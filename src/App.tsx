@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Note } from './types';
+import NoteForm from './components/NoteForm';
+import NoteList from './components/NoteList';
+import FilterMenu from './components/FilterMenu';
 
-function App() {
+const App: React.FC = () => {
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [filter, setFilter] = useState<string | null>(null);
+
+  const addNote = (note: Note) => {
+    setNotes([...notes, note]);
+  };
+
+  const filteredNotes = filter
+    ? notes.filter((note) => note.category === filter)
+    : notes;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ 
+      padding: "10px",
+      backgroundColor: "#6d9ac4"
+    }}>
+      <h1>Programming Notes</h1>
+      <NoteForm addNote={addNote} />
+      <FilterMenu setFilter={setFilter} />
+      <NoteList notes={filteredNotes} />
     </div>
   );
-}
+};
 
 export default App;
