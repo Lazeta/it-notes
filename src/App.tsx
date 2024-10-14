@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Note } from './types';
 import NoteForm from './components/NoteForm';
 import NoteList from './components/NoteList';
@@ -7,6 +7,19 @@ import FilterMenu from './components/FilterMenu';
 const App: React.FC = () => {
   const [notes, setNotes] = useState<Note[]>([]);
   const [filter, setFilter] = useState<string | null>(null);
+
+  // Загрузка заметок из sessionStorage при монтировании компонента
+  useEffect(() => {
+    const storedNotes = sessionStorage.getItem('notes');
+    if (storedNotes) {
+      setNotes(JSON.parse(storedNotes));
+    }
+  }, []);
+
+  // Сохранение заметок в sessionStorage при их изменении
+  useEffect(() => {
+    sessionStorage.setItem('notes', JSON.stringify(notes));
+  }, [notes]);
 
   const addNote = (note: Note) => {
     setNotes([...notes, note]);
