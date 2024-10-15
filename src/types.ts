@@ -4,5 +4,5 @@ export interface Note {
     content: string;
     category: string;
     subcategory?: string;
-    type: 'article' | 'video' | 'code';
+    type: 'article' | 'link' | 'video' | 'code' | 'site' | 'notes';
 }

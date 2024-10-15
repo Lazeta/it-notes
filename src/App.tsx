@@ -3,6 +3,7 @@ import { Note } from './types';
 import NoteForm from './components/NoteForm';
 import NoteList from './components/NoteList';
 import FilterMenu from './components/FilterMenu';
+import './App.css';
 
 const App: React.FC = () => {
   const [notes, setNotes] = useState<Note[]>([]);
@@ -30,11 +31,8 @@ const App: React.FC = () => {
     : notes;
 
   return (
-    <div style={{ 
-      padding: "10px",
-      backgroundColor: "#6d9ac4"
-    }}>
-      <h1>Programming Notes</h1>
+    <div className="app-container">
+      <h2>Programming Notes</h2>
       <NoteForm addNote={addNote} />
       <FilterMenu setFilter={setFilter} />
       <NoteList notes={filteredNotes} />

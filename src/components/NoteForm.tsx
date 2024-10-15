@@ -9,7 +9,7 @@ const NoteForm: React.FC<NoteFormProps> = ({ addNote }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [category, setCategory] = useState("");
-  const [type, setType] = useState<"article" | "video" | "code">("article");
+  const [type, setType] = useState<"article" | "link" | "video" | "code" | 'site' | 'notes'>("article");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,13 +58,16 @@ const NoteForm: React.FC<NoteFormProps> = ({ addNote }) => {
       <select
         value={type}
         onChange={(e) =>
-          setType(e.target.value as "article" | "video" | "code")
+          setType(e.target.value as "article" | "link" | "video" | "code" | 'site' | 'notes')
         }
         style={{ marginRight: "10px" }}
       >
         <option value="article">Article</option>
+        <option value="link">Links</option>
         <option value="video">Video</option>
         <option value="code">Code</option>
+        <option value="site">Site</option>
+        <option value="notes">Notes</option>
       </select>
       <button type="submit">Add Note</button>
     </form>
