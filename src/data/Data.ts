@@ -1,9 +1,3 @@
-// src/Data.ts
-
-export const categories = ["React", "Vue", "Angular", "Node.js"] as const;
-
-export type Category = typeof categories[number];
-
 export const Data = {
     subject: {
         React: {
@@ -49,6 +43,27 @@ export const Data = {
                     description: "Learn about Node.js and Express."
                 },
             },
+        },
+        JavaScript: {
+            title: "JavaScript",
+            subtopics: {
+                ES6: {
+                    title: "ES6",
+                    description: "Learn about ES6 features in JavaScript."
+                },
+                AsyncProgramming: {
+                    title: "Asynchronous Programming",
+                    description: "Learn about callbacks, promises, and async/await."
+                },
+                JavaScriptFrameworks: {
+                    title: "JavaScript Frameworks",
+                    description: "Overview of popular JavaScript frameworks."
+                },
+                DOMManipulation: {
+                    title: "DOM Manipulation",
+                    description: "Learn about manipulating the DOM with JavaScript."
+                },
+            }
         },
     },
 };
