@@ -5,15 +5,27 @@ export const Data = {
             subtopics: {
                 ReactJS: {
                     title: "React JS",
-                    description: "Learn about React JS."
+                    description: "Learn about React JS.",
+                    materials: [
+                        { title: "Introduction to React", description: "https://storybook.js.org/docs/writing-stories" },
+                        { title: "Advanced React", description: "https://devdocs.io/react/" },
+                    ],
                 },
                 ReactTS: {
                     title: "React TS",
-                    description: "Learn about React TypeScript."
+                    description: "Learn about React TypeScript.",
+                    materials: [
+                        { title: "Introduction to React", description: "Basics of React." },
+                        { title: "Advanced React", description: "Deep dive into React." },
+                    ],
                 },
                 ReactNative: {
                     title: "React Native",
-                    description: "Learn about React Native."
+                    description: "Learn about React Native.",
+                    materials: [
+                        { title: "Introduction to React", description: "Basics of React." },
+                        { title: "Advanced React", description: "Deep dive into React." },
+                    ],
                 },
             },
         },
@@ -22,7 +34,11 @@ export const Data = {
             subtopics: {
                 VueJS: {
                     title: "Vue JS",
-                    description: "Learn about Vue JS."
+                    description: "Learn about Vue JS.",
+                    materials: [
+                        { title: "Introduction to React", description: "Basics of React." },
+                        { title: "Advanced React", description: "Deep dive into React." },
+                    ],
                 },
             },
         },
@@ -31,7 +47,11 @@ export const Data = {
             subtopics: {
                 AngularJS: {
                     title: "Angular JS",
-                    description: "Learn about Angular JS."
+                    description: "Learn about Angular JS.",
+                    materials: [
+                        { title: "Introduction to React", description: "Basics of React." },
+                        { title: "Advanced React", description: "Deep dive into React." },
+                    ],
                 },
             },
         },
@@ -40,7 +60,11 @@ export const Data = {
             subtopics: {
                 NodeExpress: {
                     title: "Node.js with Express",
-                    description: "Learn about Node.js and Express."
+                    description: "Learn about Node.js and Express.",
+                    materials: [
+                        { title: "Introduction to React", description: "Basics of React." },
+                        { title: "Advanced React", description: "Deep dive into React." },
+                    ],
                 },
             },
         },
@@ -49,19 +73,35 @@ export const Data = {
             subtopics: {
                 ES6: {
                     title: "ES6",
-                    description: "Learn about ES6 features in JavaScript."
+                    description: "Learn about ES6 features in JavaScript.",
+                    materials: [
+                        { title: "Introduction to React", description: "Basics of React." },
+                        { title: "Advanced React", description: "Deep dive into React." },
+                    ],
                 },
                 AsyncProgramming: {
                     title: "Asynchronous Programming",
-                    description: "Learn about callbacks, promises, and async/await."
+                    description: "Learn about callbacks, promises, and async/await.",
+                    materials: [
+                        { title: "Introduction to React", description: "Basics of React." },
+                        { title: "Advanced React", description: "Deep dive into React." },
+                    ],
                 },
                 JavaScriptFrameworks: {
                     title: "JavaScript Frameworks",
-                    description: "Overview of popular JavaScript frameworks."
+                    description: "Overview of popular JavaScript frameworks.",
+                    materials: [
+                        { title: "Introduction to React", description: "Basics of React." },
+                        { title: "Advanced React", description: "Deep dive into React." },
+                    ],
                 },
                 DOMManipulation: {
                     title: "DOM Manipulation",
-                    description: "Learn about manipulating the DOM with JavaScript."
+                    description: "Learn about manipulating the DOM with JavaScript.",
+                    materials: [
+                        { title: "Introduction to React", description: "Basics of React." },
+                        { title: "Advanced React", description: "Deep dive into React." },
+                    ],
                 },
             }
         },

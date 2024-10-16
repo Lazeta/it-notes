@@ -15,3 +15,7 @@ html, body {
 .pop-up-menu {
   margin: 10% auto;
 }
+
+.material-list {
+  cursor: pointer;
+}

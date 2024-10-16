@@ -1,9 +1,21 @@
 import React, { useState } from "react";
 import { Data } from "../data/Data";
+import MaterialList from "../data/MaterialList"; // Импортируем новый компонент
 
-// Определение типа Category и Subtopic
+// Определение типов
 type Category = keyof typeof Data.subject;
-type Subtopic = typeof Data.subject[Category]['subtopics'][keyof typeof Data.subject[Category]['subtopics']];
+type SubtopicKey = keyof typeof Data.subject[Category]["subtopics"];
+
+// Определяем структуру подкатегории
+interface Subtopic {
+  title: string;
+  description: string;
+  materials: Material[]; // Убедитесь, что у подкатегории есть массив материалов
+}
+interface Material {
+  title: string;
+  description: string;
+}
 
 interface FilterMenuProps {
   setFilter: (filter: string | null) => void;
@@ -11,6 +23,7 @@ interface FilterMenuProps {
 
 const FilterMenu: React.FC<FilterMenuProps> = ({ setFilter }) => {
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
+  const [selectedSubtopic, setSelectedSubtopic] = useState<SubtopicKey | null>(null);
 
   const categories = Object.keys(Data.subject) as Category[];
 
@@ -18,7 +31,29 @@ const FilterMenu: React.FC<FilterMenuProps> = ({ setFilter }) => {
     const category = e.target.value as Category;
     setSelectedCategory(category);
     setFilter(category);
+    setSelectedSubtopic(null); // Сброс подкатегории при изменении категории
   };
+
+  const handleSubtopicChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const subtopic = e.target.value as SubtopicKey || null;
+    setSelectedSubtopic(subtopic);
+    setFilter(subtopic); // Устанавливаем фильтр для выбранной подкатегории
+  };
+
+  // Получаем материалы в зависимости от выбранной категории и подкатегории
+  const getMaterials = (): Material[] => {
+    if (selectedCategory && selectedSubtopic) {
+      const subtopic = Data.subject[selectedCategory].subtopics[selectedSubtopic] as Subtopic;
+      return subtopic?.materials || [];
+    }
+    if (selectedCategory) {
+      return Object.values(Data.subject[selectedCategory].subtopics)
+        .flatMap(subtopic => (subtopic as Subtopic).materials || []);
+    }
+    return [];
+  };
+
+  const materials = getMaterials();
 
   return (
     <div className="pop-up-menu">
@@ -42,8 +77,8 @@ const FilterMenu: React.FC<FilterMenuProps> = ({ setFilter }) => {
 
       {selectedCategory && (
         <div>
-          <h2>Subtopics for {Data.subject[selectedCategory].title}</h2>
-          <select onChange={(e) => setFilter(e.target.value || null)} 
+          <h3>Subtopics for {Data.subject[selectedCategory].title}</h3>
+          <select onChange={handleSubtopicChange}
             style={{
               width: "80%", 
               display: "flex",
@@ -52,15 +87,18 @@ const FilterMenu: React.FC<FilterMenuProps> = ({ setFilter }) => {
               font: "caption",
             }}
           >
-            <option value="">Select a subtopic</option>
+            <option value="">All</option>
             {Object.entries(Data.subject[selectedCategory].subtopics).map(([subtopicKey, subtopic]) => (
               <option key={subtopicKey} value={subtopicKey}>
-                {subtopic.title} {/* Теперь TypeScript знает, что title существует */}
+                {subtopic.title}
               </option>
             ))}
           </select>
         </div>
       )}
+
+      {/* Используем компонент MaterialList для отображения материалов */}
+      <MaterialList materials={materials} />
     </div>
   );
 };
