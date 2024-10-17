@@ -7,24 +7,24 @@ export const Data = {
                     title: "React JS",
                     description: "Learn about React JS.",
                     materials: [
-                        { title: "Introduction to React", description: "https://storybook.js.org/docs/writing-stories" },
-                        { title: "Advanced React", description: "https://devdocs.io/react/" },
+                        { title: "Introduction to React JS", description: "https://storybook.js.org/docs/writing-stories" },
+                        { title: "Advanced React JS", description: "https://devdocs.io/react/" },
                     ],
                 },
                 ReactTS: {
                     title: "React TS",
                     description: "Learn about React TypeScript.",
                     materials: [
-                        { title: "Introduction to React", description: "Basics of React." },
-                        { title: "Advanced React", description: "Deep dive into React." },
+                        { title: "Introduction to React TypeScript", description: "Basics of React Typescript." },
+                        { title: "Advanced React Typescript", description: "Deep dive into React Typescript." },
                     ],
                 },
                 ReactNative: {
                     title: "React Native",
                     description: "Learn about React Native.",
                     materials: [
-                        { title: "Introduction to React", description: "Basics of React." },
-                        { title: "Advanced React", description: "Deep dive into React." },
+                        { title: "Introduction to React Native", description: "Basics React Native." },
+                        { title: "Advanced React Native", description: "Deep dive into React Native." },
                     ],
                 },
             },
@@ -36,8 +36,8 @@ export const Data = {
                     title: "Vue JS",
                     description: "Learn about Vue JS.",
                     materials: [
-                        { title: "Introduction to React", description: "Basics of React." },
-                        { title: "Advanced React", description: "Deep dive into React." },
+                        { title: "Introduction to React", description: "Basics of Vue." },
+                        { title: "Advanced React", description: "Deep dive into Vue." },
                     ],
                 },
             },
@@ -49,21 +49,21 @@ export const Data = {
                     title: "Angular JS",
                     description: "Learn about Angular JS.",
                     materials: [
-                        { title: "Introduction to React", description: "Basics of React." },
-                        { title: "Advanced React", description: "Deep dive into React." },
+                        { title: "Introduction to Angular JS", description: "Basics of Angular JS." },
+                        { title: "Advanced Angular JS", description: "Deep dive into Angular JS." },
                     ],
                 },
             },
         },
-        "Node.js": {  // Изменено с NodeJS на "Node.js"
+        "Node.js": {
             title: "Node.js",
             subtopics: {
                 NodeExpress: {
                     title: "Node.js with Express",
                     description: "Learn about Node.js and Express.",
                     materials: [
-                        { title: "Introduction to React", description: "Basics of React." },
-                        { title: "Advanced React", description: "Deep dive into React." },
+                        { title: "Introduction to Node.js", description: "Basics of Node.js." },
+                        { title: "Advanced Node.js", description: "Deep dive into Node.js." },
                     ],
                 },
             },
@@ -75,32 +75,28 @@ export const Data = {
                     title: "ES6",
                     description: "Learn about ES6 features in JavaScript.",
                     materials: [
-                        { title: "Introduction to React", description: "Basics of React." },
-                        { title: "Advanced React", description: "Deep dive into React." },
+                        { title: "Introduction to ...", description: "Basics of ___." },
                     ],
                 },
                 AsyncProgramming: {
                     title: "Asynchronous Programming",
                     description: "Learn about callbacks, promises, and async/await.",
                     materials: [
-                        { title: "Introduction to React", description: "Basics of React." },
-                        { title: "Advanced React", description: "Deep dive into React." },
+                        { title: "Introduction to ...", description: "Basics of ___." },
                     ],
                 },
                 JavaScriptFrameworks: {
                     title: "JavaScript Frameworks",
                     description: "Overview of popular JavaScript frameworks.",
                     materials: [
-                        { title: "Introduction to React", description: "Basics of React." },
-                        { title: "Advanced React", description: "Deep dive into React." },
+                        { title: "Introduction to ...", description: "Basics of ___." },
                     ],
                 },
                 DOMManipulation: {
                     title: "DOM Manipulation",
                     description: "Learn about manipulating the DOM with JavaScript.",
                     materials: [
-                        { title: "Introduction to React", description: "Basics of React." },
-                        { title: "Advanced React", description: "Deep dive into React." },
+                        { title: "Introduction to ...", description: "Basics of ___." },
                     ],
                 },
                 DragAndDrop: {
@@ -112,14 +108,16 @@ export const Data = {
                 }
             }
         },
-        Interview : {
+        Interview: {
             title: "Interview",
             subtopics: {
                 Frontend: {
                     title: "Theme frontend",
                     description: "...",
                     materials: [
-                        { title: "Questions for Frontend theme", description: `
+                        {
+                            title: "Questions for Frontend theme",
+                            description: `
                         Темы интервью 📚
                         Основы ООП.
                         Основные структуры данных и их организация (массив, список, стек, очередь, дерево, хеш-таблица и т. д.).
@@ -148,7 +146,8 @@ export const Data = {
                         Уметь обнаруживать случаи преобразования неявных типов данных в логические, строковые, числовые.
                         Преобразования типов
                         Строгое сравнение
-                        ` },
+                        ` 
+                        },
                     ]
                 },
 
