@@ -34,6 +34,7 @@ const App: React.FC = () => {
     <div className="app-container">
       <h2>Programming Notes</h2>
       <NoteForm addNote={addNote} />
+      <hr></hr>
       <FilterMenu setFilter={setFilter} />
       <NoteList notes={filteredNotes} />
     </div>

@@ -3,19 +3,37 @@ html, body {
   margin: 0;
 }
 
+a {
+  background-color: rgba(0, 102, 255, 0.856);
+  color:black;
+  padding: 0 5px;
+}
+
+hr {
+  border: none; /* Убираем стандартный бордер */
+  height: 2px; /* Толщина линии */
+  background-color: #6d9ac4; /* Цвет линии */
+  margin: 20px 0; /* Отступы сверху и снизу */
+}
+
 .app-container {
   padding: 10px;
-  background-color: #3b110fe3; /* Цвет фона */
+  background-color: #acccc0e3; /* Цвет фона */
   min-height: 100vh; /* Минимальная высота 100% от высоты экрана */
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* Выравнивание содержимого по верхнему краю */
 }
 
+.app-container hr {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
 .pop-up-menu {
-  margin: 10% auto;
+  margin: 2rem auto;
 }
 
 .material-list {
-  cursor: pointer;
+  cursor: context-menu;
 }

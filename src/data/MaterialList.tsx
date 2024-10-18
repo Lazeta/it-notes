@@ -1,9 +1,5 @@
 import React from "react";
-
-interface Material {
-    title: string;
-    description: string;
-}
+import { Material } from "../components/FilterMenu";
 
 interface MaterialListProps {
     materials: Material[]; // Массив материалов для отображения
@@ -12,7 +8,7 @@ interface MaterialListProps {
 const MaterialList: React.FC<MaterialListProps> = ({ materials }) => {
     return (
         <div className="material-list">
-            <h2>Material</h2>
+            <h2>Materials</h2>
             {materials.length === 0 ? (
                 <p>No materials found.</p>
             ) : (
@@ -20,7 +16,13 @@ const MaterialList: React.FC<MaterialListProps> = ({ materials }) => {
                     {materials.map((material, index) => (
                         <li key={index}>
                             <h3>{material.title}</h3>
-                            <p>{material.description}</p>
+                            {material.type === "link" && material.url ? (
+                                <a href={material.url} target="_blank" rel="noopener noreferrer">
+                                    {material.description}
+                                </a>  
+                            ) : (
+                                <p>{material.description}</p>
+                            )}
                         </li>
                     ))}
                 </ul>

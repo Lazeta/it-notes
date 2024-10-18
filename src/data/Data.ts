@@ -7,8 +7,9 @@ export const Data = {
                     title: "React JS",
                     description: "Learn about React JS.",
                     materials: [
-                        { title: "Introduction to React JS", description: "https://storybook.js.org/docs/writing-stories" },
-                        { title: "Advanced React JS", description: "https://devdocs.io/react/" },
+                        { title: "Introduction to React JS", type: "link", url: "https://it-shpora.pp.ua/category/react/", description: "Подсказки для начинающего айтишника"},
+                        { title: "Advanced React JS", type: "link", url: "https://devdocs.io/react/", description: "https://devdocs.io/react/"},
+                        { title: "Storybook", type: "link", url: "https://storybook.js.org/docs/writing-stories", description: "How to write stories"},
                     ],
                 },
                 ReactTS: {
@@ -103,7 +104,11 @@ export const Data = {
                     title: "Drag and Drop",
                     description: "",
                     materials: [
-                        { title: "mouse drag and drop", description: "https://learn.javascript.ru/mouse-drag-and-drop" }
+                        { 
+                            title: "mouse drag and drop", 
+                            type: "link",
+                            url: "https://learn.javascript.ru/mouse-drag-and-drop",
+                            description: "https://learn.javascript.ru/mouse-drag-and-drop" }
                     ]
                 }
             }
@@ -117,6 +122,7 @@ export const Data = {
                     materials: [
                         {
                             title: "Questions for Frontend theme",
+                            type: "text",
                             description: `
                         Темы интервью 📚
                         Основы ООП.

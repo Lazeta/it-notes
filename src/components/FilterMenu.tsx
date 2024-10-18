@@ -12,9 +12,11 @@ interface Subtopic {
   description: string;
   materials: Material[]; // Убедитесь, что у подкатегории есть массив материалов
 }
-interface Material {
+export interface Material {
   title: string;
   description: string;
+  type: "link" | "text";
+  url?: string;
 }
 
 interface FilterMenuProps {
@@ -94,6 +96,7 @@ const FilterMenu: React.FC<FilterMenuProps> = ({ setFilter }) => {
               </option>
             ))}
           </select>
+          <hr></hr>
         </div>
       )}
 
