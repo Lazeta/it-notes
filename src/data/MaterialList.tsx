@@ -11,7 +11,7 @@ const MaterialList: React.FC<MaterialListProps> = ({ materials }) => {
             <h2>Materials</h2>
             {materials.length === 0 ? (
                 <p>No materials found.</p>
-            ) : (
+            ) :(
                 <ul>
                     {materials.map((material, index) => (
                         <li key={index}>
@@ -20,6 +20,12 @@ const MaterialList: React.FC<MaterialListProps> = ({ materials }) => {
                                 <a href={material.url} target="_blank" rel="noopener noreferrer">
                                     {material.description}
                                 </a>  
+                            ) : material.type === "image" && material.url ? (
+                                <div>
+                                    <p>{material.description}</p>
+                                    <img src={material.url} alt={material.title} 
+                                    style={{maxWidth: "100%", height: "auto" }} />
+                                </div>
                             ) : (
                                 <p>{material.description}</p>
                             )}

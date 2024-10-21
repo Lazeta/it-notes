@@ -30,10 +30,17 @@ hr {
   margin-bottom: 0;
 }
 
+.header {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .pop-up-menu {
   margin: 2rem auto;
 }
 
 .material-list {
   cursor: context-menu;
+  width: 1200px;
+  margin: 0 auto;
 }

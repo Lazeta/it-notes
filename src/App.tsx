@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { Note } from './types';
-import NoteForm from './components/NoteForm';
-import NoteList from './components/NoteList';
-import FilterMenu from './components/FilterMenu';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { Note } from "./types";
+import NoteForm from "./components/NoteForm";
+import NoteList from "./components/NoteList";
+import FilterMenu from "./components/FilterMenu";
+import "./App.css";
 
 const App: React.FC = () => {
   const [notes, setNotes] = useState<Note[]>([]);
@@ -11,7 +11,7 @@ const App: React.FC = () => {
 
   // Загрузка заметок из sessionStorage при монтировании компонента
   useEffect(() => {
-    const storedNotes = sessionStorage.getItem('notes');
+    const storedNotes = sessionStorage.getItem("notes");
     if (storedNotes) {
       setNotes(JSON.parse(storedNotes));
     }
@@ -19,7 +19,7 @@ const App: React.FC = () => {
 
   // Сохранение заметок в sessionStorage при их изменении
   useEffect(() => {
-    sessionStorage.setItem('notes', JSON.stringify(notes));
+    sessionStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
 
   const addNote = (note: Note) => {
@@ -32,9 +32,11 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
-      <h2>Programming Notes</h2>
-      <NoteForm addNote={addNote} />
-      <hr></hr>
+      <div className="header">
+        <h2>Programming Notes</h2>
+        <NoteForm addNote={addNote} />
+        <hr></hr>
+      </div>
       <FilterMenu setFilter={setFilter} />
       <NoteList notes={filteredNotes} />
     </div>

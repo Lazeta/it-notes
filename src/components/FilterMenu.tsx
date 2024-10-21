@@ -15,7 +15,7 @@ interface Subtopic {
 export interface Material {
   title: string;
   description: string;
-  type: "link" | "text";
+  type: "link" | "text" | "image";
   url?: string;
 }
 

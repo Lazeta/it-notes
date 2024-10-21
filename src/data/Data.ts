@@ -7,9 +7,10 @@ export const Data = {
                     title: "React JS",
                     description: "Learn about React JS.",
                     materials: [
-                        { title: "Introduction to React JS", type: "link", url: "https://it-shpora.pp.ua/category/react/", description: "Подсказки для начинающего айтишника"},
-                        { title: "Advanced React JS", type: "link", url: "https://devdocs.io/react/", description: "https://devdocs.io/react/"},
-                        { title: "Storybook", type: "link", url: "https://storybook.js.org/docs/writing-stories", description: "How to write stories"},
+                        { title: "Introduction to React JS", type: "link", url: "https://it-shpora.pp.ua/category/react/", description: "Подсказки для начинающего айтишника" },
+                        { title: "Advanced React JS", type: "link", url: "https://devdocs.io/react/", description: "https://devdocs.io/react/" },
+                        { title: "Storybook", type: "link", url: "https://storybook.js.org/docs/writing-stories", description: "How to write stories" },
+                        { title: "React JS Drag to Select", type: "link", url: "https://www.joshuawootonn.com/react-drag-to-select", description: "This past summer, I led a project at Makeswift to rework our file manager. Makeswift is a website builder and many of our users have hundreds of files. To manage hundreds of anything you need bulk operations, but bulk operations aren't helpful if selecting things is cumbersome, so drag selection was a key part of my vision for making Makeswift's file manager feel native." },
                     ],
                 },
                 ReactTS: {
@@ -102,14 +103,131 @@ export const Data = {
                 },
                 DragAndDrop: {
                     title: "Drag and Drop",
-                    description: "",
                     materials: [
-                        { 
-                            title: "mouse drag and drop", 
+                        {
+                            title: "mouse drag and drop",
                             type: "link",
                             url: "https://learn.javascript.ru/mouse-drag-and-drop",
-                            description: "https://learn.javascript.ru/mouse-drag-and-drop" }
+                            description: "https://learn.javascript.ru/mouse-drag-and-drop"
+                        }
                     ]
+                },
+                Methods: {
+                    title: "Methods JavaScript",
+                    materials: [
+                        // { title: "Introduction to ...", description: "Basics of ___." },
+
+                        Arrays: [
+                            {
+                                type: "text",
+                                description: `1.pop() => удаляет элемент в конце массива`,
+                            },
+                            {
+                                type: "text",
+                                description: `2.shift() => удаляет элемент в начале массива`,
+                            },
+                            {
+                                type: "text",
+                                description: `3.push() => добавляется несколько элементов в конец массива`,
+                            },
+                            {
+                                type: "text",
+                                description: `4.unshift() => добавляет несколько элементов в начало массива`,
+                            },
+                            {
+                                type: "text",
+                                description: `5.length => получаем число элементов массива`,
+                            },
+                            {
+                                type: "text",
+                                description: `6.splice() => добавление нескольких элементов в массив; первый
+                                аргумент указывает где начать вставку элементов по индексу; второй аргумент указывает
+                                сколько элементов нужно удалить, если аргумент не указать, то удаления не будет,
+                                просто добавится новый элемент в массиве; самые новые элементы указываются в скобках
+                                данного метода в кавычках.`,
+                            },
+                            {
+                                type: "text",
+                                description: `7.slice() => вырезает один или несколько элементов массива
+                                через указатель аргумента начала вырезания и второй аргумент где закончить срез;
+                                принимает отрицательные значения.`,
+                            },
+                            {
+                                type: "text",
+                                description: `8.concat() => конкатенация двух массивов`,
+                            },
+                            {
+                                type: "text",
+                                description: `9.map() => принимает массив и применяет указанную функцию для
+                                всех элементов массива; возвращает новый массив.`,
+                            },
+                            {
+                                type: "text",
+                                description: `10.every() => проверяет, соответствуют ли все элементы указанному
+                                массива определённому условию; если все элементы соответствуют условию, то возвращает
+                                метод true, в противном случае вернёт false.`,
+                            },
+                            {
+                                type: "text",
+                                description: `11.includes() => проверяет на наличие в массиве элемента; если
+                                элемент найден, то возвращает true.`,
+                            },
+                            {
+                                type: "text",
+                                description: `12.spread() => превращает массив в строки с помощью специальных
+                                разделителей … сохраняет между ними границу или по умолчанию между строками образуются
+                                пробелы.`,
+                            },
+                            {
+                                type: "text",
+                                description: `13.filter() => создает новый массив из всех элементов соответствующих
+                                заданному условию.`,
+                            },
+                            {
+                                type: "text",
+                                description: `14.reduce(function (previousValue, item, index, array) { … }, [initial]);
+                                => сводит массив к одному значению.`,
+                            },
+                            {
+                                type: "text",
+                                description: `15.reduceRight() => сводит массив к одному значение с права на лево.`,
+                            },
+                            {
+                                type: "text",
+                                description: `16.indexOf() => возвращает первый индекс по которому может быть найден
+                                элемент в массиве и -1 если такого элемента нет; это не тоже самое что и Boolean values,
+                                мы можем получать 2 и более индекса совпадений по массиву.`,
+                            },
+                            {
+                                type: "text",
+                                description: `17.sort() => возвращает отсортированный массив; если compareFunction
+                                предоставлена, то массив сортируется в соответствиями с этими условиями.`,
+                            },
+                            {
+                                type: "text",
+                                description: `18.find() => возвращает значение первого найденного в массиве элемента,
+                                который удовлетворяет условию указанных в функции, в противном случае возвращает undefined. `,
+                            },
+                            {
+                                type: "text",
+                                description: `19.findIndex() => возвращает индекс в массиве, если элемент удовлетворяет
+                                условиям проверяющей функции, в противном случае вернёт -1.`,
+                            },
+                            {
+                                type: "text",
+                                description: `20.forEach(function (item, index, array) { … } => выполняет указанную
+                                функцию один раз для каждого элемента в массиве.`,
+                            },
+                            {
+                                type: "text",
+                                description: `21.join(‘, ’) => преобразовывает массив в строку с заданным разделителем.`,
+                            },
+                            {
+                                type: "text",
+                                description: `22.isArray() => проверяем массив ли этот объект или нет.`,
+                            },
+                        ]
+                    ],
                 }
             }
         },
@@ -118,7 +236,6 @@ export const Data = {
             subtopics: {
                 Frontend: {
                     title: "Theme frontend",
-                    description: "...",
                     materials: [
                         {
                             title: "Questions for Frontend theme",
@@ -152,12 +269,39 @@ export const Data = {
                         Уметь обнаруживать случаи преобразования неявных типов данных в логические, строковые, числовые.
                         Преобразования типов
                         Строгое сравнение
-                        ` 
+                        `
                         },
                     ]
                 },
 
             }
+        },
+        Style: {
+            title: "Style",
+            subtopics: {
+                CSS: {
+                    title: "CSS",
+                    materials: [
+                        { title: "CSS Grid Layout", description: "cheat sheet for CSS grid layout", type: "image", url: "https://i.pinimg.com/enabled_hi/564x/54/e9/87/54e98761c2348545244bf25487c5be23.jpg" },
+                    ],
+                },
+                SASS: {
+                    title: "SASS",
+                    materials: []
+                },
+                SCSS: {
+                    title: "SCSS",
+                    materials: []
+                },
+                styledComponents: {
+                    title: "styled-components",
+                    materials: []
+                },
+                TailwindCss: {
+                    title: "SASS",
+                    materials: []
+                },
+            },
         },
     },
 };
