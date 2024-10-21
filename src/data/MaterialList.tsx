@@ -11,30 +11,39 @@ const MaterialList: React.FC<MaterialListProps> = ({ materials }) => {
             <h2>Materials</h2>
             {materials.length === 0 ? (
                 <p>No materials found.</p>
-            ) :(
+            ) : (
                 <ul>
                     {materials.map((material, index) => (
                         <li key={index}>
                             <h3>{material.title}</h3>
-                            {material.type === "link" && material.url ? (
-                                <a href={material.url} target="_blank" rel="noopener noreferrer">
-                                    {material.description}
-                                </a>  
-                            ) : material.type === "image" && material.url ? (
-                                <div>
-                                    <p>{material.description}</p>
-                                    <img src={material.url} alt={material.title} 
-                                    style={{maxWidth: "100%", height: "auto" }} />
-                                </div>
+                            {material.items ? ( // Проверяем наличие items
+                                <MaterialList materials={material.items} /> // Рекурсивный вызов
                             ) : (
-                                <p>{material.description}</p>
+                                <>
+                                    {material.type === "link" && material.url ? (
+                                        <a href={material.url} target="_blank" rel="noopener noreferrer">
+                                            {material.description}
+                                        </a>
+                                    ) : material.type === "image" && material.url ? (
+                                        <div>
+                                            <p>{material.description}</p>
+                                            <img 
+                                                src={material.url} 
+                                                alt={material.title} 
+                                                style={{ maxWidth: "100%", height: "auto" }} 
+                                            />
+                                        </div>
+                                    ) : (
+                                        <p>{material.description}</p>
+                                    )}
+                                </>
                             )}
                         </li>
                     ))}
                 </ul>
             )}
         </div>
-    )
+    );
 }
 
 export default MaterialList;
