@@ -7,17 +7,23 @@ interface NoteListProps {
 
 const NoteList: React.FC<NoteListProps> = ({ notes }) => {
   return (
-    <ul>
-      {notes.map((note) => (
-        <li key={note.id}>
-          <h3>{note.title}</h3>
-          <p>{note.content}</p>
-          <small>
-            {note.category} - {note.type}
-          </small>
-        </li>
-      ))}
-    </ul>
+    <div>
+      {notes.length === 0 ? (
+        <p>No notes found.</p>
+      ) : (
+        <ul>
+        {notes.map((note) => (
+          <li key={note.id}>
+            <h3>{note.title}</h3>
+            <p>{note.content}</p>
+            <small>
+              {note.category} - {note.type}
+            </small>
+          </li>
+        ))}
+      </ul>
+      )}
+    </div>
   );
 };
 

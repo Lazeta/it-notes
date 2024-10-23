@@ -20,7 +20,7 @@ interface FilterMenuProps {
 
 const FilterMenu: React.FC<FilterMenuProps> = ({ setFilter }) => {
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
-  // const [selectedSubtopic, setSelectedSubtopic] = useState<SubtopicKey | null>(null);
+  const [selectedSubtopic, setSelectedSubtopic] = useState<SubtopicKey | null>(null);
 
   const categories = Object.keys(Data.subject) as Category[];
 
@@ -28,12 +28,12 @@ const FilterMenu: React.FC<FilterMenuProps> = ({ setFilter }) => {
     const category = e.target.value as Category;
     setSelectedCategory(category);
     setFilter(category);
-    // setSelectedSubtopic(null); // Сброс подкатегории при изменении категории
+    setSelectedSubtopic(null); // Сброс подкатегории при изменении категории
   };
 
   const handleSubtopicChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const subtopic = e.target.value as SubtopicKey || null;
-    // setSelectedSubtopic(subtopic);
+    setSelectedSubtopic(subtopic);
     setFilter(subtopic); // Устанавливаем фильтр для выбранной подкатегории
   };
 
@@ -74,8 +74,8 @@ const FilterMenu: React.FC<FilterMenuProps> = ({ setFilter }) => {
       {selectedCategory && (
         <div>
           <h3>Subtopics for {Data.subject[selectedCategory].title}</h3>
-          <select onChange={handleSubtopicChange}
-            style={{
+          <select className={'s'} onChange={handleSubtopicChange}
+              style={{
               width: "80%", 
               display: "flex",
               padding: "5px",

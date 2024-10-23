@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Note } from "./types";
-import NoteForm from "./components/NoteForm";
+// import NoteForm from "./components/NoteForm";
 import NoteList from "./components/NoteList";
 import FilterMenu from "./components/FilterMenu";
 import "./App.css";
@@ -22,9 +22,9 @@ const App: React.FC = () => {
     sessionStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
 
-  const addNote = (note: Note) => {
-    setNotes([...notes, note]);
-  };
+  // const addNote = (note: Note) => {
+  //   setNotes([...notes, note]);
+  // };
 
   const filteredNotes = filter
     ? notes.filter((note) => note.category === filter)
@@ -34,11 +34,11 @@ const App: React.FC = () => {
     <div className="app-container">
       <div className="header">
         <h2>Programming Notes</h2>
-        <NoteForm addNote={addNote} />
+        {/* <NoteForm addNote={addNote} /> */}
         <hr></hr>
       </div>
       <FilterMenu setFilter={setFilter} />
-      <NoteList notes={filteredNotes} />
+      {/* <NoteList notes={filteredNotes} /> */}
     </div>
   );
 };
