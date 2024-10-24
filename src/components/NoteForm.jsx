@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { Note } from "../types";
 
-interface NoteFormProps {
-  addNote: (note: Note) => void;
-}
+// interface NoteFormProps {
+//   addNote: (note: Note) => void;
+// }
 
-const NoteForm: React.FC<NoteFormProps> = ({ addNote }) => {
+export const NoteForm = ({ addNote }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [category, setCategory] = useState("");
-  const [type, setType] = useState<'article' | 'link' | 'image' | 'video' | 'code' | 'site' | 'notes'>("article");
+  const [type, setType] = useState("article");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const newNote: Note = {
+    const newNote = {
       id: Date.now(),
       title,
       content,
@@ -58,7 +58,7 @@ const NoteForm: React.FC<NoteFormProps> = ({ addNote }) => {
       <select
         value={type}
         onChange={(e) =>
-          setType(e.target.value as 'article' | 'link' | 'image' | 'video' | 'code' | 'site' | 'notes')
+          setType(e.target.value)
         }
         style={{ marginRight: "10px" }}
       >
@@ -73,5 +73,3 @@ const NoteForm: React.FC<NoteFormProps> = ({ addNote }) => {
     </form>
   );
 };
-
-export default NoteForm;

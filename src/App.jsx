@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Note } from "./types";
-import NoteForm from "./components/NoteForm";
-import NoteList from "./components/NoteList";
-import FilterMenu from "./components/FilterMenu";
 import "./App.css";
+import { useEffect, useState } from "react";
+import { NoteForm } from "./components/NoteForm";
+import FilterMenu from "./components/FilterMenu";
+import NoteList from "./components/NoteList";
 
-const App: React.FC = () => {
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [filter, setFilter] = useState<string | null>(null);
+const App = () => {
+  const [notes, setNotes] = useState([]);
+  const [filter, setFilter] = useState(typeof String || null);
 
   // Загрузка заметок из sessionStorage при монтировании компонента
   useEffect(() => {
@@ -22,7 +21,7 @@ const App: React.FC = () => {
     sessionStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
 
-  const addNote = (note: Note) => {
+  const addNote = (note) => {
     setNotes([...notes, note]);
   };
 
@@ -39,9 +38,6 @@ const App: React.FC = () => {
       </div>
       <FilterMenu setFilter={setFilter} />
       <NoteList notes={filteredNotes} />
-      <div className="note-list-container">
-        {/* <FilterMenu /> */}
-      </div>
     </div>
   );
 };

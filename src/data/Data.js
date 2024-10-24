@@ -1,19 +1,19 @@
-export type Item = {
-    title?: string;
-    type?: "link" | "image" | "text";
-    url?: string;
-    description?: string;
-    subtopics?: Subtopic[];
-};
+// export type Item = {
+//     title?: string;
+//     type?: "link" | "image" | "text";
+//     url?: string;
+//     description?: string;
+//     subtopics?: Subtopic[];
+// };
 
-export type Subtopic = {
-    title?: string;
-    items?: Item[];
-    description?: string;
-    subtopics?: Subtopic[];
-};
+// export type Subtopic = {
+//     title?: string;
+//     items?: Item[];
+//     description?: string;
+//     subtopics?: Subtopic[];
+// };
 
-export const Data: Subtopic[] = [
+export const Data = [
     {
         title: "React",
         items: [],
