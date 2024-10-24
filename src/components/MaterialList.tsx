@@ -1,11 +1,7 @@
 import React from "react";
-import { Material } from "../components/FilterMenu";
+import { Subtopic } from "./FilterMenu";
 
-interface MaterialListProps {
-    materials: Material[]; // Массив материалов для отображения
-}
-
-const MaterialList: React.FC<MaterialListProps> = ({ materials }) => {
+const MaterialList: React.FC<Subtopic> = ({ materials }) => {
     return (
         <div className="material-list">
             <h2>Materials</h2>
@@ -13,8 +9,8 @@ const MaterialList: React.FC<MaterialListProps> = ({ materials }) => {
                 <p>No materials found.</p>
             ) : (
                 <ul>
-                    {materials.map((material, index) => (
-                        <li key={index}>
+                    {materials.map((material) => (
+                        <li key={material.title}>
                             <h3>{material.title}</h3>
                             {material.items ? ( // Проверяем наличие items
                                 <MaterialList materials={material.items} /> // Рекурсивный вызов
