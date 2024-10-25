@@ -3,7 +3,6 @@ import React from "react";
 const Sections = ({ categoryItems }) => {
     return (
         <div className="category-list">
-            <h2>Category Items</h2>
             <ul>
                 {categoryItems.map((category) => (
                     <li key={category.title}>

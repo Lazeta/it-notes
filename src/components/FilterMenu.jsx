@@ -2,33 +2,12 @@ import { useState } from "react";
 import { Data } from "../data/Data";
 import Sections from "./Sections";
 
-// Определение типов
-// type Category = keyof typeof Data;
-// type SubtopicKey = keyof (typeof Data)[];
 
-// interface Item {
-//   title: string;
-//   description?: string;
-//   type: "link" | "text" | "image";
-//   url?: string;
-// }
-
-// export interface Subtopic {
-//   title: string;
-//   items?: Item[];
-//   subtopics?: Subtopic[];
-// }
-
-// type FilterMenuProps {
-//   // setFilter(filter: string | null): void;
-//   setFilter: (filter: string | null) => void;
-// }
-
-const FilterMenu = (setFilter) => {
+const FilterMenu = ({ setFilter }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedSubtopic, setSelectedSubtopic] = useState(null);
 
-  const categories = Object.keys(Data);
+  const categories = Data.map(item => item.title); // Assuming Data is an array
 
   const handleCategoryChange = (e) => {
     const category = e.target.value;
@@ -43,26 +22,22 @@ const FilterMenu = (setFilter) => {
     setSelectedCategory(subtopic ? `${selectedCategory}.${subtopic}` : selectedCategory); // Устанавливаем фильтр для выбранной подкатегории
   };
 
-  // const getItems = (topic: Subtopic): Item[] => {
-  //   let items = topic.items || [];
-  //   if (topic.subtopics) {
-  //     for (const subtopic of topic.subtopics) {
-  //       items = items.concat(getItems(subtopic));
-  //     }
-  //   }
-  //   return items;
-  // };
   const getItems = (topic) => {
+    if (!topic) return []; // Check if topic exists
     let items = topic.items || [];
-    if (topic.subtopics) {
-      for (const subtopic of Object.values(topic.subtopics)) {
-        items = items.concat(getItems(subtopic));
-      }
-    }
+    topic.subtopics?.forEach(subtopic => {
+      items = items.concat(getItems(subtopic));
+    })
+    // if (topic.subtopics) {
+    //   for (const subtopic of Object.values(topic.subtopics)) {
+    //     items = items.concat(getItems(subtopic));
+    //   }
+    // }
     return items;
   };
 
-  const categoryItems = selectedCategory ? getItems(Data[selectedCategory]) : []; // возвращаем пустой массив, если selectedCategory равен null
+  const categoryData = selectedCategory ? Data.find(category => category.title === selectedCategory) : null;
+  const categoryItems = categoryData ? getItems(categoryData) : []; // Return empty array if no category is selected
 
 
   return (
@@ -79,16 +54,16 @@ const FilterMenu = (setFilter) => {
         }}
       >
         <option value="">All</option>
-        {categories.map((category) => (
-          <option key={category} value={category}>
-            {Data[category].title}
+        {categories.map((categoryTitle) => (
+          <option key={categoryTitle} value={categoryTitle}>
+            {categoryTitle}
           </option>
         ))}
       </select>
 
-      {selectedCategory && (
+      {selectedCategory && categoryData && (
         <div>
-          <h3>Subtopics for {Data[selectedCategory].title}</h3>
+          <h3>Subtopics for {categoryData.title}</h3>
           <select
             onChange={handleSubtopicChange}
             style={{
@@ -100,7 +75,7 @@ const FilterMenu = (setFilter) => {
             }}
           >
             <option value="">All</option>
-            {Object.entries(Data[selectedCategory].subtopics).map(([subtopicKey, subtopic]) => (
+            {Object.entries(categoryData.subtopics || {}).map(([subtopicKey, subtopic]) => (
               <option key={subtopicKey} value={subtopicKey}>
                 {subtopic.title}
               </option>
