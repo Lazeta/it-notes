@@ -71,7 +71,9 @@ const FilterMenu = ({ setFilter }) => {
 
       {selectedCategory && categoryData && (
         <div>
-          <h3>Subtopics for {categoryData.title}</h3>
+          <h2 style={{ margin: "10px", textAlign: "center" }}>
+            Subtopics for {categoryData.title}
+          </h2>
           <select onChange={handleSubtopicChange}
             style={{
               width: "80%",
