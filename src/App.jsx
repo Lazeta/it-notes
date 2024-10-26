@@ -34,10 +34,14 @@ const App = () => {
       <div className="header">
         <h2>Programming Notes</h2>
         <NoteForm addNote={addNote} />
-        <hr></hr>
       </div>
-      <FilterMenu setFilter={setFilter} />
-      <NoteList notes={filteredNotes} />
+      <div className="line">
+        <hr />
+      </div>
+      <div>
+        <FilterMenu setFilter={setFilter} />
+        <NoteList notes={filteredNotes} />
+      </div>
     </div>
   );
 };

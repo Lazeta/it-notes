@@ -1,0 +1,23 @@
+button {
+  width: max-content;
+  background-color: #4caf50; /* Зеленый цвет фона */
+  color: white; /* Цвет текста */
+  border: none; /* Без рамки */
+  border-radius: 5px; /* Закругленные углы */
+  padding: 12px 20px; /* Отступы */
+  font-size: 16px; /* Размер шрифта */
+  cursor: pointer; /* Указатель при наведении */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Плавные переходы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень кнопки */
+}
+
+.button:hover {
+  background-color: #45a049; /* Темнее при наведении */
+  transform: translateY(-2px); /* Поднимает кнопку при наведении */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
+}
+
+.button:active {
+  transform: translateY(1px); /* Опускает кнопку при нажатии */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Уменьшенная тень при нажатии */
+}

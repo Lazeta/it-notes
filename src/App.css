@@ -1,11 +1,12 @@
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
 
 a {
   background-color: rgba(0, 102, 255, 0.856);
-  color:black;
+  color: black;
   padding: 0 5px;
 }
 
@@ -13,6 +14,7 @@ hr {
   border: none; /* Убираем стандартный бордер */
   height: 2px; /* Толщина линии */
   background-color: #6d9ac4; /* Цвет линии */
+  width: 100%;
 }
 
 .app-container {
@@ -24,14 +26,21 @@ hr {
   justify-content: flex-start; /* Выравнивание содержимого по верхнему краю */
 }
 
-.app-container hr {
-  margin-top: 30px;
-  margin-bottom: 0;
+.header {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.header {
-  width: 1200px;
-  margin: 0 auto;
+.line {
+  margin-top: 30px;
+  margin-bottom: 0;
+  width: 100%;
 }
 
 .pop-up-menu {
@@ -49,8 +58,24 @@ hr {
   margin-top: 0;
 }
 
-.material-list {
-  cursor: context-menu;
-  width: 1200px;
-  margin: 0 auto;
+.NoteForm {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.div1, .div2, .div3, .div4, .div5 {
+  min-width: 250px; /* Минимальная ширина для элементов */
+  width: 100%; /* Занимаем всю ширину колонки */
+}
+
+.parent input, textarea, select {
+  width: -webkit-fill-available;
 }
