@@ -354,27 +354,15 @@ export const Data = [
             },
             {
                 title: "SASS",
-                items: [{
-
-                }]
+                items: []
             },
             {
                 title: "SCSS",
-                items: [{
-
-                }]
+                items: []
             },
             {
                 title: "styled-components",
-                items: [{
-
-                }]
-            },
-            {
-                title: "SASS",
-                items: [{
-                    
-                }]
+                items: []
             },
         ]
     },
