@@ -1,10 +1,9 @@
-import { Data } from "./data/Data";
-export interface Note {
+export type types = {
     id: number;
-    title: string;
+    title:string;
     content: string;
     category: string;
-    subcategory?: string;
-    subtopics?: string;
-    type: 'article' | 'link' | 'video' | 'code' | 'site' | 'notes';
+    subcategory: string;
+    subtopics: string;
+    type: 'article' | 'link' | 'image' | 'video' | 'code' | 'site' | 'notes';
 }
