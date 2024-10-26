@@ -1,10 +1,10 @@
 button {
   width: max-content;
-  background-color: #4caf50; /* Зеленый цвет фона */
+  background-color: #4d4d61; /* Зеленый цвет фона */
   color: white; /* Цвет текста */
   border: none; /* Без рамки */
   border-radius: 5px; /* Закругленные углы */
-  padding: 12px 20px; /* Отступы */
+  padding: 12px 30px; /* Отступы */
   font-size: 16px; /* Размер шрифта */
   cursor: pointer; /* Указатель при наведении */
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Плавные переходы */
@@ -12,7 +12,7 @@ button {
 }
 
 .button:hover {
-  background-color: #45a049; /* Темнее при наведении */
+  background-color: #2ba7bd; /* Темнее при наведении */
   transform: translateY(-2px); /* Поднимает кнопку при наведении */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
 }
