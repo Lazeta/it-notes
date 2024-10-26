@@ -13,7 +13,6 @@ hr {
   border: none; /* Убираем стандартный бордер */
   height: 2px; /* Толщина линии */
   background-color: #6d9ac4; /* Цвет линии */
-  margin: 20px 0; /* Отступы сверху и снизу */
 }
 
 .app-container {
@@ -26,7 +25,7 @@ hr {
 }
 
 .app-container hr {
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 0;
 }
 
@@ -37,6 +36,17 @@ hr {
 
 .pop-up-menu {
   margin: 2rem auto;
+  width: 90%;
+  max-width: 1000px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.pop-up-menu h1 {
+  text-align: center;
+  margin-top: 0;
 }
 
 .material-list {

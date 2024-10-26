@@ -1,5 +1,3 @@
-import React from "react";
-
 const Sections = ({ categoryItems }) => {
     return (
         <div className="category-list">
@@ -12,12 +10,22 @@ const Sections = ({ categoryItems }) => {
                         ) : (
                             <>
                                 {category.type === "link" && category.url ? (
-                                    <a href={category.url} target="_blank" rel="noopener noreferrer">
+                                    <a href={category.url} target="_blank" rel="noopener noreferrer"
+                                        style={{
+                                            width: "50%"
+
+                                        }}
+                                    >
                                         {category.description}
                                     </a>
                                 ) : category.type === "image" && category.url ? (
                                     <div>
-                                        <p>{category.description}</p>
+                                        <p style={{
+                                            width: "50%"
+
+                                        }}>
+                                            {category.description}
+                                        </p>
                                         <img
                                             src={category.url}
                                             alt={category.title}

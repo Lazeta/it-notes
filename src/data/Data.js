@@ -16,7 +16,6 @@
 export const Data = [
     {
         title: "React",
-        items: [],
         subtopics: [
             {
                 title: "React JS",
