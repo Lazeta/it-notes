@@ -144,8 +144,7 @@ export const Data = [
                 title: "Methods",
                 items: [
                     {
-                        title: "Arrays",
-                        description: "Array methods and functions.",
+                        title: "Array methods and functions",
                         subtopics: [ // Подкатегории для методов массива
                             {
                                 title: "Array Methods",

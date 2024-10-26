@@ -92,7 +92,7 @@ const FilterMenu = ({ setFilter }) => {
         </div>
       )}
 
-      {/* Используем компонент Sections для отображения материалов */}
+      {/* Используем компонент Sections для отображения фильтрованного содержимого данных */}
       <Sections categoryItems={categoryItems} />
     </div>
   );

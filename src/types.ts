@@ -3,7 +3,6 @@ export type types = {
     title:string;
     content: string;
     category: string;
-    subcategory: string;
     subtopics: string;
     type: 'article' | 'link' | 'image' | 'video' | 'code' | 'site' | 'notes';
 }

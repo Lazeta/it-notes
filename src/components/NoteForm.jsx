@@ -1,16 +1,11 @@
 import { useState } from "react";
-import { Note } from "../types";
 import Button from "./buttons/Button";
-
-// interface NoteFormProps {
-//   addNote: (note: Note) => void;
-// }
 
 export const NoteForm = ({ addNote }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [category, setCategory] = useState("");
-  const [type, setType] = useState("article");
+  const [type, setType] = useState("notes");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,7 +31,7 @@ export const NoteForm = ({ addNote }) => {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           required
-          
+
         />
       </div>
       <div className="div2">
@@ -45,7 +40,7 @@ export const NoteForm = ({ addNote }) => {
           value={content}
           onChange={(e) => setContent(e.target.value)}
           required
-          
+
         />
       </div>
       <div className="div3">
@@ -63,16 +58,17 @@ export const NoteForm = ({ addNote }) => {
           onChange={(e) =>
             setType(e.target.value)
           }>
-          <option value="article">Article</option>
-          <option value="link">Links</option>
-          <option value="video">Video</option>
-          <option value="code">Code</option>
-          <option value="site">Site</option>
           <option value="notes">Notes</option>
+          <option value="article">Article</option>
+          <option value="site">Site</option>
+          <option value="link">Links</option>
+          <option value="code">Code</option>
+          <option value="image">Image</option>
+          <option value="video">Video</option>
         </select>
       </div>
       <div className="div5">
-        <Button type="submit"/>
+        <Button type="submit" />
       </div>
     </form>
   );
