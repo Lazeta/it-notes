@@ -6,60 +6,56 @@ export const data = {
       children: [
         {
           title: "React JS",
-          description: "Learn about React JS.",
           children: [
             {
               title: "Introduction to React JS",
               type: "link",
               url: "https://it-shpora.pp.ua/category/react/",
-              description: "Learn about React JS.",
             },
             {
               title: "Advanced React JS",
               type: "link",
               url: "https://devdocs.io/react/",
-              description: "https://devdocs.io/react/",
             },
             {
               title: "Storybook",
               type: "link",
               url: "https://storybook.js.org/docs/writing-stories",
-              description: "How to write stories",
             },
             {
               title: "React JS Drag to Select",
               type: "link",
               url: "https://www.joshuawootonn.com/react-drag-to-select",
-              description:
-                "This past summer, I led a project at Makeswift to rework our file manager. Makeswift is a website builder and many of our users have hundreds of files. To manage hundreds of anything you need bulk operations, but bulk operations aren't helpful if selecting things is cumbersome, so drag selection was a key part of my vision for making Makeswift's file manager feel native.",
             },
           ],
         },
         {
           title: "React TS",
-          description: "Learn about React TypeScript.",
           children: [
             {
               title: "Introduction to React TypeScript",
-              description: "Basics of React Typescript.",
+              type: "link",
+              url: "https://it-shpora.pp.ua/category/react-typescript/",
             },
             {
               title: "Advanced React Typescript",
-              description: "Deep dive into React Typescript.",
+              type: "link",
+              url: "https://reactjs.org/docs/getting-started",
             },
           ],
         },
         {
           title: "React Native",
-          description: "Learn about React Native.",
           children: [
             {
               title: "Introduction to React Native",
-              description: "Basics React Native.",
+              type: "link",
+              url: "https://it-shpora.pp.ua/category/react-native/",
             },
             {
               title: "Advanced React Native",
-              description: "Deep dive into React Native.",
+              type: "link",
+              url: "https://reactnative.dev/",
             },
           ],
         },
@@ -70,10 +66,17 @@ export const data = {
       children: [
         {
           title: "Vue JS",
-          description: "Learn about Vue JS.",
           children: [
-            { title: "Introduction to React", description: "Basics of Vue." },
-            { title: "Advanced React", description: "Deep dive into Vue." },
+            {
+              title: "Introduction to Vue JS",
+              type: "link",
+              url: "https://it-shpora.pp.ua/category/vue-js/",
+            },
+            {
+              title: "Advanced React",
+              type: "link",
+              url: "https://it-shpora.pp.ua/category/vue-js/",
+            },
           ],
         },
       ],
@@ -83,15 +86,16 @@ export const data = {
       children: [
         {
           title: "Angular JS",
-          description: "Learn about Angular JS.",
           children: [
             {
               title: "Introduction to Angular JS",
-              description: "Basics of Angular JS.",
+              type: "link",
+              url: "https://it-shpora.pp.ua/category/angular-js/",
             },
             {
               title: "Advanced Angular JS",
-              description: "Deep dive into Angular JS.",
+              type: "link",
+              url: "https://it-shpora.pp.ua/category/angular-js/",
             },
           ],
         },
@@ -102,15 +106,16 @@ export const data = {
       children: [
         {
           title: "Node.js with Express",
-          description: "Learn about Node.js and Express.",
           children: [
             {
               title: "Introduction to Node.js",
-              description: "Basics of Node.js.",
+              type: "link",
+              url: "https://it-shpora.pp.ua/category/node-js/",
             },
             {
               title: "Advanced Node.js",
-              description: "Deep dive into Node.js.",
+              type: "link",
+              url: "https://it-shpora.pp.ua/category/node-js/",
             },
           ],
         },
@@ -121,17 +126,24 @@ export const data = {
       children: [
         {
           title: "ES6",
-          description: "Learn about ES6 features in JavaScript.",
-          children: [{ title: "Basics of ES6.", type: "text" }],
+          children: [
+            {
+              title: "Basics of ES6.",
+              type: "text",
+            },
+          ],
         },
         {
           title: "Asynchronous Programming",
-          description: "Learn about callbacks, promises, and async/await.",
-          children: [{ title: "Basics of async programming.", type: "text" }],
+          children: [
+            {
+              title: "Basics of async programming.",
+              type: "text",
+            },
+          ],
         },
         {
           title: "JavaScript Frameworks",
-          description: "Overview of popular JavaScript frameworks.",
           children: [
             {
               title: "Learn more about frameworks",
@@ -142,7 +154,6 @@ export const data = {
         },
         {
           title: "DOM Manipulation",
-          description: "Learn about manipulating the DOM with JavaScript.",
           children: [
             {
               title: "Learn more about DOM Manipulation.",
@@ -376,7 +387,6 @@ export const data = {
               title: "CSS Grid Layout",
               type: "image",
               url: "https://i.pinimg.com/enabled_hi/564x/54/e9/87/54e98761c2348545244bf25487c5be23.jpg",
-              description: "cheat sheet for CSS grid layout",
             },
           ],
         },
