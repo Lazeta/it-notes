@@ -1,56 +1,64 @@
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-a {
-  background-color: rgba(0, 102, 255, 0.856);
-  color:black;
-  padding: 0 5px;
-}
-
-hr {
-  border: none; /* Убираем стандартный бордер */
-  height: 2px; /* Толщина линии */
-  background-color: #6d9ac4; /* Цвет линии */
-}
-
-.app-container {
+.App {
+  text-align: center;
   padding: 10px;
-  background-color: #acccc0e3; /* Цвет фона */
-  min-height: 100vh; /* Минимальная высота 100% от высоты экрана */
+  background-color: #acccc0e3;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Выравнивание содержимого по верхнему краю */
-}
-
-.app-container hr {
-  margin-top: 30px;
-  margin-bottom: 0;
+  justify-content: flex-start; 
 }
 
 .header {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.pop-up-menu {
-  margin: 2rem auto;
-  width: 90%;
+  width: 100%;
   max-width: 1000px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-.pop-up-menu h1 {
-  text-align: center;
-  margin-top: 0;
-}
-
-.material-list {
-  cursor: context-menu;
-  width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.line {
+  margin-top: 30px;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.NoteForm {
+  width: 100%;
+  max-width: 1000px;
+}
+
+span {
+  font-size: 1.2rem;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #6d9ac4;
+  width: 100%;
+}
+
+a {
+  color: rgba(8, 152, 235, 0.685);
+  padding: 0 5px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.div1, .div2, .div3, .div4, .div5 {
+  min-width: 250px;
+  width: 100%;
+}
+
+.parent input, textarea, select {
+  width: -webkit-fill-available;
 }

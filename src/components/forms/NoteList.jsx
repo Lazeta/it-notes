@@ -1,7 +1,3 @@
-// interface NoteListProps {
-//   notes: Note[];
-// }
-
 const NoteList = ({ notes }) => {
   return (
     <div>

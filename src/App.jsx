@@ -1,12 +1,11 @@
-import "./App.css";
-import { useEffect, useState } from "react";
-import { NoteForm } from "./components/NoteForm";
-import FilterMenu from "./components/FilterMenu";
-import NoteList from "./components/NoteList";
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import { NoteForm } from './components/forms/NoteForm';
+import { data } from './data/Data';
+import Categories from './components/categories/Categories';
 
-const App = () => {
+function App() {
   const [notes, setNotes] = useState([]);
-  const [filter, setFilter] = useState(typeof String || null);
 
   // Загрузка заметок из sessionStorage при монтировании компонента
   useEffect(() => {
@@ -25,21 +24,20 @@ const App = () => {
     setNotes([...notes, note]);
   };
 
-  const filteredNotes = filter
-    ? notes.filter((note) => note.category === filter)
-    : notes;
-
   return (
-    <div className="app-container">
+    <div className="App">
       <div className="header">
         <h2>Programming Notes</h2>
         <NoteForm addNote={addNote} />
-        <hr></hr>
       </div>
-      <FilterMenu setFilter={setFilter} />
-      <NoteList notes={filteredNotes} />
+      <div className="line">
+        <hr />
+      </div>
+      <div style={{ width: "60%", margin: "0 auto" }}>
+        <Categories data={data} />
+      </div>
     </div>
   );
-};
+}
 
 export default App;
