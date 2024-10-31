@@ -1,5 +1,5 @@
-import { useState } from "react";
-import Button from "./buttons/Button";
+import React, { useState } from "react";
+import Button from "../buttons/Button";
 
 export const NoteForm = ({ addNote }) => {
   const [title, setTitle] = useState("");
@@ -68,7 +68,7 @@ export const NoteForm = ({ addNote }) => {
         </select>
       </div>
       <div className="div5">
-        <Button type="submit" />
+        <Button type="submit" title="Add note" />
       </div>
     </form>
   );

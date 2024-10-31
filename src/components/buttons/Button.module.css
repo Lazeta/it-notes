@@ -1,23 +1,23 @@
 button {
   width: max-content;
-  background-color: #4d4d61; /* Зеленый цвет фона */
-  color: white; /* Цвет текста */
-  border: none; /* Без рамки */
-  border-radius: 5px; /* Закругленные углы */
-  padding: 12px 30px; /* Отступы */
-  font-size: 16px; /* Размер шрифта */
-  cursor: pointer; /* Указатель при наведении */
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Плавные переходы */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень кнопки */
+  background-color: #4d4d61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .button:hover {
-  background-color: #2ba7bd; /* Темнее при наведении */
-  transform: translateY(-2px); /* Поднимает кнопку при наведении */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
+  background-color: #2ba7bd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .button:active {
-  transform: translateY(1px); /* Опускает кнопку при нажатии */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Уменьшенная тень при нажатии */
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
