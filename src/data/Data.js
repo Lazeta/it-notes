@@ -298,8 +298,8 @@ export const data = {
                 },
                 {
                   title: "Visual representation of array methods.",
-                  type: "image",
-                  url: "https://www.example.com/path/to/image.jpg",
+                  type: "link",
+                  url: "https://medium.com/@sewolpe/visualizing-javascript-array-methods-7babf560f7be",
                 },
               ],
             },
@@ -326,7 +326,8 @@ export const data = {
               children: [
                 {
                   title: "empty",
-                  type: "text",
+                  type: "video",
+                  url: "https://www.youtube.com/embed/lo7o91qLzxc",
                 },
               ],
             },
