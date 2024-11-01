@@ -33,7 +33,7 @@ function App() {
       <div className="line">
         <hr />
       </div>
-      <div style={{ width: "60%", margin: "0 auto" }}>
+      <div style={{ maxWidth: "1024px", width: "100%", margin: "0 auto", padding: 0 }}>
         <Categories data={data} />
       </div>
     </div>

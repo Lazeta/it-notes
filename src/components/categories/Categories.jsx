@@ -22,15 +22,16 @@ export default function Categories({ data }) {
 
 
   return (
-    <div
+    <div       
       style={{
-        padding: '10px 10px',
         border: '2px solid gray',
-        width: '102%',
-        margin: '0 auto',
+        borderRadius: '8px',
+        width: '94%',
+        margin: '7px auto',
         textAlign: 'justify',
+        padding: '0 10px',
         backgroundColor: '#f5f5f5',
-      }}>
+    }}>
       {data.type === "text" ? (
         <p
           style={{
@@ -71,12 +72,13 @@ export default function Categories({ data }) {
         <button onClick={expand}
           style={{
             cursor: 'pointer',
-            padding: `10px 40px`
+            padding: `8px 30px`,
+            marginLeft: '-10px',
           }}>{data.title}</button>
       )}
 
       {isVisible && filteredChildren.length > 0 && (
-        <div style={{ padding: '5px 10px', marginBottom: 10 }}>
+        <div style={{ padding: '5px 0', marginTop: '20px' }}>
           {filteredChildren.map((child, index) => (
             <div key={index}>
               <Categories data={child} />
