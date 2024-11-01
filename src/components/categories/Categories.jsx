@@ -22,7 +22,7 @@ export default function Categories({ data }) {
 
 
   return (
-    <div       
+    <div
       style={{
         border: '2px solid gray',
         borderRadius: '8px',
@@ -31,7 +31,7 @@ export default function Categories({ data }) {
         textAlign: 'justify',
         padding: '0 10px',
         backgroundColor: '#f5f5f5',
-    }}>
+      }}>
       {data.type === "text" ? (
         <p
           style={{
@@ -39,7 +39,13 @@ export default function Categories({ data }) {
             maxWidth: '100%',
             padding: '0 10px',
             textAlign: 'justify',
-          }}>{data.title}</p>
+          }}>{data.title.split('\n').map((line, index) => (
+            <span key={index}>
+              {line}
+              <br />
+            </span>
+          ))}
+        </p>
       ) : data.type === "link" ? (
         <a href={data.url} target="_blank" rel="noopener noreferrer"
           style={{
@@ -56,8 +62,8 @@ export default function Categories({ data }) {
             objectFit: 'cover',
           }} />
       ) : data.type === "video" ? (
-        <iframe 
-          src={data.url} 
+        <iframe
+          src={data.url}
           title={data.title}
           frameBorder="0"
           allowFullScreen
