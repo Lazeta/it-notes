@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Button from '../buttons/Button';
-import { transform } from 'typescript';
 
 export default function Categories({ data }) {
   const [isVisible, setIsVisible] = useState(false);
