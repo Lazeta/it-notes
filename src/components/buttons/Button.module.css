@@ -1,4 +1,4 @@
-button {
+.button {
   width: max-content;
   background-color: #4d4d61;
   color: white;
@@ -13,11 +13,11 @@ button {
 
 .button:hover {
   background-color: #2ba7bd;
-  transform: translateY(-2px);
+  transform: translateX(3px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .button:active {
-  transform: translateY(1px);
+  transform: translateX(0px) scale(1);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }

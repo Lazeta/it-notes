@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import Button from '../buttons/Button';
+import { transform } from 'typescript';
 
 export default function Categories({ data }) {
   const [isVisible, setIsVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
+
 
   const expand = () => {
     setIsVisible(!isVisible);
@@ -75,12 +78,13 @@ export default function Categories({ data }) {
             objectFit: 'cover',
           }} />
       ) : (
-        <button onClick={expand}
+        <Button onClick={expand} type="button" title={data.title}
           style={{
             cursor: 'pointer',
-            padding: `8px 30px`,
+            padding: '8px 30px',
             marginLeft: '-10px',
-          }}>{data.title}</button>
+          }}
+        />
       )}
 
       {isVisible && filteredChildren.length > 0 && (
