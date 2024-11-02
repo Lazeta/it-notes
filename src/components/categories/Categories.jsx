@@ -74,6 +74,33 @@ export default function Categories({ data }) {
             maxHeight: '500px',
             objectFit: 'cover',
           }} />
+      ) : data.type === "code" ? (
+        <>
+          <p
+            style={{
+              maxWidth: '100%',
+              padding: '0 10px',
+              textAlign: 'justify',
+            }}>{data.title.split('\n').map((line, index) => (
+              <span key={index}>{line}<br /></span>
+            ))}
+          </p>
+          <div
+            style={{
+              border: '1px solid #ccc',
+              borderRadius: '4px',
+              padding: '5px',
+              backgroundColor: '#f5f5f5',
+              fontFamily: 'monospace',
+              whiteSpace: 'pre-wrap',
+              overflow: 'auto',
+            }}
+          >
+            <pre>
+              <code>{data.code}</code>
+            </pre>
+          </div>
+        </>
       ) : (
         <Button onClick={expand} type="button" title={data.title}
           style={{
@@ -84,19 +111,19 @@ export default function Categories({ data }) {
         />
       )}
 
-        {isVisible && filteredChildren.length > 0 && (
-          <div
-            style={{
-              padding: '5px 0',
-              marginTop: '20px',
-            }}>
-            {filteredChildren.map((child, index) => (
-              <div key={index}>
-                <Categories data={child} />
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+      {isVisible && filteredChildren.length > 0 && (
+        <div
+          style={{
+            padding: '5px 0',
+            marginTop: '20px',
+          }}>
+          {filteredChildren.map((child, index) => (
+            <div key={index}>
+              <Categories data={child} />
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
