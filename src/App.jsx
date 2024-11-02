@@ -34,7 +34,7 @@ function App() {
         <hr />
         <br />
       </div>
-      <div style={{ maxWidth: "1024px", width: "100%", margin: "0 auto", padding: 0 }}>
+      <div style={{ maxWidth: "1024px", width: "100%", margin: "0 auto", padding: 0, maxHeight: "auto" }}>
         <Categories data={data} />
       </div>
     </div>

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from '../buttons/Button';
 
 export default function Categories({ data }) {
   const [isVisible, setIsVisible] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm] = useState('');
 
 
   const expand = () => {
@@ -19,10 +19,11 @@ export default function Categories({ data }) {
       return matchesTitle || hasVisibleChildren;
     });
   }
-
   const filteredChildren = filterChildren(data.children);
 
+  // ________________________________________________________________________________________________
 
+  // ________________________________________________________________________________________________
   return (
     <div
       style={{
@@ -42,10 +43,7 @@ export default function Categories({ data }) {
             padding: '0 10px',
             textAlign: 'justify',
           }}>{data.title.split('\n').map((line, index) => (
-            <span key={index}>
-              {line}
-              <br />
-            </span>
+            <span key={index}>{line}<br /></span>
           ))}
         </p>
       ) : data.type === "link" ? (
@@ -86,15 +84,19 @@ export default function Categories({ data }) {
         />
       )}
 
-      {isVisible && filteredChildren.length > 0 && (
-        <div style={{ padding: '5px 0', marginTop: '20px' }}>
-          {filteredChildren.map((child, index) => (
-            <div key={index}>
-              <Categories data={child} />
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  )
+        {isVisible && filteredChildren.length > 0 && (
+          <div
+            style={{
+              padding: '5px 0',
+              marginTop: '20px',
+            }}>
+            {filteredChildren.map((child, index) => (
+              <div key={index}>
+                <Categories data={child} />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+  );
 }
