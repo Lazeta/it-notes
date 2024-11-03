@@ -62,21 +62,26 @@ export default function Categories({ data }) {
             objectFit: 'cover',
           }} />
       ) : data.type === "video" ? (
-        <iframe
-          src={data.url}
-          title={data.title}
-          frameBorder="0"
-          allowFullScreen
-          style={{
-            margin: '0',
-            height: '100%',
-            maxWidth: '100%',
-            maxHeight: '500px',
-            objectFit: 'cover',
-          }} />
+        <>
+          <h3 style={{ margin: '0', }}>{data.title}</h3>
+          {data.description && <p>{data.description}</p>}
+          <iframe
+            src={data.url}
+            title={data.title}
+            frameBorder="0"
+            allowFullScreen
+            style={{
+              margin: '0',
+              height: '100%',
+              maxWidth: '100%',
+              maxHeight: '500px',
+              objectFit: 'cover',
+            }} />
+        </>
       ) : data.type === "code" ? (
         <>
-          <p
+          {data.title && 
+          <h3
             style={{
               maxWidth: '100%',
               padding: '0 10px',
@@ -84,7 +89,8 @@ export default function Categories({ data }) {
             }}>{data.title.split('\n').map((line, index) => (
               <span key={index}>{line}<br /></span>
             ))}
-          </p>
+          </h3>}
+          {data.description && <p>{data.description}</p>}
           <div
             style={{
               border: '1px solid #ccc',
@@ -100,6 +106,11 @@ export default function Categories({ data }) {
               <code>{data.code}</code>
             </pre>
           </div>
+          {data.link && data.url &&
+            <a href={data.url} target="_blank" rel="noopener noreferrer">
+              {data.link}
+            </a>
+          }
         </>
       ) : (
         <Button onClick={expand} type="button" title={data.title}

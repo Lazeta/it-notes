@@ -343,6 +343,26 @@ export const data = {
             },
           ],
         },
+        {
+          title: "Page Visibility API",
+          children: [
+            {
+              title: "Реализация паузы/старта видео в зависимости от состояния видимости страницы",
+              description: `Page Visibility API — это API браузера, который проверяет видимость страницы. Он помогает определять, скрыта или свернута текущая страница, и тем самым позволяет контролировать ее поведение и использование ресурсов`,
+              type: "code",
+              code: `const video = document.querySelector('video');
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    video.pause();
+  } else {
+    video.play();
+  }
+});`,
+              link: "Подробнее — MDN",
+              url: "https://medium.com/nuances-of-programming/%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-page-visibility-api-fca074a5b113",
+            }
+          ]
+        },
       ],
     },
     {
@@ -475,6 +495,10 @@ export const data = {
               `,
               type: "code",
               code: `
+.article-content {
+  columns: auto 10rem;
+}
+
 .article {
     // Шорткат columns даёт возможность указать значения для 
     // свойств column-count и column-width одновременно, задав 
@@ -489,6 +513,11 @@ export const data = {
   }
 }`,
             },
+            {
+              title: "HTML and CSS Slider",
+              type: "video",
+              url: "https://www.youtube.com/embed/gVxyTOPPEPc",
+            }
           ],
         },
         {
@@ -557,6 +586,26 @@ export const data = {
           ],
         },
       ],
+    },
+    {
+      title: "HTML",
+      children: [
+        {
+          title: "Basic of HTML",
+          type: "link",
+          url: "https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics",
+        },
+        {
+          title: `Атрибут for: 
+          Он связывает элемент <label> с соответствующим полем <input>, позволяя пользователям 
+          кликать по тексту метки для выбора или фокуса на связанном элементе управления.
+          p.s. Значение атрибута for должно совпадать с id связанного элемента, что 
+          улучшает доступность и удобство взаимодействия с формами.`,
+          type: "code",
+          code: `<label for="Number">Ваше любимое число:</label>
+<input id="number">`,
+        }
+      ]
     },
   ],
 };
