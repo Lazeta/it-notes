@@ -47,13 +47,16 @@ export default function Categories({ data }) {
           ))}
         </p>
       ) : data.type === "link" ? (
-        <a href={data.url} target="_blank" rel="noopener noreferrer"
-          style={{
-            margin: '0',
-            maxWidth: '100%',
-            padding: '0 10px',
-            textAlign: 'justify',
-          }}>{data.title}</a>
+        <>
+          {data.description && <p>{data.description}</p>}
+          <a href={data.url} target="_blank" rel="noopener noreferrer"
+            style={{
+              margin: '0',
+              maxWidth: '100%',
+              padding: '0 10px',
+              textAlign: 'justify',
+            }}>{data.title}</a>
+        </>
       ) : data.type === "image" ? (
         <img src={data.url} alt={data.title}
           style={{
@@ -80,16 +83,16 @@ export default function Categories({ data }) {
         </>
       ) : data.type === "code" ? (
         <>
-          {data.title && 
-          <h3
-            style={{
-              maxWidth: '100%',
-              padding: '0 10px',
-              textAlign: 'justify',
-            }}>{data.title.split('\n').map((line, index) => (
-              <span key={index}>{line}<br /></span>
-            ))}
-          </h3>}
+          {data.title &&
+            <h3
+              style={{
+                maxWidth: '100%',
+                padding: '0 10px',
+                textAlign: 'justify',
+              }}>{data.title.split('\n').map((line, index) => (
+                <span key={index}>{line}<br /></span>
+              ))}
+            </h3>}
           {data.description && <p>{data.description}</p>}
           <div
             style={{
