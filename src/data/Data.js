@@ -792,6 +792,16 @@ document.addEventListener('visibilitychange', () => {
             },
           ],
         },
+        {
+          title: "PyCharm",
+          children: [
+            {
+              title: "PyCharm Справка по горячим клавишам",
+              type: "link",
+              url: "https://hotkeycheatsheet.com/ru/hotkey-cheatsheet/pycharm",
+            },
+          ],
+        },
       ],
     },
     {
