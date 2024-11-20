@@ -173,6 +173,30 @@ export const data = {
           ],
         },
         {
+          title: "Recursion",
+          children: [
+            {
+              title: "How to Use Recursion in React",
+              type: "link",
+              url: "https://www.freecodecamp.org/news/how-to-use-recursion-in-react/",
+            },
+          ],
+        },
+        {
+          title: "Destructuring objects in JS",
+          children: [
+            {
+              title: "",
+              description:
+                "Деструктуризация объектов позволяет извлекать значения из объекта и присваивать их переменным в краткой форме",
+              type: "code",
+              code: `const person = { name: 'Alice', age: 25 };
+const { name, age } = person;
+console.log(name, age);`,
+            },
+          ],
+        },
+        {
           title: "Methods",
           children: [
             {
@@ -241,7 +265,7 @@ export const data = {
                   type: "text",
                 },
                 {
-                  title: `13.filter() => создает новый массив из всех элементов соответствующих
+                  title: `13.filter() => возвращает новый массив из всех элементов соответствующих
                             заданному условию.`,
                   type: "text",
                 },
@@ -307,7 +331,87 @@ export const data = {
               title: "Strings Methods",
               children: [
                 {
-                  title: "empty",
+                  title: "1.toUpperCase() => перевод строки в верхний регистр",
+                  type: "text",
+                },
+                {
+                  title: "2.toLowerCase() => перевод строки в нижний регистр",
+                  type: "text",
+                },
+                {
+                  title: "3.trim() => удаляет пробелы в начале и конце строки",
+                  type: "text",
+                },
+                {
+                  title: "4.length => получаем длину строки",
+                  type: "text",
+                },
+                {
+                  title: `5.includes() => проверяет на наличие в строке элемента; если элемент найден, то возвращает true.`,
+                  type: "text",
+                },
+                {
+                  title: `6.spread() => превращает массив в строки с помощью специальных разделителей ... сохраняет между ними границу или по умолчанию между строками образуются пробелы.`,
+                  type: "text",
+                },
+                {
+                  title: `7.repeat() => повторяет строку указанное количество раз.`,
+                  type: "text",
+                },
+                {
+                  title: `8.split() => разбивает строку на массив подстроки по указанному разделителю. Возвращает новый массив, который содержит подстроки полученные в ходе разбиения.`,
+                  type: "text", 
+                },
+                {
+                  title: `9.startsWith() => проверяет на наличие в начале строки указанного элемента. Возвращает true или false`,
+                  type: "text",
+                },
+                {
+                  title: `10.endsWith() => проверяет на наличие в конце строки указанного элемента. Возвращает true или false`,
+                  type: "text",
+                },
+                {
+                  title: `11.slice() => вырезает один или несколько элементов внутри строки через указатель аргумента начала вырезания и второй аргумент где закончить срез; принимает отрицательные значения.`,
+                  type: "text",
+                },
+                {
+                  title: `12.substring() => возвращает вырезанную часть строки, но не принимает отрицательные числа в качестве аргументов.`,
+                  type: "text",
+                },
+                {
+                  title: `13.concat() => конкатенация между собой строк в одну строку`,
+                  type: "text",
+                },
+                {
+                  title: `14.charCodeAt() => возвращает значение символа по Юникод.`,
+                  type: "text",
+                },
+                {
+                  title: `15.charAt() => возвращает символ по Юникод.`,
+                  type: "text",
+                },
+                {
+                  title: `16.trimStart() => удаляет пробелы в начале строки.`,
+                  type: "text",
+                },
+                {
+                  title: `17.trimEnd() => удаляет пробелы в конце строки.`,
+                  type: "text",
+                },
+                {
+                  title: `18.padStart() => добавляет символы в начале строки, чтобы результирующая строка получила указанную длину; по умолчанию метод возвращает пустую строку до указанной длины, но может принимать и другие символы указанные во втором аргументе.`,
+                  type: "text",
+                },
+                {
+                  title: `19.padEnd() => добавляет символы в конце строки, чтобы результирующая строка получила указанную длину.`,
+                  type: "text",
+                },
+                {
+                  title: `20.indexOf() => возвращает индекс первого вхождения указанного элемента в строку. Если элемент не найден, возвращает -1.`,
+                  type: "text",
+                },
+                {
+                  title: `21.at(-1) или at() => получает последний символ строки или символ согласно индексу слева на право, так же как при отрицательном значении принимает символ с право на лево.`,
                   type: "text",
                 },
               ],
@@ -316,20 +420,223 @@ export const data = {
               title: "Numbers Methods",
               children: [
                 {
-                  title: "empty",
+                  title: "1.toFixed() => форматирует число с использованием записи с фиксированной запятой.",
                   type: "text",
                 },
+                {
+                  title: "2.parseFloat() => принимает строку в качестве аргумента и возвращает число с плавающей точной.",
+                  type: "text",
+                },
+                {
+                  title: "3.parseInt() => принимает строку в качестве аргумента и возвращает целое число в соответствии с указанной системой счисления.",
+                  type: "text",
+                },
+                {
+                  title: "4.Number() => преобразовывает строку в числовой тип данных.",
+                  type: "text",
+                },
+                {
+                  title: "5.Math.sqrt() => возвращает квадратный корень числа.",
+                  type: "text",
+                },
+                {
+                  title: "6.Math.cbrt() => возвращает кубический корень числа.",
+                  type: "text",
+                },
+                {
+                  title: "7.Math.abs() => возвращает абсолютное значение числа.",
+                  type: "text", 
+                },
+                {
+                  title: "8.Math.pow() => возвращает число, возведённое в степень.",
+                }
               ],
             },
             {
               title: "Object Methods",
               children: [
                 {
-                  title: "empty",
-                  type: "video",
-                  url: "https://www.youtube.com/embed/lo7o91qLzxc",
+                  title: "1.Object.keys(obj): Возвращает массив строк, содержащий имена собственных перечисляемых свойств объекта.",
+                  type: "text",
                 },
+                {
+                  title: "2.Object.values(obj): Возвращает массив значений собственных перечисляемых свойств объекта.",
+                  type: "text",
+                },
+                {
+                  title: "3.Object.create(proto, propertiesObject): Создает новый объект с указанным прототипом и свойствами.",
+                  type: "text",
+                },
+                {
+                  title: "4.Object.freeze(obj): Замораживает объект, предотвращая добавление, удаление или изменение его свойств.",
+                  type: "text",
+                },
+                {
+                  title: "5.Object.assign(target, ...sources): Копирует значения всех собственных перечисляемых свойств из одного или более источников в целевой объект и возвращает его.",
+                  type: "text",
+                },
+                {
+                  title: "6.Object.entries(obj): Возвращает массив пар [ключ, значение] для собственных перечисляемых свойств объекта.",
+                  type: "text",
+                },
+                {
+                  title: "7.Object.seal(obj): Замораживает объект, предотвращая добавление, удаление или изменение его свойств.",
+                  type: "text",
+                },
+                {
+                  title: "8.Object.is(value1, value2): Определяет, являются ли два значения одним и тем же значением.",
+                  type: "text",
+                }
               ],
+            },
+            {
+              title: "Cycle",
+              children: [
+                {
+                  title: "1.while => повторяет блок кода до тех пор, пока не выполнится условие.",
+                  type: "text",
+                },
+                {
+                  title: "2.do while => повторяет блок кода до тех пор, пока не выполнится условие. После чего выполняется блок кода.",
+                  type: "text",
+                },
+                {
+                  title: "3.for => повторяет блок кода определённое количество раз.",
+                  type: "text",
+                },
+                {
+                  title: "4.for of => повторяет блок кода для каждого элемента в массиве.",
+                  type: "text",
+                },
+                {
+                  title: "5.for in => повторяет блок кода для каждого свойства в объекте.",
+                  type: "text",
+                },
+                {
+                  title: "6.break => прерывает выполнение цикла.",
+                  type: "text",
+                },
+                {
+                  title: "7.continue => прерывает текущую итерацию цикла и переходит к следующей.",
+                  type: "text",
+                },
+              ]
+            },
+            {
+              title: "work with JSON",
+              children: [
+                {
+                  title: `JSON.stringify(value, replacer, space): Преобразует значение в строку JSON.`,
+                  type: "text",
+                },
+                {
+                  title: `JSON.parse(text, reviver): Преобразует строку JSON в значение.`,
+                  type: "text",
+                },
+              ]
+            }
+          ],
+        },
+        {
+          title: "Page Visibility API",
+          children: [
+            {
+              title:
+                "Реализация паузы/старта видео в зависимости от состояния видимости страницы",
+              description: `Page Visibility API — это API браузера, который проверяет видимость страницы. Он помогает определять, скрыта или свернута текущая страница, и тем самым позволяет контролировать ее поведение и использование ресурсов`,
+              type: "code",
+              code: `const video = document.querySelector('video');
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    video.pause();
+  } else {
+    video.play();
+  }
+});`,
+              link: "Подробнее — MDN",
+              url: "https://medium.com/nuances-of-programming/%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-page-visibility-api-fca074a5b113",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Next.js",
+      children: [
+        {
+          title: "Next.js Crash Course Tutorial",
+          children: [
+            {
+              title: "#1 - Introduction & New Features",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=TJQbDPGzm0Y&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT",
+            },
+            {
+              title: "#2 - SSR & Server Components (theory)",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=YEG2_fSJswc&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=2",
+            },
+            {
+              title: "#3 - Pages & Routes",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=vwg4Wrk-kWE&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=3",
+            },
+            {
+              title: "#4 - Layouts & Links",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=R7A5vBDfZ18&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=4",
+            },
+            {
+              title: "#5 - Styles, Fonts & Images",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=oWUQQD97Rz0&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=5",
+            },
+            {
+              title: "#6 - Fetching & Revalidating Data",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=PAXWRgEo7Ns&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=6",
+            },
+            {
+              title: "#7 - Dynamic Segments (Params)",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=ZwajQ9ywgIU&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=7",
+            },
+            {
+              title: "#8 - Static Rendering",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=ihmyC4Ei2zY&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=8",
+            },
+            {
+              title: "#9 - Custom 404 Page",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=PbFH_VE1Iks&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=9",
+            },
+            {
+              title: "#10 - Loading UI & Suspense",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=Lzml9L3f4IM&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=10",
+            },
+            {
+              title: "#11 - Client Form Component",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=nSfu7sHPE9M&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=11",
+            },
+            {
+              title: "#12 - Building the App",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=Yi_zS8jSln8&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=12",
+            },
+          ],
+        },
+        {
+          title: "Routing",
+          children: [
+            {
+              title: "Learn more about routing",
+              description:
+                "The skeleton of every application is routing. This page will introduce you to the fundamental concepts of routing for the web and how to handle routing in Next.js.",
+              type: "link",
+              url: "https://nextjs.org/docs/app/building-your-application/routing#terminology",
             },
           ],
         },
@@ -389,6 +696,35 @@ export const data = {
               type: "image",
               url: "https://i.pinimg.com/enabled_hi/564x/54/e9/87/54e98761c2348545244bf25487c5be23.jpg",
             },
+            {
+              title: `⚡️ Мультиколонки:
+Основная идея мультиколонок заключается в том, что вы можете взять фрагмент содержимого и поместить его в несколько колонок, как в газете
+              `,
+              type: "code",
+              code: `
+.article-content {
+  columns: auto 10rem;
+}
+
+.article {
+    // Шорткат columns даёт возможность указать значения для 
+    // свойств column-count и column-width одновременно, задав 
+    // количество и ширину колонок
+    columns: 2 200px;
+    column-gap: 25px;
+  }
+  .title{
+    // Свойство column-span позволяет элементу растянуться 
+    // на несколько колонок
+    column-span: all;
+  }
+}`,
+            },
+            {
+              title: "HTML and CSS Slider",
+              type: "video",
+              url: "https://www.youtube.com/embed/gVxyTOPPEPc",
+            },
           ],
         },
         {
@@ -420,6 +756,71 @@ export const data = {
               url: "https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png",
             },
           ],
+        },
+      ],
+    },
+    {
+      title: "IDE",
+      children: [
+        {
+          title: "VS Code",
+          children: [
+            {
+              title: "Visual Studio Code Справка по горячим клавишам",
+              type: "link",
+              url: "https://hotkeycheatsheet.com/ru/hotkey-cheatsheet/vscode",
+            },
+          ],
+        },
+        {
+          title: "WebStorm",
+          children: [
+            {
+              title: "WebStorm Справка по горячим клавишам",
+              type: "link",
+              url: "https://hotkeycheatsheet.com/ru/hotkey-cheatsheet/webstorm",
+            },
+          ],
+        },
+        {
+          title: "Sublime Text 3",
+          children: [
+            {
+              title: "Sublime Text 3 Справка по горячим клавишам",
+              type: "link",
+              url: "https://hotkeycheatsheet.com/ru/hotkey-cheatsheet/sublime-text-3",
+            },
+          ],
+        },
+        {
+          title: "PyCharm",
+          children: [
+            {
+              title: "PyCharm Справка по горячим клавишам",
+              type: "link",
+              url: "https://hotkeycheatsheet.com/ru/hotkey-cheatsheet/pycharm",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: "HTML",
+      children: [
+        {
+          title: "Basic of HTML",
+          type: "link",
+          url: "https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics",
+        },
+        {
+          title: `Атрибут for: 
+          Он связывает элемент <label> с соответствующим полем <input>, позволяя пользователям 
+          кликать по тексту метки для выбора или фокуса на связанном элементе управления.
+          p.s. Значение атрибута for должно совпадать с id связанного элемента, что 
+          улучшает доступность и удобство взаимодействия с формами.`,
+          type: "code",
+          code: `<label for="Number">Ваше любимое число:</label>
+<input id="number">`,
         },
       ],
     },
