@@ -93,7 +93,11 @@ export default function Categories({ data }) {
                 <span key={index}>{line}<br /></span>
               ))}
             </h3>}
-          {data.description && <p>{data.description}</p>}
+          {data.description && (
+            <div 
+              dangerouslySetInnerHTML={{ __html: data.description }}
+            />
+          )}
           <div
             style={{
               border: '1px solid #ccc',

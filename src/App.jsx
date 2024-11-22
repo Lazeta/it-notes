@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import { NoteForm } from './components/forms/NoteForm';
 import { data } from './data/Data';
