@@ -724,6 +724,16 @@ document.addEventListener('visibilitychange', () => {
             },
           ],
         },
+        {
+          title: "Definitions",
+          children: [
+            {
+              title: "Reducers - чистая функция, которая принимает старый 'state' и 'action', и возвращает новое модифицированное состояние если это нужно. По правилам иммутабельности работает лишь с копией state.",
+              type: "text",
+
+            }
+          ]
+        }
       ],
     },
     {
