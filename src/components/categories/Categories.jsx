@@ -21,15 +21,12 @@ export default function Categories({ data }) {
   }
   const filteredChildren = filterChildren(data.children);
 
-  // ________________________________________________________________________________________________
-
-  // ________________________________________________________________________________________________
   return (
     <div
       style={{
         border: '2px solid gray',
         borderRadius: '8px',
-        width: '94%',
+        width: '96%',
         margin: '7px auto',
         textAlign: 'justify',
         padding: '0 10px',
@@ -64,22 +61,28 @@ export default function Categories({ data }) {
             maxWidth: '100%',
             objectFit: 'cover',
           }} />
-      ) : data.type === "video" ? (
+      ) : data.type === "list" ? (
         <>
-          <h3 style={{ margin: '0', }}>{data.title}</h3>
-          {data.description && <p>{data.description}</p>}
-          <iframe
-            src={data.url}
-            title={data.title}
-            frameBorder="0"
-            allowFullScreen
-            style={{
-              margin: '0',
-              height: '100%',
-              maxWidth: '100%',
-              maxHeight: '500px',
-              objectFit: 'cover',
-            }} />
+          {data.title &&
+            <h3
+              style={{
+                maxWidth: '100%',
+                padding: '0 10px',
+                textAlign: 'justify',
+              }}>{data.title.split('\n').map((line, index) => (
+                <span key={index}>{line}<br /></span>
+              ))}
+            </h3>}
+          {data.description && (
+            <div
+              dangerouslySetInnerHTML={{ __html: data.description }}
+            />
+          )}
+          {data.link && data.url &&
+            <a href={data.url} target="_blank" rel="noopener noreferrer">
+              {data.link}
+            </a>
+          }
         </>
       ) : data.type === "code" ? (
         <>
@@ -94,7 +97,7 @@ export default function Categories({ data }) {
               ))}
             </h3>}
           {data.description && (
-            <div 
+            <div
               dangerouslySetInnerHTML={{ __html: data.description }}
             />
           )}
@@ -119,12 +122,31 @@ export default function Categories({ data }) {
             </a>
           }
         </>
+      ) : data.type === "video" ? (
+        <>
+          <h3 style={{ margin: '0', }}>{data.title}</h3>
+          {data.description && <p>{data.description}</p>}
+          <iframe
+            src={data.url}
+            title={data.title}
+            frameBorder="0"
+            allowFullScreen
+            style={{
+              margin: '0',
+              height: '100%',
+              maxWidth: '100%',
+              maxHeight: '500px',
+              objectFit: 'cover',
+            }} />
+        </>
       ) : (
         <Button onClick={expand} type="button" title={data.title}
           style={{
             cursor: 'pointer',
             padding: '8px 30px',
             marginLeft: '-10px',
+            display: 'flex',
+            flexWrap: 'wrap',
           }}
         />
       )}
@@ -133,10 +155,10 @@ export default function Categories({ data }) {
         <div
           style={{
             padding: '5px 0',
-            marginTop: '20px',
+            marginTop: '10px',
           }}>
           {filteredChildren.map((child, index) => (
-            <div key={index}>
+            <div key={index} >
               <Categories data={child} />
             </div>
           ))}
