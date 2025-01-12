@@ -110,6 +110,7 @@ export default function Categories({ data }) {
               fontFamily: 'monospace',
               whiteSpace: 'pre-wrap',
               overflow: 'auto',
+              marginBottom: '10px',
             }}
           >
             <pre>
