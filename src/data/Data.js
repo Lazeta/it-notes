@@ -1407,15 +1407,21 @@ document.addEventListener('visibilitychange', () => {
                     "Возможность реализовать довольно простой алгоритм на JavaScript. Примеры задач",
                   children: [
                     {
-                      title: "title",
+                      title: "Факториал числа",
                       type: "code",
                       description: `
-                      <p></p>
-                        <li></li>
-                      <p></p>
+                        <p>Задача: Реализовать функцию, вычисляющую факториал числа.</p>
+                        <ul>
+                          <li>Факториал числа n (обозначается n!) равен произведению всех положительных целых чисел от 1 до n.</li>
+                          <li>Пример: 5! = 5 * 4 * 3 * 2 * 1 = 120</li>
+                        </ul>
                       `,
                       code: `
-                      
+  function factorial(n) {
+    if (n < 0) return -1; // факториал не существует для отрицательных чисел
+    if (n === 0) return 1; // 0! = 1
+    return n * factorial(n - 1); // рекурсивный вызов
+  }
                       `,
                     },
                   ],
@@ -1424,15 +1430,27 @@ document.addEventListener('visibilitychange', () => {
                   title: "Основные алгоритмы сортировки и поиска",
                   children: [
                     {
-                      title: "title",
+                      title: "Сортировка пузырьком",
                       type: "code",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                        <p>Алгоритм сортировки пузырьком сравнивает пары соседних элементов и меняет их местами, если порядок неправильный.</p>
+                        <p>Задача: Реализовать сортировку массива с использованием алгоритма пузырька.</p>
                       `,
                       code: `
-                      
+  function bubbleSort(arr) {
+    const n = arr.length;
+    let swapped;
+    do {
+      swapped = false;
+      for (let i = 0; i < n - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+          [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]; // обмен элементов
+          swapped = true;
+        }
+      }
+    } while (swapped);
+    return arr;
+  }
                       `,
                     },
                   ],
@@ -1441,15 +1459,29 @@ document.addEventListener('visibilitychange', () => {
                   title: "Переменные",
                   children: [
                     {
-                      title: "title",
+                      title: "Область видимости переменных",
                       type: "code",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                        <p>В JavaScript есть три типа областей видимости: глобальная, функция и блок.</p>
+                        <ul>
+                          <li><strong>Глобальная</strong>: Переменные, доступные во всем скрипте.</li>
+                          <li><strong>Функция</strong>: Переменные, доступные только внутри функции.</li>
+                          <li><strong>Блок</strong>: Переменные, объявленные внутри блока (например, внутри 'if', 'for', и т. д.).</li>
+                        </ul>
                       `,
                       code: `
-                      
+  let globalVar = 'I'm global';
+  
+  function testScope() {
+    let functionVar = 'I'm local to function';
+    if (true) {
+      let blockVar = 'I exist only in this block';
+      console.log(blockVar); // доступен здесь
+    }
+    console.log(functionVar); // доступен здесь
+    // console.log(blockVar); // ошибка: blockVar не доступен здесь
+  }
+  console.log(globalVar); // доступен здесь
                       `,
                     },
                   ],
@@ -1458,15 +1490,73 @@ document.addEventListener('visibilitychange', () => {
                   title: "Числовые методы",
                   children: [
                     {
-                      title: "title",
+                      title: "Методы Math",
                       type: "code",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                        <p>JavaScript предоставляет объект Math с различными методами для работы с числами (1.)</p>
+                        <ul>
+                          <li><strong>Math.max()</strong>: Возвращает наибольшее значение.</li>
+                          <li><strong>Math.min()</strong>: Возвращает наименьшее значение.</li>
+                          <li><strong>Math.random()</strong>: Генерирует случайное число от 0 до 1.</li>
+                          <li><strong>Math.round()</strong>: Округляет число до ближайшего целого.</li>
+                        </ul>
+                        <ul>
+                          <li><strong>toString()</strong>: Преобразует число в строку.</li>
+                          <li><strong>toFixed()</strong>: Округляет число до заданного количества знаков после запяты.</li>
+                          <li><strong>toExponential()</strong>: Преобразует число в экспоненциальное представление. 
+                          <br>Параметр определяет количество знаков после десятичной точки (2.)
+                          <li><strong>toPrecision()</strong>: возвращает строку с числом, записанным с указанной длиной (3.)</li> 
+                          <li><strong>valueOf()</strong>: Возвращает число как число (4.)</li> 
+                            <p>В JavaScript число может быть примитивным значением (typeof = number) или объектом (typeof = object).
+                            Этот valueOf() метод используется внутри JavaScript для преобразования объектов Number в примитивные значения.
+                            Нет причин использовать это в вашем коде.
+                            Все типы данных JavaScript имеют valueOf() и toString() метод.</p>
+                          <li><strong>Number()</strong>: Преобразует строку в число (5.)</li> 
+                          <li><strong>parseFloat()</strong>: анализирует строку и возвращает число. Разрешены пробелы. Возвращается только первое число (6.)</li> 
+                          <li><strong>parseInt()</strong>: анализирует строку и возвращает целое число. Разрешены пробелы. Возвращается только первое число (7.)</li> 
+                        </ul>
                       `,
                       code: `
-                      
+  1.
+  function getRandomInt(min, max) {
+    // генерация случайного целого числа
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
+  console.log(Math.max(1, 2, 3)); // 3
+  console.log(Math.min(1, 2, 3)); // 1
+  console.log(getRandomInt(1, 10)); // случайное число от 1 до 10
+
+  2.
+  var x = 9.656;
+  x.toExponential(2);     // возвращает 9.66e+0
+  x.toExponential(4);     // возвращает 9.6560e+0</li> 
+
+  3.
+  var x = 9.656;
+  x.toPrecision();        // возвращает 9.656
+  x.toPrecision(4);       // возвращает 9.656
+
+  4.
+  var x = 123;
+  x.valueOf();            // возвращает 123 из переменной x
+  (123).valueOf();        // возвращает 123 из литерала 123
+  (100 + 23).valueOf();   // возвращает 123 из выражения 100 + 23
+
+  5.
+  Number(true);          // возвращает 1
+  Number("10");          // возвращает 10
+  Number("10,33");       // возвращает NaN
+
+  6.
+  parseFloat("10");        // возвращает 10
+  parseFloat("10.33");     // возвращает 10.33
+  parseFloat("10 20 30");  // возвращает 10
+
+  7.
+  parseInt("10");         // возвращает 10
+  parseInt("10.33");      // возвращает 10
+  parseInt("10 20 30");   // возвращает 10
                       `,
                     },
                   ],
@@ -1475,33 +1565,111 @@ document.addEventListener('visibilitychange', () => {
                   title: "Строковые методы и строковые шаблоны",
                   children: [
                     {
-                      title: "title",
+                      title: "Методы строк и шаблонные строки",
                       type: "code",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                        <p>В JavaScript строковые методы позволяют выполнять различные операции над строками, включая изменение, извлечение и преобразование.</p>
+                        <ul>
+                          <li><strong>length</strong>: Возвращает длину строки.</li>
+                          <li><strong>toUpperCase()</strong>: Преобразует строку в верхний регистр.</li>
+                          <li><strong>toLowerCase()</strong>: Преобразует строку в нижний регистр.</li>
+                          <li><strong>trim()</strong>: Удаляет пробелы с начала и конца строки.</li>
+                          <li><strong>split(separator)</strong>: Разделяет строку на массив строк с использованием разделителя.</li>
+                          <li><strong>indexOf()</strong>: Возвращает индекс первого вхождения подстроки в строку.</li>
+                          <li><strong>lastIndexOf()</strong>: Возвращает индекс последнего вхождения подстроки в строке.</li>
+                            <span style="font-size: 0.9em">Оба indexOf(), и lastIndexOf() возвращают -1, если текст не найден.</span>
+                          <li><strong>search()(index)</strong>: Возвращает индекс первого вхождения подстроки в строке.</li>
+                          <li><strong>replace(searchValue, replaceValue)</strong>: Заменяет все вхождения подстроки searchValue в строке на replaceValue.</li>
+                          <li><strong>includes(searchValue)</strong>: Проверяет, содержит ли строка подстроку searchValue.</li>
+                          <li><strong>startsWith(searchValue)</strong>: Проверяет, начинается ли строка с подстроки searchValue.</li>
+                          <li><strong>endsWith(searchValue)</strong>: Проверяет, заканчивается ли строка подстрокой searchValue.</li>
+                          <li><strong>repeat(count)</strong>: Повторяет строку count раз.</li>
+                          <li><strong>charAt(index)</strong>: Возвращает символ по индексу.</li>
+                          <li><strong>charCodeAt(index)</strong>: Возвращает код символа по индексу.</li>
+                          <li><strong>fromCharCode(code)</strong>: Возвращает символ по его коду.</li>
+                          <li><strong>slice(start, end)</strong>: Вырезает часть строки с начального индекса до конечного индекса.</li>
+                          <li><strong>substring(start, end)</strong>: Вырезает часть строки с начального индекса до конечного индекса.</li>
+                          <li><strong>substr(start, length)</strong>: Вырезает часть строки с начального индекса до конечного индекса.</li>
+                          <li><strong>concat(...strings)</strong>: Объединяет строки в одну.</li>
+                        </ul>
+                        <p>Шаблонные строки (template literals) позволяют интерполировать выражения и создавать многострочные строки.</p>
                       `,
                       code: `
-                      
+  // Примеры использования методов строк
+  const str = "  Hello, World!  ";
+
+  console.log(str.length); // 17
+  console.log(str.toUpperCase()); // "  HELLO, WORLD!  "
+  console.log(str.toLowerCase()); // "  hello, world!  "
+  console.log(str.trim()); // "Hello, World!"
+  console.log(str.split(",")); // ["  Hello", " World!  "]
+  console.log(str.indexOf("World")); // 9
+  console.log(str.lastIndexOf("World")); // 9 
+  console.log(str.search("World")); // 9
+  console.log(str.replace("World", "JavaScript")); // 'Hello, JavaScript!'
+  console.log(str.includes("World")); // true
+  console.log(str.startsWith("Hello")); // false
+  console.log(str.endsWith("!")); // false
+  console.log(str.repeat(3)); // "Hello, World!   Hello, World!   Hello, World!"
+  console.log(str.charAt(0)); // ' '
+  console.log(str.charCodeAt(0)); // 32
+  console.log(String.fromCharCode(72, 101, 108, 108, 111, 44, 32, 87, 111, 114, 108, 100, 33)); // Hello, World!
+  console.log(str.slice(0, 5)); // 'Hel'
+  console.log(str.substring(0, 5)); // 'Hel'
+  console.log(str.substr(0, 5)); // 'Hel'
+  console.log(str.concat(", ", "JavaScript", "!")); // 'Hello, World!  , JavaScript!'
+
+  // Пример использования шаблонных строк
+  const name = "Alice";
+  const age = 30;
+  const greeting = \`Привет, меня зовут \${name}, и мне \${age} лет.\`;
+  console.log(greeting); // "Привет, меня зовут Alice, и мне 30 лет."
                       `,
                     },
                   ],
                 },
                 {
-                  title: `Тернарные, нулевое объединение, необязательное связывание и логические операторы`,
+                  title:
+                    "Тернарные, нулевое объединение, необязательное связывание и логические операторы",
                   children: [
                     {
                       title:
-                        "Тернарные, нулевое объединение, необязательное связывание и логические операторы – синтаксис и варианты использования",
+                        "Использование тернарного оператора и логических операторов",
                       type: "code",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                        <p>В JavaScript есть несколько удобных операторов, которые помогают упростить код и избавиться от лишних проверок.</p>
+                        <ul>
+                          <li><strong>Тернарный оператор</strong>: Сокращенная форма if-else, позволяет записать условную логику в одной строке.</li>
+                          <li><strong>Оператор нулевого объединения (??)</strong>: Позволяет вернуть правое значение, если левое значение равно null или undefined.</li>
+                          <li><strong>Необязательное связывание (?.)</strong>: Позволяет безопасно получать доступ к вложенным свойствам объектов без необходимости проверки каждой промежуточной ссылки.</li>
+                        </ul>
                       `,
                       code: `
-                      
+  // Пример тернарного оператора
+  const age = 18;
+  const canVote = (age >= 18) ? "Да" : "Нет";
+  console.log(canVote); // "Да"
+
+  // Пример оператора нулевого объединения
+  const userInput = null;
+  const defaultValue = userInput ?? "Значение по умолчанию";
+  console.log(defaultValue); // "Значение по умолчанию"
+
+  // Пример необязательного связывания
+  const user = {
+    profile: {
+      name: "Alice",
+      age: 30,
+    },
+  };
+  const userCity = user.profile?.city ?? "Город не указан";
+  console.log(userCity); // "Город не указан" (поскольку city не существует)
+  
+  // Пример логического И (&&) и ИЛИ (||)
+  const isAuthenticated = true;
+  const userRole = isAuthenticated && "admin";
+    // вернёт "admin", если isAuthenticated true
+  const fallback = userRole || "guest"; // вернёт "guest", если userRole falsy
                       `,
                     },
                   ],
@@ -1511,15 +1679,94 @@ document.addEventListener('visibilitychange', () => {
                     "Случай переключателя — примеры, где это может быть полезно",
                   children: [
                     {
-                      title: "title",
+                      title: "Использование конструкции switch",
                       type: "code",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                      <p>Конструкция switch позволяет выполнять различные действия на основе значения выражения.</p>
+                      <ul>
+                        <li>Мы можем использовать switch вместо многочисленных if-else, когда нужно проверить одно значение на несколько возможных вариантов.</li>
+                        <li>Это делает код более читаемым и поддерживаемым.</li>
+                      </ul>
+                      <p>Вот несколько примеров использования switch:</p>
                       `,
                       code: `
-                      
+  // Пример 1: Определение дня недели
+  const day = 3;
+  let dayName;
+
+  switch (day) {
+    case 1:
+      dayName = 'Понедельник';
+      break;
+    case 2:
+      dayName = 'Вторник';
+      break;
+    case 3:
+      dayName = 'Среда';
+      break;
+    case 4:
+      dayName = 'Четверг';
+      break;
+    case 5:
+      dayName = 'Пятница';
+      break;
+    case 6:
+      dayName = 'Суббота';
+      break;
+    case 7:
+      dayName = 'Воскресенье';
+      break;
+    default:
+      dayName = 'Некорректный день';
+  }
+
+  console.log(dayName); // "Среда"
+
+
+  // Пример 2: Использование switch с выражением
+  const fruit = 'яблоко';
+  let color;
+
+  switch (fruit) {
+    case 'банан':
+      color = 'желтый';
+      break;
+    case 'яблоко':
+      color = 'красный';
+      break;
+    case 'виноград':
+      color = 'зеленый';
+      break;
+    default:
+      color = 'неизвестный цвет';
+  }
+
+  console.log(color); // "красный"
+
+
+  // Пример 3: Объединение случаев
+  const grade = 'B';
+  let message;
+
+  switch (grade) {
+    case 'A':
+    case 'B':
+      message = 'Отлично!';
+      break;
+    case 'C':
+      message = 'Хорошо!';
+      break;
+    case 'D':
+      message = 'Удовлетворительно!';
+      break;
+    case 'F':
+      message = 'Неп satisfactoriously!';
+      break;
+    default:
+      message = 'Некорректная оценка';
+  }
+
+  console.log(message); // "Отлично!"
                       `,
                     },
                   ],
@@ -1528,15 +1775,35 @@ document.addEventListener('visibilitychange', () => {
                   title: "Циклы - for, while, do while",
                   children: [
                     {
-                      title: "title",
+                      title: "Использование циклов в JavaScript",
                       type: "code",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                      <p>В JavaScript существуют различные виды циклов, которые позволяют повторять выполнение блока кода определенное количество раз или до тех пор, пока выполняется заданное условие.</p>
+                      <ul>
+                        <li><strong>Цикл for</strong>: Используется, когда известно количество итераций.</li>
+                        <li><strong>Цикл while</strong>: Используется, когда количество итераций неизвестно, и необходимо повторять выполнение до тех пор, пока условие истинно.</li>
+                        <li><strong>Цикл do while</strong>: Похож на цикл while, но гарантирует хотя бы одну итерацию.</li>
+                      </ul>
                       `,
                       code: `
-                      
+  // Пример цикла for
+  for (let i = 0; i < 5; i++) {
+    console.log("Итерация: " + i); // Выводит 0, 1, 2, 3, 4
+  }
+
+  // Пример цикла while
+  let j = 0; 
+  while (j < 5) {
+    console.log("Итерация: " + j); // Выводит 0, 1, 2, 3, 4
+    j++;
+  }
+
+  // Пример цикла do while
+  let k = 0;
+  do {
+    console.log("Итерация: " + k); // Выводит 0, 1, 2, 3, 4
+    k++;
+  } while (k < 5);
                       `,
                     },
                   ],
@@ -1545,72 +1812,419 @@ document.addEventListener('visibilitychange', () => {
                   title: "Строгое сравнение",
                   children: [
                     {
-                      title: "title",
+                      title: "Использование строгого сравнения в JavaScript",
                       type: "code",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                        <p>В JavaScript есть два типа сравнения: нестрогое (==) и строгое (===).</p>
+                        <ul>
+                          <li><strong>Нестрогое сравнение (==)</strong>: Приводит операнды к одному типу перед сравнением.</li>
+                          <li><strong>Строгое сравнение (===)</strong>: Сравнивает как значение, так и тип данных.</li>
+                        </ul>
+                        <p>Вот примеры использования строгого сравнения:</p>
                       `,
                       code: `
-                      
+  // Пример нестрогого сравнения
+  console.log(5 == '5'); // true
+  console.log(null == undefined); // true
+
+  // Пример строгого сравнения
+  console.log(5 === '5'); // false
+  console.log(null === undefined); // false
+
+  // Строгое сравнение с разными типами
+  console.log(1 === 1); // true
+  console.log(true === 1); // false
                       `,
                     },
                   ],
                 },
                 {
-                  title: "topic title",
+                  title: "NaN (Not-a-Number)",
                   children: [
                     {
-                      title: "title",
+                      title: "Использование NaN в JavaScript",
                       type: "code",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                        <p>NaN (Not-a-Number) — специальное значение в JavaScript, которое представляет собой результат вычисления, не являющегося числом.</p>
+                        <ul>
+                          <li>NaN является единственным значением, которое не равно ни одному числу, включая само себя.</li>
+                          <li>Для проверки на NaN в JavaScript следует использовать функцию <code>isNaN()</code> или <code>Number.isNaN()</code>.</li>
+                        </ul>
+                        <p>Вот примеры работы с NaN:</p>
+                      `,
+                      code: `
+  // Примеры, когда результатом является NaN
+  console.log(0 / 0); // NaN
+  console.log(Math.sqrt(-1)); // NaN
+  console.log(parseInt('abc')); // NaN
+
+  // Проверка на NaN
+  console.log(isNaN(NaN)); // true
+  console.log(isNaN('abc')); // true
+  console.log(isNaN(123)); // false
+
+  // Использование Number.isNaN
+  console.log(Number.isNaN(NaN)); // true
+  console.log(Number.isNaN('abc')); // false
+  console.log(Number.isNaN(undefined)); // false
                       `,
                     },
                   ],
                 },
                 {
-                  title: "topic title",
+                  title: "Разница и схожесть между null и undefined",
                   children: [
                     {
-                      title: "title",
-                      type: "list",
+                      title: "Описание null и undefined",
+                      type: "code",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                        <p><strong>null</strong>: Это специальное значение, указывающее на отсутствие какого-либо объектного значения. Оно явно назначается переменной, чтобы показать, что эта переменная не содержит ничего.</p>
+                        <p><strong>undefined</strong>: Это значение автоматически назначается переменной, которая была объявлена, но не инициализирована. Также это происходит, если функция не возвращает значения.</p>
+                        <ul>
+                          <li>Оба значения представляют отсутствие значения, но в разных контекстах.</li>
+                        </ul>
+                      `,
+                      code: `
+                        // Примеры null и undefined
+                        let a = null;      // Явно задано значение null
+                        let b;             // Не инициализирована, значение undefined
+                
+                        console.log(a);   // null
+                        console.log(b);   // undefined
+                
+                        // Проверка типов
+                        console.log(typeof a); // "object"
+                        console.log(typeof b); // "undefined"
+                      `,
+                    },
+                    {
+                      title: "Сравнение null и undefined",
+                      type: "code",
+                      description: `
+                        <p>Важно понимать, что при нестрогом сравнении они равны друг другу:</p>
+                      `,
+                      code: `
+  console.log(null == undefined); // true (нестрогое сравнение)
+  console.log(null === undefined); // false (строгое сравнение)
                       `,
                     },
                   ],
                 },
                 {
-                  title: "topic title",
+                  title: "Как объекты превращаются в примитивы",
                   children: [
                     {
-                      title: "title",
-                      type: "list",
+                      title: "Преобразование объектов в примитивы",
+                      type: "code",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                        <p>В JavaScript объекты могут быть автоматически преобразованы в примитивные значения в контекстах, таких как сравнение, арифметические операции или приведение типов. Процесс преобразования включает:</p>
+                        <ul>
+                          <li>Попытка вызова метода <strong>valueOf()</strong></li>
+                          <li>Попытка вызова метода <strong>toString()</strong></li>
+                        </ul>
+                      `,
+                      code: `
+  const obj = {
+    valueOf: function() {
+      return 42;
+    }
+  };
+  
+  console.log(obj + 10); // 52 (вызывается obj.valueOf())
+                      `,
+                    },
+                    {
+                      title: "Этапы преобразования",
+                      type: "code",
+                      description: `
+                        <p>Когда JavaScript пытается преобразовать объект в примитив, он выполняет следующие шаги:</p>
+                        <ol>
+                          <li>Вызывать метод <strong>valueOf()</strong>. Если он возвращает примитив, то это значение используется.</li>
+                          <li>Если <strong>valueOf()</strong> возвращает объект, то JavaScript попытется вызвать <strong>toString()</strong>. Если <strong>toString()</strong> возвращает примитив, то это значение используется.</li>
+                        </ol>
+                      `,
+                      code: `
+  const obj2 = {
+    toString: function() {
+      return 'Hello';
+    }
+  };
+
+  console.log(obj2 + ' World'); // "Hello World" (вызывается obj2.toString())
+                      `,
+                    },
+                    {
+                      title: "Примеры преобразования",
+                      type: "code",
+                      description: `
+                        <p>Пример объекта с реализацией обоих методов:</p>
+                      `,
+                      code: `
+  const obj3 = {
+    valueOf: function() {
+      return 10;
+    },
+    toString: function() {
+      return 'I am an object';
+    }
+  };
+
+  console.log(obj3 + 5); // 15 (вызывается valueOf)
+  console.log(String(obj3)); // "I am an object" (вызывается toString)
+                      `,
+                    },
+                    {
+                      title: "Использование операторов",
+                      type: "code",
+                      description: `
+                        <p>Объекты могут быть преобразованы в примитивы при использовании операторов:</p>
+                        <ul>
+                          <li>Сравнение: ==, ===</li>
+                          <li>Арифметические операции: +, -, *, /</li>
+                          <li>Приведение типов: String(), Number(), Boolean()</li>
+                        </ul>
+                      `,
+                      code: `
+  console.log([] + '1'); // "1" (вызывается toString)
+  console.log([1] == 1); // true (нестрогое сравнение, вызывается valueOf)
+                      `,
+                    },
+                    {
+                      title: "Вывод",
+                      type: "code",
+                      description: `
+                        <p>Объекты в JavaScript автоматически преобразуются в примитивные значения с использованием методов valueOf() и toString(). Контекст и ситуация определяют, какой метод будет вызван.</p>
+                      `,
+                      code: `
+  const obj4 = {
+    valueOf: function() {
+      return '5';
+    },
+    toString: function() {
+      return 'I am an object';
+    }
+  };
+
+  console.log(obj4 + 1); // "51" (вызывается valueOf)
+  console.log(obj4 == '5'); // true (нестрогое сравнение, вызывается valueOf)
                       `,
                     },
                   ],
                 },
                 {
-                  title: "topic title",
+                  title: "Оператор typeof",
                   children: [
                     {
-                      title: "title",
-                      type: "list",
+                      title: "Описание оператора typeof",
+                      type: "code",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                        <p><strong>typeof</strong>: Это оператор в JavaScript, который используется для определения типа переменной или выражения. Он возвращает строку, описывающую тип аргумента.</p>
+                        <ul>
+                          <li>Примеры типов: "undefined", "boolean", "number", "string", "object", "function", "symbol".</li>
+                        </ul>
                       `,
+                      code: `
+  // Примеры использования оператора typeof
+  console.log(typeof undefined); // "undefined"
+  console.log(typeof null);      // "object" (это известная ошибка в JavaScript)
+  console.log(typeof 42);        // "number"
+  console.log(typeof 'hello');   // "string"
+  console.log(typeof {});         // "object"
+  console.log(typeof [];          // "object"
+  console.log(typeof function(){}); // "function"
+                      `,
+                    },
+                    {
+                      title: "Практическое применение",
+                      type: "code",
+                      description: `
+                        <p>Оператор typeof часто используется для проверки типов переменных перед выполнением операций:</p>
+                      `,
+                      code: `
+  let value;
+
+  if (typeof value === 'undefined') {
+    console.log('Переменная value не инициализирована.');
+  }
+
+  value = 10;
+
+  if (typeof value === 'number') {
+    console.log('value является числом.');
+  }
+                      `,
+                    },
+                    {
+                      title: "Ограничения оператора typeof",
+                      type: "code",
+                      description: `
+                        <p>Некоторые особенности и ограничения:</p>
+                        <ul>
+                          <li>Для объектов и массивов оператор возвращает "object".</li>
+                          <li>Для null он также возвращает "object", что является известной особенностью JavaScript.</li>
+                          <li>Для функций возвращает "function", но это подтип объекта.</li>
+                        </ul>
+                      `,
+                      code: `
+  console.log(typeof null);       // "object"
+  console.log(typeof [1, 2, 3]);  // "object"
+  console.log(typeof {};           // "object"
+  console.log(typeof (() => {})); // "function"
+                      `,
+                    },
+                    {
+                      title: "Вывод",
+                      type: "code",
+                      description: `
+                        <p>Оператор typeof является полезным инструментом в JavaScript для проверки типов данных и может помочь избежать ошибок при работе с переменными.</p>
+                      `,
+                      code: `
+  let value = 'test';
+  console.log(typeof value); // "string"
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Переменные let, const, var",
+                  children: [
+                    {
+                      title: "Описание переменных",
+                      type: "code",
+                      description: `
+                        <p><strong>var</strong>: Используется для объявления переменных. Переменные, объявленные с помощью var, имеют функциональную или глобальную область видимости и могут быть переопределены. Они также подвержены механизму поднятия (hoisting).</p>
+                        <p><strong>let</strong>: Вводится в ES6 (ECMAScript 2015). Используется для объявления переменных с блочной областью видимости. Переменные, объявленные с помощью let, не могут быть переопределены в пределах одной и той же области видимости. Также подвержены подъеманию, но не инициализируются до фактической строки кода.</p>
+                        <p><strong>const</strong>: Также введена в ES6. Используется для объявления констант, значение которых не может быть переопределено. Как и let, имеет блочную область видимости.</p>
+                      `,
+                      code: `
+  var a = 'Hello';
+  console.log(a); // 'Hello'
+  
+  let b = 'World';
+  console.log(b); // 'World'
+  
+  const c = '!';
+  console.log(c); // '!'
+                      `,
+                    },
+                    {
+                      title: "Сравнение области видимости",
+                      type: "code",
+                      description: `
+                        <p>Область видимости переменных var, let и const:</p>
+                        <ul>
+                          <li><strong>var</strong>: Функциональная или глобальная область видимости.</li>
+                          <li><strong>let</strong> и <strong>const</strong>: Блочная область видимости.</li>
+                        </ul>
+                      `,
+                      code: `
+  if (true) {
+    var x = 10;
+    let y = 20;
+    const z = 30;
+  }
+
+  console.log(x); // 10
+  console.log(y); // ReferenceError: y is not defined
+  console.log(z); // ReferenceError: z is not defined
+                      `,
+                    },
+                    {
+                      title: "Подъем переменных",
+                      type: "code",
+                      description: `
+                        <p>Все три типа переменных поднимаются, но их инициализация происходит на разных стадиях:</p>
+                      `,
+                      code: `
+  console.log(aVar); // undefined (подъем, но не инициализация)
+  var aVar = 'test';
+
+  // console.log(aLet); // ReferenceError: Cannot access 'aLet' before initialization
+  let aLet = 'test';
+
+  // console.log(aConst); // ReferenceError: Cannot access 'aConst' before initialization
+  const aConst = 'test';
+                      `,
+                    },
+                    {
+                      title: "Использование",
+                      type: "code",
+                      description: `
+                        <p>Рекомендуется использовать let и const вместо var, чтобы избежать неожиданных ошибок и путаницы:</p>
+                      `,
+                      code: `
+  let name = 'John';
+  const age = 30;
+
+  name = 'Doe'; // корректно, значение переменной может меняться
+  // age = 31; // TypeError: Assignment to constant variable. (ошибка)
+                      `,
+                    },
+                    {
+                      title: "Вывод",
+                      type: "code",
+                      description: `
+                        <p>Необходимо использовать let и const в современных приложениях, чтобы избежать проблем с областью видимости, поднятием и переопределением переменных.</p>
+                      `,
+                      code: `
+  if (true) {
+    let message = "Hello, block!";
+    console.log(message); // "Hello, block!"
+  }
+  // console.log(message); // ReferenceError: message is not defined
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Контекст this",
+                  children: [
+                    {
+                      title: "Описание",
+                      type: "list",
+                      description:
+                        "this – это специальное ключевое слово в JavaScript, которое ссылается на объект, который в данный момент выполняет код. Значение `this` определяется не тем, как функция была объявлена, а тем, как она была вызвана.",
+                    },
+                    {
+                      title: "Контекст вызова",
+                      type: "code",
+                      description:
+                        "Значение `this` зависит от контекста вызова функции. Вот основные правила:",
+                      code: "// В глобальном контексте (вне функций) 'this' ссылается на глобальный объект (window в браузере).\nconsole.log(this); // window\n\n// В методе объекта 'this' ссылается на объект, в контексте которого был вызван метод:\nconst obj = {\n    name: 'Obj',\n    method: function() {\n        console.log(this.name);\n    }\n};\nobj.method(); // 'Obj'\n",
+                    },
+                    {
+                      title: "Значение this в функциях",
+                      type: "code",
+                      description:
+                        "В обычной функции `this` ссылается на глобальный объект (или undefined в строгом режиме).",
+                      code: "function showThis() {\n    console.log(this);\n}\n\nshowThis(); // window (или undefined в строгом режиме)",
+                    },
+                    {
+                      title: "Классы и this",
+                      type: "code",
+                      description:
+                        "В классах `this` ссылается на экземпляр класса, который был создан с помощью ключевого слова new.",
+                      code: "class MyClass {\n    constructor(value) {\n        this.value = value;\n    }\n    showValue() {\n        console.log(this.value);\n    }\n}\n\nconst instance = new MyClass(10);\ninstance.showValue(); // 10",
+                    },
+                    {
+                      title: "Стрелочные функции и this",
+                      type: "code",
+                      description:
+                        "Стрелочные функции не имеют собственного `this` и наследуют его из родительского контекста, в котором они были созданы.",
+                      code: "const obj = {\n    value: 20,\n    method: function() {\n        const arrowFunction = () => {\n            console.log(this.value);\n        };\n        arrowFunction();\n    }\n};\n\nobj.method(); // 20",
+                    },
+                    {
+                      title: "Способы контроля this",
+                      type: "code",
+                      description:
+                        "Можно контролировать значение `this` в функции с помощью методов `.call()`, `.apply()` и `.bind()`.",
+                      code: "function show() {\n    console.log(this.name);\n}\n\nconst obj = { name: 'Test' };\n\nshow.call(obj);    // 'Test'\nshow.apply(obj);   // 'Test'\n\nconst boundShow = show.bind(obj);\nboundShow();        // 'Test'",
+                    },
+                    {
+                      title: "Вывод",
+                      type: "list",
+                      description:
+                        "Контекст `this` в JavaScript может быть сложным для понимания. Важно понимать, как он работает в разных контекстах для избежания ошибок.",
                     },
                   ],
                 },
