@@ -1491,73 +1491,97 @@ document.addEventListener('visibilitychange', () => {
                   children: [
                     {
                       title: "Методы Math",
-                      type: "code",
-                      description: `
-                        <p>JavaScript предоставляет объект Math с различными методами для работы с числами (1.)</p>
-                        <ul>
-                          <li><strong>Math.max()</strong>: Возвращает наибольшее значение.</li>
-                          <li><strong>Math.min()</strong>: Возвращает наименьшее значение.</li>
-                          <li><strong>Math.random()</strong>: Генерирует случайное число от 0 до 1.</li>
-                          <li><strong>Math.round()</strong>: Округляет число до ближайшего целого.</li>
-                        </ul>
-                        <ul>
-                          <li><strong>toString()</strong>: Преобразует число в строку.</li>
-                          <li><strong>toFixed()</strong>: Округляет число до заданного количества знаков после запяты.</li>
-                          <li><strong>toExponential()</strong>: Преобразует число в экспоненциальное представление. 
-                          <br>Параметр определяет количество знаков после десятичной точки (2.)
-                          <li><strong>toPrecision()</strong>: возвращает строку с числом, записанным с указанной длиной (3.)</li> 
-                          <li><strong>valueOf()</strong>: Возвращает число как число (4.)</li> 
-                            <p>В JavaScript число может быть примитивным значением (typeof = number) или объектом (typeof = object).
-                            Этот valueOf() метод используется внутри JavaScript для преобразования объектов Number в примитивные значения.
-                            Нет причин использовать это в вашем коде.
-                            Все типы данных JavaScript имеют valueOf() и toString() метод.</p>
-                          <li><strong>Number()</strong>: Преобразует строку в число (5.)</li> 
-                          <li><strong>parseFloat()</strong>: анализирует строку и возвращает число. Разрешены пробелы. Возвращается только первое число (6.)</li> 
-                          <li><strong>parseInt()</strong>: анализирует строку и возвращает целое число. Разрешены пробелы. Возвращается только первое число (7.)</li> 
-                        </ul>
-                      `,
-                      code: `
-  1.
+                      children: [
+                        {
+                          title: "Math.max()",
+                          type: "code",
+                          description: "<p>Возвращает наибольшее значение.</p>",
+                          code: "console.log(Math.max(1, 2, 3)); // 3",
+                        },
+                        {
+                          title: "Math.min()",
+                          type: "code",
+                          description: "<p>Возвращает наименьшее значение.</p>",
+                          code: "console.log(Math.min(1, 2, 3)); // 1",
+                        },
+                        {
+                          title: "Math.random()",
+                          type: "code",
+                          description:
+                            "<p>Генерирует случайное число от 0 до 1.</p>",
+                          code: `
   function getRandomInt(min, max) {
     // генерация случайного целого числа
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  
-  console.log(Math.max(1, 2, 3)); // 3
-  console.log(Math.min(1, 2, 3)); // 1
   console.log(getRandomInt(1, 10)); // случайное число от 1 до 10
-
-  2.
-  var x = 9.656;
-  x.toExponential(2);     // возвращает 9.66e+0
-  x.toExponential(4);     // возвращает 9.6560e+0</li> 
-
-  3.
-  var x = 9.656;
-  x.toPrecision();        // возвращает 9.656
-  x.toPrecision(4);       // возвращает 9.656
-
-  4.
-  var x = 123;
-  x.valueOf();            // возвращает 123 из переменной x
-  (123).valueOf();        // возвращает 123 из литерала 123
-  (100 + 23).valueOf();   // возвращает 123 из выражения 100 + 23
-
-  5.
-  Number(true);          // возвращает 1
-  Number("10");          // возвращает 10
-  Number("10,33");       // возвращает NaN
-
-  6.
-  parseFloat("10");        // возвращает 10
-  parseFloat("10.33");     // возвращает 10.33
-  parseFloat("10 20 30");  // возвращает 10
-
-  7.
-  parseInt("10");         // возвращает 10
-  parseInt("10.33");      // возвращает 10
-  parseInt("10 20 30");   // возвращает 10
-                      `,
+                          `,
+                        },
+                        {
+                          title: "Math.round()",
+                          type: "code",
+                          description:
+                            "<p>Округляет число до ближайшего целого.</p>",
+                          code: "console.log(Math.round(4.6)); // 5",
+                        },
+                      ],
+                    },
+                    {
+                      title: "Методы для строк",
+                      children: [
+                        {
+                          title: "toString()",
+                          type: "code",
+                          description: "<p>Преобразует число в строку.</p>",
+                          code: "var num = 123; console.log(num.toString()); // '123'",
+                        },
+                        {
+                          title: "toFixed()",
+                          type: "code",
+                          description:
+                            "<p>Округляет число до заданного количества знаков после запятой.</p>",
+                          code: "var x = 9.656; console.log(x.toFixed(2)); // '9.66'",
+                        },
+                        {
+                          title: "toExponential()",
+                          type: "code",
+                          description:
+                            "<p>Преобразует число в экспоненциальное представление.</p>",
+                          code: "var x = 9.656; console.log(x.toExponential(2)); // '9.66e+0'",
+                        },
+                        {
+                          title: "toPrecision()",
+                          type: "code",
+                          description:
+                            "<p>Возвращает строку с числом, записанным с указанной длиной.</p>",
+                          code: "var x = 9.656; console.log(x.toPrecision(4)); // '9.656'",
+                        },
+                      ],
+                    },
+                    {
+                      title: "Преобразование строк в числа",
+                      children: [
+                        {
+                          title: "Number()",
+                          type: "code",
+                          description: "<p>Преобразует строку в число.</p>",
+                          code: "console.log(Number('10')); // 10",
+                        },
+                        {
+                          title: "parseFloat()",
+                          type: "code",
+                          description:
+                            "<p>Анализирует строку и возвращает число. Разрешены пробелы.</p>",
+                          code: "console.log(parseFloat('10.33')); // 10.33",
+                        },
+                        {
+                          title: "parseInt()",
+                          type: "code",
+                          description:
+                            "<p>Анализирует строку и возвращает целое число. Разрешены пробелы.</p>",
+                          code: "console.log(parseInt('10.33')); // 10",
+                        },
+                      ],
                     },
                   ],
                 },
@@ -1566,65 +1590,172 @@ document.addEventListener('visibilitychange', () => {
                   children: [
                     {
                       title: "Методы строк и шаблонные строки",
-                      type: "code",
-                      description: `
-                        <p>В JavaScript строковые методы позволяют выполнять различные операции над строками, включая изменение, извлечение и преобразование.</p>
-                        <ul>
-                          <li><strong>length</strong>: Возвращает длину строки.</li>
-                          <li><strong>toUpperCase()</strong>: Преобразует строку в верхний регистр.</li>
-                          <li><strong>toLowerCase()</strong>: Преобразует строку в нижний регистр.</li>
-                          <li><strong>trim()</strong>: Удаляет пробелы с начала и конца строки.</li>
-                          <li><strong>split(separator)</strong>: Разделяет строку на массив строк с использованием разделителя.</li>
-                          <li><strong>indexOf()</strong>: Возвращает индекс первого вхождения подстроки в строку.</li>
-                          <li><strong>lastIndexOf()</strong>: Возвращает индекс последнего вхождения подстроки в строке.</li>
-                            <span style="font-size: 0.9em">Оба indexOf(), и lastIndexOf() возвращают -1, если текст не найден.</span>
-                          <li><strong>search()(index)</strong>: Возвращает индекс первого вхождения подстроки в строке.</li>
-                          <li><strong>replace(searchValue, replaceValue)</strong>: Заменяет все вхождения подстроки searchValue в строке на replaceValue.</li>
-                          <li><strong>includes(searchValue)</strong>: Проверяет, содержит ли строка подстроку searchValue.</li>
-                          <li><strong>startsWith(searchValue)</strong>: Проверяет, начинается ли строка с подстроки searchValue.</li>
-                          <li><strong>endsWith(searchValue)</strong>: Проверяет, заканчивается ли строка подстрокой searchValue.</li>
-                          <li><strong>repeat(count)</strong>: Повторяет строку count раз.</li>
-                          <li><strong>charAt(index)</strong>: Возвращает символ по индексу.</li>
-                          <li><strong>charCodeAt(index)</strong>: Возвращает код символа по индексу.</li>
-                          <li><strong>fromCharCode(code)</strong>: Возвращает символ по его коду.</li>
-                          <li><strong>slice(start, end)</strong>: Вырезает часть строки с начального индекса до конечного индекса.</li>
-                          <li><strong>substring(start, end)</strong>: Вырезает часть строки с начального индекса до конечного индекса.</li>
-                          <li><strong>substr(start, length)</strong>: Вырезает часть строки с начального индекса до конечного индекса.</li>
-                          <li><strong>concat(...strings)</strong>: Объединяет строки в одну.</li>
-                        </ul>
-                        <p>Шаблонные строки (template literals) позволяют интерполировать выражения и создавать многострочные строки.</p>
-                      `,
-                      code: `
-  // Примеры использования методов строк
-  const str = "  Hello, World!  ";
-
-  console.log(str.length); // 17
-  console.log(str.toUpperCase()); // "  HELLO, WORLD!  "
-  console.log(str.toLowerCase()); // "  hello, world!  "
-  console.log(str.trim()); // "Hello, World!"
-  console.log(str.split(",")); // ["  Hello", " World!  "]
-  console.log(str.indexOf("World")); // 9
-  console.log(str.lastIndexOf("World")); // 9 
-  console.log(str.search("World")); // 9
-  console.log(str.replace("World", "JavaScript")); // 'Hello, JavaScript!'
-  console.log(str.includes("World")); // true
-  console.log(str.startsWith("Hello")); // false
-  console.log(str.endsWith("!")); // false
-  console.log(str.repeat(3)); // "Hello, World!   Hello, World!   Hello, World!"
-  console.log(str.charAt(0)); // ' '
-  console.log(str.charCodeAt(0)); // 32
-  console.log(String.fromCharCode(72, 101, 108, 108, 111, 44, 32, 87, 111, 114, 108, 100, 33)); // Hello, World!
-  console.log(str.slice(0, 5)); // 'Hel'
-  console.log(str.substring(0, 5)); // 'Hel'
-  console.log(str.substr(0, 5)); // 'Hel'
-  console.log(str.concat(", ", "JavaScript", "!")); // 'Hello, World!  , JavaScript!'
-
-  // Пример использования шаблонных строк
+                      children: [
+                        {
+                          title: "Основные методы строк",
+                          children: [
+                            {
+                              title:
+                                "В JavaScript строковые методы позволяют выполнять различные операции над строками, включая изменение, извлечение и преобразование.",
+                              type: "text",
+                            },
+                            {
+                              title: "length",
+                              type: "code",
+                              description: "<p>Возвращает длину строки.</p>",
+                              code: "console.log(str.length); // 17",
+                            },
+                            {
+                              title: "toUpperCase()",
+                              type: "code",
+                              description:
+                                "<p>Преобразует строку в верхний регистр.</p>",
+                              code: "console.log(str.toUpperCase()); // '  HELLO, WORLD!  '",
+                            },
+                            {
+                              title: "toLowerCase()",
+                              type: "code",
+                              description:
+                                "<p>Преобразует строку в нижний регистр.</p>",
+                              code: "console.log(str.toLowerCase()); // '  hello, world!  '",
+                            },
+                            {
+                              title: "trim()",
+                              type: "code",
+                              description:
+                                "<p>Удаляет пробелы с начала и конца строки.</p>",
+                              code: "console.log(str.trim()); // 'Hello, World!'",
+                            },
+                            {
+                              title: "split(separator)",
+                              type: "code",
+                              description:
+                                "<p>Разделяет строку на массив строк с использованием разделителя.</p>",
+                              code: "console.log(str.split(',')); // ['  Hello', ' World!  ']",
+                            },
+                            {
+                              title: "indexOf()",
+                              type: "code",
+                              description:
+                                "<p>Возвращает индекс первого вхождения подстроки в строку.</p>",
+                              code: "console.log(str.indexOf('World')); // 9",
+                            },
+                            {
+                              title: "lastIndexOf()",
+                              type: "code",
+                              description:
+                                "<p>Возвращает индекс последнего вхождения подстроки в строке.</p>",
+                              code: "console.log(str.lastIndexOf('World')); // 9",
+                            },
+                            {
+                              title: "search()",
+                              type: "code",
+                              description:
+                                "<p>Возвращает индекс первого вхождения подстроки в строке.</p>",
+                              code: "console.log(str.search('World')); // 9",
+                            },
+                            {
+                              title: "replace(searchValue, replaceValue)",
+                              type: "code",
+                              description:
+                                "<p>Заменяет все вхождения подстроки searchValue в строке на replaceValue.</p>",
+                              code: "console.log(str.replace('World', 'JavaScript')); // 'Hello, JavaScript!'",
+                            },
+                            {
+                              title: "includes(searchValue)",
+                              type: "code",
+                              description:
+                                "<p>Проверяет, содержит ли строка подстроку searchValue.</p>",
+                              code: "console.log(str.includes('World')); // true",
+                            },
+                            {
+                              title: "startsWith(searchValue)",
+                              type: "code",
+                              description:
+                                "<p>Проверяет, начинается ли строка с подстроки searchValue.</p>",
+                              code: "console.log(str.startsWith('Hello')); // false",
+                            },
+                            {
+                              title: "endsWith(searchValue)",
+                              type: "code",
+                              description:
+                                "<p>Проверяет, заканчивается ли строка подстрокой searchValue.</p>",
+                              code: "console.log(str.endsWith('!')); // false",
+                            },
+                            {
+                              title: "repeat(count)",
+                              type: "code",
+                              description: "<p>Повторяет строку count раз.</p>",
+                              code: "console.log(str.repeat(3)); // 'Hello, World!   Hello, World!   Hello, World!'",
+                            },
+                            {
+                              title: "charAt(index)",
+                              type: "code",
+                              description:
+                                "<p>Возвращает символ по индексу.</p>",
+                              code: "console.log(str.charAt(0)); // ' '",
+                            },
+                            {
+                              title: "charCodeAt(index)",
+                              type: "code",
+                              description:
+                                "<p>Возвращает код символа по индексу.</p>",
+                              code: "console.log(str.charCodeAt(0)); // 32",
+                            },
+                            {
+                              title: "fromCharCode(code)",
+                              type: "code",
+                              description:
+                                "<p>Возвращает символ по его коду.</p>",
+                              code: "console.log(String.fromCharCode(72, 101, 108, 108, 111, 44, 32, 87, 111, 114, 108, 100, 33)); // 'Hello, World!'",
+                            },
+                            {
+                              title: "slice(start, end)",
+                              type: "code",
+                              description:
+                                "<p>Вырезает часть строки с начального индекса до конечного индекса.</p>",
+                              code: "console.log(str.slice(0, 5)); // 'Hel'",
+                            },
+                            {
+                              title: "substring(start, end)",
+                              type: "code",
+                              description:
+                                "<p>Вырезает часть строки с начального индекса до конечного индекса.</p>",
+                              code: "console.log(str.substring(0, 5)); // 'Hel'",
+                            },
+                            {
+                              title: "substr(start, length)",
+                              type: "code",
+                              description:
+                                "<p>Вырезает часть строки с начального индекса до заданной длины.</p>",
+                              code: "console.log(str.substr(0, 5)); // 'Hel'",
+                            },
+                            {
+                              title: "concat(...strings)",
+                              type: "code",
+                              description: "<p>Объединяет строки в одну.</p>",
+                              code: "console.log(str.concat(', ', 'JavaScript', '!')); // 'Hello, World!  , JavaScript!'",
+                            },
+                          ],
+                        },
+                        {
+                          title: "Шаблонные строки",
+                          children: [
+                            {
+                              title: "Шаблонные строки",
+                              type: "code",
+                              description:
+                                "<p>Шаблонные строки (template literals) позволяют интерполировать выражения и создавать многострочные строки.</p>",
+                              code: `
   const name = "Alice";
   const age = 30;
   const greeting = \`Привет, меня зовут \${name}, и мне \${age} лет.\`;
   console.log(greeting); // "Привет, меня зовут Alice, и мне 30 лет."
-                      `,
+                              `,
+                            },
+                          ],
+                        },
+                      ],
                     },
                   ],
                 },
@@ -2225,6 +2356,285 @@ document.addEventListener('visibilitychange', () => {
                       type: "list",
                       description:
                         "Контекст `this` в JavaScript может быть сложным для понимания. Важно понимать, как он работает в разных контекстах для избежания ошибок.",
+                    },
+                  ],
+                },
+                {
+                  title: "function declaration and expression, arrow function",
+                  children: [
+                    {
+                      title: "Описание объявлений и выражений функций",
+                      type: "code",
+                      description: `
+                        <p><strong>Объявление функции</strong>: Это способ определения функции с использованием ключевого слова <code>function</code>. Функция может быть вызвана до ее определения (подъем).</p>
+                        <p><strong>Выражение функции</strong>: Это определение функции, которое присваивается переменной. Функция не может быть вызвана до ее объявления.</p>
+                      `,
+                      code: `
+  // Объявление функции
+  function sayHello() {
+    console.log("Hello!");
+  }
+  sayHello(); // "Hello!"
+
+  // Выражение функции
+  const greet = function() {
+    console.log("Hi!");
+  };
+  greet(); // "Hi!"
+                      `,
+                    },
+                    {
+                      title: "Стрелочные функции",
+                      type: "code",
+                      description: `
+                        <p><strong>Стрелочные функции</strong>: Это упрощенный синтаксис для объявления функций, введенный в ES6. Они не имеют собственного значения <code>this</code> и не могут быть использованы в качестве конструктора.</p>
+                      `,
+                      code: `
+  const multiply = (x, y) => x * y;
+  console.log(multiply(2, 3)); // 6
+
+  const add = (a, b) => {
+    return a + b;
+  };
+  console.log(add(2, 3)); // 5
+                      `,
+                    },
+                    {
+                      title: "Сравнение синтаксиса",
+                      type: "code",
+                      description: `
+                        <p>Различия в синтаксисе между обычными и стрелочными функциями:</p>
+                      `,
+                      code: `
+  // Обычная функция
+  function square(x) {
+    return x * x;
+  }
+
+  // Стрелочная функция
+  const squareArrow = (x) => x * x;
+
+  console.log(square(4)); // 16
+  console.log(squareArrow(4)); // 16
+                      `,
+                    },
+                    {
+                      title: "Преимущества",
+                      type: "code",
+                      description: `
+                        <p>Стрелочные функции обеспечивают более лаконичный синтаксис и удобнее работают с <code>this</code> в контексте методов, так как они наследуют <code>this</code> от родительской области видимости.</p>
+                      `,
+                      code: `
+  const obj = {
+    value: 100,
+    regularFunction: function() {
+      console.log(this.value);
+    },
+    arrowFunction: () => {
+      console.log(this.value);
+    },
+  };
+
+  obj.regularFunction(); // 100
+  obj.arrowFunction();   // undefined (т.к. 'this' не ссылается на obj)
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Посредством чего в JS реализуются наследования?",
+                  children: [
+                    {
+                      title: "Прототипное наследование",
+                      type: "code",
+                      description: `
+                        <p><strong>Прототипное наследование</strong>: В JavaScript объекты могут наследовать свойства и методы от других объектов через механизм прототипов. Каждый объект имеет внутреннюю ссылку на свой прототип, который может содержать свойства и методы, доступные наследуемым объектам.</p>
+                        <p>Это характерно для JavaScript и позволяет разработчикам расширять возможности объектов без необходимости использовать классы.</p>
+                      `,
+                      code: `
+  // Создаем объект родитель
+  const parent = {
+    greet: function() {
+      console.log("Hello from parent!");
+    }
+  };
+
+  // Создаем объект child с наследованием от parent
+  const child = Object.create(parent);
+  child.greet(); // "Hello from parent!"
+                      `,
+                    },
+                    {
+                      title: "Классы ES6",
+                      type: "code",
+                      description: `
+                        <p><strong>Классы ES6</strong>: С появлением ES6 в JavaScript появилась возможность использования классов. Классы предоставляют более удобный и понятный синтаксис для реализации наследования. Классы также используют механизм прототипов под капотом.</p>
+                      `,
+                      code: `
+  class Parent {
+    greet() {
+      console.log("Hello from parent class!");
+    }
+  }
+
+  class Child extends Parent {
+    greet() {
+      console.log("Hello from child class!");
+    }
+  }
+
+  const childInstance = new Child();
+  childInstance.greet(); // "Hello from child class!"
+  const parentInstance = new Parent();
+  parentInstance.greet(); // "Hello from parent class!"
+                      `,
+                    },
+                    {
+                      title:
+                        "Наследование с использованием Object.setPrototypeOf",
+                      type: "code",
+                      description: `
+                        <p><strong>Object.setPrototypeOf</strong>: Этот метод можно использовать для изменения прототипа существующего объекта. Это также позволяет реализовать наследование, но рекомендуется использовать в основном в особых случаях, т.к. может привести к ухудшению производительности.</p>
+                      `,
+                      code: `
+  const parent = {
+    greet: function() {
+      console.log("Hello from parent!");
+    }
+  };
+
+  const child = {};
+  Object.setPrototypeOf(child, parent);
+  child.greet(); // "Hello from parent!"
+                      `,
+                    },
+                    {
+                      title: "Сравнение различных способов наследования",
+                      type: "code",
+                      description: `
+                        <p>Различные способы реализации наследования в JavaScript имеют свои преимущества и недостатки:</p>
+                        <ul>
+                          <li><strong>Прототипное наследование:</strong> Гибкость, но может быть сложнее для понимания начинающим.</li>
+                          <li><strong>Классы ES6:</strong> Более читаемый и привычный синтаксис, похожий на другие языки программирования.</li>
+                          <li><strong>Object.setPrototypeOf:</strong> Не рекомендуется для частого использования, так как имеет низкую производительность.</li>
+                        </ul>
+                      `,
+                      code: `
+  // Обзор методов
+  console.log(Object.getPrototypeOf(child) === parent); // true
+  console.log(child instanceof Child); // true
+  console.log(child instanceof Parent); // true
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title:
+                    "Что такое IIFE (Immediately Invoked Function Expression)?",
+                  children: [
+                    {
+                      title: "Описание IIFE",
+                      type: "code",
+                      description: `
+                        <p>
+                          <strong>IIFE</strong>: Это функциональное выражение, которое выполняется сразу после его определения. Это позволяет создать локальную область видимости и изолировать переменные от глобальной области видимости.
+                        </p>
+                        <p>
+                          IIFE часто используется для организации кода и предотвращения загрязнения глобального пространства имен.
+                        </p>
+                      `,
+                      code: `
+  (function() {
+    var localVariable = 'I am local';
+    console.log(localVariable); // 'I am local'
+  })();
+  
+  // console.log(localVariable); // Uncaught ReferenceError: localVariable is not defined
+                      `,
+                    },
+                    {
+                      title: "Синтаксис IIFE",
+                      type: "code",
+                      description: `
+                        <p>Стандартный синтаксис включает в себя определение функции, заключенное в круглые скобки, и сразу же вызываемое с использованием дополнительных круглых скобок.</p>
+                      `,
+                      code: `
+  (function() {
+    // Код здесь
+  })();
+  
+  // Или с использованием стрелочной функции
+  (() => {
+    // Код здесь
+  })();
+                      `,
+                    },
+                    {
+                      title: "Преимущества использования IIFE",
+                      type: "code",
+                      description: `
+                        <p>
+                          <strong>Преимущества:</strong>
+                          <ul>
+                            <li>Изолированная область видимости для переменных.</li>
+                            <li>Предотвращение конфликтов переменных с глобальной областью видимости.</li>
+                            <li>Помогает безопасно избегать переменных, которые могут повлиять на другие скрипты.</li>
+                          </ul>
+                        </p>
+                      `,
+                      code: `
+  (function() {
+    var count = 0; // Локальная переменная, недоступная вне IIFE
+    console.log(count); // 0
+  })();
+  
+  // console.log(count); // Uncaught ReferenceError: count is not defined
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Строгое и нестрогое сравнение в JavaScript",
+                  children: [
+                    {
+                      title: "Нестрогое сравнение (==)",
+                      type: "code",
+                      description: `
+                        <p><strong>Нестрогое сравнение</strong> выполняется с помощью оператора "==". При этом происходит приведение типов, что означает, что если два сравниваемых значения имеют разные типы, JavaScript попытается привести их к одному типу перед сравнением.</p>
+                        <p>Например, строка и число могут быть приведены к числу, а затем выполнено сравнение.</p>
+                      `,
+                      code: `
+  console.log(5 == '5'); // true (строка '5' приводится к числу 5) 
+  console.log(null == undefined); // true (null и undefined равны) 
+                      `,
+                    },
+                    {
+                      title: "Строгое сравнение (===)",
+                      type: "code",
+                      description: `
+                        <p><strong>Строгое сравнение</strong> выполняется с помощью оператора "===". При этом не происходит приведения типов, и значения сравниваются с учетом их типа. Если типы различны, результатом будет false.</p>
+                        <p>Строгое сравнение помогает избежать неожиданных результатов, возникающих вследствие неявного преобразования типов.</p>
+                      `,
+                      code: `
+  console.log(5 === '5'); // false (разные типы) 
+  console.log(null === undefined); // false (разные типы) 
+                      `,
+                    },
+                    {
+                      title: "Сравнение их особенностей",
+                      type: "code",
+                      description: `
+                        <p>Основные различия между строгое и нестрогое сравнение:</p>
+                        <ul>
+                          <li><strong>Приведение типов:</strong> Нестрогое сравнение приводит разные типы к одному типу перед сравнением, в то время как строгое сравнение нет.</li>
+                          <li><strong>Безопасность:</strong> Строгое сравнение снижает вероятность неожиданных результатов.</li>
+                          <li><strong>Производительность:</strong> Строгое сравнение может быть немного быстрее, поскольку не требует приведения типов.</li>
+                        </ul>
+                      `,
+                      code: `
+  console.log(5 == '5'); // true (нестрогое) 
+  console.log(5 === '5'); // false (строгое) 
+                      `,
                     },
                   ],
                 },
