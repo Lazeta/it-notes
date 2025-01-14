@@ -888,6 +888,98 @@ document.addEventListener('visibilitychange', () => {
                     },
                   ],
                 },
+                {
+                  title: "Основные события при построении HTML-страницы",
+                  children: [
+                    {
+                      title: "Загрузка и парсинг HTML",
+                      type: "list",
+                      description: `
+                        <p>Основные характеристики загрузки и парсинга HTML:</p>
+                        <ul>
+                          <li><strong>Событие</strong>: Браузер загружает HTML-документ и начинает его парсить.</li>
+                          <li><strong>Результат</strong>: Создается дерево элементов (DOM — Document Object Model).</li>
+                          <li><strong>Зависимости</strong>: В процессе могут обнаруживаться внешние ресурсы (CSS, JavaScript).</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Загрузка и парсинг CSS",
+                      type: "list",
+                      description: `
+                        <p>Основные характеристики загрузки и парсинга CSS:</p>
+                        <ul>
+                          <li><strong>Событие</strong>: Браузер загружает и парсит файлы CSS.</li>
+                          <li><strong>Результат</strong>: Создается дерево стилей (CSSOM — CSS Object Model).</li>
+                          <li><strong>Блокировка</strong>: Этот этап может блокировать рендеринг страницы.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Создание и рендеринг страницы",
+                      type: "list",
+                      description: `
+                        <p>Основные характеристики создания и рендеринга страницы:</p>
+                        <ul>
+                          <li><strong>Событие</strong>: Браузер создает дерево рендеринга и отображает страницу.</li>
+                          <li><strong>Результат</strong>: Объединение DOM и CSSOM для создания визуального представления.</li>
+                          <li><strong>Влияние</strong>: Рендеринг зависит от порядка загрузки и выполнения JavaScript.</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Структура классического HTML-документа",
+                  children: [
+                    {
+                      title: "<!DOCTYPE html>",
+                      type: "list",
+                      description: `
+                        <p>Определяет тип документа и версию HTML.</p>
+                        <ul>
+                          <li><strong>Версия</strong>: HTML5.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "<html>",
+                      type: "list",
+                      description: `
+                        <p>Корневой элемент документа.</p>
+                        <ul>
+                          <li><strong>Атрибуты</strong>: может содержать атрибуты, такие как lang.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "<head>",
+                      type: "list",
+                      description: `
+                        <p>Содержит метаданные о документе.</p>
+                        <ul>
+                          <li><strong>meta charset="UTF-8"</strong>: Устанавливает кодировку документа.</li>
+                          <li><strong>meta name="viewport"</strong>: Настройки для адаптивного дизайна.</li>
+                          <li><strong>title </strong>: Заголовок, отображаемый в заголовке вкладки браузера.</li>
+                          <li><strong>link </strong>: Подключение CSS-файлов.</li>
+                          <li><strong>script </strong>: Подключение JavaScript-файлов.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "<body>",
+                      type: "list",
+                      description: `
+                        <p>Основное содержимое документа.</p>
+                        <ul>
+                          <li><strong>header</strong>: Заголовок сайта, может содержать навигацию.</li>
+                          <li><strong>main</strong>: Основной контент страницы.</li>
+                          <li><strong>footer</strong>: Нижний колонтитул, содержащий информацию о правами и другие ссылки.</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
               ],
             },
             {
@@ -986,6 +1078,104 @@ document.addEventListener('visibilitychange', () => {
                   ],
                 },
                 {
+                  title: "Состав базовой HTML-страницы",
+                  children: [
+                    {
+                      title: "<!DOCTYPE html>",
+                      type: "list",
+                      description: `
+                        <p>Объявляет тип документа и версию HTML:</p>
+                        <ul>
+                          <li><strong>Версия</strong>: Обычно используется HTML5.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "<html>",
+                      type: "list",
+                      description: `
+                        <p>Корневой элемент HTML-документа:</p>
+                        <ul>
+                          <li><strong>Атрибуты</strong>: Может содержать атрибут <code>lang</code> для указания языка.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "<head>",
+                      type: "list",
+                      description: `
+                        <p>Содержит метаданные о документе:</p>
+                        <ul>
+                          <li><strong><meta charset="UTF-8"></strong>: Устанавливает кодировку документа.</li>
+                          <li><strong><meta name="viewport"></strong>: Настройки для адаптивного дизайна и отображения на мобильных устройствах.</li>
+                          <li><strong><title></strong>: Заголовок, отображаемый на вкладке браузера.</li>
+                          <li><strong><link></strong>: Подключение внешних CSS-файлов.</li>
+                          <li><strong><script></strong>: Подключение внешних JavaScript-файлов (если необходимо).</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "<body>",
+                      type: "list",
+                      description: `
+                        <p>Основное содержимое страницы:</p>
+                        <ul>
+                          <li><strong><header></strong>: Заголовок или навигация сайта.</li>
+                          <li><strong><main></strong>: Основной контент страницы.</li>
+                          <li><strong><footer></strong>: Нижний колонтитул с информацией о правами и ссылками.</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Способы подключения стилей в HTML",
+                  children: [
+                    {
+                      title: "1. Внешний стиль (External CSS)",
+                      type: "list",
+                      description: `
+                        <p>Подключение стилей через отдельный файл:</p>
+                        <ul>
+                          <li><strong>Используемый тег</strong>: <code>&lt;link&gt;</code>.</li>
+                          <li><strong>Пример</strong>: 
+                            <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>.
+                          </li>
+                          <li><strong>Преимущества</strong>: Упрощает управление стилями и позволяет повторно использовать их на нескольких страницах.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "2. Встроенный стиль (Internal CSS)",
+                      type: "list",
+                      description: `
+                        <p>Подключение стилей в <code>&lt;head&gt;</code> документа:</p>
+                        <ul>
+                          <li><strong>Используемый тег</strong>: <code>&lt;style&gt;</code>.</li>
+                          <li><strong>Пример</strong>: 
+                            <code>&lt;style&gt; body { background-color: lightblue; } &lt;/style&gt;</code>.
+                          </li>
+                          <li><strong>Преимущества</strong>: Удобно для небольших проектов или когда стили специфичны для одной страницы.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "3. Инлайновый стиль (Inline CSS)",
+                      type: "list",
+                      description: `
+                        <p>Применение стилей непосредственно к элементам:</p>
+                        <ul>
+                          <li><strong>Используемый атрибут</strong>: <code>style</code>.</li>
+                          <li><strong>Пример</strong>: 
+                            <code>&lt;h1 style="color: red;"&gt;Заголовок&lt;/h1&gt;</code>.
+                          </li>
+                          <li><strong>Преимущества</strong>: Быстрое применение стилей к отдельным элементам, но может привести к дублированию кода.</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
+                {
                   title: "Вес селектора или что такое специфичность в CSS",
                   children: [
                     {
@@ -994,6 +1184,7 @@ document.addEventListener('visibilitychange', () => {
                       type: "code",
                       description: `
                         <ul>
+                          <li><strong>глобальный селектор *</strong>: не имеет веса</li>
                           <li><strong>Инлайновые стили</strong>: 1000</li>
                           <li><strong>ID-селекторы</strong>: 100</li>
                           <li><strong>Классы, атрибуты и псевдоклассы</strong>: 10</li>
@@ -1002,6 +1193,11 @@ document.addEventListener('visibilitychange', () => {
                         <p>Пример:</p>
                       `,
                       code: `
+  // Специфичность: 0 (глобальный селектор)
+  * {
+    color: black;
+  }                    
+
   /* Специфичность: 1 (тег) */
   p {
     color: blue;
@@ -1052,7 +1248,7 @@ document.addEventListener('visibilitychange', () => {
                   ],
                 },
                 {
-                  title: "Коробчатая модель",
+                  title: "Коробчатая модель (box-sizing)",
                   children: [
                     {
                       title:
@@ -1397,14 +1593,180 @@ document.addEventListener('visibilitychange', () => {
                     },
                   ],
                 },
+                {
+                  title: "Разница между блочными и строчными элементами",
+                  children: [
+                    {
+                      title: "Блочные элементы",
+                      type: "list",
+                      description: `
+                        <p>Характеристики блочных элементов:</p>
+                        <ul>
+                          <li><strong>Занимают всю ширину</strong>: Блочные элементы по умолчанию занимают всю доступную ширину контейнера.</li>
+                          <li><strong>Начинают новую строку</strong>: Каждый блочный элемент начинается с новой строки, что создает визуальное разделение между элементами.</li>
+                          <li><strong>Примеры</strong>: <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;section&gt;</code>.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Строчные элементы",
+                      type: "list",
+                      description: `
+                        <p>Характеристики строчных элементов:</p>
+                        <ul>
+                          <li><strong>Занимают только необходимую ширину</strong>: Строчные элементы занимают только ту ширину, которая необходима для их содержания.</li>
+                          <li><strong>Не начинают новую строку</strong>: Строчные элементы располагаются в одной строке с другими элементами, не создавая разрывов.</li>
+                          <li><strong>Примеры</strong>: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;img&gt;</code>.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Сводная таблица различий",
+                      type: "list",
+                      description: `
+                        <p>Краткое сравнение:</p>
+                        <ul>
+                          <li><strong>Ширина</strong>: Блочные элементы — 100% ширины; строчные элементы — по содержимому.</li>
+                          <li><strong>Перенос</strong>: Блочные элементы переносят последующий контент на новую строку; строчные элементы — нет.</li>
+                          <li><strong>Использование</strong>: Блочные элементы для структуры; строчные элементы для форматирования текста.</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Подключение JavaScript-скриптов в HTML",
+                  children: [
+                    {
+                      title: "1. Внешний скрипт (External Script)",
+                      type: "list",
+                      description: `
+                        <p>Подключение скрипта через отдельный файл:</p>
+                        <ul>
+                          <li><strong>Используемый тег</strong>: <code>&lt;script&gt;</code>.</li>
+                          <li><strong>Пример</strong>: 
+                            <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code>.
+                          </li>
+                          <li><strong>Преимущества</strong>: Упрощает организацию кода и позволяет повторно использовать скрипты на нескольких страницах.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "2. Встроенный скрипт (Internal Script)",
+                      type: "list",
+                      description: `
+                        <p>Подключение скрипта непосредственно в документе:</p>
+                        <ul>
+                          <li><strong>Используемый тег</strong>: <code>&lt;script&gt;</code>.</li>
+                          <li><strong>Пример</strong>: 
+                            <code>&lt;script&gt; console.log('Hello, world!'); &lt;/script&gt;</code>.
+                          </li>
+                          <li><strong>Преимущества</strong>: Удобно для небольших скриптов, специфичных для одной страницы.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Атрибуты тега <script>",
+                      type: "list",
+                      description: `
+                        <p>Основные атрибуты:</p>
+                        <ul>
+                          <li><strong>src</strong>: Указывает путь к внешнему JavaScript-файлу.</li>
+                          <li><strong>defer</strong>: Загружает скрипт после завершения парсинга HTML-документа. Работает только с внешними скриптами.</li>
+                          <li><strong>async</strong>: Загружает скрипт асинхронно, не блокируя парсинг HTML. Работает только с внешними скриптами.</li>
+                          <li><strong>type</strong>: Указывает тип скрипта (по умолчанию <code>text/javascript</code>). Например, для модулей можно использовать <code>type="module"</code>.</li>
+                          <li><strong>integrity</strong>: Используется для проверки целостности загружаемого файла с использованием Subresource Integrity (SRI).</li>
+                          <li><strong>crossorigin</strong>: Определяет, как браузер должен обрабатывать кросс-доменные запросы для загружаемого скрипта.</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
               ],
             },
             {
               title: "JS questions",
               children: [
                 {
-                  title:
-                    "Возможность реализовать довольно простой алгоритм на JavaScript. Примеры задач",
+                  title: "Основные типы данных в JavaScript",
+                  children: [
+                    {
+                      title: "1. Числа (Number)",
+                      type: "list",
+                      description: `
+                        <p>Характеристики чисел:</p>
+                        <ul>
+                          <li><strong>Тип данных</strong>: Представляют как целые, так и дробные числа.</li>
+                          <li><strong>Примеры</strong>: <code>42</code>, <code>3.14</code>.</li>
+                          <li><strong>Особенности</strong>: Поддерживают специальные значения, такие как <code>Infinity</code>, <code>-Infinity</code>, и <code>NaN</code> (не число).</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "2. Строки (String)",
+                      type: "list",
+                      description: `
+                        <p>Характеристики строк:</p>
+                        <ul>
+                          <li><strong>Тип данных</strong>: Последовательность символов, используемая для представления текста.</li>
+                          <li><strong>Примеры</strong>: <code>"Hello, world!"</code>, <code>'JavaScript'</code>.</li>
+                          <li><strong>Методы</strong>: Строки имеют множество методов, таких как <code>length</code>, <code>substring()</code>, <code>toUpperCase()</code>.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "3. Логические значения (Boolean)",
+                      type: "list",
+                      description: `
+                        <p>Характеристики логических значений:</p>
+                        <ul>
+                          <li><strong>Тип данных</strong>: Представляют истинное (<code>true</code>) или ложное (<code>false</code>) значение.</li>
+                          <li><strong>Примеры</strong>: <code>true</code>, <code>false</code>.</li>
+                          <li><strong>Использование</strong>: Часто используются в условиях и циклах.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "4. Объекты (Object)",
+                      type: "list",
+                      description: `
+                        <p>Характеристики объектов:</p>
+                        <ul>
+                          <li><strong>Тип данных</strong>: Сложные структуры, которые могут содержать множество значений и методов.</li>
+                          <li><strong>Примеры</strong>: <code>{ name: "Alice", age: 25 }</code>, <code>new Date()</code>.</li>
+                          <li><strong>Типы объектов</strong>: Могут быть встроенными (Array, Date и т.д.) или пользовательскими.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "5. Массивы (Array)",
+                      type: "list",
+                      description: `
+                        <p>Характеристики массивов:</p>
+                        <ul>
+                          <li><strong>Тип данных</strong>: Специальный тип объекта, который хранит упорядоченные коллекции значений.</li>
+                          <li><strong>Примеры</strong>: <code>[1, 2, 3]</code>, <code>["apple", "banana"]</code>.</li>
+                          <li><strong>Методы</strong>: Массивы имеют множество методов, таких как <code>push()</code>, <code>pop()</code>, <code>map()</code>.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "6. Специальные значения",
+                      type: "list",
+                      description: `
+                        <p>Некоторые специальные значения:</p>
+                        <ul>
+                          <li><strong>undefined</strong>: Переменная, которая была объявлена, но не инициализирована.</li>
+                          <li><strong>null</strong>: Явное указание на отсутствие значения или объект.</li>
+                          <li><strong>Symbol</strong>: Уникальные и неизменяемые идентификаторы (доступны с ES6).</li>
+                          <li><strong>BigInt</strong>: Тип данных для работы с целыми числами произвольной длины (доступен с ES11).</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Реализация простого алгоритма на JavaScript",
                   children: [
                     {
                       title: "Факториал числа",
@@ -1456,7 +1818,7 @@ document.addEventListener('visibilitychange', () => {
                   ],
                 },
                 {
-                  title: "Переменные",
+                  title: "Переменные let, const, var",
                   children: [
                     {
                       title: "Область видимости переменных",
@@ -1482,6 +1844,236 @@ document.addEventListener('visibilitychange', () => {
     // console.log(blockVar); // ошибка: blockVar не доступен здесь
   }
   console.log(globalVar); // доступен здесь
+                      `,
+                    },
+                    {
+                      title: "Описание переменных",
+                      type: "code",
+                      description: `
+                        <p><strong>var</strong>: Используется для объявления переменных. Переменные, объявленные с помощью var, имеют функциональную или глобальную область видимости и могут быть переопределены. Они также подвержены механизму поднятия (hoisting).</p>
+                        <p><strong>let</strong>: Вводится в ES6 (ECMAScript 2015). Используется для объявления переменных с блочной областью видимости. Переменные, объявленные с помощью let, не могут быть переопределены в пределах одной и той же области видимости. Также подвержены подъеманию, но не инициализируются до фактической строки кода.</p>
+                        <p><strong>const</strong>: Также введена в ES6. Используется для объявления констант, значение которых не может быть переопределено. Как и let, имеет блочную область видимости.</p>
+                      `,
+                      code: `
+  var a = 'Hello';
+  console.log(a); // 'Hello'
+  
+  let b = 'World';
+  console.log(b); // 'World'
+  
+  const c = '!';
+  console.log(c); // '!'
+                      `,
+                    },
+                    {
+                      title: "Сравнение области видимости",
+                      type: "code",
+                      description: `
+                        <p>Область видимости переменных var, let и const:</p>
+                        <ul>
+                          <li><strong>var</strong>: Функциональная или глобальная область видимости.</li>
+                          <li><strong>let</strong> и <strong>const</strong>: Блочная область видимости.</li>
+                        </ul>
+                      `,
+                      code: `
+  if (true) {
+    var x = 10;
+    let y = 20;
+    const z = 30;
+  }
+
+  console.log(x); // 10
+  console.log(y); // ReferenceError: y is not defined
+  console.log(z); // ReferenceError: z is not defined
+                      `,
+                    },
+                    {
+                      title: "Подъем переменных",
+                      type: "code",
+                      description: `
+                        <p>Все три типа переменных поднимаются, но их инициализация происходит на разных стадиях:</p>
+                      `,
+                      code: `
+  console.log(aVar); // undefined (подъем, но не инициализация)
+  var aVar = 'test';
+
+  // console.log(aLet); // ReferenceError: Cannot access 'aLet' before initialization
+  let aLet = 'test';
+
+  // console.log(aConst); // ReferenceError: Cannot access 'aConst' before initialization
+  const aConst = 'test';
+                      `,
+                    },
+                    {
+                      title: "Использование",
+                      type: "code",
+                      description: `
+                        <p>Рекомендуется использовать let и const вместо var, чтобы избежать неожиданных ошибок и путаницы:</p>
+                      `,
+                      code: `
+  let name = 'John';
+  const age = 30;
+
+  name = 'Doe'; // корректно, значение переменной может меняться
+  // age = 31; // TypeError: Assignment to constant variable. (ошибка)
+                      `,
+                    },
+                    {
+                      title: "Вывод",
+                      type: "code",
+                      description: `
+                        <p>Необходимо использовать let и const в современных приложениях, чтобы избежать проблем с областью видимости, поднятием и переопределением переменных.</p>
+                      `,
+                      code: `
+  if (true) {
+    let message = "Hello, block!";
+    console.log(message); // "Hello, block!"
+  }
+  // console.log(message); // ReferenceError: message is not defined
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Способы объявления переменных",
+                  children: [
+                    {
+                      title: "1. Использование var",
+                      type: "code",
+                      description: `
+                        <p><strong>var</strong>: Объявляет переменную с функциональной или глобальной областью видимости.</p>
+                        <ul>
+                          <li>Переменные, объявленные с помощью <code>var</code>, могут быть переопределены.</li>
+                          <li>Подвержены механизму поднятия (hoisting).</li>
+                        </ul>
+                      `,
+                      code: `
+  var name = 'Alice';
+  console.log(name); // 'Alice'
+  var name = 'Bob'; // переопределение
+  console.log(name); // 'Bob'
+                      `,
+                    },
+                    {
+                      title: "2. Использование let",
+                      type: "code",
+                      description: `
+                        <p><strong>let</strong>: Объявляет переменную с блочной областью видимости.</p>
+                        <ul>
+                          <li>Переменные, объявленные с помощью <code>let</code>, не могут быть переопределены в пределах одной области видимости.</li>
+                          <li>Также подвержены поднятию, но не инициализируются до фактической строки кода.</li>
+                        </ul>
+                      `,
+                      code: `
+  let age = 25;
+  console.log(age); // 25
+  // let age = 30; // ошибка: Identifier 'age' has already been declared
+                      `,
+                    },
+                    {
+                      title: "3. Использование const",
+                      type: "code",
+                      description: `
+                        <p><strong>const</strong>: Объявляет константу, значение которой не может быть переопределено.</p>
+                        <ul>
+                          <li>Имеет блочную область видимости.</li>
+                          <li>Объявленные с помощью <code>const</code> переменные должны быть инициализированы при объявлении.</li>
+                        </ul>
+                      `,
+                      code: `
+  const pi = 3.14;
+  console.log(pi); // 3.14
+  // pi = 3.14159; // ошибка: Assignment to constant variable.
+                      `,
+                    },
+                    {
+                      title: "4. Групповое объявление",
+                      type: "code",
+                      description: `
+                        <p>Можно объявить несколько переменных в одной строке:</p>
+                      `,
+                      code: `
+  let x = 10, y = 20, z = 30;
+  console.log(x, y, z); // 10 20 30
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Особенности стрелочных функций",
+                  children: [
+                    {
+                      title: "1. Синтаксис",
+                      type: "code",
+                      description: `
+                        <p>Стрелочные функции имеют более компактный синтаксис по сравнению с обычными функциями:</p>
+                      `,
+                      code: `
+  const add = (a, b) => a + b;
+  console.log(add(2, 3)); // 5
+                      `,
+                    },
+                    {
+                      title: "2. Лексическое значение this",
+                      type: "code",
+                      description: `
+                        <p>Стрелочные функции не имеют своего собственного <code>this</code>; вместо этого они используют <code>this</code> из окружающего контекста:</p>
+                      `,
+                      code: `
+  function Person() {
+    this.age = 0;
+
+    setInterval(() => {
+      this.age++; // 'this' ссылается на объект Person
+      console.log(this.age);
+    }, 1000);
+  }
+
+  const p = new Person(); // будет выводить возраст каждую секунду
+                      `,
+                    },
+                    {
+                      title: "3. Отсутствие объекта arguments",
+                      type: "code",
+                      description: `
+                        <p>Стрелочные функции не имеют собственного объекта <code>arguments</code>. Для доступа к аргументам можно использовать оператор <code>rest</code>:</p>
+                      `,
+                      code: `
+  const sum = (...args) => args.reduce((a, b) => a + b, 0);
+  console.log(sum(1, 2, 3, 4)); // 10
+                      `,
+                    },
+                    {
+                      title: "4. Не могут быть использованы как конструкторы",
+                      type: "code",
+                      description: `
+                        <p>Стрелочные функции не могут быть использованы с оператором <code>new</code>:</p>
+                      `,
+                      code: `
+  const Person = () => {};
+  // const p = new Person(); // ошибка: Person is not a constructor
+                      `,
+                    },
+                    {
+                      title: "5. Не имеют свойства prototype",
+                      type: "code",
+                      description: `
+                        <p>Стрелочные функции не имеют свойства <code>prototype</code>, что делает их непригодными для создания методов объектов:</p>
+                      `,
+                      code: `
+  const arrowFunc = () => {};
+  console.log(arrowFunc.prototype); // undefined
+                      `,
+                    },
+                    {
+                      title: "6. Возврат значений",
+                      type: "code",
+                      description: `
+                        <p>Если стрелочная функция состоит из одного выражения, то фигурные скобки и ключевое слово <code>return</code> можно опустить:</p>
+                      `,
+                      code: `
+  const square = x => x * x;
+  console.log(square(4)); // 16
                       `,
                     },
                   ],
@@ -1511,8 +2103,8 @@ document.addEventListener('visibilitychange', () => {
                             "<p>Генерирует случайное число от 0 до 1.</p>",
                           code: `
   function getRandomInt(min, max) {
-    // генерация случайного целого числа
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  // генерация случайного целого числа
+  return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   console.log(getRandomInt(1, 10)); // случайное число от 1 до 10
                           `,
@@ -1760,6 +2352,191 @@ document.addEventListener('visibilitychange', () => {
                   ],
                 },
                 {
+                  title: "Основные методы объекта",
+                  children: [
+                    {
+                      title: "1. Object.create()",
+                      type: "code",
+                      description: `
+                        <p>Создает новый объект с указанным объектом в качестве прототипа.</p>
+                      `,
+                      code: `
+  const proto = { greet() { console.log('Hello!'); } };
+  const obj = Object.create(proto);
+  obj.greet(); // 'Hello!'
+                      `,
+                    },
+                    {
+                      title: "2. Object.keys()",
+                      type: "code",
+                      description: `
+                        <p>Возвращает массив имен собственных перечисляемых свойств объекта.</p>
+                      `,
+                      code: `
+  const person = { name: 'Alice', age: 25 };
+  console.log(Object.keys(person)); // ['name', 'age']
+                      `,
+                    },
+                    {
+                      title: "3. Object.values()",
+                      type: "code",
+                      description: `
+                        <p>Возвращает массив значений собственных перечисляемых свойств объекта.</p>
+                      `,
+                      code: `
+  const person = { name: 'Alice', age: 25 };
+  console.log(Object.values(person)); // ['Alice', 25]
+                      `,
+                    },
+                    {
+                      title: "4. Object.entries()",
+                      type: "code",
+                      description: `
+                        <p>Возвращает массив собственных перечисляемых свойств объекта в виде пар [ключ, значение].</p>
+                      `,
+                      code: `
+  const person = { name: 'Alice', age: 25 };
+  console.log(Object.entries(person)); // [['name', 'Alice'], ['age', 25]]
+                      `,
+                    },
+                    {
+                      title: "5. Object.assign()",
+                      type: "code",
+                      description: `
+                        <p>Копирует значения всех собственных перечисляемых свойств из одного или нескольких источников в целевой объект.</p>
+                      `,
+                      code: `
+  const target = { a: 1 };
+  const source = { b: 2, c: 3 };
+  const returnedTarget = Object.assign(target, source);
+  console.log(returnedTarget); // { a: 1, b: 2, c: 3 }
+                      `,
+                    },
+                    {
+                      title: "6. Object.freeze()",
+                      type: "code",
+                      description: `
+                        <p>Замораживает объект, делая его неизменяемым. Невозможно добавлять, удалять или изменять свойства.</p>
+                      `,
+                      code: `
+  const obj = { name: 'Alice' };
+  Object.freeze(obj);
+  obj.name = 'Bob'; // не сработает
+  console.log(obj.name); // 'Alice'
+                      `,
+                    },
+                    {
+                      title: "7. Object.seal()",
+                      type: "code",
+                      description: `
+                        <p>Запечатывает объект, предотвращая добавление или удаление свойств, но позволяя изменять существующие.</p>
+                      `,
+                      code: `
+  const obj = { name: 'Alice' };
+  Object.seal(obj);
+  obj.age = 25; // не сработает
+  obj.name = 'Bob'; // сработает
+  console.log(obj); // { name: 'Bob' }
+                      `,
+                    },
+                    {
+                      title: "8. Object.prototype.hasOwnProperty()",
+                      type: "code",
+                      description: `
+                        <p>Возвращает булево значение, указывающее, является ли указанное свойство собственным свойством объекта.</p>
+                      `,
+                      code: `
+  const obj = { name: 'Alice' };
+  console.log(obj.hasOwnProperty('name')); // true
+  console.log(obj.hasOwnProperty('age')); // false
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Дескрипторы объекта",
+                  children: [
+                    {
+                      title: "Определение",
+                      type: "list",
+                      description: `
+                        <p><strong>Дескрипторы объекта</strong> — это объекты, которые описывают свойства объекта, их поведение и характеристики. Они позволяют управлять тем, как свойства могут быть использованы и изменены.</p>
+                      `,
+                    },
+                    {
+                      title: "Типы дескрипторов",
+                      type: "list",
+                      description: `
+                        <p>Существуют два типа дескрипторов:</p>
+                        <ul>
+                          <li><strong>Данные дескрипторы</strong>: Определяют свойство с конкретным значением.</li>
+                          <li><strong>Accessor дескрипторы</strong>: Определяют свойство с помощью функций получения и установки (геттеров и сеттеров).</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Пример данных дескриптора",
+                      type: "code",
+                      description: `
+                        <p>Создание свойства с помощью данных дескриптора:</p>
+                      `,
+                      code: `
+  const obj = {};
+  Object.defineProperty(obj, 'name', {
+    value: 'Alice',
+    writable: true, // может быть изменено
+    enumerable: true, // будет перечисляться в циклах
+    configurable: true // может быть изменено или удалено
+  });
+  console.log(obj.name); // 'Alice'
+                      `,
+                    },
+                    {
+                      title: "Пример accessor дескриптора",
+                      type: "code",
+                      description: `
+                        <p>Создание свойства с помощью accessor дескриптора:</p>
+                      `,
+                      code: `
+  const obj = {
+    firstName: 'Alice',
+    lastName: 'Smith'
+  };
+  
+  Object.defineProperty(obj, 'fullName', {
+    get() {
+      return \`\${this.firstName} \${this.lastName}\`;
+    },
+    set(value) {
+      [this.firstName, this.lastName] = value.split(' ');
+    },
+    enumerable: true,
+    configurable: true
+  });
+  
+  console.log(obj.fullName); // 'Alice Smith'
+  obj.fullName = 'Bob Johnson';
+  console.log(obj.firstName); // 'Bob'
+                      `,
+                    },
+                    {
+                      title: "Свойства дескрипторов",
+                      type: "list",
+                      description: `
+                        <p>Дескрипторы имеют следующие свойства:</p>
+                        <ul>
+                          <li><strong>value</strong>: значение свойства (для данных дескрипторов).</li>
+                          <li><strong>writable</strong>: указывает, может ли значение быть изменено.</li>
+                          <li><strong>enumerable</strong>: указывает, будет ли свойство перечисляться в циклах.</li>
+                          <li><strong>configurable</strong>: указывает, может ли свойство быть удалено или изменено.</li>
+                          <li><strong>get</strong>: функция, возвращающая текущее значение свойства (для accessor дескрипторов).</li>
+                          <li><strong>set</strong>: функция, задающая новое значение свойства (для accessor дескрипторов).</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
+                {
                   title:
                     "Тернарные, нулевое объединение, необязательное связывание и логические операторы",
                   children: [
@@ -2003,7 +2780,7 @@ document.addEventListener('visibilitychange', () => {
                   ],
                 },
                 {
-                  title: "Разница и схожесть между null и undefined",
+                  title: "Отличие между null и undefined",
                   children: [
                     {
                       title: "Описание null и undefined",
@@ -2016,16 +2793,16 @@ document.addEventListener('visibilitychange', () => {
                         </ul>
                       `,
                       code: `
-                        // Примеры null и undefined
-                        let a = null;      // Явно задано значение null
-                        let b;             // Не инициализирована, значение undefined
-                
-                        console.log(a);   // null
-                        console.log(b);   // undefined
-                
-                        // Проверка типов
-                        console.log(typeof a); // "object"
-                        console.log(typeof b); // "undefined"
+  // Примеры null и undefined
+  let a = null;      // Явно задано значение null
+  let b;             // Не инициализирована, значение undefined
+
+  console.log(a);   // null
+  console.log(b);   // undefined
+
+  // Проверка типов
+  console.log(typeof a); // "object"
+  console.log(typeof b); // "undefined"
                       `,
                     },
                     {
@@ -2217,97 +2994,6 @@ document.addEventListener('visibilitychange', () => {
                   ],
                 },
                 {
-                  title: "Переменные let, const, var",
-                  children: [
-                    {
-                      title: "Описание переменных",
-                      type: "code",
-                      description: `
-                        <p><strong>var</strong>: Используется для объявления переменных. Переменные, объявленные с помощью var, имеют функциональную или глобальную область видимости и могут быть переопределены. Они также подвержены механизму поднятия (hoisting).</p>
-                        <p><strong>let</strong>: Вводится в ES6 (ECMAScript 2015). Используется для объявления переменных с блочной областью видимости. Переменные, объявленные с помощью let, не могут быть переопределены в пределах одной и той же области видимости. Также подвержены подъеманию, но не инициализируются до фактической строки кода.</p>
-                        <p><strong>const</strong>: Также введена в ES6. Используется для объявления констант, значение которых не может быть переопределено. Как и let, имеет блочную область видимости.</p>
-                      `,
-                      code: `
-  var a = 'Hello';
-  console.log(a); // 'Hello'
-  
-  let b = 'World';
-  console.log(b); // 'World'
-  
-  const c = '!';
-  console.log(c); // '!'
-                      `,
-                    },
-                    {
-                      title: "Сравнение области видимости",
-                      type: "code",
-                      description: `
-                        <p>Область видимости переменных var, let и const:</p>
-                        <ul>
-                          <li><strong>var</strong>: Функциональная или глобальная область видимости.</li>
-                          <li><strong>let</strong> и <strong>const</strong>: Блочная область видимости.</li>
-                        </ul>
-                      `,
-                      code: `
-  if (true) {
-    var x = 10;
-    let y = 20;
-    const z = 30;
-  }
-
-  console.log(x); // 10
-  console.log(y); // ReferenceError: y is not defined
-  console.log(z); // ReferenceError: z is not defined
-                      `,
-                    },
-                    {
-                      title: "Подъем переменных",
-                      type: "code",
-                      description: `
-                        <p>Все три типа переменных поднимаются, но их инициализация происходит на разных стадиях:</p>
-                      `,
-                      code: `
-  console.log(aVar); // undefined (подъем, но не инициализация)
-  var aVar = 'test';
-
-  // console.log(aLet); // ReferenceError: Cannot access 'aLet' before initialization
-  let aLet = 'test';
-
-  // console.log(aConst); // ReferenceError: Cannot access 'aConst' before initialization
-  const aConst = 'test';
-                      `,
-                    },
-                    {
-                      title: "Использование",
-                      type: "code",
-                      description: `
-                        <p>Рекомендуется использовать let и const вместо var, чтобы избежать неожиданных ошибок и путаницы:</p>
-                      `,
-                      code: `
-  let name = 'John';
-  const age = 30;
-
-  name = 'Doe'; // корректно, значение переменной может меняться
-  // age = 31; // TypeError: Assignment to constant variable. (ошибка)
-                      `,
-                    },
-                    {
-                      title: "Вывод",
-                      type: "code",
-                      description: `
-                        <p>Необходимо использовать let и const в современных приложениях, чтобы избежать проблем с областью видимости, поднятием и переопределением переменных.</p>
-                      `,
-                      code: `
-  if (true) {
-    let message = "Hello, block!";
-    console.log(message); // "Hello, block!"
-  }
-  // console.log(message); // ReferenceError: message is not defined
-                      `,
-                    },
-                  ],
-                },
-                {
                   title: "Контекст this",
                   children: [
                     {
@@ -2321,35 +3007,85 @@ document.addEventListener('visibilitychange', () => {
                       type: "code",
                       description:
                         "Значение `this` зависит от контекста вызова функции. Вот основные правила:",
-                      code: "// В глобальном контексте (вне функций) 'this' ссылается на глобальный объект (window в браузере).\nconsole.log(this); // window\n\n// В методе объекта 'this' ссылается на объект, в контексте которого был вызван метод:\nconst obj = {\n    name: 'Obj',\n    method: function() {\n        console.log(this.name);\n    }\n};\nobj.method(); // 'Obj'\n",
+                      code: `
+  // В глобальном контексте (вне функций) 'this' ссылается на глобальный объект (window в браузере).
+  console.log(this); // window
+  
+  // В методе объекта 'this' ссылается на объект, в контексте которого был вызван метод:
+  const obj = {
+    name: 'Obj',
+    method: function() {
+      console.log(this.name);
+    }
+  };
+  obj.method(); // 'Obj'
+                      `,
                     },
                     {
                       title: "Значение this в функциях",
                       type: "code",
                       description:
                         "В обычной функции `this` ссылается на глобальный объект (или undefined в строгом режиме).",
-                      code: "function showThis() {\n    console.log(this);\n}\n\nshowThis(); // window (или undefined в строгом режиме)",
+                      code: `
+  function showThis() {
+    console.log(this);
+  }
+  
+  showThis(); // window (или undefined в строгом режиме)
+                      `,
                     },
                     {
                       title: "Классы и this",
                       type: "code",
                       description:
                         "В классах `this` ссылается на экземпляр класса, который был создан с помощью ключевого слова new.",
-                      code: "class MyClass {\n    constructor(value) {\n        this.value = value;\n    }\n    showValue() {\n        console.log(this.value);\n    }\n}\n\nconst instance = new MyClass(10);\ninstance.showValue(); // 10",
+                      code: `
+  class MyClass {
+    constructor(value) {
+      this.value = value;
+    }
+    showValue() {
+      console.log(this.value);
+    }
+  }
+  
+  const instance = new MyClass(10);
+  instance.showValue(); // 10
+                      `,
                     },
                     {
                       title: "Стрелочные функции и this",
                       type: "code",
                       description:
                         "Стрелочные функции не имеют собственного `this` и наследуют его из родительского контекста, в котором они были созданы.",
-                      code: "const obj = {\n    value: 20,\n    method: function() {\n        const arrowFunction = () => {\n            console.log(this.value);\n        };\n        arrowFunction();\n    }\n};\n\nobj.method(); // 20",
+                      code: `
+  const obj = {
+    value: 20,
+    method: function() {
+      const arrowFunction = () => {
+        console.log(this.value);
+      };
+    arrowFunction();
+  }};
+
+  obj.method(); // 20
+                      `,
                     },
                     {
                       title: "Способы контроля this",
                       type: "code",
                       description:
                         "Можно контролировать значение `this` в функции с помощью методов `.call()`, `.apply()` и `.bind()`.",
-                      code: "function show() {\n    console.log(this.name);\n}\n\nconst obj = { name: 'Test' };\n\nshow.call(obj);    // 'Test'\nshow.apply(obj);   // 'Test'\n\nconst boundShow = show.bind(obj);\nboundShow();        // 'Test'",
+                      code: `
+  function show() {  
+    console.log(this.name);
+    const obj = { name: 'Test' };
+    show.call(obj);    // 'Test'
+    show.apply(obj);   // 'Test'
+    const boundShow = show.bind(obj);
+    boundShow();       // 'Test'
+  }
+                      `,
                     },
                     {
                       title: "Вывод",
@@ -2594,7 +3330,7 @@ document.addEventListener('visibilitychange', () => {
                   ],
                 },
                 {
-                  title: "Строгое и нестрогое сравнение в JavaScript",
+                  title: "Строгое и нестрогое сравнение",
                   children: [
                     {
                       title: "Нестрогое сравнение (==)",
@@ -2638,67 +3374,119 @@ document.addEventListener('visibilitychange', () => {
                     },
                   ],
                 },
+                {
+                  title: "Рекурсия",
+                  children: [
+                    {
+                      title: "Определение",
+                      type: "list",
+                      description: `
+                        <p><strong>Рекурсия</strong> — это функция вызывающая саму себя для решения подзадач. Рекурсивные функции обычно разбивают задачу на меньшие подзадачи, которые решаются аналогичным образом.</p>
+                      `,
+                    },
+                    {
+                      title: "Структура рекурсивной функции",
+                      type: "code",
+                      description: `
+                        <p>Рекурсивная функция должна иметь:</p>
+                        <ul>
+                          <li><strong>Базовый случай</strong>: Условие, при котором функция прекращает вызывать саму себя, чтобы избежать бесконечной рекурсии.</li>
+                          <li><strong>Рекурсивный случай</strong>: Вызов самой функции с меньшей или более простой версией задачи.</li>
+                        </ul>
+                      `,
+                      code: `
+  function factorial(n) {
+    if (n === 0) { // базовый случай
+      return 1;
+    }
+    return n * factorial(n - 1); // рекурсивный случай
+  }
+  console.log(factorial(5)); // 120
+                      `,
+                    },
+                    {
+                      title: "Примеры использования",
+                      type: "list",
+                      description: `
+                        <p>Рекурсия может быть использована в следующих ситуациях:</p>
+                        <ul>
+                          <li>Вычисление факториала.</li>
+                          <li>Обход деревьев и графов.</li>
+                          <li>Решение задач, таких как сортировка (например, быстрая сортировка, сортировка слиянием).</li>
+                          <li>Решение задач, связанных с последовательностями (например, числа Фибоначчи).</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Преимущества и недостатки",
+                      type: "list",
+                      description: `
+                        <p>Преимущества и недостатки рекурсии:</p>
+                        <ul>
+                          <li><strong>Преимущества:</strong> Код более лаконичен и понятен, особенно при работе со сложными структурами данных.</li>
+                          <li><strong>Недостатки:</strong> Рекурсия может приводить к большому потреблению памяти из-за хранения состояния вызовов стека и может быть менее эффективной по сравнению с итеративными подходами.</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Promise",
+                  children: [
+                    {
+                      title: "Определение",
+                      type: "list",
+                      description: `
+                        <p>Promise — это объект, представляющий конечный результат асинхронной операции. Он может находиться в одном из трех состояний:</p>
+                        <ul>
+                          <li><strong>Ожидание (pending)</strong>: начальное состояние, ни выполнено, ни отклонено.</li>
+                          <li><strong>Выполнено (fulfilled)</strong>: операция завершена успешно.</li>
+                          <li><strong>Отклонено (rejected)</strong>: операция завершена с ошибкой.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Создание Promise",
+                      type: "code",
+                      description: `
+                        <p>Promise создается с помощью конструктора <code>Promise</code>, который принимает функцию с двумя аргументами: <code>resolve</code> и <code>reject</code>.</p>
+                      `,
+                      code: `
+  const myPromise = new Promise((resolve, reject) => {
+    // Асинхронная операция
+    const success = true; // поменяйте на false для теста отклонения
+    
+    if (success) {
+      resolve('Operation was successful!');
+    } else {
+      reject('Operation failed.');
+    }
+  });
+                      `,
+                    },
+                    {
+                      title: "Основные статические методы Promise",
+                      type: "list",
+                      description: `
+                        <p>Promise предоставляет несколько статических методов:</p>
+                        <ul>
+                          <li><strong>Promise.all(iterable)</strong>: Ожидает выполнения всех переданных промисов и возвращает массив результатов. Если любой из промисов будет отклонен, возвращается ошибка.</li>
+                          <li><strong>Promise.allSettled(iterable)</strong>: Ожидает выполнения всех переданных промисов и возвращает массив объектов с результатами (выполнено или отклонено) для каждого промиса.</li>
+                          <li><strong>Promise.any(iterable)</strong>: Ожидает выполнения первого успешного промиса. Если все промисы будут отклонены, возвращается ошибка.</li>
+                          <li><strong>Promise.race(iterable)</strong>: Ожидает выполнения первого завершенного промиса (выполнено или отклонено).</li>
+                          <li><strong>Promise.resolve(value)</strong>: Возвращает промис, который выполнен с заданным значением.</li>
+                          <li><strong>Promise.reject(reason)</strong>: Возвращает промис, который отклонен с заданной причиной.</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
               ],
             },
             {
               title: "React questions",
               children: [
-                {
-                  title: "topic title",
-                  children: [
-                    {
-                      title: "title",
-                      type: "list",
-                      description: `
-                      <p></p>
-                        <li></li>
-                      <p></p>
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "topic title",
-                  children: [
-                    {
-                      title: "title",
-                      type: "list",
-                      description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "topic title",
-                  children: [
-                    {
-                      title: "title",
-                      type: "list",
-                      description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "topic title",
-                  children: [
-                    {
-                      title: "title",
-                      type: "list",
-                      description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
-                      `,
-                    },
-                  ],
-                },
+
               ],
             },
             {
@@ -2763,119 +3551,57 @@ document.addEventListener('visibilitychange', () => {
                     },
                   ],
                 },
-                {
-                  title: "topic title",
-                  children: [
-                    {
-                      title: "title",
-                      type: "list",
-                      description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "topic title",
-                  children: [
-                    {
-                      title: "title",
-                      type: "list",
-                      description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "topic title",
-                  children: [
-                    {
-                      title: "title",
-                      type: "list",
-                      description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "topic title",
-                  children: [
-                    {
-                      title: "title",
-                      type: "list",
-                      description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
-                      `,
-                    },
-                  ],
-                },
               ],
             },
             {
               title: "methodology and libraries",
               children: [
                 {
-                  title: "topic title",
+                  title: "Методология BEM",
                   children: [
                     {
-                      title: "title",
+                      title: "B - Блок (Block)",
                       type: "list",
                       description: `
-                      <p></p>
-                        <li></li>
-                      <p></p>
+                        <p>Определение блока:</p>
+                        <ul>
+                          <li><strong>Что это</strong>: Независимый компонент интерфейса, который может быть переиспользован.</li>
+                          <li><strong>Примеры</strong>: <code>header</code>, <code>menu</code>, <code>button</code>.</li>
+                        </ul>
                       `,
                     },
-                  ],
-                },
-                {
-                  title: "topic title",
-                  children: [
                     {
-                      title: "title",
+                      title: "E - Элемент (Element)",
                       type: "list",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                        <p>Определение элемента:</p>
+                        <ul>
+                          <li><strong>Что это</strong>: Составная часть блока, которая не имеет смысла вне него.</li>
+                          <li><strong>Обозначение</strong>: Элементы обозначаются двойным подчеркиванием, например, <code>menu__item</code>.</li>
+                        </ul>
                       `,
                     },
-                  ],
-                },
-                {
-                  title: "topic title",
-                  children: [
                     {
-                      title: "title",
+                      title: "M - Модификатор (Modifier)",
                       type: "list",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                        <p>Определение модификатора:</p>
+                        <ul>
+                          <li><strong>Что это</strong>: Состояние или версия блока или элемента, изменяющая его внешний вид или поведение.</li>
+                          <li><strong>Обозначение</strong>: Модификаторы обозначаются двойным дефиссом, например, <code>button--primary</code>.</li>
+                        </ul>
                       `,
                     },
-                  ],
-                },
-                {
-                  title: "topic title",
-                  children: [
                     {
-                      title: "title",
+                      title: "Преимущества BEM",
                       type: "list",
                       description: `
-                      <p>paragraph</p>
-                        <li>li</li>
-                        <p>paragraph</p>
+                        <p>Основные преимущества методологии BEM:</p>
+                        <ul>
+                          <li><strong>Читаемость</strong>: Структура именования делает код более понятным.</li>
+                          <li><strong>Масштабируемость</strong>: Легко добавлять новые блоки и элементы без конфликтов.</li>
+                          <li><strong>Поддерживаемость</strong>: Изменения в одном блоке не влияют на другие.</li>
+                        </ul>
                       `,
                     },
                   ],
@@ -2903,57 +3629,61 @@ document.addEventListener('visibilitychange', () => {
                   ],
                 },
                 {
-                  title: "topic title",
+                  title: "Принципы SOLID",
                   children: [
                     {
-                      title: "title",
+                      title: "S - Single Responsibility Principle",
                       type: "list",
                       description: `
-                      <p></p>
-                        <li></li>
-                      <p></p>
+                        <p>Принцип единственной ответственности:</p>
+                        <ul>
+                          <li><strong>Определение</strong>: Каждый класс должен иметь одну единственную ответственность.</li>
+                          <li><strong>Цель</strong>: Упрощение тестирования и модификации кода.</li>
+                        </ul>
                       `,
                     },
-                  ],
-                },
-                {
-                  title: "topic title",
-                  children: [
                     {
-                      title: "title",
+                      title: "O - Open/Closed Principle",
                       type: "list",
                       description: `
-                      <p></p>
-                        <li></li>
-                      <p></p>
+                        <p>Принцип открытости/закрытости:</p>
+                        <ul>
+                          <li><strong>Определение</strong>: Классы должны быть открыты для расширения, но закрыты для изменения.</li>
+                          <li><strong>Цель</strong>: Позволяет добавлять новую функциональность без изменения существующего кода.</li>
+                        </ul>
                       `,
                     },
-                  ],
-                },
-                {
-                  title: "topic title",
-                  children: [
                     {
-                      title: "title",
+                      title: "L - Liskov Substitution Principle",
                       type: "list",
                       description: `
-                      <p></p>
-                        <li></li>
-                      <p></p>
+                        <p>Принцип подстановки Лисков:</p>
+                        <ul>
+                          <li><strong>Определение</strong>: Объекты подкласса должны быть взаимозаменяемыми с объектами суперкласса.</li>
+                          <li><strong>Цель</strong>: Поддержание корректности программы при замене объектов.</li>
+                        </ul>
                       `,
                     },
-                  ],
-                },
-                {
-                  title: "topic title",
-                  children: [
                     {
-                      title: "title",
+                      title: "I - Interface Segregation Principle",
                       type: "list",
                       description: `
-                      <p></p>
-                        <li></li>
-                      <p></p>
+                        <p>Принцип сегрегации интерфейсов:</p>
+                        <ul>
+                          <li><strong>Определение</strong>: Клиенты не должны зависеть от интерфейсов, которые они не используют.</li>
+                          <li><strong>Цель</strong>: Избежать ненужных зависимостей и создать узкоспециализированные интерфейсы.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "D - Dependency Inversion Principle",
+                      type: "list",
+                      description: `
+                        <p>Принцип инверсии зависимостей:</p>
+                        <ul>
+                          <li><strong>Определение</strong>: Модули верхнего уровня не должны зависеть от модулей нижнего уровня; обе группы должны зависеть от абстракций.</li>
+                          <li><strong>Цель</strong>: Уменьшение связанности между компонентами системы.</li>
+                        </ul>
                       `,
                     },
                   ],
@@ -2963,6 +3693,7 @@ document.addEventListener('visibilitychange', () => {
             {
               title: `
                         Темы интервью 📚:
+                        - SOLID.
                         - как работает браузер.
                         - Что такое DOM.
                         - Из чего состоит HTTP запрос.
@@ -2975,9 +3706,11 @@ document.addEventListener('visibilitychange', () => {
                         Основы HTML/CSS:
                         - На что нужно обратить внимание при разработке мультиязычных сайтов?
                         - Отображать значения атрибутов.
+                        - Состав базовой HTML-страницы
+                        - Способы подключения стилей в HTML
                         - Вес селектора или что такое специфичность в CSS.
                         - Псевдоклассы и псевдоэлементы.
-                        - Коробчатая модель.
+                        - Коробчатая модель (box-sizing).
                         - em против rem, относительные и абсолютные значения.
                         - Позиционирование: поток документов, свойство позиции, переполнение и z-индекс.
                         - Флексбокс.
@@ -2988,6 +3721,7 @@ document.addEventListener('visibilitychange', () => {
                         - Что такое #shadow-root в инспекторе HTML-страницы?
                         - Названия популярные CSS-методологии и их отличия.
                         - Как изменить цвет в svg файле?
+                        - Разница между блочными и строчными элементами
                         
                         Основы JS:
                         - Типы данных.
@@ -3025,6 +3759,7 @@ document.addEventListener('visibilitychange', () => {
                         - Что такое Event loop и как он работает? Можешь в подробностях рассказать о микро- и макрозадачах?
                         - Что такое webpack?
                         - Что такое XSS (Cross-Site Scripting)?
+                        - Особенности стрелочных функций.
                         
                         Основы React:
                         - Что такое JSX?
