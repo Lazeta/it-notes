@@ -21,15 +21,12 @@ export default function Categories({ data }) {
   }
   const filteredChildren = filterChildren(data.children);
 
-  // ________________________________________________________________________________________________
-
-  // ________________________________________________________________________________________________
   return (
     <div
       style={{
         border: '2px solid gray',
         borderRadius: '8px',
-        width: '94%',
+        width: '96%',
         margin: '7px auto',
         textAlign: 'justify',
         padding: '0 10px',
@@ -64,6 +61,68 @@ export default function Categories({ data }) {
             maxWidth: '100%',
             objectFit: 'cover',
           }} />
+      ) : data.type === "list" ? (
+        <>
+          {data.title &&
+            <h3
+              style={{
+                maxWidth: '100%',
+                padding: '0 10px',
+                textAlign: 'justify',
+              }}>{data.title.split('\n').map((line, index) => (
+                <span key={index}>{line}<br /></span>
+              ))}
+            </h3>}
+          {data.description && (
+            <div
+              dangerouslySetInnerHTML={{ __html: data.description }}
+            />
+          )}
+          {data.link && data.url &&
+            <a href={data.url} target="_blank" rel="noopener noreferrer">
+              {data.link}
+            </a>
+          }
+        </>
+      ) : data.type === "code" ? (
+        <>
+          {data.title &&
+            <h3
+              style={{
+                maxWidth: '100%',
+                padding: '0 10px',
+                textAlign: 'justify',
+              }}>{data.title.split('\n').map((line, index) => (
+                <span key={index}>{line}<br /></span>
+              ))}
+            </h3>}
+          {data.description && (
+            <div
+              dangerouslySetInnerHTML={{ __html: data.description }}
+            />
+          )}
+          <div
+            style={{
+              border: '1px solid #ccc',
+              borderRadius: '4px',
+              padding: '5px',
+              backgroundColor: '#f5f5f5',
+              fontFamily: 'monospace',
+              whiteSpace: 'pre-wrap',
+              overflow: 'auto',
+              marginBottom: '10px',
+            }}
+          >
+            <pre>
+              <code>{data.code}</code>
+            </pre>
+          </div>
+          {data.link && data.url &&
+            <a href={data.url} target="_blank" rel="noopener noreferrer">
+              {data.link}
+            </a>
+          }
+        </>
       ) : data.type === "video" ? (
         <>
           <h3 style={{ margin: '0', }}>{data.title}</h3>
@@ -81,50 +140,14 @@ export default function Categories({ data }) {
               objectFit: 'cover',
             }} />
         </>
-      ) : data.type === "code" ? (
-        <>
-          {data.title &&
-            <h3
-              style={{
-                maxWidth: '100%',
-                padding: '0 10px',
-                textAlign: 'justify',
-              }}>{data.title.split('\n').map((line, index) => (
-                <span key={index}>{line}<br /></span>
-              ))}
-            </h3>}
-          {data.description && (
-            <div 
-              dangerouslySetInnerHTML={{ __html: data.description }}
-            />
-          )}
-          <div
-            style={{
-              border: '1px solid #ccc',
-              borderRadius: '4px',
-              padding: '5px',
-              backgroundColor: '#f5f5f5',
-              fontFamily: 'monospace',
-              whiteSpace: 'pre-wrap',
-              overflow: 'auto',
-            }}
-          >
-            <pre>
-              <code>{data.code}</code>
-            </pre>
-          </div>
-          {data.link && data.url &&
-            <a href={data.url} target="_blank" rel="noopener noreferrer">
-              {data.link}
-            </a>
-          }
-        </>
       ) : (
         <Button onClick={expand} type="button" title={data.title}
           style={{
             cursor: 'pointer',
             padding: '8px 30px',
             marginLeft: '-10px',
+            display: 'flex',
+            flexWrap: 'wrap',
           }}
         />
       )}
@@ -133,10 +156,10 @@ export default function Categories({ data }) {
         <div
           style={{
             padding: '5px 0',
-            marginTop: '20px',
+            marginTop: '10px',
           }}>
           {filteredChildren.map((child, index) => (
-            <div key={index}>
+            <div key={index} >
               <Categories data={child} />
             </div>
           ))}
