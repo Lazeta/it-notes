@@ -156,7 +156,7 @@ export default function Categories({ data }) {
         <div
           style={{
             padding: '5px 0',
-            marginTop: '10px',
+            marginTop: '5px',
           }}>
           {filteredChildren.map((child, index) => (
             <div key={index} >
