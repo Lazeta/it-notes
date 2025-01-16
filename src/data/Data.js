@@ -128,7 +128,47 @@ export const data = {
           title: "ES6",
           children: [
             {
-              title: "Basics of ES6.",
+              title: "Destructuring assignment",
+              type: "text",
+            },
+            {
+              title: "Arrow functions () => {} ",
+              type: "text",
+            },
+            {
+              title: "Template strings `${}`",
+              type: "text",
+            },
+            {
+              title: "variable declaration with let and const",
+              type: "text",
+            },
+            {
+              title: "Classes",
+              type: "text",
+            },
+            {
+              title: "IIFE (immediately invoked function expression)",
+              type: "text",
+            },
+            {
+              title: "Multi-line strings",
+              type: "text",
+            },
+            {
+              title: "Promises",
+              type: "text",
+            },
+            {
+              title: "forEach and for...of",
+              type: "text",
+            },
+            {
+              title: "Default parameters",
+              type: "text",
+            },
+            {
+              title: "Rest-параметры и Spread-оператор ...",
               type: "text",
             },
           ],
@@ -139,26 +179,6 @@ export const data = {
             {
               title: "Basics of async programming.",
               type: "text",
-            },
-          ],
-        },
-        {
-          title: "JavaScript Frameworks",
-          children: [
-            {
-              title: "Learn more about frameworks",
-              type: "link",
-              url: "https://example.com",
-            },
-          ],
-        },
-        {
-          title: "DOM Manipulation",
-          children: [
-            {
-              title: "Learn more about DOM Manipulation.",
-              type: "link",
-              url: "https://example.com",
             },
           ],
         },
@@ -521,21 +541,26 @@ console.log(name, age);`,
                 },
                 {
                   title:
-                    "4.for of => повторяет блок кода для каждого элемента в массиве.",
+                    "4.for...of => повторяет блок кода для каждого элемента в массиве.",
+                  type: "text",
+                },
+                {
+                  title: 
+                    "5.forEach() => повторяет блок кода для каждого элемента в массиве.",
                   type: "text",
                 },
                 {
                   title:
-                    "5.for in => повторяет блок кода для каждого свойства в объекте.",
+                    "6.for in => повторяет блок кода для каждого свойства в объекте.",
                   type: "text",
                 },
                 {
-                  title: "6.break => прерывает выполнение цикла.",
+                  title: "7.break => прерывает выполнение цикла.",
                   type: "text",
                 },
                 {
                   title:
-                    "7.continue => прерывает текущую итерацию цикла и переходит к следующей.",
+                    "8.continue => прерывает текущую итерацию цикла и переходит к следующей.",
                   type: "text",
                 },
               ],
@@ -3555,6 +3580,82 @@ document.addEventListener('visibilitychange', () => {
               title: "patterns, principles, methodologies",
               children: [
                 {
+                  title: "Чистый код (Clean Code)",
+                  children: [
+                    {
+                      title: "Определение",
+                      type: "list",
+                      description: `
+                        <p>Чистый код — это подход к написанию программного обеспечения, который акцентирует внимание на его читаемости, понятности и простоте. Он способствует более легкому пониманию и сопровождению кода.</p>
+                      `,
+                    },
+                    {
+                      title: "Основные принципы чистого кода",
+                      type: "list",
+                      description: `
+                        <p>Некоторые ключевые принципы чистого кода:</p>
+                        <ul>
+                          <li><strong>Читаемость</strong>: Код должен быть легким для чтения и понимания.</li>
+                          <li><strong>Понятность</strong>: Названия переменных, функций и классов должны быть ясными и описательными.</li>
+                          <li><strong>Структурированность</strong>: Код должен быть организован логически, с четким разделением на модули и функции.</li>
+                          <li><strong>Минимизация дублирования</strong>: Избегайте повторения кода, используя функции и модули.</li>
+                          <li><strong>Тестируемость</strong>: Код должен быть легко тестируемым, что облегчает обнаружение ошибок.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Примеры хорошего кода",
+                      type: "code",
+                      description: `
+                        <p>Пример хорошего кода с понятными названиями:</p>
+                      `,
+                      code: `
+  function calculateArea(radius) {
+    return Math.PI * radius * radius;
+  }
+                      `,
+                    },
+                    {
+                      title: "Примеры плохого кода",
+                      type: "code",
+                      description: `
+                        <p>Пример плохого кода с непонятными названиями:</p>
+                      `,
+                      code: `
+  function c(r) {
+    return 3.14 * r * r;
+  }
+                      `,
+                    },
+                    {
+                      title: "Рекомендации по написанию чистого кода",
+                      type: "list",
+                      description: `
+                        <p>Некоторые рекомендации:</p>
+                        <ul>
+                          <li><strong>Используйте описательные названия</strong>: Названия должны отражать назначение переменной или функции.</li>
+                          <li><strong>Разделяйте код на функции</strong>: Каждая функция должна выполнять одну задачу.</li>
+                          <li><strong>Пишите комментарии</strong>: Используйте комментарии для объяснения сложных частей кода, но не переусердствуйте.</li>
+                          <li><strong>Следуйте стандартам кодирования</strong>: Придерживайтесь общепринятых стилей и стандартов в вашей команде.</li>
+                          <li><strong>Регулярно рефакторите код</strong>: Улучшайте и оптимизируйте код по мере его развития.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Преимущества чистого кода",
+                      type: "list",
+                      description: `
+                        <p>Преимущества написания чистого кода:</p>
+                        <ul>
+                          <li><strong>Упрощенное сопровождение</strong>: Более легкое понимание и изменение кода.</li>
+                          <li><strong>Меньше ошибок</strong>: Чистый код снижает вероятность ошибок и багов.</li>
+                          <li><strong>Увеличение производительности команды</strong>: Читаемый код ускоряет процесс разработки и тестирования.</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
+                {
                   title: "Методология BEM",
                   children: [
                     {
@@ -3835,6 +3936,7 @@ document.addEventListener('visibilitychange', () => {
                       </li>
                       <li><strong>Компоненты</strong>
                         <ul>
+                          <li>Что такое Portal</li>
                           <li>В чем разница между классовыми и функциональными компонентами?</li>
                           <li>Чем управляемые компоненты отличаются от неуправляемых?</li>
                           <li>Как выполнить рендеринг элементов массива?</li>
@@ -4099,7 +4201,7 @@ document.addEventListener('visibilitychange', () => {
               title: "",
               type: "list",
               description:
-              "<strong>DRY (Don't Repeat Yourself)</strong> - Принцип, согласно которому информация и логика не должны повторяться в коде, чтобы уменьшить дублирование и облегчить поддержку.",
+                "<strong>DRY (Don't Repeat Yourself)</strong> - Принцип, согласно которому информация и логика не должны повторяться в коде, чтобы уменьшить дублирование и облегчить поддержку.",
             },
             {
               title: "",
