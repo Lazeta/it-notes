@@ -32,7 +32,7 @@ export default function Categories({ data }) {
         padding: '0 10px',
         backgroundColor: '#f5f5f5',
       }}>
-      {data.type === "text" ? (
+      {data.type === "title" ? (
         <p
           style={{
             margin: '0',
@@ -43,26 +43,8 @@ export default function Categories({ data }) {
             <span key={index}>{line}<br /></span>
           ))}
         </p>
-      ) : data.type === "link" ? (
-        <>
-          {data.description && <p>{data.description}</p>}
-          <a href={data.url} target="_blank" rel="noopener noreferrer"
-            style={{
-              margin: '0',
-              maxWidth: '100%',
-              padding: '0 10px',
-              textAlign: 'justify',
-            }}>{data.title}</a>
-        </>
-      ) : data.type === "image" ? (
-        <img src={data.url} alt={data.title}
-          style={{
-            margin: '0',
-            maxWidth: '100%',
-            objectFit: 'cover',
-          }} />
-      ) : data.type === "list" ? (
-        <>
+      ) : data.type === "text" ? (
+        <div>
           {data.title &&
             <h3
               style={{
@@ -83,7 +65,48 @@ export default function Categories({ data }) {
               {data.link}
             </a>
           }
+        </div>
+      ) : data.type === "link" ? (
+        <>
+          {data.description && <p>{data.description}</p>}
+          <a href={data.url} target="_blank" rel="noopener noreferrer"
+            style={{
+              margin: '0',
+              maxWidth: '100%',
+              padding: '0 10px',
+              textAlign: 'justify',
+            }}>{data.title}</a>
         </>
+      ) : data.type === "image" ? (
+        <img src={data.url} alt={data.title}
+          style={{
+            margin: '0',
+            maxWidth: '100%',
+            objectFit: 'cover',
+          }} />
+      ) : data.type === "list" ? (
+        <div>
+          {data.title &&
+            <h3
+              style={{
+                maxWidth: '100%',
+                padding: '0 10px',
+                textAlign: 'justify',
+              }}>{data.title.split('\n').map((line, index) => (
+                <span key={index}>{line}<br /></span>
+              ))}
+            </h3>}
+          {data.description && (
+            <div
+              dangerouslySetInnerHTML={{ __html: data.description }}
+            />
+          )}
+          {data.link && data.url &&
+            <a href={data.url} target="_blank" rel="noopener noreferrer">
+              {data.link}
+            </a>
+          }
+        </div>
       ) : data.type === "code" ? (
         <>
           {data.title &&
