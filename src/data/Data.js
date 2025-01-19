@@ -2,3235 +2,99 @@ export const data = {
   title: "All",
   children: [
     {
-      title: "HTML/CSS",
+      title: "Web-technology",
       children: [
         {
-          title: "Style",
+          title: "Когда пользователь открывает страницу по ссылке",
           children: [
             {
-              title: "CSS",
-              children: [
-                {
-                  title: "Способы подключения стилей в HTML",
-                  children: [
-                    {
-                      title: "1. Внешний стиль (External CSS)",
-                      type: "list",
-                      description: `
-                        <p>Подключение стилей через отдельный файл:</p>
-                        <ul>
-                          <li><strong>Используемый тег</strong>: <code>&lt;link&gt;</code>.</li>
-                          <li><strong>Пример</strong>: 
-                            <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>.
-                          </li>
-                          <li><strong>Преимущества</strong>: Упрощает управление стилями и позволяет повторно использовать их на нескольких страницах.</li>
-                        </ul>
-                      `,
-                    },
-                    {
-                      title: "2. Встроенный стиль (Internal CSS)",
-                      type: "list",
-                      description: `
-                        <p>Подключение стилей в <code>&lt;head&gt;</code> документа:</p>
-                        <ul>
-                          <li><strong>Используемый тег</strong>: <code>&lt;style&gt;</code>.</li>
-                          <li><strong>Пример</strong>: 
-                            <code>&lt;style&gt; body { background-color: lightblue; } &lt;/style&gt;</code>.
-                          </li>
-                          <li><strong>Преимущества</strong>: Удобно для небольших проектов или когда стили специфичны для одной страницы.</li>
-                        </ul>
-                      `,
-                    },
-                    {
-                      title: "3. Инлайновый стиль (Inline CSS)",
-                      type: "list",
-                      description: `
-                        <p>Применение стилей непосредственно к элементам:</p>
-                        <ul>
-                          <li><strong>Используемый атрибут</strong>: <code>style</code>.</li>
-                          <li><strong>Пример</strong>: 
-                            <code>&lt;h1 style="color: red;"&gt;Заголовок&lt;/h1&gt;</code>.
-                          </li>
-                          <li><strong>Преимущества</strong>: Быстрое применение стилей к отдельным элементам, но может привести к дублированию кода.</li>
-                        </ul>
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "Вес селектора или что такое специфичность в CSS",
-                  children: [
-                    {
-                      title:
-                        "Специфичность в CSS определяет, какой стиль применяется к элементу при наличии множества правил. Она рассчитывается на основе различных типов селекторов:",
-                      type: "code",
-                      description: `
-                        <ul>
-                          <li><strong>глобальный селектор *</strong>: не имеет веса</li>
-                          <li><strong>Инлайновые стили</strong>: 1000</li>
-                          <li><strong>ID-селекторы</strong>: 100</li>
-                          <li><strong>Классы, атрибуты и псевдоклассы</strong>: 10</li>
-                          <li><strong>Теги и псевдоэлементы</strong>: 1</li>
-                        </ul>
-                        <p>Пример:</p>
-                      `,
-                      code: `
-          // Специфичность: 0 (глобальный селектор)
-          * {
-            color: black;
-          }                    
-        
-          /* Специфичность: 1 (тег) */
-          p {
-            color: blue;
-          }
-        
-          /* Специфичность: 10 (класс) */
-          .myClass {
-            color: red;
-          }
-        
-          /* Специфичность: 100 (ID) */
-          #myId {
-            color: green;
-          }
-        
-          /* Специфичность: 1000 (инлайн стиль) */
-          &lt;p style="color: yellow;"&gt;Hello&lt;/p&gt;
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "Псевдоклассы и псевдоэлементы",
-                  children: [
-                    {
-                      title:
-                        "Псевдоклассы и псевдоэлементы позволяют стилизовать элементы на основе их состояния или позиции:",
-                      type: "code",
-                      description: `
-                        <ul>
-                          <li><strong>Псевдоклассы</strong>: <code>:hover</code>, <code>:focus</code>, <code>:nth-child()</code></li>
-                          <li><strong>Псевдоэлементы</strong>: <code>::before</code>, <code>::after</code>, <code>::first-line</code></li>
-                        </ul>
-                        <p>Пример:</p>
-                      `,
-                      code: `
-  /* Псевдокласс */
-  a:hover {
-  color: blue;
-  }
-
-  /* Псевдоэлемент */
-  p::first-line {
-  font-weight: bold;
-  }
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "Коробчатая модель (box-sizing)",
-                  children: [
-                    {
-                      title:
-                        "Коробчатая модель описывает пространство, занимаемое элементом",
-                      type: "code",
-                      description: `
-                        <p>Она включает в себя следующие свойства:</p>
-                        <ul>
-                          <li><strong>Content</strong>: Содержимое элемента.</li>
-                          <li><strong>Padding</strong>: Поля вокруг содержимого.</li>
-                          <li><strong>Border</strong>: Граница вокруг элемента.</li>
-                          <li><strong>Margin</strong>: Отступы между элементами.</li>
-                        </ul>
-                        <p>Пример:</p>
-                      `,
-                      code: `
-  div {
-    margin: 10px;
-    border: 1px solid black;
-    padding: 5px;
-    width: 100px;
-  }
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "em против rem, относительные и абсолютные значения",
-                  children: [
-                    {
-                      title:
-                        "<code>em</code> и <code>rem</code> - это относительные единицы измерения, используемые в CSS:",
-                      type: "code",
-                      description: `
-                        <ul>
-                          <li><strong>em</strong>: Относится к текущему элементу. Если размер шрифта родительского элемента равен 16px, то 1em = 16px.</li>
-                          <li><strong>rem</strong>: Относится к корневому элементу (обычно <code>html</code>). Если размер шрифта корневого элемента равен 16px, то 1rem = 16px.</li>
-                        </ul>
-                        <p>Пример:</p>
-                      `,
-                      code: `
-  h1 {
-  font-size: 2em; /* 32px, если родительский элемент имеет размер 16px */
-  }
-
-  p {
-  font-size: 1.5rem; /* 24px */
-  }
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "Позиционирование: поток документов, overflow, z-index",
-                  children: [
-                    {
-                      title:
-                        "Позиционирование в CSS управляет размещением элементов на странице:",
-                      type: "code",
-                      description: `
-                        <ul>
-                          <li><strong>static</strong>: Обычное потоковое позиционирование.</li>
-                          <li><strong>relative</strong>: Относительное позиционирование, элемент сдвигается относительно своего обычного положения.</li>
-                          <li><strong>absolute</strong>: Абсолютное позиционирование относительно ближайшего родительского элемента.</li>
-                          <li><strong>fixed</strong>: Фиксированное позиционирование относительно окна браузера.</li>
-                          <li><strong>sticky</strong>: Элемент ведет себя как <code>relative</code> до определенной точки, после чего становится <code>fixed</code>.</li>
-                        </ul>
-                        <p>Пример:</p>
-                      `,
-                      code: `
-  .relative {
-  position: relative;
-  top: 10px;
-  }
-
-  .absolute {
-  position: absolute;
-  top: 20px;
-  }
-
-  .fixed {
-  position: fixed;
-  top: 0;
-  }
-                      `,
-                    },
-                    {
-                      title: "Переполнение (Overflow)",
-                      type: "list",
-                      description: `
-                        <p>Свойство <code>overflow</code> в CSS управляет тем, как обрабатывается содержимое, выходящее за пределы блока. Оно может принимать следующие значения:</p>
-                        <ul>
-                          <li><strong>visible</strong>: Содержимое не обрезается; его можно видеть за пределами элемента (значение по умолчанию).</li>
-                          <li><strong>hidden</strong>: Содержимое, выходящее за пределы элемента, скрыто.</li>
-                          <li><strong>scroll</strong>: Содержимое скрыто, но добавляются полосы прокрутки для доступа к нему.</li>
-                          <li><strong>auto</strong>: Полосы прокрутки добавляются только при необходимости.</li>
-                        </ul>
-                      `,
-                    },
-                    {
-                      title: "Пример использования overflow",
-                      type: "code",
-                      description: `
-                        <p>Пример CSS с использованием свойства <code>overflow</code>:</p>
-                      `,
-                      code: `
-  .container {
-    width: 200px;
-    height: 100px;
-    overflow: scroll; /* Добавляет полосы прокрутки */
-  }
-                      `,
-                    },
-                    {
-                      title: "z-индекс (z-index)",
-                      type: "list",
-                      description: `
-                        <p>Свойство <code>z-index</code> управляет порядком наложения элементов на странице. Оно определяет, какой элемент будет отображаться сверху, когда элементы перекрываются. Некоторые важные моменты:</p>
-                        <ul>
-                          <li><strong>Числовые значения</strong>: Элементы с большим значением <code>z-index</code> отображаются выше элементов с меньшим значением.</li>
-                          <li><strong>Контекст наложения</strong>: <code>z-index</code> работает только для элементов, у которых задано свойство <code>position</code> (relative, absolute, fixed или sticky).</li>
-                          <li><strong>Значение по умолчанию</strong>: Элементы без заданного <code>z-index</code> имеют значение по умолчанию 0.</li>
-                        </ul>
-                      `,
-                    },
-                    {
-                      title: "Пример использования z-index",
-                      type: "code",
-                      description: `
-                        <p>Пример CSS с использованием свойства <code>z-index</code>:</p>
-                      `,
-                      code: `
-  .box1 {
-    position: absolute;
-    z-index: 1; /* Находится ниже */
-  }
-
-  .box2 {
-    position: absolute;
-    z-index: 2; /* Находится выше */
-  }
-                      `,
-                    },
-                  ],
-                },
-
-                {
-                  title: "Флексбокс",
-                  children: [
-                    {
-                      title:
-                        "Флексбокс - это метод расположения элементов в одной строке или колонке с возможностью изменения их размеров:",
-                      type: "code",
-                      description: `
-                        <ul>
-                          <li><strong>display: flex</strong>: Включает флексбокс на родительском элементе.</li>
-                          <li><strong>flex-direction</strong>: Определяет направление основного оси (row, column).</li>
-                          <li><strong>justify-content</strong>: Управляет расположением элементов вдоль главной оси.</li>
-                          <li><strong>align-items</strong>: Управляет расположением элементов вдоль поперечной оси.</li>
-                        </ul>
-                        <p>Пример:</p>
-                        `,
-                      code: `               
-  .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "Сетка",
-                  children: [
-                    {
-                      title: "CSS Grid",
-                      type: "code",
-                      description: `
-                      <p>CSS Grid - это мощный инструмент для создания гибких и сложных макетов. Основные моменты:</p>
-                      <ul>
-                        <li>Создает двумерные сетки</li>
-                        <li>Контролирует размещение элементов по строкам и колонкам</li>
-                        <li>Задает размер и расстояние между элементами</li>
-                      </ul>
-                      <p>Пример:</p>
-                      `,
-                      code: `
-  .grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
-  gap: 10px; /* расстояние между элементами */
-  }
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "CSS Grid Layout",
-                  children: [
-                    {
-                      title: "CSS Grid Layout",
-                      type: "image",
-                      url: "https://i.pinimg.com/enabled_hi/564x/54/e9/87/54e98761c2348545244bf25487c5be23.jpg",
-                    },
-                    {
-                      title: `⚡️ Мультиколонки:
-        Основная идея мультиколонок заключается в том, что вы можете взять фрагмент содержимого и поместить его в несколько колонок, как в газете
-                      `,
-                      type: "code",
-                      code: `
-  .article-content {
-    columns: auto 10rem;
-  }
-  
-  .article {
-      // Шорткат columns даёт возможность указать значения для 
-      // свойств column-count и column-width одновременно, задав 
-      // количество и ширину колонок
-      columns: 2 200px;
-      column-gap: 25px;
-    }
-    .title{
-      // Свойство column-span позволяет элементу растянуться 
-      // на несколько колонок
-      column-span: all;
-    }
-  }`,
-                    },
-                  ]
-                },
-                {
-                  title: "Разница между блочными и строчными элементами",
-                  children: [
-                    {
-                      title: "Блочные элементы",
-                      type: "list",
-                      description: `
-                        <p>Характеристики блочных элементов:</p>
-                        <ul>
-                          <li><strong>Занимают всю ширину</strong>: Блочные элементы по умолчанию занимают всю доступную ширину контейнера.</li>
-                          <li><strong>Начинают новую строку</strong>: Каждый блочный элемент начинается с новой строки, что создает визуальное разделение между элементами.</li>
-                          <li><strong>Примеры</strong>: <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;section&gt;</code>.</li>
-                        </ul>
-                      `,
-                    },
-                    {
-                      title: "Строчные элементы",
-                      type: "list",
-                      description: `
-                        <p>Характеристики строчных элементов:</p>
-                        <ul>
-                          <li><strong>Занимают только необходимую ширину</strong>: Строчные элементы занимают только ту ширину, которая необходима для их содержания.</li>
-                          <li><strong>Не начинают новую строку</strong>: Строчные элементы располагаются в одной строке с другими элементами, не создавая разрывов.</li>
-                          <li><strong>Примеры</strong>: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;img&gt;</code>.</li>
-                        </ul>
-                      `,
-                    },
-                    {
-                      title: "Сводная таблица различий",
-                      type: "list",
-                      description: `
-                        <p>Краткое сравнение:</p>
-                        <ul>
-                          <li><strong>Ширина</strong>: Блочные элементы — 100% ширины; строчные элементы — по содержимому.</li>
-                          <li><strong>Перенос</strong>: Блочные элементы переносят последующий контент на новую строку; строчные элементы — нет.</li>
-                          <li><strong>Использование</strong>: Блочные элементы для структуры; строчные элементы для форматирования текста.</li>
-                        </ul>
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "HTML and CSS Slider",
-                  children: [
-                    {
-                      title: "",
-                      type: "video",
-                      url: "https://www.youtube.com/embed/gVxyTOPPEPc",
-                    },
-                  ]
-                },
-                {
-                  title: "Принципы семантической верстки",
-                  children: [
-                    {
-                      title: "Принципы семантической верстки включают:",
-                      type: "code",
-                      description: `
-                      <ul>
-                        <li>Использование HTML-тегов по назначению (например, &lt;header&gt;, &lt;article&gt;, &lt;footer&gt;).</li>
-                        <li>Обеспечение доступности для технологий помощников (скринридеров).</li>
-                        <li>Улучшение SEO (поисковой оптимизации).</li>
-                      </ul>
-                      <p>Пример:</p>
-                      `,
-                      code: `
-  <article>
-  <header>
-  <h1>Заголовок статьи</h1>
-  </header>
-  <p>Содержимое статьи...</p>
-  <footer>Автор: Иван Иванов</footer>
-  </article>
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "Что такое #shadow-root в инспекторе HTML-страницы",
-                  children: [
-                    {
-                      title:
-                        "Shadow DOM позволяет создавать отдельные области DOM, чтобы избежать конфликтов стилей",
-                      type: "list",
-                      description: `
-                              <ul>
-                                  <li>Поддержка инкапсуляции: Стили внутри Shadow DOM не влияют на родительский DOM.</li>
-                                  <li>Упрощение разработки компонентов: Позволяет создавать защищенные компоненты.</li>
-                              </ul>
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "Названия популярных CSS-методологий и их отличия",
-                  children: [
-                    {
-                      title: "Существует несколько популярных CSS-методологий:",
-                      type: "list",
-                      description: `
-                              <ul>
-                                  <li><strong>BEM</strong> (Block, Element, Modifier) - способствует созданию доступных и модульных стилей.</li>
-                                  <li><strong>SMACSS</strong> (Scalable and Modular Architecture for CSS) - структурирует стили по категориям.</li>
-                                  <li><strong>OOCSS</strong> (Object-Oriented CSS) - акцентирует внимание на создании повторно используемых объектов.</li>
-                              </ul>
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "Как изменить цвет в svg файле",
-                  children: [
-                    {
-                      title: "Изменение цвета",
-                      type: "code",
-                      description: `
-                              <p>Существует несколько способов изменить цвет в SVG:</p>
-                              <ul>
-                                  <li>Изменение атрибутов <code>fill</code> и <code>stroke</code> в самом SVG файле.</li>
-                                  <li>Использование CSS для стилизации SVG элементов.</li>
-                                  <li>Динамическое изменение с помощью JavaScript.</li>
-                              </ul>
-                      `,
-                      code: `
-  // изменение атрибутов
-  <svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" fill="red" stroke="black" 
-      stroke-width="2" />
-  </svg>
-  
-  
-  // использование CSS 
-  <svg width="100" height="100">
-  <style>
-  .myCircle {
-  fill: blue;
-  stroke: green;
-  stroke-width: 3;
-  }
-  </style>
-  <circle class="myCircle" cx="50" cy="50" r="40" />
-  </svg>
-  
-  
-  // динамическое изменение
-  <svg id="mySvg" width="100" height="100">
-  <circle id="myCircle" cx="50" cy="50" r="40" fill="orange" 
-      stroke="black" stroke-width="2" />
-  </svg>
-  
-  <button onclick="changeColor()">Изменить цвет</button>
-  
-  <script>
-  function changeColor() {
-  var circle = document.getElementById("myCircle");
-  circle.setAttribute("fill", "purple");  // Изменяем цвет заливки
-  circle.setAttribute("stroke", "yellow"); // Изменяем цвет обводки
-  }
-  </script>
-                      `,
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              title: "SASS",
-              children: [
-                {
-                  title: "SASS cheat sheet",
-                  type: "image",
-                  url: "https://d1le3ohiuslpz1.cloudfront.net/skillcrush/wp-content/uploads/2023/07/how-sass-works-1024x506.png",
-                },
-              ],
-            },
-            {
-              title: "SCSS",
-              children: [
-                {
-                  title: "SCSS cheat sheet",
-                  type: "image",
-                  url: "https://i0.wp.com/techprimelab.com/wp-content/uploads/2020/06/SCSS-or-CSS.jpg",
-                },
-              ],
-            },
-            {
-              title: "styled-components",
-              children: [
-                {
-                  title: "styled-components cheat sheet",
-                  type: "image",
-                  url: "https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          title: "Создание макета в HTML и CSS",
-          children: [
-            {
-              title: "HTML атрибуты для создания макета:",
-              type: "code",
-              description: `
-                <ul>
-                  <li><strong>Атрибуты <code>div</code>:</strong>
-                    <ul>
-                      <li><code>id</code>: Уникальный идентификатор элемента.</li>
-                      <li><code>class</code>: Классы для стилизации с помощью CSS.</li>
-                    </ul>
-                  </li>
-                  <li><strong>Семантические элементы:</strong>
-                    <ul>
-                      <li><code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>: Используются для структурирования страницы.</li>
-                    </ul>
-                  </li>
-                  <li><strong>Встраиваемый стиль:</strong>
-                    <ul>
-                      <li>Пример использования <code>style</code>:</li>
-                    </ul>
-                  </li>
-                </ul>
-              `,
-              code: `
-  <div style="width: 50%; float: left;">Контент</div>
-              `,
-            },
-            {
-              title: "CSS свойства для создания макета:",
-              type: "code",
-              description: `
-                <ul>
-                  <li><strong>Свойство <code>display</code>:</strong>
-                    <ul>
-                      <li><code>block</code>, <code>inline</code>, <code>inline-block</code>, <code>flex</code>, <code>grid</code></li>
-                    </ul>
-                  </li>
-                  <li><strong>Свойство <code>position</code>:</strong>
-                    <ul>
-                      <li><code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code></li>
-                    </ul>
-                  </li>
-                  <li><strong>Свойства <code>margin</code> и <code>padding</code>:</strong> Используются для управления пространством между элементами и внутри элемента.</li>
-                  <li><strong>Свойства <code>width</code> и <code>height</code>:</strong> Задают размеры элемента.</li>
-                </ul>
-              `,
-              code: `
-  .container {
-    display: flex;
-    justify-content: center; /* Выравнивание по горизонтали */
-    align-items: center; /* Выравнивание по вертикали */
-  }
-              `,
-            },
-            {
-              title: "HTML5 семантические элементы:",
+              title: "1. Запрос по сети",
               type: "list",
               description: `
                 <ul>
-                  <li><strong>&lt;header&gt;</strong>, <strong>&lt;nav&gt;</strong>, <strong>&lt;main&gt;</strong>, <strong>&lt;section&gt;</strong>, <strong>&lt;article&gt;</strong>, <strong>&lt;aside&gt;</strong>, <strong>&lt;footer&gt;</strong>: Эти элементы помогают улучшить SEO и доступность.</li>
+                  <li><strong>Клик по ссылке:</strong> Пользователь нажимает на ссылку, инициируя процесс загрузки страницы.</li>
+                  <li><strong>DNS-запрос:</strong> Браузер запрашивает IP-адрес сервера, на котором размещён ресурс.</li>
                 </ul>
               `,
             },
             {
-              title: "Flexbox и Grid для создания макетов:",
-              type: "code",
-              description: `
-                <ul>
-                  <li><strong>Flexbox:</strong> Упрощает выравнивание элементов вдоль одной оси.</li>
-                  <li><strong>Grid:</strong> Позволяет создавать сеточные макеты, определяя колонки и строки.</li>
-                </ul>
-              `,
-              code: `
-  /* Flexbox */
-  .container {
-    display: flex;
-    justify-content: center; /* Выравнивание по горизонтали */
-    align-items: center; /* Выравнивание по вертикали */
-  }
-
-  /* Grid */
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Три равные колонки */
-  }
-              `,
-            },
-          ],
-        },
-        {
-          title: "Состав базовой HTML-страницы",
-          children: [
-            {
-              title: "<!DOCTYPE html>",
+              title: "2. Установление соединения",
               type: "list",
               description: `
-                <p>Объявляет тип документа и версию HTML:</p>
                 <ul>
-                  <li><strong>Версия</strong>: Обычно используется HTML5.</li>
+                  <li><strong>TCP-соединение:</strong> Браузер устанавливает TCP-соединение с сервером.</li>
+                  <li><strong>TLS/SSL:</strong> Устанавливается защищенное соединение, если используется HTTPS.</li>
                 </ul>
               `,
             },
             {
-              title: "<html>",
+              title: "3. Отправка HTTP-запроса",
               type: "list",
               description: `
-                <p>Корневой элемент HTML-документа:</p>
                 <ul>
-                  <li><strong>Атрибуты</strong>: Может содержать атрибут <code>lang</code> для указания языка.</li>
+                  <li><strong>HTTP-запрос:</strong> Браузер отправляет запрос на сервер для получения ресурса (HTML-документа).</li>
                 </ul>
               `,
             },
             {
-              title: "<head>",
+              title: "4. Получение ответа от сервера",
               type: "list",
               description: `
-                <p>Содержит метаданные о документе:</p>
                 <ul>
-                  <li><strong><meta charset="UTF-8"></strong>: Устанавливает кодировку документа.</li>
-                  <li><strong><meta name="viewport"></strong>: Настройки для адаптивного дизайна и отображения на мобильных устройствах.</li>
-                  <li><strong><title></strong>: Заголовок, отображаемый на вкладке браузера.</li>
-                  <li><strong><link></strong>: Подключение внешних CSS-файлов.</li>
-                  <li><strong><script></strong>: Подключение внешних JavaScript-файлов (если необходимо).</li>
+                  <li><strong>HTTP-ответ:</strong> Сервер обрабатывает запрос и отправляет обратно статус-код, заголовки и тело ответа.</li>
                 </ul>
               `,
             },
             {
-              title: "<body>",
+              title: "5. Обработка ответа",
               type: "list",
               description: `
-                <p>Основное содержимое страницы:</p>
                 <ul>
-                  <li><strong><header></strong>: Заголовок или навигация сайта.</li>
-                  <li><strong><main></strong>: Основной контент страницы.</li>
-                  <li><strong><footer></strong>: Нижний колонтитул с информацией о правами и ссылками.</li>
+                  <li><strong>Загрузка и парсинг HTML:</strong> Браузер начинает загружать и парсить HTML-документ, создавая DOM.</li>
+                  <li><strong>Загрузка зависимостей:</strong> Браузер отправляет дополнительные запросы для внешних ресурсов (CSS, JavaScript, изображения).</li>
                 </ul>
               `,
             },
-          ],
-        },
-
-
-
-
-        {
-          title: "На что нужно обратить внимание при разработке мультиязычных сайтов",
-          children: [
             {
-              title:
-                "При разработке мультиязычных сайтов стоит учитывать:",
-              type: "code",
-              description: `
-              <ul>
-                <li>Хранение текста: использовать JSON или базы данных для хранения переведенных текстов.</li>
-                <li>Изменение языка: обеспечить пользовательский интерфейс для смены языка.</li>
-                <li>SEO: использовать атрибут &lt;html lang="en"&gt; для указания языка страницы.</li>
-              </ul>
-              <p>Пример:</p>
-              `,
-              code: `
-  <html lang="ru">
-    <head>
-      <meta charset="UTF-8">
-    </head>
-  </html>
-              `,
-            },
-          ],
-        },
-        {
-          title: "Что такое прогрессивная развертка",
-          children: [
-            {
-              title:
-                "Прогрессивная развертка - это подход к разработке страниц, при котором отображение контента происходит по мере его загрузки",
-              type: "code",
-              description: `
-              <ul>
-                <li>Сначала загружается основной контент</li>
-                <li>Второстепенный контент загружается позже</li>
-              </ul>
-              <p>Пример:</p>
-              `,
-              code: `
-  // Пример с использованием JavaScript для прогрессивной загрузки
-  fetch('/api/content')
-    .then(response => response.json())
-    .then(data => {
-  document.getElementById('content').innerHTML = data.content;
-  });
-              `,
-            },
-          ],
-        },
-        {
-          title: "Разница между script, script async и script defer",
-          children: [
-            {
-              title: "Загрузки скриптов",
-              type: "code",
-              description: `
-              <p>Существует три способа подключения скриптов в HTML:</p>
-              <ul>
-                <li>&lt;script&gt;: Загружает и выполняет скрипт синхронно.</li>
-                <li>&lt;script async&gt;: Загружает скрипт асинхронно, не блокируя загрузку страницы.</li>
-                <li>&lt;script defer&gt;: Также загружает скрипт асинхронно, но гарантирует, что он будет выполнен после полной загрузки HTML.</li>
-              </ul>
-              <p>Пример:</p>
-              `,
-              code: `
-  <script src="script.js"></script>
-  <script async src="script-async.js"></script>
-  <script defer src="script-defer.js"></script>
-              `,
-            },
-          ],
-        },
-        {
-          title: "Подключение JavaScript-скриптов в HTML",
-          children: [
-            {
-              title: "1. Внешний скрипт (External Script)",
+              title: "6. Обработка CSS и JavaScript",
               type: "list",
               description: `
-                <p>Подключение скрипта через отдельный файл:</p>
                 <ul>
-                  <li><strong>Используемый тег</strong>: <code>&lt;script&gt;</code>.</li>
-                  <li><strong>Пример</strong>: 
-                    <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code>.
-                  </li>
-                  <li><strong>Преимущества</strong>: Упрощает организацию кода и позволяет повторно использовать скрипты на нескольких страницах.</li>
+                  <li><strong>Загрузка и парсинг CSS:</strong> Браузер загружает и парсит CSS, создавая CSSOM.</li>
+                  <li><strong>Выполнение JavaScript:</strong> JavaScript-файлы выполняются и могут изменять структуру DOM и стили.</li>
                 </ul>
               `,
             },
             {
-              title: "2. Встроенный скрипт (Internal Script)",
+              title: "7. Создание рендеринга",
               type: "list",
               description: `
-                <p>Подключение скрипта непосредственно в документе:</p>
                 <ul>
-                  <li><strong>Используемый тег</strong>: <code>&lt;script&gt;</code>.</li>
-                  <li><strong>Пример</strong>: 
-                    <code>&lt;script&gt; console.log('Hello, world!'); &lt;/script&gt;</code>.
-                  </li>
-                  <li><strong>Преимущества</strong>: Удобно для небольших скриптов, специфичных для одной страницы.</li>
+                  <li><strong>Создание дерева рендеринга:</strong> Браузер объединяет DOM и CSSOM для создания визуального представления.</li>
+                  <li><strong>Рендеринг:</strong> Страница отрисовывается на экране.</li>
                 </ul>
               `,
             },
             {
-              title: "Атрибуты тега <script>",
+              title: "8. Завершение загрузки",
               type: "list",
               description: `
-                <p>Основные атрибуты:</p>
                 <ul>
-                  <li><strong>src</strong>: Указывает путь к внешнему JavaScript-файлу.</li>
-                  <li><strong>defer</strong>: Загружает скрипт после завершения парсинга HTML-документа. Работает только с внешними скриптами.</li>
-                  <li><strong>async</strong>: Загружает скрипт асинхронно, не блокируя парсинг HTML. Работает только с внешними скриптами.</li>
-                  <li><strong>type</strong>: Указывает тип скрипта (по умолчанию <code>text/javascript</code>). Например, для модулей можно использовать <code>type="module"</code>.</li>
-                  <li><strong>integrity</strong>: Используется для проверки целостности загружаемого файла с использованием Subresource Integrity (SRI).</li>
-                  <li><strong>crossorigin</strong>: Определяет, как браузер должен обрабатывать кросс-доменные запросы для загружаемого скрипта.</li>
+                  <li><strong>Событие 'DOMContentLoaded':</strong> Срабатывает, когда HTML полностью загружен и разобран.</li>
+                  <li><strong>Событие 'load':</strong> Срабатывает, когда вся страница и её зависимости полностью загружены.</li>
+                  <li><strong>Событие 'beforeunload':</strong> Подготавливается для обработки при попытке пользователя покинуть страницу.</li>
                 </ul>
               `,
             },
-          ],
-        },
-        {
-          title: "Атрибут For",
-          children: [
             {
-              title: ``,
-              type: "code",
-              description: `
-              Он связывает элемент <label> с соответствующим полем < input >, позволяя пользователям 
-              кликать по тексту метки для выбора или фокуса на связанном элементе управления.
-              p.s. Значение атрибута for должно совпадать с id связанного элемента, что 
-              улучшает доступность и удобство взаимодействия с формами.
-              `,
-              code: `
-  <label for="Number">Ваше любимое число:</label>
-  <input id="number">`,
-            },
-          ]
-        }
-      ],
-    },
-    {
-      title: "JavaScript",
-      children: [
-        {
-          title: "Asynchronous Programming",
-          children: [
-            {
-              title: "Basics of async programming",
+              title: "9. Взаимодействие с пользователем",
               type: "list",
               description: `
-                <p><strong>Асинхронное программирование</strong> — это парадигма, позволяющая выполнять операции, не блокируя основной поток выполнения. Это особенно полезно для задач, которые могут занять продолжительное время, таких как сетевые запросы или операции с файлами.</p>
-              `,
-            },
-            {
-              title: "Key Concepts",
-              type: "list",
-              description: `
-                <p>Основные концепции асинхронного программирования:</p>
-                <ul>
-                  <li><strong>Callbacks</strong>: Функции обратного вызова, которые передаются в другие функции и вызываются после завершения асинхронной операции.</li>
-                  <li><strong>Promises</strong>: Объекты, представляющие результат асинхронной операции, которые могут быть в состоянии ожидания (pending), выполнены (fulfilled) или отклонены (rejected).</li>
-                  <li><strong>Async/Await</strong>: Синтаксический сахар над промисами, позволяющий писать асинхронный код, который выглядит как синхронный.</li>
-                </ul>
-              `,
-            },
-            {
-              title: "Callbacks",
-              type: "code",
-              description: `
-                <p>Пример использования колбеков:</p>
-              `,
-              code: `
-  function fetchData(callback) {
-    setTimeout(() => {
-      callback('Data received');
-    }, 1000);
-  }
-
-  fetchData((data) => {
-    console.log(data); // 'Data received'
-  });
-              `,
-            },
-            {
-              title: "Promises",
-              type: "code",
-              description: `
-                <p>Пример использования промисов:</p>
-              `,
-              code: `
-  function fetchData() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve('Data received');
-      }, 1000);
-    });
-  }
-
-  fetchData().then(data => {
-    console.log(data); // 'Data received'
-  });
-              `,
-            },
-            {
-              title: "Async/Await",
-              type: "code",
-              description: `
-                <p>Пример использования async/await:</p>
-              `,
-              code: `
-  async function fetchData() {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve('Data received');
-      }, 1000);
-    });
-  }
-
-  async function getData() {
-    const data = await fetchData();
-    console.log(data); // 'Data received'
-  }
-
-  getData();
-              `,
-            },
-            {
-              title: "Benefits of Asynchronous Programming",
-              type: "list",
-              description: `
-                <p>Преимущества асинхронного программирования:</p>
-                <ul>
-                  <li><strong>Улучшенная производительность</strong>: Не блокирует основной поток выполнения, что позволяет выполнять другие задачи.</li>
-                  <li><strong>Лучшая отзывчивость приложения</strong>: Пользовательский интерфейс остается активным во время выполнения длительных операций.</li>
-                  <li><strong>Упрощение кода</strong>: Использование async/await делает код более читаемым и понятным.</li>
-                </ul>
+                <p><strong>Интерактивность:</strong> Пользователь начинает взаимодействовать с загруженной страницей, и скрипты обрабатывают события.</p>
               `,
             },
           ],
         },
-        {
-          title: "Context this",
-          children: [
-            {
-              title: "Описание",
-              type: "list",
-              description:
-                "this – это специальное ключевое слово в JavaScript, которое ссылается на объект, который в данный момент выполняет код. Значение `this` определяется не тем, как функция была объявлена, а тем, как она была вызвана.",
-            },
-            {
-              title: "Контекст вызова",
-              type: "code",
-              description:
-                "Значение `this` зависит от контекста вызова функции. Вот основные правила:",
-              code: `
-// В глобальном контексте (вне функций) 'this' ссылается на глобальный объект (window в браузере).
-console.log(this); // window
-
-// В методе объекта 'this' ссылается на объект, в контексте которого был вызван метод:
-const obj = {
-name: 'Obj',
-method: function() {
-console.log(this.name);
-}
-};
-obj.method(); // 'Obj'
-              `,
-            },
-            {
-              title: "Значение this в функциях",
-              type: "code",
-              description:
-                "В обычной функции `this` ссылается на глобальный объект (или undefined в строгом режиме).",
-              code: `
-function showThis() {
-console.log(this);
-}
-
-showThis(); // window (или undefined в строгом режиме)
-              `,
-            },
-            {
-              title: "Классы и this",
-              type: "code",
-              description:
-                "В классах `this` ссылается на экземпляр класса, который был создан с помощью ключевого слова new.",
-              code: `
-class MyClass {
-constructor(value) {
-this.value = value;
-}
-showValue() {
-console.log(this.value);
-}
-}
-
-const instance = new MyClass(10);
-instance.showValue(); // 10
-              `,
-            },
-            {
-              title: "Стрелочные функции и this",
-              type: "code",
-              description:
-                "Стрелочные функции не имеют собственного `this` и наследуют его из родительского контекста, в котором они были созданы.",
-              code: `
-const obj = {
-value: 20,
-method: function() {
-const arrowFunction = () => {
-console.log(this.value);
-};
-arrowFunction();
-}};
-
-obj.method(); // 20
-              `,
-            },
-            {
-              title: "Способы контроля this",
-              type: "code",
-              description:
-                "Можно контролировать значение `this` в функции с помощью методов `.call()`, `.apply()` и `.bind()`.",
-              code: `
-function show() {  
-console.log(this.name);
-const obj = { name: 'Test' };
-show.call(obj);    // 'Test'
-show.apply(obj);   // 'Test'
-const boundShow = show.bind(obj);
-boundShow();       // 'Test'
-}
-              `,
-            },
-            {
-              title: "Вывод",
-              type: "list",
-              description:
-                "Контекст `this` в JavaScript может быть сложным для понимания. Важно понимать, как он работает в разных контекстах для избежания ошибок.",
-            },
-          ],
-        },
-        {
-          title: "Data types in JavaScript",
-          children: [
-            {
-              title: "1. Числа (Number)",
-              type: "list",
-              description: `
-                <p>Характеристики чисел:</p>
-                <ul>
-                  <li><strong>Тип данных</strong>: Представляют как целые, так и дробные числа.</li>
-                  <li><strong>Примеры</strong>: <code>42</code>, <code>3.14</code>.</li>
-                  <li><strong>Особенности</strong>: Поддерживают специальные значения, такие как <code>Infinity</code>, <code>-Infinity</code>, и <code>NaN</code> (не число).</li>
-                </ul>
-              `,
-            },
-            {
-              title: "2. Строки (String)",
-              type: "list",
-              description: `
-                <p>Характеристики строк:</p>
-                <ul>
-                  <li><strong>Тип данных</strong>: Последовательность символов, используемая для представления текста.</li>
-                  <li><strong>Примеры</strong>: <code>"Hello, world!"</code>, <code>'JavaScript'</code>.</li>
-                  <li><strong>Методы</strong>: Строки имеют множество методов, таких как <code>length</code>, <code>substring()</code>, <code>toUpperCase()</code>.</li>
-                </ul>
-              `,
-            },
-            {
-              title: "3. Логические значения (Boolean)",
-              type: "list",
-              description: `
-                <p>Характеристики логических значений:</p>
-                <ul>
-                  <li><strong>Тип данных</strong>: Представляют истинное (<code>true</code>) или ложное (<code>false</code>) значение.</li>
-                  <li><strong>Примеры</strong>: <code>true</code>, <code>false</code>.</li>
-                  <li><strong>Использование</strong>: Часто используются в условиях и циклах.</li>
-                </ul>
-              `,
-            },
-            {
-              title: "4. Объекты (Object)",
-              type: "list",
-              description: `
-                <p>Характеристики объектов:</p>
-                <ul>
-                  <li><strong>Тип данных</strong>: Сложные структуры, которые могут содержать множество значений и методов.</li>
-                  <li><strong>Примеры</strong>: <code>{ name: "Alice", age: 25 }</code>, <code>new Date()</code>.</li>
-                  <li><strong>Типы объектов</strong>: Могут быть встроенными (Array, Date и т.д.) или пользовательскими.</li>
-                </ul>
-              `,
-            },
-            {
-              title: "5. Массивы (Array)",
-              type: "list",
-              description: `
-                <p>Характеристики массивов:</p>
-                <ul>
-                  <li><strong>Тип данных</strong>: Специальный тип объекта, который хранит упорядоченные коллекции значений.</li>
-                  <li><strong>Примеры</strong>: <code>[1, 2, 3]</code>, <code>["apple", "banana"]</code>.</li>
-                  <li><strong>Методы</strong>: Массивы имеют множество методов, таких как <code>push()</code>, <code>pop()</code>, <code>map()</code>.</li>
-                </ul>
-              `,
-            },
-            {
-              title: "6. Специальные значения",
-              type: "list",
-              description: `
-                <p>Некоторые специальные значения:</p>
-                <ul>
-                  <li><strong>undefined</strong>: Переменная, которая была объявлена, но не инициализирована.</li>
-                  <li><strong>null</strong>: Явное указание на отсутствие значения или объект.</li>
-                  <li><strong>Symbol</strong>: Уникальные и неизменяемые идентификаторы (доступны с ES6).</li>
-                  <li><strong>BigInt</strong>: Тип данных для работы с целыми числами произвольной длины (доступен с ES11).</li>
-                </ul>
-              `,
-            },
-          ],
-        },
-        {
-          title: "Descriptors, Getters, and Setters",
-          children: [
-            {
-              title: "Определение дескрипторов",
-              type: "text",
-              description: `
-                <p>Дескрипторы свойств — это объекты, которые содержат информацию о свойствах объектов в JavaScript, такие как возможность записи, перечисляемость и доступность.</p>
-                <p><strong>Дескрипторы объекта</strong> — это объекты, которые описывают свойства объекта, их поведение и характеристики. Они позволяют управлять тем, как свойства могут быть использованы и изменены.</p>
-              `,
-            },
-            {
-              title: "Типы дескрипторов",
-              type: "list",
-              description: `
-                <p>Существует два типа дескрипторов:</p>
-                <ul>
-                  <li><strong>Данные дескриптора</strong>: хранят значение и могут быть настроены для записи.</li>
-                  <li><strong>Accessor дескрипторы</strong>: используют геттеры и сеттеры для управления доступом к значениям.</li>
-                </ul>
-              `,
-            },
-            {
-              title: "Геттеры",
-              type: "text",
-              description: `
-                <p>Геттеры — это специальные методы, которые позволяют получать значения свойств объекта. Они определяются с помощью ключевого слова <code>get</code>.</p>
-              `,
-            },
-            {
-              title: "Пример геттера",
-              type: "code",
-              description: `
-                <p>Пример использования геттера в объекте:</p>
-              `,
-              code: `
-  const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    get fullName() {
-      return \`\${this.firstName} \${this.lastName}\`;
-    }
-  };
-
-  console.log(person.fullName); // John Doe
-              `,
-            },
-            {
-              title: "Сеттеры",
-              type: "text",
-              description: `
-                <p>Сеттеры — это специальные методы, которые позволяют задавать значения свойств объекта. Они определяются с помощью ключевого слова <code>set</code>.</p>
-              `,
-            },
-            {
-              title: "Пример сеттера",
-              type: "code",
-              description: `
-                <p>Пример использования сеттера в объекте:</p>
-              `,
-              code: `
-  const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    set fullName(name) {
-      [this.firstName, this.lastName] = name.split(' ');
-    }
-  };
-
-  person.fullName = 'Jane Smith';
-  console.log(person.firstName); // Jane
-  console.log(person.lastName); // Smith
-              `,
-            },
-            {
-              title: "Заключение",
-              type: "text",
-              description: `
-                <p>Дескрипторы, геттеры и сеттеры позволяют управлять доступом к свойствам объектов, обеспечивая более гибкий и контролируемый способ работы с данными в JavaScript.</p>
-              `,
-            },
-            {
-              title: "Подробнее на learn.javascript.ru",
-              type: "link",
-              url: "https://learn.javascript.ru/descriptors-getters-setters",
-            }
-          ],
-        },
-        {
-          title: "Destructuring objects in JS",
-          children: [
-            {
-              title: "",
-              description:
-                "Деструктуризация объектов позволяет извлекать значения из объекта и присваивать их переменным в краткой форме",
-              type: "code",
-              code: `
-  const person = { name: 'Alice', age: 25 };
-  const { name, age } = person;
-  console.log(name, age);`,
-            },
-          ],
-        },
-        {
-          title: "Difference between null and undefined",
-          children: [
-            {
-              title: "Описание null и undefined",
-              type: "code",
-              description: `
-                <p><strong>null</strong>: Это специальное значение, указывающее на отсутствие какого-либо объектного значения. Оно явно назначается переменной, чтобы показать, что эта переменная не содержит ничего.</p>
-                <p><strong>undefined</strong>: Это значение автоматически назначается переменной, которая была объявлена, но не инициализирована. Также это происходит, если функция не возвращает значения.</p>
-                <ul>
-                  <li>Оба значения представляют отсутствие значения, но в разных контекстах.</li>
-                </ul>
-              `,
-              code: `
-// Примеры null и undefined
-let a = null;      // Явно задано значение null
-let b;             // Не инициализирована, значение undefined
-
-console.log(a);   // null
-console.log(b);   // undefined
-
-// Проверка типов
-console.log(typeof a); // "object"
-console.log(typeof b); // "undefined"
-              `,
-            },
-            {
-              title: "Сравнение null и undefined",
-              type: "code",
-              description: `
-                <p>Важно понимать, что при нестрогом сравнении они равны друг другу:</p>
-              `,
-              code: `
-console.log(null == undefined); // true (нестрогое сравнение)
-console.log(null === undefined); // false (строгое сравнение)
-              `,
-            },
-          ],
-        },
-        {
-          title: "Drag and Drop",
-          children: [
-            {
-              title: "Mouse Drag and Drop",
-              type: "link",
-              url: "https://learn.javascript.ru/mouse-drag-and-drop",
-            },
-            {
-              title: "Основы Drag and Drop",
-              type: "text",
-              description: `
-                <p>Drag and Drop — это способ улучшить интерфейс, позволяя пользователю перемещать элементы с помощью мыши. Это может быть полезно для копирования и перемещения документов, а также для других действий, таких как добавление элементов в корзину.</p>
-              `,
-            },
-            {
-              title: "Алгоритм Drag and Drop",
-              type: "list",
-              description: `
-                <p>Базовый алгоритм Drag and Drop включает следующие шаги:</p>
-                <ul>
-                  <li><strong>mousedown</strong>: Подготовка элемента к перемещению.</li>
-                  <li><strong>mousemove</strong>: Перемещение элемента на новые координаты.</li>
-                  <li><strong>mouseup</strong>: Завершение перемещения элемента.</li>
-                </ul>
-              `,
-            },
-            {
-              title: "Правильное позиционирование",
-              type: "text",
-              description: `
-                <p>Чтобы избежать «прыжков» элемента при начале Drag and Drop, запоминаем расстояние от курсора до элемента и используем его при перемещении.</p>
-              `,
-            },
-            {
-              title: "Цели переноса (Droppable)",
-              type: "list",
-              description: `
-                <p>Для реализации переноса элемента в другую цель, используйте метод <code>document.elementFromPoint</code> для определения, над каким элементом находится указатель.</p>
-                <ul>
-                  <li>Подсвечивайте элементы, когда мышь находится над ними.</li>
-                  <li>Обрабатывайте окончание переноса, чтобы выполнить действия с элементами.</li>
-                </ul>
-              `,
-            },
-            {
-              title: "Пример кода",
-              type: "code",
-              description: `
-                <p>Пример реализации Drag and Drop:</p>
-              `,
-              code: `
-  ball.onmousedown = function(event) {
-    // код для начала переноса
-  };
-
-  function onMouseMove(event) {
-    // код для перемещения элемента
-  }
-              `,
-            },
-          ],
-        },
-        {
-          title: "ES6",
-          children: [
-            {
-              title: "Destructuring assignment",
-              type: "title",
-            },
-            {
-              title: "Arrow functions () => {} ",
-              type: "title",
-            },
-            {
-              title: "Template strings `${}`",
-              type: "title",
-            },
-            {
-              title: "variable declaration with let and const",
-              type: "title",
-            },
-            {
-              title: "Classes",
-              type: "title",
-            },
-            {
-              title: "IIFE (immediately invoked function expression)",
-              type: "title",
-            },
-            {
-              title: "Multi-line strings",
-              type: "title",
-            },
-            {
-              title: "Promises",
-              type: "title",
-            },
-            {
-              title: "forEach and for...of",
-              type: "title",
-            },
-            {
-              title: "Default parameters",
-              type: "title",
-            },
-            {
-              title: "Rest-параметры и Spread-оператор ...",
-              type: "title",
-            },
-          ],
-        },
-        {
-          title: "Event Loop",
-          children: [
-            {
-              title:
-                "Цикл событий (event loop) — это механизм, который позволяет JavaScript выполнять асинхронные операции, не блокируя основной поток выполнения. Он обеспечивает обработку событий и выполнение колбеков (callback functions) в ответ на события, такие как клики мыши, нажатия клавиш и завершение асинхронных операций.",
-              type: "list",
-              description: `
-              <p>Вот как работает цикл событий:</p>
-                <li>Обработка асинхронного кода: Если в обработчике события есть асинхронный код, такой как таймеры или сетевые запросы, он не блокирует выполнение других событий. Вместо этого асинхронный код помещается в очередь задач (task queue) для выполнения в будущем.</li>
-                <li>Очередь сообщений (Message Queue): Когда асинхронная операция (например, запрос к серверу) завершается, соответствующий колбек помещается в очередь сообщений.</li>
-                <li>Цикл событий: Цикл событий постоянно проверяет стек вызовов и очередь сообщений. Если стек пуст, он берет первое сообщение из очереди и помещает его в стек вызовов для выполнения.</li>
-                <p>Таким образом, цикл событий позволяет JavaScript обрабатывать асинхронные операции, не блокируя выполнение других кода, что делает его эффективным для работы с пользовательскими интерфейсами и сетевыми запросами.</p>
-              `,
-            },
-          ],
-        },
-        {
-          title: "Function Levenshtein",
-          children: [
-            {
-              title: "Function Levenshtein or Levenshtein Distance",
-              type: "code",
-              description: `
-                <p>Функция Левенштейна, или расстояние Левенштейна, измеряет различие между двумя строками, 
-                определяя минимальное количество операций, необходимых для преобразования одной строки в другую.
-                </p>
-                <ul>Операциями могут быть:
-                  <li>Замена: Заменить один символ на другой;</li>
-                  <li>Удаление: Удалить символ из строки;</li>
-                  <li>Вставка: Вставить символ в строку;</li>
-                </ul>
-                <p>Суть и применение</p>
-                <ul>
-                  <li>Сравнение строк: Функция используется для нахождения «похожести» строк. Чем меньше расстояние Левенштейна, тем более похожи строки.</li>
-                  <li>Поиск и исправление ошибок: Часто применяется в системах проверки правописания, для поиска похожих слов и исправления ошибок.</li>
-                  <li>Обработка естественного языка: Используется в алгоритмах для сравнения слов и предложений, что может быть полезно в чат-ботах, поисковых системах и других NLP приложениях.</li>
-                </ul>
-                            `,
-              code: `
-  function levenshtein(a, b) {
-    if (a.length === 0) return b.length;
-    if (b.length === 0) return a.length;
-    const matrix = [];
-    for (let i = 0; i <= b.length; matrix[i] = [i]) i++;
-    for (let j = 0; j <= a.length; matrix[0][j] = j++) j++;
-    for (let i = 1; i <= b.length; i++) {
-      for (let j = 1; j <= a.length; j++) {
-        matrix[i][j] = b[i - 1] === a[j - 1]
-          ? matrix[i - 1][j - 1]
-          : Math.min(
-            matrix[i - 1][j - 1] + 1,
-            Math.min(matrix[i][j - 1] + 1, matrix[i - 1][j] + 1)
-          );
-      }
-    }
-    return matrix[b.length][a.length];
-  }
-`
-            },
-          ],
-        },
-        {
-          title: "function declaration and expression, arrow function",
-          children: [
-            {
-              title: "Описание объявлений и выражений функций",
-              type: "code",
-              description: `
-                <p><strong>Объявление функции</strong>: Это способ определения функции с использованием ключевого слова <code>function</code>. Функция может быть вызвана до ее определения (подъем).</p>
-                <p><strong>Выражение функции</strong>: Это определение функции, которое присваивается переменной. Функция не может быть вызвана до ее объявления.</p>
-              `,
-              code: `
-// Объявление функции
-function sayHello() {
-console.log("Hello!");
-}
-sayHello(); // "Hello!"
-
-// Выражение функции
-const greet = function() {
-console.log("Hi!");
-};
-greet(); // "Hi!"
-              `,
-            },
-            {
-              title: "Стрелочные функции",
-              type: "code",
-              description: `
-                <p><strong>Стрелочные функции</strong>: Это упрощенный синтаксис для объявления функций, введенный в ES6. Они не имеют собственного значения <code>this</code> и не могут быть использованы в качестве конструктора.</p>
-              `,
-              code: `
-const multiply = (x, y) => x * y;
-console.log(multiply(2, 3)); // 6
-
-const add = (a, b) => {
-return a + b;
-};
-console.log(add(2, 3)); // 5
-              `,
-            },
-            {
-              title: "Сравнение синтаксиса",
-              type: "code",
-              description: `
-                <p>Различия в синтаксисе между обычными и стрелочными функциями:</p>
-              `,
-              code: `
-// Обычная функция
-function square(x) {
-return x * x;
-}
-
-// Стрелочная функция
-const squareArrow = (x) => x * x;
-
-console.log(square(4)); // 16
-console.log(squareArrow(4)); // 16
-              `,
-            },
-            {
-              title: "Преимущества",
-              type: "code",
-              description: `
-                <p>Стрелочные функции обеспечивают более лаконичный синтаксис и удобнее работают с <code>this</code> в контексте методов, так как они наследуют <code>this</code> от родительской области видимости.</p>
-              `,
-              code: `
-const obj = {
-value: 100,
-regularFunction: function() {
-console.log(this.value);
-},
-arrowFunction: () => {
-console.log(this.value);
-},
-};
-
-obj.regularFunction(); // 100
-obj.arrowFunction();   // undefined (т.к. 'this' не ссылается на obj)
-              `,
-            },
-          ],
-        },
-        {
-          title: "Features of arrow functions",
-          children: [
-            {
-              title: "1. Синтаксис",
-              type: "code",
-              description: `
-                <p>Стрелочные функции имеют более компактный синтаксис по сравнению с обычными функциями:</p>
-              `,
-              code: `
-  const add = (a, b) => a + b;
-  console.log(add(2, 3)); // 5
-              `,
-            },
-            {
-              title: "2. Лексическое значение this",
-              type: "code",
-              description: `
-                <p>Стрелочные функции не имеют своего собственного <code>this</code>; вместо этого они используют <code>this</code> из окружающего контекста:</p>
-              `,
-              code: `
-  function Person() {
-  this.age = 0;
-
-  setInterval(() => {
-  this.age++; // 'this' ссылается на объект Person
-  console.log(this.age);
-  }, 1000);
-  }
-
-  const p = new Person(); // будет выводить возраст каждую секунду
-              `,
-            },
-            {
-              title: "3. Отсутствие объекта arguments",
-              type: "code",
-              description: `
-                <p>Стрелочные функции не имеют собственного объекта <code>arguments</code>. Для доступа к аргументам можно использовать оператор <code>rest</code>:</p>
-              `,
-              code: `
-  const sum = (...args) => args.reduce((a, b) => a + b, 0);
-  console.log(sum(1, 2, 3, 4)); // 10
-              `,
-            },
-            {
-              title: "4. Не могут быть использованы как конструкторы",
-              type: "code",
-              description: `
-                <p>Стрелочные функции не могут быть использованы с оператором <code>new</code>:</p>
-              `,
-              code: `
-  const Person = () => {};
-  // const p = new Person(); // ошибка: Person is not a constructor
-              `,
-            },
-            {
-              title: "5. Не имеют свойства prototype",
-              type: "code",
-              description: `
-                <p>Стрелочные функции не имеют свойства <code>prototype</code>, что делает их непригодными для создания методов объектов:</p>
-              `,
-              code: `
-  const arrowFunc = () => {};
-  console.log(arrowFunc.prototype); // undefined
-              `,
-            },
-            {
-              title: "6. Возврат значений",
-              type: "code",
-              description: `
-                <p>Если стрелочная функция состоит из одного выражения, то фигурные скобки и ключевое слово <code>return</code> можно опустить:</p>
-              `,
-              code: `
-  const square = x => x * x;
-  console.log(square(4)); // 16
-              `,
-            },
-          ],
-        },
-        {
-          title: "How objects become primitives",
-          children: [
-            {
-              title: "Преобразование объектов в примитивы",
-              type: "code",
-              description: `
-                <p>В JavaScript объекты могут быть автоматически преобразованы в примитивные значения в контекстах, таких как сравнение, арифметические операции или приведение типов. Процесс преобразования включает:</p>
-                <ul>
-                  <li>Попытка вызова метода <strong>valueOf()</strong></li>
-                  <li>Попытка вызова метода <strong>toString()</strong></li>
-                </ul>
-              `,
-              code: `
-const obj = {
-valueOf: function() {
-return 42;
-}
-};
-
-console.log(obj + 10); // 52 (вызывается obj.valueOf())
-              `,
-            },
-            {
-              title: "Этапы преобразования",
-              type: "code",
-              description: `
-                <p>Когда JavaScript пытается преобразовать объект в примитив, он выполняет следующие шаги:</p>
-                <ol>
-                  <li>Вызывать метод <strong>valueOf()</strong>. Если он возвращает примитив, то это значение используется.</li>
-                  <li>Если <strong>valueOf()</strong> возвращает объект, то JavaScript попытется вызвать <strong>toString()</strong>. Если <strong>toString()</strong> возвращает примитив, то это значение используется.</li>
-                </ol>
-              `,
-              code: `
-const obj2 = {
-toString: function() {
-return 'Hello';
-}
-};
-
-console.log(obj2 + ' World'); // "Hello World" (вызывается obj2.toString())
-              `,
-            },
-            {
-              title: "Примеры преобразования",
-              type: "code",
-              description: `
-                <p>Пример объекта с реализацией обоих методов:</p>
-              `,
-              code: `
-const obj3 = {
-valueOf: function() {
-return 10;
-},
-toString: function() {
-return 'I am an object';
-}
-};
-
-console.log(obj3 + 5); // 15 (вызывается valueOf)
-console.log(String(obj3)); // "I am an object" (вызывается toString)
-              `,
-            },
-            {
-              title: "Использование операторов",
-              type: "code",
-              description: `
-                <p>Объекты могут быть преобразованы в примитивы при использовании операторов:</p>
-                <ul>
-                  <li>Сравнение: ==, ===</li>
-                  <li>Арифметические операции: +, -, *, /</li>
-                  <li>Приведение типов: String(), Number(), Boolean()</li>
-                </ul>
-              `,
-              code: `
-console.log([] + '1'); // "1" (вызывается toString)
-console.log([1] == 1); // true (нестрогое сравнение, вызывается valueOf)
-              `,
-            },
-            {
-              title: "Вывод",
-              type: "code",
-              description: `
-                <p>Объекты в JavaScript автоматически преобразуются в примитивные значения с использованием методов valueOf() и toString(). Контекст и ситуация определяют, какой метод будет вызван.</p>
-              `,
-              code: `
-const obj4 = {
-valueOf: function() {
-return '5';
-},
-toString: function() {
-return 'I am an object';
-}
-};
-
-console.log(obj4 + 1); // "51" (вызывается valueOf)
-console.log(obj4 == '5'); // true (нестрогое сравнение, вызывается valueOf)
-              `,
-            },
-          ],
-        },
-        {
-          title: "Inheritance",
-          children: [
-            {
-              title: "Прототипное наследование",
-              type: "code",
-              description: `
-                <p><strong>Прототипное наследование</strong>: В JavaScript объекты могут наследовать свойства и методы от других объектов через механизм прототипов. Каждый объект имеет внутреннюю ссылку на свой прототип, который может содержать свойства и методы, доступные наследуемым объектам.</p>
-                <p>Это характерно для JavaScript и позволяет разработчикам расширять возможности объектов без необходимости использовать классы.</p>
-              `,
-              code: `
-// Создаем объект родитель
-const parent = {
-greet: function() {
-console.log("Hello from parent!");
-}
-};
-
-// Создаем объект child с наследованием от parent
-const child = Object.create(parent);
-child.greet(); // "Hello from parent!"
-              `,
-            },
-            {
-              title: "Классы ES6",
-              type: "code",
-              description: `
-                <p><strong>Классы ES6</strong>: С появлением ES6 в JavaScript появилась возможность использования классов. Классы предоставляют более удобный и понятный синтаксис для реализации наследования. Классы также используют механизм прототипов под капотом.</p>
-              `,
-              code: `
-class Parent {
-greet() {
-console.log("Hello from parent class!");
-}
-}
-
-class Child extends Parent {
-greet() {
-console.log("Hello from child class!");
-}
-}
-
-const childInstance = new Child();
-childInstance.greet(); // "Hello from child class!"
-const parentInstance = new Parent();
-parentInstance.greet(); // "Hello from parent class!"
-              `,
-            },
-            {
-              title:
-                "Наследование с использованием Object.setPrototypeOf",
-              type: "code",
-              description: `
-                <p><strong>Object.setPrototypeOf</strong>: Этот метод можно использовать для изменения прототипа существующего объекта. Это также позволяет реализовать наследование, но рекомендуется использовать в основном в особых случаях, т.к. может привести к ухудшению производительности.</p>
-              `,
-              code: `
-const parent = {
-greet: function() {
-console.log("Hello from parent!");
-}
-};
-
-const child = {};
-Object.setPrototypeOf(child, parent);
-child.greet(); // "Hello from parent!"
-              `,
-            },
-            {
-              title: "Сравнение различных способов наследования",
-              type: "code",
-              description: `
-                <p>Различные способы реализации наследования в JavaScript имеют свои преимущества и недостатки:</p>
-                <ul>
-                  <li><strong>Прототипное наследование:</strong> Гибкость, но может быть сложнее для понимания начинающим.</li>
-                  <li><strong>Классы ES6:</strong> Более читаемый и привычный синтаксис, похожий на другие языки программирования.</li>
-                  <li><strong>Object.setPrototypeOf:</strong> Не рекомендуется для частого использования, так как имеет низкую производительность.</li>
-                </ul>
-              `,
-              code: `
-// Обзор методов
-console.log(Object.getPrototypeOf(child) === parent); // true
-console.log(child instanceof Child); // true
-console.log(child instanceof Parent); // true
-              `,
-            },
-          ],
-        },
-        {
-          title: "IIFE (Immediately Invoked Function Expression)?",
-          children: [
-            {
-              title: "Описание IIFE",
-              type: "code",
-              description: `
-                <p>
-                  <strong>IIFE</strong>: Это функциональное выражение, которое выполняется сразу после его определения. Это позволяет создать локальную область видимости и изолировать переменные от глобальной области видимости.
-                </p>
-                <p>
-                  IIFE часто используется для организации кода и предотвращения загрязнения глобального пространства имен.
-                </p>
-              `,
-              code: `
-(function() {
-var localVariable = 'I am local';
-console.log(localVariable); // 'I am local'
-})();
-
-// console.log(localVariable); // Uncaught ReferenceError: localVariable is not defined
-              `,
-            },
-            {
-              title: "Синтаксис IIFE",
-              type: "code",
-              description: `
-                <p>Стандартный синтаксис включает в себя определение функции, заключенное в круглые скобки, и сразу же вызываемое с использованием дополнительных круглых скобок.</p>
-              `,
-              code: `
-(function() {
-// Код здесь
-})();
-
-// Или с использованием стрелочной функции
-(() => {
-// Код здесь
-})();
-              `,
-            },
-            {
-              title: "Преимущества использования IIFE",
-              type: "code",
-              description: `
-                <p>
-                  <strong>Преимущества:</strong>
-                  <ul>
-                    <li>Изолированная область видимости для переменных.</li>
-                    <li>Предотвращение конфликтов переменных с глобальной областью видимости.</li>
-                    <li>Помогает безопасно избегать переменных, которые могут повлиять на другие скрипты.</li>
-                  </ul>
-                </p>
-              `,
-              code: `
-(function() {
-var count = 0; // Локальная переменная, недоступная вне IIFE
-console.log(count); // 0
-})();
-
-// console.log(count); // Uncaught ReferenceError: count is not defined
-              `,
-            },
-          ],
-        },
-        {
-          title: "Methods",
-          children: [
-            {
-              title: "Array Methods",
-              children: [
-                {
-                  title: "1. pop() => removes the last element from an array.",
-                  type: "title",
-                },
-                {
-                  title: "2.shift() => удаляет элемент в начале массива",
-                  type: "title",
-                },
-                {
-                  title:
-                    "3.push() => добавляется несколько элементов в конец массива",
-                  type: "title",
-                },
-                {
-                  title:
-                    "4.unshift() => добавляет несколько элементов в начало массива",
-                  type: "title",
-                },
-                {
-                  title: "5.length => получаем число элементов массива",
-                  type: "title",
-                },
-                {
-                  title: `6.splice() => добавление нескольких элементов в массив; 
-                            первый аргумент указывает где начать вставку элементов по индексу; 
-                            второй аргумент указывает сколько элементов нужно удалить, если аргумент не указать, то удаления не будет, просто добавится новый элемент в массиве; самые новые элементы указываются в скобках данного метода в кавычках,`,
-                  type: "title",
-                },
-                {
-                  title: `7.slice() => вырезает один или несколько элементов массива
-                            через указатель аргумента начала вырезания и второй аргумент где закончить срез;
-                            принимает отрицательные значения.`,
-                  type: "title",
-                },
-                {
-                  title: "8.concat() => конкатенация двух массивов",
-                  type: "title",
-                },
-                {
-                  title: `9.map() => принимает массив и применяет указанную функцию для
-                            всех элементов массива; возвращает новый массив.`,
-                  type: "title",
-                },
-                {
-                  title: `10.every() => проверяет, соответствуют ли все элементы указанному
-                            массиву определённому условию; если все элементы соответствуют условию, то возвращает
-                            метод true, в противном случае вернёт false.`,
-                  type: "title",
-                },
-                {
-                  title: `11.includes() => проверяет на наличие в массиве элемента; если
-                            элемент найден, то возвращает true.`,
-                  type: "title",
-                },
-                {
-                  title: `12.spread() => превращает массив в строки с помощью специальных
-                            разделителей … сохраняет между ними границу или по умолчанию между строками образуются
-                            пробелы.`,
-                  type: "title",
-                },
-                {
-                  title: `13.filter() => возвращает новый массив из всех элементов соответствующих
-                            заданному условию.`,
-                  type: "title",
-                },
-                {
-                  title:
-                    "14.reduce(function (previousValue, item, index, array) { … }, [initial]); => сводит массив к одному значению.",
-                  type: "title",
-                },
-                {
-                  title:
-                    "15.reduceRight() => сводит массив к одному значение с права на лево.",
-                  type: "title",
-                },
-                {
-                  title: `16.indexOf() => возвращает первый индекс по которому может быть найден
-                            элемент в массиве и -1 если такого элемента нет; это не тоже самое что и Boolean values,
-                            мы можем получать 2 и более индекса совпадений по массиву.`,
-                  type: "title",
-                },
-                {
-                  title: `17.sort() => возвращает отсортированный массив; если compareFunction
-                            предоставлена, то массив сортируется в соответствиями с этими условиями.`,
-                  type: "title",
-                },
-                {
-                  title: `18.find() => возвращает значение первого найденного в массиве элемента,
-                            который удовлетворяет условию указанных в функции, в противном случае возвращает undefined.`,
-                  type: "title",
-                },
-                {
-                  title: `19.findIndex() => возвращает индекс в массиве, если элемент удовлетворяет
-                            условиям проверяющей функции, в противном случае вернёт -1.`,
-                  type: "title",
-                },
-                {
-                  title: `20.forEach(function (item, index, array) { … } => выполняет указанную
-                            функцию один раз для каждого элемента в массиве.`,
-                  type: "title",
-                },
-                {
-                  title:
-                    "21.join(‘, ’) => преобразовывает массив в строку с заданным разделителем.",
-                  type: "title",
-                },
-                {
-                  title:
-                    "22.isArray() => проверяем массив ли этот объект или нет.",
-                  type: "title",
-                },
-                {
-                  title: "Learn more about array methods.",
-                  type: "link",
-                  url: "https://learn.javascript.ru/array-methods",
-                },
-                {
-                  title: "Visual representation of array methods.",
-                  type: "link",
-                  url: "https://medium.com/@sewolpe/visualizing-javascript-array-methods-7babf560f7be",
-                },
-              ],
-            },
-            {
-              title: "Strings Methods",
-              children: [
-                {
-                  title: "1.toUpperCase() => перевод строки в верхний регистр",
-                  type: "title",
-                },
-                {
-                  title: "2.toLowerCase() => перевод строки в нижний регистр",
-                  type: "title",
-                },
-                {
-                  title: "3.trim() => удаляет пробелы в начале и конце строки",
-                  type: "title",
-                },
-                {
-                  title: "4.length => получаем длину строки",
-                  type: "title",
-                },
-                {
-                  title: `5.includes() => проверяет на наличие в строке элемента; если элемент найден, то возвращает true.`,
-                  type: "title",
-                },
-                {
-                  title: `6.spread() => превращает массив в строки с помощью специальных разделителей ... сохраняет между ними границу или по умолчанию между строками образуются пробелы.`,
-                  type: "title",
-                },
-                {
-                  title: `7.repeat() => повторяет строку указанное количество раз.`,
-                  type: "title",
-                },
-                {
-                  title: `8.split() => разбивает строку на массив подстроки по указанному разделителю. Возвращает новый массив, который содержит подстроки полученные в ходе разбиения.`,
-                  type: "title",
-                },
-                {
-                  title: `9.startsWith() => проверяет на наличие в начале строки указанного элемента. Возвращает true или false`,
-                  type: "title",
-                },
-                {
-                  title: `10.endsWith() => проверяет на наличие в конце строки указанного элемента. Возвращает true или false`,
-                  type: "title",
-                },
-                {
-                  title: `11.slice() => вырезает один или несколько элементов внутри строки через указатель аргумента начала вырезания и второй аргумент где закончить срез; принимает отрицательные значения.`,
-                  type: "title",
-                },
-                {
-                  title: `12.substring() => возвращает вырезанную часть строки, но не принимает отрицательные числа в качестве аргументов.`,
-                  type: "title",
-                },
-                {
-                  title: `13.concat() => конкатенация между собой строк в одну строку`,
-                  type: "title",
-                },
-                {
-                  title: `14.charCodeAt() => возвращает значение символа по Юникод.`,
-                  type: "title",
-                },
-                {
-                  title: `15.charAt() => возвращает символ по Юникод.`,
-                  type: "title",
-                },
-                {
-                  title: `16.trimStart() => удаляет пробелы в начале строки.`,
-                  type: "title",
-                },
-                {
-                  title: `17.trimEnd() => удаляет пробелы в конце строки.`,
-                  type: "title",
-                },
-                {
-                  title: `18.padStart() => добавляет символы в начале строки, чтобы результирующая строка получила указанную длину; по умолчанию метод возвращает пустую строку до указанной длины, но может принимать и другие символы указанные во втором аргументе.`,
-                  type: "title",
-                },
-                {
-                  title: `19.padEnd() => добавляет символы в конце строки, чтобы результирующая строка получила указанную длину.`,
-                  type: "title",
-                },
-                {
-                  title: `20.indexOf() => возвращает индекс первого вхождения указанного элемента в строку. Если элемент не найден, возвращает -1.`,
-                  type: "title",
-                },
-                {
-                  title: `21.at(-1) или at() => получает последний символ строки или символ согласно индексу слева на право, так же как при отрицательном значении принимает символ с право на лево.`,
-                  type: "title",
-                },
-                {
-                  title: `22.search()`,
-                  type: "code",
-                  description: `search() => возвращает индекс первого вхождения подстроки в строке.`,
-                  code: `console.log(str.search('World')); // 9`
-                }
-              ],
-            },
-            {
-              title: "Numbers Methods",
-              children: [
-                {
-                  title:
-                    "1.toFixed() => форматирует число с использованием записи с фиксированной запятой.",
-                  type: "title",
-                },
-                {
-                  title:
-                    "2.parseFloat() => принимает строку в качестве аргумента и возвращает число с плавающей точной.",
-                  type: "title",
-                },
-                {
-                  title:
-                    "3.parseInt() => принимает строку в качестве аргумента и возвращает целое число в соответствии с указанной системой счисления.",
-                  type: "title",
-                },
-                {
-                  title:
-                    "4.Number() => преобразовывает строку в числовой тип данных.",
-                  type: "title",
-                },
-                {
-                  title: "toExponential()",
-                  type: "code",
-                  description:
-                    "<p>Преобразует число в экспоненциальное представление.</p>",
-                  code: "var x = 9.656; console.log(x.toExponential(2)); // '9.66e+0'",
-                },
-                {
-                  title: "toPrecision()",
-                  type: "code",
-                  description:
-                    "<p>Возвращает строку с числом, записанным с указанной длиной.</p>",
-                  code: "var x = 9.656; console.log(x.toPrecision(4)); // '9.656'",
-                },
-                {
-                  title: "Методы Math",
-                  children: [
-                    {
-                      title: "Math.max()",
-                      type: "code",
-                      description: "<p>Возвращает наибольшее значение.</p>",
-                      code: "console.log(Math.max(1, 2, 3)); // 3",
-                    },
-                    {
-                      title: "Math.min()",
-                      type: "code",
-                      description: "<p>Возвращает наименьшее значение.</p>",
-                      code: "console.log(Math.min(1, 2, 3)); // 1",
-                    },
-                    {
-                      title: "Math.random()",
-                      type: "code",
-                      description:
-                        "<p>Генерирует случайное число от 0 до 1.</p>",
-                      code: `
-function getRandomInt(min, max) {
-// генерация случайного целого числа
-return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-console.log(getRandomInt(1, 10)); // случайное число от 1 до 10
-                      `,
-                    },
-                    {
-                      title: "Math.round()",
-                      type: "code",
-                      description:
-                        "<p>Округляет число до ближайшего целого.</p>",
-                      code: "console.log(Math.round(4.6)); // 5",
-                    },
-                    {
-                      title: "5.Math.sqrt() => возвращает квадратный корень числа.",
-                      type: "title",
-                    },
-                    {
-                      title: "6.Math.cbrt() => возвращает кубический корень числа.",
-                      type: "title",
-                    },
-                    {
-                      title:
-                        "7.Math.abs() => возвращает абсолютное значение числа.",
-                      type: "title",
-                    },
-                    {
-                      title:
-                        "8.Math.pow() => возвращает число, возведённое в степень.",
-                      type: "title",
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              title: "Object Methods",
-              children: [
-                {
-                  title: "1.Object.keys(obj): Возвращает массив строк, содержащий имена собственных перечисляемых свойств объекта.",
-                  type: "code",
-                  description: `<p>Примеры использования <code>Object.keys()</code>:</p>`,
-                  code: `
-const person = { name: 'Alice', age: 25 };
-console.log(Object.keys(person)); // ['name', 'age']
-                                      `,
-                },
-                {
-                  title: "2.Object.values(obj): Возвращает массив значений собственных перечисляемых свойств объекта.",
-                  type: "code",
-                  description: `<p>Примеры использования <code>Object.values()</code>:</p>`,
-                  code: `
-const person = { name: 'Alice', age: 25 };
-console.log(Object.values(person)); // ['Alice', 25]
-                                      `,
-                },
-                {
-                  title: "3.Object.create(proto, propertiesObject): Создает новый объект с указанным прототипом и свойствами.",
-                  type: "code",
-                  description: `<p>Примеры использования <code>Object.create()</code>:</p>`,
-                  code: `
-const proto = { greet() { console.log('Hello!'); } };
-const obj = Object.create(proto);
-obj.greet(); // 'Hello!'
-                  `,
-                },
-                {
-                  title: "4.Object.freeze(obj): Замораживает объект, предотвращая добавление, удаление или изменение его свойств.",
-                  type: "code",
-                  description: `<p>Примеры использования <code>Object.freeze()</code>:</p>`,
-                  code: `
-const obj = { name: 'Alice' };
-Object.freeze(obj);
-obj.name = 'Bob'; // не сработает
-console.log(obj.name); // 'Alice'
-                  `,
-                },
-                {
-                  title: "5.Object.assign(target, ...sources): Копирует значения всех собственных перечисляемых свойств из одного или более источников в целевой объект и возвращает его.",
-                  type: "code",
-                  description: `<p>Примеры использования <code>Object.assign()</code>:</p>`,
-                  code: `
-const target = { a: 1 };
-const source = { b: 2, c: 3 };
-const returnedTarget = Object.assign(target, source);
-console.log(returnedTarget); // { a: 1, b: 2, c: 3 }
-                  `,
-                },
-                {
-                  title: "6.Object.entries(obj): Возвращает массив пар [ключ, значение] для собственных перечисляемых свойств объекта.",
-                  type: "code",
-                  description: `<p>Примеры использования <code>Object.entries()</code>:</p>`,
-                  code: `
-const person = { name: 'Alice', age: 25 };
-console.log(Object.entries(person)); // [['name', 'Alice'], ['age', 25]]
-                  `,
-                },
-                {
-                  title:
-                    "7.Object.seal(obj): Замораживает объект, предотвращая добавление, удаление или изменение его свойств.",
-                  type: "code",
-                  description: `<p>Примеры использования <code>Object.seal()</code>:</p>`,
-                  code: `
-const obj = { name: 'Alice' };
-Object.seal(obj);
-obj.age = 25; // не сработает
-obj.name = 'Bob'; // сработает
-console.log(obj); // { name: 'Bob' }
-                  `,
-                },
-                {
-                  title:
-                    "8.Object.is(value1, value2): Определяет, являются ли два значения одним и тем же значением.",
-                  type: "code",
-                  description: `<p>Примеры использования <code>Object.is()</code>:</p>`,
-                  code: `
-console.log(Object.is('abc', 'abc')); // true
-console.log(Object.is(0, -0)); // false
-console.log(Object.is(NaN, NaN)); // true
-console.log(Object.is(null, undefined)); // false
-                  `,
-                },
-                {
-                  title: "9. Object.prototype.hasOwnProperty(): Возвращает булево значение, указывающее, является ли указанное свойство собственным свойством объекта.",
-                  type: "code",
-                  description: `<p>Примеры использования <code>Object.prototype.hasOwnProperty()</code>:</p>`,
-                  code: `
-const obj = { name: 'Alice' };
-console.log(obj.hasOwnProperty('name')); // true
-console.log(obj.hasOwnProperty('age')); // false
-                  `,
-                },
-              ],
-            },
-            {
-              title: "Cycle",
-              children: [
-                {
-                  title: "for, while, do while",
-                  children: [
-                    {
-                      title: "Использование циклов for, while, do while",
-                      type: "code",
-                      description: `
-                      <p>В JavaScript существуют различные виды циклов, которые позволяют повторять выполнение блока кода определенное количество раз или до тех пор, пока выполняется заданное условие.</p>
-                      <ul>
-                        <li><strong>Цикл for</strong>: Используется, когда известно количество итераций.</li>
-                        <li><strong>Цикл while</strong>: Используется, когда количество итераций неизвестно, и необходимо повторять выполнение до тех пор, пока условие истинно.</li>
-                        <li><strong>Цикл do while</strong>: Похож на цикл while, но гарантирует хотя бы одну итерацию.</li>
-                      </ul>
-                      `,
-                      code: `
-  // Пример цикла for
-  for (let i = 0; i < 5; i++) {
-    console.log("Итерация: " + i); // Выводит 0, 1, 2, 3, 4
-  }
-
-  // Пример цикла while
-  let j = 0; 
-  while (j < 5) {
-    console.log("Итерация: " + j); // Выводит 0, 1, 2, 3, 4
-    j++;
-  }
-
-  // Пример цикла do while
-  let k = 0;
-  do {
-    console.log("Итерация: " + k); // Выводит 0, 1, 2, 3, 4
-    k++;
-  } while (k < 5);
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title:"1.for => повторяет блок кода определённое количество раз.",
-                  type: "title",
-                },
-                {
-                  title:"2.while => повторяет блок кода до тех пор, пока не выполнится условие.",
-                  type: "title",
-                },
-                {
-                  title:"3.do while => повторяет блок кода до тех пор, пока не выполнится условие. После чего выполняется блок кода.",
-                  type: "title",
-                },
-                {
-                  title:"4.for...of => повторяет блок кода для каждого элемента в массиве.",
-                  type: "title",
-                },
-                {
-                  title:"5.forEach() => повторяет блок кода для каждого элемента в массиве.",
-                  type: "title",
-                },
-                {
-                  title:"6.for in => повторяет блок кода для каждого свойства в объекте.",
-                  type: "title",
-                },
-                {
-                  title: "7.break => прерывает выполнение цикла.",
-                  type: "title",
-                },
-                {
-                  title:"8.continue => прерывает текущую итерацию цикла и переходит к следующей.",
-                  type: "title",
-                },
-              ],
-            },
-            {
-              title: "work with JSON",
-              children: [
-                {
-                  title: `JSON.stringify(value, replacer, space): Преобразует значение в строку JSON.`,
-                  type: "title",
-                },
-                {
-                  title: `JSON.parse(text, reviver): Преобразует строку JSON в значение.`,
-                  type: "title",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          title: "NaN (Not-a-Number)",
-          children: [
-            {
-              title: "Использование NaN в JavaScript",
-              type: "code",
-              description: `
-                <p>NaN (Not-a-Number) — специальное значение в JavaScript, которое представляет собой результат вычисления, не являющегося числом.</p>
-                <ul>
-                  <li>NaN является единственным значением, которое не равно ни одному числу, включая само себя.</li>
-                  <li>Для проверки на NaN в JavaScript следует использовать функцию <code>isNaN()</code> или <code>Number.isNaN()</code>.</li>
-                </ul>
-                <p>Вот примеры работы с NaN:</p>
-              `,
-              code: `
-// Примеры, когда результатом является NaN
-console.log(0 / 0); // NaN
-console.log(Math.sqrt(-1)); // NaN
-console.log(parseInt('abc')); // NaN
-
-// Проверка на NaN
-console.log(isNaN(NaN)); // true
-console.log(isNaN('abc')); // true
-console.log(isNaN(123)); // false
-
-// Использование Number.isNaN
-console.log(Number.isNaN(NaN)); // true
-console.log(Number.isNaN('abc')); // false
-console.log(Number.isNaN(undefined)); // false
-              `,
-            },
-          ],
-        },
-        {
-          title: "Promise",
-          children: [
-            {
-              title: "Определение",
-              type: "list",
-              description: `
-                <p>Promise — это объект, представляющий конечный результат асинхронной операции. Он может находиться в одном из трех состояний:</p>
-                <ul>
-                  <li><strong>Ожидание (pending)</strong>: начальное состояние, ни выполнено, ни отклонено.</li>
-                  <li><strong>Выполнено (fulfilled)</strong>: операция завершена успешно.</li>
-                  <li><strong>Отклонено (rejected)</strong>: операция завершена с ошибкой.</li>
-                </ul>
-              `,
-            },
-            {
-              title: "Создание Promise",
-              type: "code",
-              description: `
-                <p>Promise создается с помощью конструктора <code>Promise</code>, который принимает функцию с двумя аргументами: <code>resolve</code> и <code>reject</code>.</p>
-              `,
-              code: `
-  const myPromise = new Promise((resolve, reject) => {
-  // Асинхронная операция
-  const success = true; // поменяйте на false для теста отклонения
-
-  if (success) {
-    resolve('Operation was successful!');
-  } else {
-    reject('Operation failed.');
-    }
-  });
-              `,
-            },
-            {
-              title: "Основные статические методы Promise",
-              type: "list",
-              description: `
-                <p>Promise предоставляет несколько статических методов:</p>
-                <ul>
-                  <li><strong>Promise.all(iterable)</strong>: Ожидает выполнения всех переданных промисов и возвращает массив результатов. Если любой из промисов будет отклонен, возвращается ошибка.</li>
-                  <li><strong>Promise.allSettled(iterable)</strong>: Ожидает выполнения всех переданных промисов и возвращает массив объектов с результатами (выполнено или отклонено) для каждого промиса.</li>
-                  <li><strong>Promise.any(iterable)</strong>: Ожидает выполнения первого успешного промиса. Если все промисы будут отклонены, возвращается ошибка.</li>
-                  <li><strong>Promise.race(iterable)</strong>: Ожидает выполнения первого завершенного промиса (выполнено или отклонено).</li>
-                  <li><strong>Promise.resolve(value)</strong>: Возвращает промис, который выполнен с заданным значением.</li>
-                  <li><strong>Promise.reject(reason)</strong>: Возвращает промис, который отклонен с заданной причиной.</li>
-                </ul>
-              `,
-            },
-          ],
-        },
-        {
-          title: "Page Visibility API",
-          children: [
-            {
-              title:
-                "Реализация паузы/старта видео в зависимости от состояния видимости страницы",
-              description: `Page Visibility API — это API браузера, который проверяет видимость страницы. Он помогает определять, скрыта или свернута текущая страница, и тем самым позволяет контролировать ее поведение и использование ресурсов`,
-              type: "code",
-              code: `
-  const video = document.querySelector('video');
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      video.pause();
-    } else {
-      video.play();
-    }
-  });
-`,
-              link: "Подробнее — MDN",
-              url: "https://medium.com/nuances-of-programming/%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-page-visibility-api-fca074a5b113",
-            },
-          ],
-        },
-        {
-          title: "Recursion",
-          children: [
-            {
-              title: "Определение",
-              type: "list",
-              description: `
-                <p><strong>Рекурсия</strong> — это функция вызывающая саму себя для решения подзадач. Рекурсивные функции обычно разбивают задачу на меньшие подзадачи, которые решаются аналогичным образом.</p>
-              `,
-            },
-            {
-              title: "Структура рекурсивной функции",
-              type: "code",
-              description: `
-                <p>Рекурсивная функция должна иметь:</p>
-                <ul>
-                  <li><strong>Базовый случай</strong>: Условие, при котором функция прекращает вызывать саму себя, чтобы избежать бесконечной рекурсии.</li>
-                  <li><strong>Рекурсивный случай</strong>: Вызов самой функции с меньшей или более простой версией задачи.</li>
-                </ul>
-              `,
-              code: `
-  function factorial(n) {
-    if (n === 0) { // базовый случай
-      return 1;
-    }
-    return n * factorial(n - 1); // рекурсивный случай
-  }
-  console.log(factorial(5)); // 120
-              `,
-            },
-            {
-              title: "Примеры использования",
-              type: "list",
-              description: `
-                <p>Рекурсия может быть использована в следующих ситуациях:</p>
-                <ul>
-                  <li>Вычисление факториала.</li>
-                  <li>Обход деревьев и графов.</li>
-                  <li>Решение задач, таких как сортировка (например, быстрая сортировка, сортировка слиянием).</li>
-                  <li>Решение задач, связанных с последовательностями (например, числа Фибоначчи).</li>
-                </ul>
-              `,
-            },
-            {
-              title: "Преимущества и недостатки",
-              type: "list",
-              description: `
-                <p>Преимущества и недостатки рекурсии:</p>
-                <ul>
-                  <li><strong>Преимущества:</strong> Код более лаконичен и понятен, особенно при работе со сложными структурами данных.</li>
-                  <li><strong>Недостатки:</strong> Рекурсия может приводить к большому потреблению памяти из-за хранения состояния вызовов стека и может быть менее эффективной по сравнению с итеративными подходами.</li>
-                </ul>
-              `,
-            },
-          ],
-        },
-        {
-          title: "Reducers",
-          children: [
-            {
-              title: "Определение редьюсера",
-              type: "text",
-              description: `
-                <p>Редьюсер — это чистая функция, которая принимает текущее состояние и действие, и возвращает новое состояние.</p>
-              `,
-            },
-            {
-              title: "Аргументы редьюсера",
-              type: "list",
-              description: `
-                <p>Редьюсер принимает два аргумента:</p>
-                <ul>
-                  <li><strong>state</strong>: текущее состояние.</li>
-                  <li><strong>action</strong>: объект, описывающий действие.</li>
-                </ul>
-              `,
-            },
-            {
-              title: "Пример редьюсера",
-              type: "code",
-              description: `
-                <p>Пример простого редьюсера для управления задачами:</p>
-              `,
-              code: `
-  const initialState = { todos: [] };
-
-  function todoReducer(state = initialState, action) {
-    switch (action.type) {
-      case 'ADD_TODO':
-        return { ...state, todos: [...state.todos, action.payload] };
-      case 'REMOVE_TODO':
-        return {
-          ...state,
-          todos: state.todos.filter((_, index) => index !== action.payload),
-        };
-      default:
-        return state;
-    }
-  }
-              `,
-            },
-            {
-              title: "Использование редьюсера",
-              type: "text",
-              description: `
-                <p>Редьюсеры комбинируются с помощью функции <code>combineReducers</code> для создания общего состояния в Redux.</p>
-              `,
-            },
-            {
-              title: "Пример с использованием useReducer",
-              type: "code",
-              description: `
-                <p>Пример использования <code>useReducer</code> в React:</p>
-              `,
-              code: `
-  import React, { useReducer } from 'react';
-
-  const initialState = { count: 0 };
-
-  function reducer(state, action) {
-    switch (action.type) {
-      case 'increment':
-        return { count: state.count + 1 };
-      case 'decrement':
-        return { count: state.count - 1 };
-      default:
-        throw new Error();
-    }
-  }
-
-  function Counter() {
-    const [state, dispatch] = useReducer(reducer, initialState);
-
-    return (
-      <>
-        Count: {state.count}
-        <button onClick={() => dispatch({ type: 'increment' })}>+</button>
-        <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
-      </>
-    );
-  }
-              `,
-            },
-            {
-              title: "Заключение",
-              type: "text",
-              description: `
-                <p>Редьюсеры обеспечивают предсказуемое и централизованное управление состоянием в приложениях.</p>
-              `,
-            },
-          ],
-        },
-        {
-          title: "Switch",
-          children: [
-            {
-              title: "Использование конструкции switch и где это нужно",
-              type: "code",
-              description: `
-              <p>Конструкция switch позволяет выполнять различные действия на основе значения выражения.</p>
-              <ul>
-                <li>Мы можем использовать switch вместо многочисленных if-else, когда нужно проверить одно значение на несколько возможных вариантов.</li>
-                <li>Это делает код более читаемым и поддерживаемым.</li>
-              </ul>
-              <p>Вот несколько примеров использования switch:</p>
-              `,
-              code: `
-// Пример 1: Определение дня недели
-const day = 3;
-let dayName;
-
-switch (day) {
-case 1:
-dayName = 'Понедельник';
-break;
-case 2:
-dayName = 'Вторник';
-break;
-case 3:
-dayName = 'Среда';
-break;
-case 4:
-dayName = 'Четверг';
-break;
-case 5:
-dayName = 'Пятница';
-break;
-case 6:
-dayName = 'Суббота';
-break;
-case 7:
-dayName = 'Воскресенье';
-break;
-default:
-dayName = 'Некорректный день';
-}
-
-console.log(dayName); // "Среда"
-
-
-// Пример 2: Использование switch с выражением
-const fruit = 'яблоко';
-let color;
-
-switch (fruit) {
-case 'банан':
-color = 'желтый';
-break;
-case 'яблоко':
-color = 'красный';
-break;
-case 'виноград':
-color = 'зеленый';
-break;
-default:
-color = 'неизвестный цвет';
-}
-
-console.log(color); // "красный"
-
-
-// Пример 3: Объединение случаев
-const grade = 'B';
-let message;
-
-switch (grade) {
-case 'A':
-case 'B':
-message = 'Отлично!';
-break;
-case 'C':
-message = 'Хорошо!';
-break;
-case 'D':
-message = 'Удовлетворительно!';
-break;
-case 'F':
-message = 'Неп satisfactoriously!';
-break;
-default:
-message = 'Некорректная оценка';
-}
-
-console.log(message); // "Отлично!"
-              `,
-            },
-          ],
-        },
-        {
-          title: "Sort functions",
-          children: [
-            {
-              title: "Сортировка пузырьком",
-              type: "code",
-              description: `
-                <p>Алгоритм сортировки пузырьком сравнивает пары соседних элементов и меняет их местами, если порядок неправильный.</p>
-                <p>Задача: Реализовать сортировку массива с использованием алгоритма пузырька.</p>
-              `,
-              code: `
-  function bubbleSort(arr) {
-  const n = arr.length;
-  let swapped;
-  do {
-    swapped = false;
-    for (let i = 0; i < n - 1; i++) {
-    if (arr[i] > arr[i + 1]) {
-      [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]; // обмен элементов
-      swapped = true;
-      }
-    }
-  } while (swapped);
-    return arr;
-  }
-              `,
-            },
-          ]
-        },
-        {
-          title: "Search function",
-          children: [
-
-          ]
-        },
-        {
-          title: "Strict comparison",
-          children: [
-            {
-              title: "Использование строгого сравнения в JavaScript",
-              type: "code",
-              description: `
-                <p>В JavaScript есть два типа сравнения: нестрогое (==) и строгое (===).</p>
-                <ul>
-                  <li><strong>Нестрогое сравнение (==)</strong>: Приводит операнды к одному типу перед сравнением.</li>
-                  <li><strong>Строгое сравнение (===)</strong>: Сравнивает как значение, так и тип данных.</li>
-                </ul>
-                <p>Вот примеры использования строгого сравнения:</p>
-              `,
-              code: `
-// Пример нестрогого сравнения
-console.log(5 == '5'); // true
-console.log(null == undefined); // true
-
-// Пример строгого сравнения
-console.log(5 === '5'); // false
-console.log(null === undefined); // false
-
-// Строгое сравнение с разными типами
-console.log(1 === 1); // true
-console.log(true === 1); // false
-              `,
-            },
-          ],
-        },
-        {
-          title: "Ternary operator and logical operators",
-          children: [
-            {
-              title:
-                "Использование тернарного оператора и логических операторов",
-              type: "code",
-              description: `
-                <p>В JavaScript есть несколько удобных операторов, которые помогают упростить код и избавиться от лишних проверок.</p>
-                <ul>
-                  <li><strong>Тернарный оператор</strong>: Сокращенная форма if-else, позволяет записать условную логику в одной строке.</li>
-                  <li><strong>Оператор нулевого объединения (??)</strong>: Позволяет вернуть правое значение, если левое значение равно null или undefined.</li>
-                  <li><strong>Необязательное связывание (?.)</strong>: Позволяет безопасно получать доступ к вложенным свойствам объектов без необходимости проверки каждой промежуточной ссылки.</li>
-                </ul>
-              `,
-              code: `
-// Пример тернарного оператора
-const age = 18;
-const canVote = (age >= 18) ? "Да" : "Нет";
-console.log(canVote); // "Да"
-
-// Пример оператора нулевого объединения
-const userInput = null;
-const defaultValue = userInput ?? "Значение по умолчанию";
-console.log(defaultValue); // "Значение по умолчанию"
-
-// Пример необязательного связывания
-const user = {
-profile: {
-name: "Alice",
-age: 30,
-},
-};
-const userCity = user.profile?.city ?? "Город не указан";
-console.log(userCity); // "Город не указан" (поскольку city не существует)
-
-// Пример логического И (&&) и ИЛИ (||)
-const isAuthenticated = true;
-const userRole = isAuthenticated && "admin";
-// вернёт "admin", если isAuthenticated true
-const fallback = userRole || "guest"; // вернёт "guest", если userRole falsy
-              `,
-            },
-          ],
-        },
-        {
-          title: "typeof operator ",
-          children: [
-            {
-              title: "Описание оператора typeof",
-              type: "code",
-              description: `
-                <p><strong>typeof</strong>: Это оператор в JavaScript, который используется для определения типа переменной или выражения. Он возвращает строку, описывающую тип аргумента.</p>
-                <ul>
-                  <li>Примеры типов: "undefined", "boolean", "number", "string", "object", "function", "symbol".</li>
-                </ul>
-              `,
-              code: `
-// Примеры использования оператора typeof
-console.log(typeof undefined); // "undefined"
-console.log(typeof null);      // "object" (это известная ошибка в JavaScript)
-console.log(typeof 42);        // "number"
-console.log(typeof 'hello');   // "string"
-console.log(typeof {});         // "object"
-console.log(typeof [];          // "object"
-console.log(typeof function(){}); // "function"
-              `,
-            },
-            {
-              title: "Практическое применение",
-              type: "code",
-              description: `
-                <p>Оператор typeof часто используется для проверки типов переменных перед выполнением операций:</p>
-              `,
-              code: `
-let value;
-
-if (typeof value === 'undefined') {
-console.log('Переменная value не инициализирована.');
-}
-
-value = 10;
-
-if (typeof value === 'number') {
-console.log('value является числом.');
-}
-              `,
-            },
-            {
-              title: "Ограничения оператора typeof",
-              type: "code",
-              description: `
-                <p>Некоторые особенности и ограничения:</p>
-                <ul>
-                  <li>Для объектов и массивов оператор возвращает "object".</li>
-                  <li>Для null он также возвращает "object", что является известной особенностью JavaScript.</li>
-                  <li>Для функций возвращает "function", но это подтип объекта.</li>
-                </ul>
-              `,
-              code: `
-console.log(typeof null);       // "object"
-console.log(typeof [1, 2, 3]);  // "object"
-console.log(typeof {};           // "object"
-console.log(typeof (() => {})); // "function"
-              `,
-            },
-            {
-              title: "Вывод",
-              type: "code",
-              description: `
-                <p>Оператор typeof является полезным инструментом в JavaScript для проверки типов данных и может помочь избежать ошибок при работе с переменными.</p>
-              `,
-              code: `
-let value = 'test';
-console.log(typeof value); // "string"
-              `,
-            },
-          ],
-        },
-        {
-          title: "Variables: let, const, var",
-          children: [
-            {
-              title: "Область видимости переменных",
-              type: "code",
-              description: `
-                <p>В JavaScript есть три типа областей видимости: глобальная, функция и блок.</p>
-                <ul>
-                  <li><strong>Глобальная</strong>: Переменные, доступные во всем скрипте.</li>
-                  <li><strong>Функция</strong>: Переменные, доступные только внутри функции.</li>
-                  <li><strong>Блок</strong>: Переменные, объявленные внутри блока (например, внутри 'if', 'for', и т. д.).</li>
-                </ul>
-              `,
-              code: `
-  let globalVar = 'I'm global';
-
-  function testScope() {
-  let functionVar = 'I'm local to function';
-  if (true) {
-  let blockVar = 'I exist only in this block';
-  console.log(blockVar); // доступен здесь
-  }
-  console.log(functionVar); // доступен здесь
-  // console.log(blockVar); // ошибка: blockVar не доступен здесь
-  }
-  console.log(globalVar); // доступен здесь
-              `,
-            },
-            {
-              title: "Описание переменных",
-              type: "code",
-              description: `
-                <p><strong>var</strong>: Используется для объявления переменных. Переменные, объявленные с помощью var, имеют функциональную или глобальную область видимости и могут быть переопределены. Они также подвержены механизму поднятия (hoisting).</p>
-                <p><strong>let</strong>: Вводится в ES6 (ECMAScript 2015). Используется для объявления переменных с блочной областью видимости. Переменные, объявленные с помощью let, не могут быть переопределены в пределах одной и той же области видимости. Также подвержены подъеманию, но не инициализируются до фактической строки кода.</p>
-                <p><strong>const</strong>: Также введена в ES6. Используется для объявления констант, значение которых не может быть переопределено. Как и let, имеет блочную область видимости.</p>
-              `,
-              code: `
-  var a = 'Hello';
-  console.log(a); // 'Hello'
-
-  let b = 'World';
-  console.log(b); // 'World'
-
-  const c = '!';
-  console.log(c); // '!'
-              `,
-            },
-            {
-              title: "Сравнение области видимости",
-              type: "code",
-              description: `
-                <p>Область видимости переменных var, let и const:</p>
-                <ul>
-                  <li><strong>var</strong>: Функциональная или глобальная область видимости.</li>
-                  <li><strong>let</strong> и <strong>const</strong>: Блочная область видимости.</li>
-                </ul>
-              `,
-              code: `
-  if (true) {
-  var x = 10;
-  let y = 20;
-  const z = 30;
-  }
-
-  console.log(x); // 10
-  console.log(y); // ReferenceError: y is not defined
-  console.log(z); // ReferenceError: z is not defined
-              `,
-            },
-            {
-              title: "Подъем переменных",
-              type: "code",
-              description: `
-                <p>Все три типа переменных поднимаются, но их инициализация происходит на разных стадиях:</p>
-              `,
-              code: `
-  console.log(aVar); // undefined (подъем, но не инициализация)
-  var aVar = 'test';
-
-  // console.log(aLet); // ReferenceError: Cannot access 'aLet' before initialization
-  let aLet = 'test';
-
-  // console.log(aConst); // ReferenceError: Cannot access 'aConst' before initialization
-  const aConst = 'test';
-              `,
-            },
-            {
-              title: "Использование",
-              type: "code",
-              description: `
-                <p>Рекомендуется использовать let и const вместо var, чтобы избежать неожиданных ошибок и путаницы:</p>
-              `,
-              code: `
-  let name = 'John';
-  const age = 30;
-
-  name = 'Doe'; // корректно, значение переменной может меняться
-  // age = 31; // TypeError: Assignment to constant variable. (ошибка)
-              `,
-            },
-            {
-              title: "Вывод",
-              type: "code",
-              description: `
-                <p>Необходимо использовать let и const в современных приложениях, чтобы избежать проблем с областью видимости, поднятием и переопределением переменных.</p>
-              `,
-              code: `
-  if (true) {
-  let message = "Hello, block!";
-  console.log(message); // "Hello, block!"
-  }
-  // console.log(message); // ReferenceError: message is not defined
-              `,
-            },
-          ],
-        },
-        {
-          title: "Variable declarations",
-          children: [
-            {
-              title: "1. Использование var",
-              type: "code",
-              description: `
-                <p><strong>var</strong>: Объявляет переменную с функциональной или глобальной областью видимости.</p>
-                <ul>
-                  <li>Переменные, объявленные с помощью <code>var</code>, могут быть переопределены.</li>
-                  <li>Подвержены механизму поднятия (hoisting).</li>
-                </ul>
-              `,
-              code: `
-  var name = 'Alice';
-  console.log(name); // 'Alice'
-  var name = 'Bob'; // переопределение
-  console.log(name); // 'Bob'
-              `,
-            },
-            {
-              title: "2. Использование let",
-              type: "code",
-              description: `
-                <p><strong>let</strong>: Объявляет переменную с блочной областью видимости.</p>
-                <ul>
-                  <li>Переменные, объявленные с помощью <code>let</code>, не могут быть переопределены в пределах одной области видимости.</li>
-                  <li>Также подвержены поднятию, но не инициализируются до фактической строки кода.</li>
-                </ul>
-              `,
-              code: `
-  let age = 25;
-  console.log(age); // 25
-  // let age = 30; // ошибка: Identifier 'age' has already been declared
-              `,
-            },
-            {
-              title: "3. Использование const",
-              type: "code",
-              description: `
-                <p><strong>const</strong>: Объявляет константу, значение которой не может быть переопределено.</p>
-                <ul>
-                  <li>Имеет блочную область видимости.</li>
-                  <li>Объявленные с помощью <code>const</code> переменные должны быть инициализированы при объявлении.</li>
-                </ul>
-              `,
-              code: `
-  const pi = 3.14;
-  console.log(pi); // 3.14
-  // pi = 3.14159; // ошибка: Assignment to constant variable.
-              `,
-            },
-            {
-              title: "4. Групповое объявление",
-              type: "code",
-              description: `
-                <p>Можно объявить несколько переменных в одной строке:</p>
-              `,
-              code: `
-  let x = 10, y = 20, z = 30;
-  console.log(x, y, z); // 10 20 30
-              `,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      title: "React",
-      children: [
-        {
-          title: "React JS",
-          children: [
-            {
-              title: "Introduction to React JS",
-              type: "link",
-              url: "https://it-shpora.pp.ua/category/react/",
-            },
-            {
-              title: "Advanced React JS",
-              type: "link",
-              url: "https://devdocs.io/react/",
-            },
-            {
-              title: "Storybook",
-              type: "link",
-              url: "https://storybook.js.org/docs/writing-stories",
-            },
-            {
-              title: "React JS Drag to Select",
-              type: "link",
-              url: "https://www.joshuawootonn.com/react-drag-to-select",
-            },
-          ],
-        },
-        {
-          title: "React TS",
-          children: [
-            {
-              title: "Introduction to React TypeScript",
-              type: "link",
-              url: "https://it-shpora.pp.ua/category/react-typescript/",
-            },
-            {
-              title: "Advanced React Typescript",
-              type: "link",
-              url: "https://reactjs.org/docs/getting-started",
-            },
-          ],
-        },
-        {
-          title: "React Native",
-          children: [
-            {
-              title: "Introduction to React Native",
-              type: "link",
-              url: "https://it-shpora.pp.ua/category/react-native/",
-            },
-            {
-              title: "Advanced React Native",
-              type: "link",
-              url: "https://reactnative.dev/",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      title: "Next.js",
-      children: [
-        {
-          title: "Next.js Crash Course Tutorial",
-          children: [
-            {
-              title: "#1 - Introduction & New Features",
-              type: "video",
-              url: "https://www.youtube.com/embed?v=TJQbDPGzm0Y&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT",
-            },
-            {
-              title: "#2 - SSR & Server Components (theory)",
-              type: "video",
-              url: "https://www.youtube.com/embed?v=YEG2_fSJswc&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=2",
-            },
-            {
-              title: "#3 - Pages & Routes",
-              type: "video",
-              url: "https://www.youtube.com/embed?v=vwg4Wrk-kWE&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=3",
-            },
-            {
-              title: "#4 - Layouts & Links",
-              type: "video",
-              url: "https://www.youtube.com/embed?v=R7A5vBDfZ18&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=4",
-            },
-            {
-              title: "#5 - Styles, Fonts & Images",
-              type: "video",
-              url: "https://www.youtube.com/embed?v=oWUQQD97Rz0&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=5",
-            },
-            {
-              title: "#6 - Fetching & Revalidating Data",
-              type: "video",
-              url: "https://www.youtube.com/embed?v=PAXWRgEo7Ns&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=6",
-            },
-            {
-              title: "#7 - Dynamic Segments (Params)",
-              type: "video",
-              url: "https://www.youtube.com/embed?v=ZwajQ9ywgIU&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=7",
-            },
-            {
-              title: "#8 - Static Rendering",
-              type: "video",
-              url: "https://www.youtube.com/embed?v=ihmyC4Ei2zY&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=8",
-            },
-            {
-              title: "#9 - Custom 404 Page",
-              type: "video",
-              url: "https://www.youtube.com/embed?v=PbFH_VE1Iks&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=9",
-            },
-            {
-              title: "#10 - Loading UI & Suspense",
-              type: "video",
-              url: "https://www.youtube.com/embed?v=Lzml9L3f4IM&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=10",
-            },
-            {
-              title: "#11 - Client Form Component",
-              type: "video",
-              url: "https://www.youtube.com/embed?v=nSfu7sHPE9M&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=11",
-            },
-            {
-              title: "#12 - Building the App",
-              type: "video",
-              url: "https://www.youtube.com/embed?v=Yi_zS8jSln8&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=12",
-            },
-          ],
-        },
-        {
-          title: "Routing",
-          children: [
-            {
-              title: "Learn more about routing",
-              description:
-                "The skeleton of every application is routing. This page will introduce you to the fundamental concepts of routing for the web and how to handle routing in Next.js.",
-              type: "link",
-              url: "https://nextjs.org/docs/app/building-your-application/routing#terminology",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      title: "Net",
-      children: [
         {
           title: "JWT (JSON Web Token)",
           children: [
@@ -4239,6 +1103,65 @@ console.log(typeof value); // "string"
           ],
         },
         {
+          title: "CRP",
+          children: [
+            {
+              title: "1. Что такое CRP?",
+              type: "text",
+              description: `
+                <p>CRP (Cross-Origin Resource Policy) - это механизм безопасности, который позволяет управлять доступом к ресурсам на основе их источника.</p>
+                <p>Он используется для определения, какие ресурсы могут быть использованы в контексте других источников.</p>
+              `,
+            },
+            {
+              title: "2. Зачем нужен CRP?",
+              type: "text",
+              description: `
+                <p>CRP помогает предотвратить атаки, такие как:</p>
+                <ul>
+                  <li>Cross-Site Scripting (XSS)</li>
+                  <li>Cross-Origin Resource Sharing (CORS)</li>
+                </ul>
+                <p>Это позволяет разработчикам контролировать, какие внешние ресурсы могут взаимодействовать с их приложениями.</p>
+              `,
+            },
+            {
+              title: "3. Как работает CRP?",
+              type: "text",
+              description: `
+                <p>CRP работает путем добавления заголовков HTTP к ресурсам, которые определяют правила доступа.</p>
+                <p>Примеры заголовков:</p>
+                <ul>
+                  <li><code>Cross-Origin-Resource-Policy: same-origin</code> - Разрешает доступ только с того же источника.</li>
+                  <li><code>Cross-Origin-Resource-Policy: cross-origin</code> - Разрешает доступ с любых источников.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "4. Пример использования CRP",
+              type: "code",
+              description: `
+                <p>Пример настройки заголовка CRP в серверном приложении:</p>
+              `,
+              code: `
+        response.setHeader('Cross-Origin-Resource-Policy', 'same-origin');
+              `
+            },
+            {
+              title: "5. Когда использовать CRP?",
+              type: "text",
+              description: `
+                <p>CRP следует использовать, когда:</p>
+                <ul>
+                  <li>Необходимо защитить ресурсы от несанкционированного доступа.</li>
+                  <li>Приложение взаимодействует с ресурсами из разных источников.</li>
+                  <li>Хотите контролировать доступ к вашим ресурсам на уровне безопасности.</li>
+                </ul>
+              `,
+            },
+          ],
+        },
+        {
           title: "REST",
           children: [
             {
@@ -4493,6 +1416,3914 @@ console.log(typeof value); // "string"
       ]
     },
     {
+      title: "HTML/CSS",
+      children: [
+        {
+          title: "Style",
+          children: [
+            {
+              title: "CSS",
+              children: [
+                {
+                  title: "Способы подключения стилей в HTML",
+                  children: [
+                    {
+                      title: "1. Внешний стиль (External CSS)",
+                      type: "list",
+                      description: `
+                        <p>Подключение стилей через отдельный файл:</p>
+                        <ul>
+                          <li><strong>Используемый тег</strong>: <code>&lt;link&gt;</code>.</li>
+                          <li><strong>Пример</strong>: 
+                            <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>.
+                          </li>
+                          <li><strong>Преимущества</strong>: Упрощает управление стилями и позволяет повторно использовать их на нескольких страницах.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "2. Встроенный стиль (Internal CSS)",
+                      type: "list",
+                      description: `
+                        <p>Подключение стилей в <code>&lt;head&gt;</code> документа:</p>
+                        <ul>
+                          <li><strong>Используемый тег</strong>: <code>&lt;style&gt;</code>.</li>
+                          <li><strong>Пример</strong>: 
+                            <code>&lt;style&gt; body { background-color: lightblue; } &lt;/style&gt;</code>.
+                          </li>
+                          <li><strong>Преимущества</strong>: Удобно для небольших проектов или когда стили специфичны для одной страницы.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "3. Инлайновый стиль (Inline CSS)",
+                      type: "list",
+                      description: `
+                        <p>Применение стилей непосредственно к элементам:</p>
+                        <ul>
+                          <li><strong>Используемый атрибут</strong>: <code>style</code>.</li>
+                          <li><strong>Пример</strong>: 
+                            <code>&lt;h1 style="color: red;"&gt;Заголовок&lt;/h1&gt;</code>.
+                          </li>
+                          <li><strong>Преимущества</strong>: Быстрое применение стилей к отдельным элементам, но может привести к дублированию кода.</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Вес селектора или что такое специфичность в CSS",
+                  children: [
+                    {
+                      title:
+                        "Специфичность в CSS определяет, какой стиль применяется к элементу при наличии множества правил. Она рассчитывается на основе различных типов селекторов:",
+                      type: "code",
+                      description: `
+                        <ul>
+                          <li><strong>глобальный селектор *</strong>: не имеет веса</li>
+                          <li><strong>Инлайновые стили</strong>: 1000</li>
+                          <li><strong>ID-селекторы</strong>: 100</li>
+                          <li><strong>Классы, атрибуты и псевдоклассы</strong>: 10</li>
+                          <li><strong>Теги и псевдоэлементы</strong>: 1</li>
+                        </ul>
+                        <p>Пример:</p>
+                      `,
+                      code: `
+// Специфичность: 0 (глобальный селектор)
+* {
+  color: black;
+}                    
+
+/* Специфичность: 1 (тег) */
+p {
+  color: blue;
+}
+
+/* Специфичность: 10 (класс) */
+.myClass {
+  color: red;
+}
+
+/* Специфичность: 100 (ID) */
+#myId {
+  color: green;
+}
+
+/* Специфичность: 1000 (инлайн стиль) */
+&lt;p style="color: yellow;"&gt;Hello&lt;/p&gt;
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Псевдоклассы и псевдоэлементы",
+                  children: [
+                    {
+                      title:
+                        "Псевдоклассы и псевдоэлементы позволяют стилизовать элементы на основе их состояния или позиции:",
+                      type: "code",
+                      description: `
+                        <ul>
+                          <li><strong>Псевдоклассы</strong>: <code>:hover</code>, <code>:focus</code>, <code>:nth-child()</code></li>
+                          <li><strong>Псевдоэлементы</strong>: <code>::before</code>, <code>::after</code>, <code>::first-line</code></li>
+                        </ul>
+                        <p>Пример:</p>
+                      `,
+                      code: `
+/* Псевдокласс */
+a:hover {
+color: blue;
+}
+
+/* Псевдоэлемент */
+p::first-line {
+font-weight: bold;
+}
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Коробчатая модель (box-sizing)",
+                  children: [
+                    {
+                      title:
+                        "Коробчатая модель описывает пространство, занимаемое элементом",
+                      type: "code",
+                      description: `
+                        <p>Она включает в себя следующие свойства:</p>
+                        <ul>
+                          <li><strong>Content</strong>: Содержимое элемента.</li>
+                          <li><strong>Padding</strong>: Поля вокруг содержимого.</li>
+                          <li><strong>Border</strong>: Граница вокруг элемента.</li>
+                          <li><strong>Margin</strong>: Отступы между элементами.</li>
+                        </ul>
+                        <p>Пример:</p>
+                      `,
+                      code: `
+div {
+  margin: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  width: 100px;
+}
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "em против rem, относительные и абсолютные значения",
+                  children: [
+                    {
+                      title:
+                        "<code>em</code> и <code>rem</code> - это относительные единицы измерения, используемые в CSS:",
+                      type: "code",
+                      description: `
+                        <ul>
+                          <li><strong>em</strong>: Относится к текущему элементу. Если размер шрифта родительского элемента равен 16px, то 1em = 16px.</li>
+                          <li><strong>rem</strong>: Относится к корневому элементу (обычно <code>html</code>). Если размер шрифта корневого элемента равен 16px, то 1rem = 16px.</li>
+                        </ul>
+                        <p>Пример:</p>
+                      `,
+                      code: `
+h1 {
+font-size: 2em; /* 32px, если родительский элемент имеет размер 16px */
+}
+
+p {
+font-size: 1.5rem; /* 24px */
+}
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Позиционирование: поток документов, overflow, z-index",
+                  children: [
+                    {
+                      title:
+                        "Позиционирование в CSS управляет размещением элементов на странице:",
+                      type: "code",
+                      description: `
+                        <ul>
+                          <li><strong>position: static</strong>: Обычное потоковое позиционирование.</li>
+                          <li><strong>position: relative</strong>: Относительное позиционирование, элемент сдвигается относительно своего обычного положения.</li>
+                          <li><strong>position: absolute</strong>: Абсолютное позиционирование относительно ближайшего родительского элемента.</li>
+                          <li><strong>position: fixed</strong>: Фиксированное позиционирование относительно окна браузера.</li>
+                          <li><strong>position: sticky</strong>: Элемент ведет себя как <code>relative</code> до определенной точки, после чего становится <code>fixed</code>.</li>
+                        </ul>
+                        <p>Пример:</p>
+                      `,
+                      code: `
+.relative {
+position: relative;
+top: 10px;
+}
+
+.absolute {
+position: absolute;
+top: 20px;
+}
+
+.fixed {
+position: fixed;
+top: 0;
+}
+                      `,
+                    },
+                    {
+                      title: "Переполнение (Overflow)",
+                      type: "list",
+                      description: `
+                        <p>Свойство <code>overflow</code> в CSS управляет тем, как обрабатывается содержимое, выходящее за пределы блока. Оно может принимать следующие значения:</p>
+                        <ul>
+                          <li><strong>visible</strong>: Содержимое не обрезается; его можно видеть за пределами элемента (значение по умолчанию).</li>
+                          <li><strong>hidden</strong>: Содержимое, выходящее за пределы элемента, скрыто.</li>
+                          <li><strong>scroll</strong>: Содержимое скрыто, но добавляются полосы прокрутки для доступа к нему.</li>
+                          <li><strong>auto</strong>: Полосы прокрутки добавляются только при необходимости.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Пример использования overflow",
+                      type: "code",
+                      description: `
+                        <p>Пример CSS с использованием свойства <code>overflow</code>:</p>
+                      `,
+                      code: `
+.container {
+  width: 200px;
+  height: 100px;
+  overflow: scroll; /* Добавляет полосы прокрутки */
+}
+                      `,
+                    },
+                    {
+                      title: "z-индекс (z-index)",
+                      type: "list",
+                      description: `
+                        <p>Свойство <code>z-index</code> управляет порядком наложения элементов на странице. Оно определяет, какой элемент будет отображаться сверху, когда элементы перекрываются. Некоторые важные моменты:</p>
+                        <ul>
+                          <li><strong>Числовые значения</strong>: Элементы с большим значением <code>z-index</code> отображаются выше элементов с меньшим значением.</li>
+                          <li><strong>Контекст наложения</strong>: <code>z-index</code> работает только для элементов, у которых задано свойство <code>position</code> (relative, absolute, fixed или sticky).</li>
+                          <li><strong>Значение по умолчанию</strong>: Элементы без заданного <code>z-index</code> имеют значение по умолчанию 0.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Пример использования z-index",
+                      type: "code",
+                      description: `
+                        <p>Пример CSS с использованием свойства <code>z-index</code>:</p>
+                      `,
+                      code: `
+.box1 {
+  position: absolute;
+  z-index: 1; /* Находится ниже */
+}
+
+.box2 {
+  position: absolute;
+  z-index: 2; /* Находится выше */
+}
+                      `,
+                    },
+                  ],
+                },
+
+                {
+                  title: "Флексбокс",
+                  children: [
+                    {
+                      title:
+                        "Флексбокс - это метод расположения элементов в одной строке или колонке с возможностью изменения их размеров:",
+                      type: "code",
+                      description: `
+                        <ul>
+                          <li><strong>display: flex</strong>: Включает флексбокс на родительском элементе.</li>
+                          <li><strong>flex-direction</strong>: Определяет направление основного оси (row, column).</li>
+                          <li><strong>justify-content</strong>: Управляет расположением элементов вдоль главной оси.</li>
+                          <li><strong>align-items</strong>: Управляет расположением элементов вдоль поперечной оси.</li>
+                        </ul>
+                        <p>Пример:</p>
+                        `,
+                      code: `               
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Сетка",
+                  children: [
+                    {
+                      title: "CSS Grid",
+                      type: "code",
+                      description: `
+                      <p>CSS Grid - это мощный инструмент для создания гибких и сложных макетов. Основные моменты:</p>
+                      <ul>
+                        <li>Создает двумерные сетки</li>
+                        <li>Контролирует размещение элементов по строкам и колонкам</li>
+                        <li>Задает размер и расстояние между элементами</li>
+                      </ul>
+                      <p>Пример:</p>
+                      `,
+                      code: `
+.grid-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+gap: 10px; /* расстояние между элементами */
+}
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "CSS Grid Layout",
+                  children: [
+                    {
+                      title: "CSS Grid Layout",
+                      type: "image",
+                      url: "https://i.pinimg.com/enabled_hi/564x/54/e9/87/54e98761c2348545244bf25487c5be23.jpg",
+                    },
+                    {
+                      title: `⚡️ Мультиколонки:
+        Основная идея мультиколонок заключается в том, что вы можете взять фрагмент содержимого и поместить его в несколько колонок, как в газете
+                      `,
+                      type: "code",
+                      code: `
+.article-content {
+  columns: auto 10rem;
+}
+
+.article {
+    // Шорткат columns даёт возможность указать значения для 
+    // свойств column-count и column-width одновременно, задав 
+    // количество и ширину колонок
+    columns: 2 200px;
+    column-gap: 25px;
+  }
+  .title{
+    // Свойство column-span позволяет элементу растянуться 
+    // на несколько колонок
+    column-span: all;
+  }
+}`,
+                    },
+                  ]
+                },
+                {
+                  title: "Разница между блочными и строчными элементами",
+                  children: [
+                    {
+                      title: "Блочные элементы",
+                      type: "list",
+                      description: `
+                        <p>Характеристики блочных элементов:</p>
+                        <ul>
+                          <li><strong>Занимают всю ширину</strong>: Блочные элементы по умолчанию занимают всю доступную ширину контейнера.</li>
+                          <li><strong>Начинают новую строку</strong>: Каждый блочный элемент начинается с новой строки, что создает визуальное разделение между элементами.</li>
+                          <li><strong>Примеры</strong>: <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;section&gt;</code>.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Строчные элементы",
+                      type: "list",
+                      description: `
+                        <p>Характеристики строчных элементов:</p>
+                        <ul>
+                          <li><strong>Занимают только необходимую ширину</strong>: Строчные элементы занимают только ту ширину, которая необходима для их содержания.</li>
+                          <li><strong>Не начинают новую строку</strong>: Строчные элементы располагаются в одной строке с другими элементами, не создавая разрывов.</li>
+                          <li><strong>Примеры</strong>: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;img&gt;</code>.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Сводная таблица различий",
+                      type: "list",
+                      description: `
+                        <p>Краткое сравнение:</p>
+                        <ul>
+                          <li><strong>Ширина</strong>: Блочные элементы — 100% ширины; строчные элементы — по содержимому.</li>
+                          <li><strong>Перенос</strong>: Блочные элементы переносят последующий контент на новую строку; строчные элементы — нет.</li>
+                          <li><strong>Использование</strong>: Блочные элементы для структуры; строчные элементы для форматирования текста.</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "HTML and CSS Slider",
+                  children: [
+                    {
+                      title: "",
+                      type: "video",
+                      url: "https://www.youtube.com/embed/gVxyTOPPEPc",
+                    },
+                  ]
+                },
+                {
+                  title: "Принципы семантической верстки",
+                  children: [
+                    {
+                      title: "Принципы семантической верстки включают:",
+                      type: "code",
+                      description: `
+                      <ul>
+                        <li>Использование HTML-тегов по назначению (например, &lt;header&gt;, &lt;article&gt;, &lt;footer&gt;).</li>
+                        <li>Обеспечение доступности для технологий помощников (скринридеров).</li>
+                        <li>Улучшение SEO (поисковой оптимизации).</li>
+                      </ul>
+                      <p>Пример:</p>
+                      `,
+                      code: `
+<article>
+<header>
+<h1>Заголовок статьи</h1>
+</header>
+<p>Содержимое статьи...</p>
+<footer>Автор: Иван Иванов</footer>
+</article>
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Что такое #shadow-root в инспекторе HTML-страницы",
+                  children: [
+                    {
+                      title:
+                        "Shadow DOM позволяет создавать отдельные области DOM, чтобы избежать конфликтов стилей",
+                      type: "list",
+                      description: `
+                              <ul>
+                                  <li>Поддержка инкапсуляции: Стили внутри Shadow DOM не влияют на родительский DOM.</li>
+                                  <li>Упрощение разработки компонентов: Позволяет создавать защищенные компоненты.</li>
+                              </ul>
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Названия популярных CSS-методологий и их отличия",
+                  children: [
+                    {
+                      title: "Существует несколько популярных CSS-методологий:",
+                      type: "list",
+                      description: `
+                              <ul>
+                                  <li><strong>BEM</strong> (Block, Element, Modifier) - способствует созданию доступных и модульных стилей.</li>
+                                  <li><strong>SMACSS</strong> (Scalable and Modular Architecture for CSS) - структурирует стили по категориям.</li>
+                                  <li><strong>OOCSS</strong> (Object-Oriented CSS) - акцентирует внимание на создании повторно используемых объектов.</li>
+                              </ul>
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Как изменить цвет в svg файле",
+                  children: [
+                    {
+                      title: "Изменение цвета",
+                      type: "code",
+                      description: `
+                              <p>Существует несколько способов изменить цвет в SVG:</p>
+                              <ul>
+                                  <li>Изменение атрибутов <code>fill</code> и <code>stroke</code> в самом SVG файле.</li>
+                                  <li>Использование CSS для стилизации SVG элементов.</li>
+                                  <li>Динамическое изменение с помощью JavaScript.</li>
+                              </ul>
+                      `,
+                      code: `
+// изменение атрибутов
+<svg width="100" height="100">
+<circle cx="50" cy="50" r="40" fill="red" stroke="black" 
+    stroke-width="2" />
+</svg>
+
+
+// использование CSS 
+<svg width="100" height="100">
+<style>
+.myCircle {
+fill: blue;
+stroke: green;
+stroke-width: 3;
+}
+</style>
+<circle class="myCircle" cx="50" cy="50" r="40" />
+</svg>
+
+
+// динамическое изменение
+<svg id="mySvg" width="100" height="100">
+<circle id="myCircle" cx="50" cy="50" r="40" fill="orange" 
+    stroke="black" stroke-width="2" />
+</svg>
+
+<button onclick="changeColor()">Изменить цвет</button>
+
+<script>
+function changeColor() {
+var circle = document.getElementById("myCircle");
+circle.setAttribute("fill", "purple");  // Изменяем цвет заливки
+circle.setAttribute("stroke", "yellow"); // Изменяем цвет обводки
+}
+</script>
+                      `,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "SASS",
+              children: [
+                {
+                  title: "SASS cheat sheet",
+                  type: "image",
+                  url: "https://d1le3ohiuslpz1.cloudfront.net/skillcrush/wp-content/uploads/2023/07/how-sass-works-1024x506.png",
+                },
+              ],
+            },
+            {
+              title: "SCSS",
+              children: [
+                {
+                  title: "SCSS cheat sheet",
+                  type: "image",
+                  url: "https://i0.wp.com/techprimelab.com/wp-content/uploads/2020/06/SCSS-or-CSS.jpg",
+                },
+              ],
+            },
+            {
+              title: "styled-components",
+              children: [
+                {
+                  title: "styled-components cheat sheet",
+                  type: "image",
+                  url: "https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: "Создание макета в HTML и CSS",
+          children: [
+            {
+              title: "HTML атрибуты для создания макета:",
+              type: "code",
+              description: `
+                <ul>
+                  <li><strong>Атрибуты <code>div</code>:</strong>
+                    <ul>
+                      <li><code>id</code>: Уникальный идентификатор элемента.</li>
+                      <li><code>class</code>: Классы для стилизации с помощью CSS.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Семантические элементы:</strong>
+                    <ul>
+                      <li><code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>: Используются для структурирования страницы.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Встраиваемый стиль:</strong>
+                    <ul>
+                      <li>Пример использования <code>style</code>:</li>
+                    </ul>
+                  </li>
+                </ul>
+              `,
+              code: `
+<div style="width: 50%; float: left;">Контент</div>
+              `,
+            },
+            {
+              title: "CSS свойства для создания макета:",
+              type: "code",
+              description: `
+                <ul>
+                  <li><strong>Свойство <code>display</code>:</strong>
+                    <ul>
+                      <li><code>block</code>, <code>inline</code>, <code>inline-block</code>, <code>flex</code>, <code>grid</code></li>
+                    </ul>
+                  </li>
+                  <li><strong>Свойство <code>position</code>:</strong>
+                    <ul>
+                      <li><code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code></li>
+                    </ul>
+                  </li>
+                  <li><strong>Свойства <code>margin</code> и <code>padding</code>:</strong> Используются для управления пространством между элементами и внутри элемента.</li>
+                  <li><strong>Свойства <code>width</code> и <code>height</code>:</strong> Задают размеры элемента.</li>
+                </ul>
+              `,
+              code: `
+.container {
+  display: flex;
+  justify-content: center; /* Выравнивание по горизонтали */
+  align-items: center; /* Выравнивание по вертикали */
+}
+              `,
+            },
+            {
+              title: "HTML5 семантические элементы:",
+              type: "list",
+              description: `
+                <ul>
+                  <li><strong>&lt;header&gt;</strong>, <strong>&lt;nav&gt;</strong>, <strong>&lt;main&gt;</strong>, <strong>&lt;section&gt;</strong>, <strong>&lt;article&gt;</strong>, <strong>&lt;aside&gt;</strong>, <strong>&lt;footer&gt;</strong>: Эти элементы помогают улучшить SEO и доступность.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "Flexbox и Grid для создания макетов:",
+              type: "code",
+              description: `
+                <ul>
+                  <li><strong>Flexbox:</strong> Упрощает выравнивание элементов вдоль одной оси.</li>
+                  <li><strong>Grid:</strong> Позволяет создавать сеточные макеты, определяя колонки и строки.</li>
+                </ul>
+              `,
+              code: `
+/* Flexbox */
+.container {
+  display: flex;
+  justify-content: center; /* Выравнивание по горизонтали */
+  align-items: center; /* Выравнивание по вертикали */
+}
+
+/* Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Три равные колонки */
+}
+              `,
+            },
+          ],
+        },
+        {
+          title: "Структура HTML документа",
+          children: [
+            {
+              title: "<!DOCTYPE html>",
+              type: "list",
+              description: `
+                <p>Объявляет тип документа и версию HTML:</p>
+                <ul>
+                  <li><strong>Версия</strong>: Обычно используется HTML5.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "<html>",
+              type: "list",
+              description: `
+                <p>Корневой элемент HTML-документа:</p>
+                <ul>
+                  <li><strong>Атрибуты</strong>: Может содержать атрибут <code>lang</code> для указания языка.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "<head>",
+              type: "list",
+              description: `
+                <p>Содержит метаданные о документе:</p>
+                <ul>
+                  <li><strong><meta charset="UTF-8"></strong>: Устанавливает кодировку документа.</li>
+                  <li><strong><meta name="viewport"></strong>: Настройки для адаптивного дизайна и отображения на мобильных устройствах.</li>
+                  <li><strong><title></strong>: Заголовок, отображаемый на вкладке браузера.</li>
+                  <li><strong><link></strong>: Подключение внешних CSS-файлов.</li>
+                  <li><strong><script></strong>: Подключение внешних JavaScript-файлов (если необходимо).</li>
+                </ul>
+              `,
+            },
+            {
+              title: "<body>",
+              type: "list",
+              description: `
+                <p>Основное содержимое страницы:</p>
+                <ul>
+                  <li><strong><header></strong>: Заголовок или навигация сайта.</li>
+                  <li><strong><main></strong>: Основной контент страницы.</li>
+                  <li><strong><footer></strong>: Нижний колонтитул с информацией о правами и ссылками.</li>
+                </ul>
+              `,
+            },
+          ],
+        },
+
+
+
+
+        {
+          title: "На что нужно обратить внимание при разработке мультиязычных сайтов",
+          children: [
+            {
+              title:
+                "При разработке мультиязычных сайтов стоит учитывать:",
+              type: "code",
+              description: `
+              <ul>
+                <li>Хранение текста: использовать JSON или базы данных для хранения переведенных текстов.</li>
+                <li>Изменение языка: обеспечить пользовательский интерфейс для смены языка.</li>
+                <li>SEO: использовать атрибут &lt;html lang="en"&gt; для указания языка страницы.</li>
+              </ul>
+              <p>Пример:</p>
+              `,
+              code: `
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+  </head>
+</html>
+              `,
+            },
+          ],
+        },
+        {
+          title: "Что такое прогрессивная развертка",
+          children: [
+            {
+              title:
+                "Прогрессивная развертка - это подход к разработке страниц, при котором отображение контента происходит по мере его загрузки",
+              type: "code",
+              description: `
+              <ul>
+                <li>Сначала загружается основной контент</li>
+                <li>Второстепенный контент загружается позже</li>
+              </ul>
+              <p>Пример:</p>
+              `,
+              code: `
+// Пример с использованием JavaScript для прогрессивной загрузки
+fetch('/api/content')
+  .then(response => response.json())
+  .then(data => {
+document.getElementById('content').innerHTML = data.content;
+});
+              `,
+            },
+          ],
+        },
+        {
+          title: "Разница между script, script async и script defer",
+          children: [
+            {
+              title: "Загрузки скриптов",
+              type: "code",
+              description: `
+              <p>Существует три способа подключения скриптов в HTML:</p>
+              <ul>
+                <li>&lt;script&gt;: Загружает и выполняет скрипт синхронно.</li>
+                <li>&lt;script async&gt;: Загружает скрипт асинхронно, не блокируя загрузку страницы.</li>
+                <li>&lt;script defer&gt;: Также загружает скрипт асинхронно, но гарантирует, что он будет выполнен после полной загрузки HTML.</li>
+              </ul>
+              <p>Пример:</p>
+              `,
+              code: `
+<script src="script.js"></script>
+<script async src="script-async.js"></script>
+<script defer src="script-defer.js"></script>
+              `,
+            },
+          ],
+        },
+        {
+          title: "Подключение JavaScript-скриптов в HTML",
+          children: [
+            {
+              title: "1. Внешний скрипт (External Script)",
+              type: "list",
+              description: `
+                <p>Подключение скрипта через отдельный файл:</p>
+                <ul>
+                  <li><strong>Используемый тег</strong>: <code>&lt;script&gt;</code>.</li>
+                  <li><strong>Пример</strong>: 
+                    <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code>.
+                  </li>
+                  <li><strong>Преимущества</strong>: Упрощает организацию кода и позволяет повторно использовать скрипты на нескольких страницах.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "2. Встроенный скрипт (Internal Script)",
+              type: "list",
+              description: `
+                <p>Подключение скрипта непосредственно в документе:</p>
+                <ul>
+                  <li><strong>Используемый тег</strong>: <code>&lt;script&gt;</code>.</li>
+                  <li><strong>Пример</strong>: 
+                    <code>&lt;script&gt; console.log('Hello, world!'); &lt;/script&gt;</code>.
+                  </li>
+                  <li><strong>Преимущества</strong>: Удобно для небольших скриптов, специфичных для одной страницы.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "Атрибуты тега <script>",
+              type: "list",
+              description: `
+                <p>Основные атрибуты:</p>
+                <ul>
+                  <li><strong>src</strong>: Указывает путь к внешнему JavaScript-файлу.</li>
+                  <li><strong>defer</strong>: Загружает скрипт после завершения парсинга HTML-документа. Работает только с внешними скриптами.</li>
+                  <li><strong>async</strong>: Загружает скрипт асинхронно, не блокируя парсинг HTML. Работает только с внешними скриптами.</li>
+                  <li><strong>type</strong>: Указывает тип скрипта (по умолчанию <code>text/javascript</code>). Например, для модулей можно использовать <code>type="module"</code>.</li>
+                  <li><strong>integrity</strong>: Используется для проверки целостности загружаемого файла с использованием Subresource Integrity (SRI).</li>
+                  <li><strong>crossorigin</strong>: Определяет, как браузер должен обрабатывать кросс-доменные запросы для загружаемого скрипта.</li>
+                </ul>
+              `,
+            },
+          ],
+        },
+        {
+          title: "Атрибут For",
+          children: [
+            {
+              title: ``,
+              type: "code",
+              description: `
+              Он связывает элемент <label> с соответствующим полем < input >, позволяя пользователям 
+              кликать по тексту метки для выбора или фокуса на связанном элементе управления.
+              p.s. Значение атрибута for должно совпадать с id связанного элемента, что 
+              улучшает доступность и удобство взаимодействия с формами.
+              `,
+              code: `
+<label for="Number">Ваше любимое число:</label>
+<input id="number">`,
+            },
+          ]
+        }
+      ],
+    },
+    {
+      title: "JavaScript",
+      children: [
+        {
+          title: "addEventListener() method arguments",
+          children: [
+            {
+              title: "1. event",
+              type: "text",
+              description: `
+                <p>Название события, которое вы хотите отслеживать (например, <code>'click'</code>, <code>'keyup'</code>, <code>'load'</code>).</p>
+              `,
+            },
+            {
+              title: "2. handler",
+              type: "text",
+              description: `
+                <p>Функция, которая будет вызвана при возникновении события. Она принимает объект события в качестве первого аргумента.</p>
+              `,
+            },
+            {
+              title: "3. options",
+              type: "text",
+              description: `
+                <p>Опциональный аргумент, который может быть:</p>
+                <ul>
+                  <li><strong>boolean:</strong> Если <code>true</code>, обработчик будет вызван на фазе захвата.</li>
+                  <li><strong>object:</strong> Объект с параметрами:</li>
+                  <ul>
+                    <li><code>capture</code>: Если <code>true</code>, обработчик срабатывает на фазе захвата.</li>
+                    <li><code>once</code>: Если <code>true</code>, обработчик вызовется только один раз.</li>
+                    <li><code>passive</code>: Если <code>true</code>, обработчик не вызовет <code>preventDefault()</code>.</li>
+                  </ul>
+                </ul>
+              `,
+            },
+            {
+              title: "Пример использования",
+              type: "code",
+              description: `
+                <p>Пример добавления обработчика события клика:</p>
+              `,
+              code: `
+const button = document.getElementById('myButton');
+
+button.addEventListener('click', function(event) {
+  console.log('Кнопка нажата!');
+}, {
+  capture: false,
+  once: true
+});
+              `
+            },
+          ],
+        },
+        {
+          title: "Asynchronous Programming",
+          children: [
+            {
+              title: "Basics of async programming",
+              type: "list",
+              description: `
+                <p><strong>Асинхронное программирование</strong> — это парадигма, позволяющая выполнять операции, не блокируя основной поток выполнения. Это особенно полезно для задач, которые могут занять продолжительное время, таких как сетевые запросы или операции с файлами.</p>
+              `,
+            },
+            {
+              title: "Key Concepts",
+              type: "list",
+              description: `
+                <p>Основные концепции асинхронного программирования:</p>
+                <ul>
+                  <li><strong>Callbacks</strong>: Функции обратного вызова, которые передаются в другие функции и вызываются после завершения асинхронной операции.</li>
+                  <li><strong>Promises</strong>: Объекты, представляющие результат асинхронной операции, которые могут быть в состоянии ожидания (pending), выполнены (fulfilled) или отклонены (rejected).</li>
+                  <li><strong>Async/Await</strong>: Синтаксический сахар над промисами, позволяющий писать асинхронный код, который выглядит как синхронный.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "Callbacks",
+              type: "code",
+              description: `
+                <p>Пример использования колбеков:</p>
+              `,
+              code: `
+function fetchData(callback) {
+  setTimeout(() => {
+    callback('Data received');
+  }, 1000);
+}
+
+fetchData((data) => {
+  console.log(data); // 'Data received'
+});
+              `,
+            },
+            {
+              title: "Promises",
+              type: "code",
+              description: `
+                <p>Пример использования промисов:</p>
+              `,
+              code: `
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Data received');
+    }, 1000);
+  });
+}
+
+fetchData().then(data => {
+  console.log(data); // 'Data received'
+});
+              `,
+            },
+            {
+              title: "Async/Await",
+              type: "code",
+              description: `
+                <p>Пример использования async/await:</p>
+              `,
+              code: `
+  async function fetchData() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve('Data received');
+      }, 1000);
+    });
+  }
+
+  async function getData() {
+    const data = await fetchData();
+    console.log(data); // 'Data received'
+  }
+
+  getData();
+              `,
+            },
+            {
+              title: "Benefits of Asynchronous Programming",
+              type: "list",
+              description: `
+                <p>Преимущества асинхронного программирования:</p>
+                <ul>
+                  <li><strong>Улучшенная производительность</strong>: Не блокирует основной поток выполнения, что позволяет выполнять другие задачи.</li>
+                  <li><strong>Лучшая отзывчивость приложения</strong>: Пользовательский интерфейс остается активным во время выполнения длительных операций.</li>
+                  <li><strong>Упрощение кода</strong>: Использование async/await делает код более читаемым и понятным.</li>
+                </ul>
+              `,
+            },
+          ],
+        },
+        {
+          title: "Context this",
+          children: [
+            {
+              title: "Описание",
+              type: "list",
+              description:
+                "this – это специальное ключевое слово в JavaScript, которое ссылается на объект, который в данный момент выполняет код. Значение `this` определяется не тем, как функция была объявлена, а тем, как она была вызвана.",
+            },
+            {
+              title: "Контекст вызова",
+              type: "code",
+              description: `Значение "this" зависит от контекста вызова функции. Вот основные правила:`,
+              code: `
+// В глобальном контексте (вне функций) 'this' ссылается на глобальный объект (window в браузере).
+console.log(this); // window
+
+// В методе объекта 'this' ссылается на объект, в контексте которого был вызван метод:
+const obj = {
+  name: 'Obj',
+  method: function() {
+  console.log(this.name);
+  }
+};
+obj.method(); // 'Obj'
+              `,
+            },
+            {
+              title: "Значение this в функциях",
+              type: "code",
+              description:
+                "В обычной функции `this` ссылается на глобальный объект (или undefined в строгом режиме).",
+              code: `
+function showThis() {
+  console.log(this);
+}
+
+showThis(); // window (или undefined в строгом режиме)
+              `,
+            },
+            {
+              title: "Классы и this",
+              type: "code",
+              description:
+                "В классах `this` ссылается на экземпляр класса, который был создан с помощью ключевого слова new.",
+              code: `
+class MyClass {
+  constructor(value) {
+    this.value = value;
+  }
+  showValue() {
+    console.log(this.value);
+  }
+}
+
+const instance = new MyClass(10);
+instance.showValue(); // 10
+              `,
+            },
+            {
+              title: "Стрелочные функции и this",
+              type: "code",
+              description:
+                "Стрелочные функции не имеют собственного `this` и наследуют его из родительского контекста, в котором они были созданы.",
+              code: `
+const obj = {
+  value: 20,
+  method: function() {
+    const arrowFunction = () => {
+      console.log(this.value);
+    };
+    arrowFunction();
+  }
+}
+
+obj.method(); // 20
+              `,
+            },
+            {
+              title: "Способы контроля this",
+              type: "code",
+              description:
+                "Можно контролировать значение `this` в функции с помощью методов `.call()`, `.apply()` и `.bind()`.",
+              code: `
+function show() {  
+  console.log(this.name);
+  const obj = { name: 'Test' };
+  show.call(obj);    // 'Test'
+  show.apply(obj);   // 'Test'
+  const boundShow = show.bind(obj);
+  boundShow();       // 'Test'
+}
+              `,
+            },
+            {
+              title: "Вывод",
+              type: "list",
+              description:
+                "Контекст `this` в JavaScript может быть сложным для понимания. Важно понимать, как он работает в разных контекстах для избежания ошибок.",
+            },
+          ],
+        },
+        {
+          title: "Cancel ascent and dive / Отмена всплытия и погружения",
+          children: [
+            {
+              title: "1. Всплытие событий",
+              type: "text",
+              description: `
+                <p>Всплытие - это процесс, при котором событие движется от целевого элемента к корню документа.</p>
+                <p>По умолчанию события всплывают, позволяя родительским элементам обрабатывать их.</p>
+              `,
+            },
+            {
+              title: "2. Погружение событий",
+              type: "text",
+              description: `
+                <p>Погружение (или захват) - это процесс, при котором событие движется от корня документа к целевому элементу.</p>
+                <p>Этот процесс выполняется только при установке соответствующего параметра в <code>addEventListener</code>.</p>
+              `,
+            },
+            {
+              title: "3. Отмена всплытия",
+              type: "text",
+              description: `
+                <p>Чтобы отменить всплытие события, используйте метод <code>event.stopPropagation()</code>.</p>
+                <p>Этот метод предотвращает дальнейшее распространение события по дереву DOM.</p>
+              `,
+            },
+            {
+              title: "4. Отмена погружения",
+              type: "text",
+              description: `
+                <p>Чтобы отменить погружение события, используйте метод <code>event.stopImmediatePropagation()</code>.</p>
+                <p>Этот метод не только предотвращает дальнейшее распространение, но и останавливает выполнение других обработчиков события на текущем элементе.</p>
+              `,
+            },
+            {
+              title: "Пример отмены всплытия",
+              type: "code",
+              description: `
+                <p>Пример отмены всплытия события:</p>
+              `,
+              code: `
+        button.addEventListener('click', function(event) {
+          event.stopPropagation(); // Отменяет всплытие события
+          console.log('Кнопка нажата, всплытие отменено!');
+        });
+              `
+            },
+          ],
+        },
+        {
+          title: "Closure / Замыкание",
+          children: [
+            {
+              title: "1. Определение замыкания",
+              type: "text",
+              description: `
+                <p>Замыкание - это функция, которая имеет доступ к своей внешней области видимости даже после завершения выполнения внешней функции.</p>
+              `,
+            },
+            {
+              title: "2. Как работает замыкание?",
+              type: "text",
+              description: `
+                <p>Когда функция создаётся в JavaScript, она "захватывает" переменные из своей внешней области видимости. Даже если внешняя функция завершила выполнение, замыкание сохраняет ссылку на эти переменные.</p>
+              `,
+            },
+            {
+              title: "3. Пример замыкания",
+              type: "code",
+              description: `
+                <p>Пример замыкания:</p>
+              `,
+              code: `
+function outerFunction() {
+  let outerVar = 'I am outside!';
+  
+  function innerFunction() {
+    console.log(outerVar); // Доступ к outerVar
+  }
+  
+  return innerFunction;
+}
+
+const myInnerFunction = outerFunction();
+myInnerFunction(); // Вывод: "I am outside!"
+              `
+            },
+            {
+              title: "4. Применение замыканий",
+              type: "text",
+              description: `
+                <p>Замыкания часто используются для:</p>
+                <ul>
+                  <li>Создания приватных переменных.</li>
+                  <li>Фабричных функций для создания функций с предустановленными значениями.</li>
+                  <li>Обработчиков событий, где необходимо сохранить состояние.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "5. Пример использования замыкания для приватных переменных",
+              type: "code",
+              description: `
+                <p>Пример создания приватной переменной:</p>
+              `,
+              code: `
+function createCounter() {
+  let count = 0; // Приватная переменная
+  
+  return {
+    increment: function() {
+      count++;
+      return count;
+    },
+    decrement: function() {
+      count--;
+      return count;
+    },
+    getCount: function() {
+      return count;
+    }
+  };
+}
+
+const counter = createCounter();
+console.log(counter.increment()); // 1
+console.log(counter.increment()); // 2
+console.log(counter.getCount()); // 2
+console.log(counter.decrement()); // 1
+              `
+            },
+            {
+              title: "6. Замыкания и производительность",
+              type: "text",
+              description: `
+                <p>Хотя замыкания мощный инструмент, они могут повлиять на производительность, если используются неправильно. Избыточное использование замыканий может привести к утечкам памяти, если ссылки на замыкания не освобождаются.</p>
+              `,
+            },
+          ],
+        },
+        {
+          title: "Data types / Типы данных",
+          children: [
+            {
+              title: "1. Числа (Number)",
+              type: "list",
+              description: `
+                <p>Характеристики чисел:</p>
+                <ul>
+                  <li><strong>Тип данных</strong>: Представляют как целые, так и дробные числа.</li>
+                  <li><strong>Примеры</strong>: <code>42</code>, <code>3.14</code>.</li>
+                  <li><strong>Особенности</strong>: Поддерживают специальные значения, такие как <code>Infinity</code>, <code>-Infinity</code>, и <code>NaN</code> (не число).</li>
+                </ul>
+              `,
+            },
+            {
+              title: "2. Строки (String)",
+              type: "list",
+              description: `
+                <p>Характеристики строк:</p>
+                <ul>
+                  <li><strong>Тип данных</strong>: Последовательность символов, используемая для представления текста.</li>
+                  <li><strong>Примеры</strong>: <code>"Hello, world!"</code>, <code>'JavaScript'</code>.</li>
+                  <li><strong>Методы</strong>: Строки имеют множество методов, таких как <code>length</code>, <code>substring()</code>, <code>toUpperCase()</code>.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "3. Логические значения (Boolean)",
+              type: "list",
+              description: `
+                <p>Характеристики логических значений:</p>
+                <ul>
+                  <li><strong>Тип данных</strong>: Представляют истинное (<code>true</code>) или ложное (<code>false</code>) значение.</li>
+                  <li><strong>Примеры</strong>: <code>true</code>, <code>false</code>.</li>
+                  <li><strong>Использование</strong>: Часто используются в условиях и циклах.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "4. Объекты (Object)",
+              type: "list",
+              description: `
+                <p>Характеристики объектов:</p>
+                <ul>
+                  <li><strong>Тип данных</strong>: Сложные структуры, которые могут содержать множество значений и методов.</li>
+                  <li><strong>Примеры</strong>: <code>{ name: "Alice", age: 25 }</code>, <code>new Date()</code>.</li>
+                  <li><strong>Типы объектов</strong>: Могут быть встроенными (Array, Date и т.д.) или пользовательскими.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "5. Массивы (Array)",
+              type: "list",
+              description: `
+                <p>Характеристики массивов:</p>
+                <ul>
+                  <li><strong>Тип данных</strong>: Специальный тип объекта, который хранит упорядоченные коллекции значений.</li>
+                  <li><strong>Примеры</strong>: <code>[1, 2, 3]</code>, <code>["apple", "banana"]</code>.</li>
+                  <li><strong>Методы</strong>: Массивы имеют множество методов, таких как <code>push()</code>, <code>pop()</code>, <code>map()</code>.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "6. Специальные значения",
+              type: "list",
+              description: `
+                <p>Некоторые специальные значения:</p>
+                <ul>
+                  <li><strong>undefined</strong>: Переменная, которая была объявлена, но не инициализирована.</li>
+                  <li><strong>null</strong>: Явное указание на отсутствие значения или объект.</li>
+                  <li><strong>Symbol</strong>: Уникальные и неизменяемые идентификаторы (доступны с ES6).</li>
+                  <li><strong>BigInt</strong>: Тип данных для работы с целыми числами произвольной длины (доступен с ES11).</li>
+                </ul>
+              `,
+            },
+          ],
+        },
+        {
+          title: "Descriptors, Getters, and Setters",
+          children: [
+            {
+              title: "Определение дескрипторов",
+              type: "text",
+              description: `
+                <p>Дескрипторы свойств — это объекты, которые содержат информацию о свойствах объектов в JavaScript, такие как возможность записи, перечисляемость и доступность.</p>
+                <p><strong>Дескрипторы объекта</strong> — это объекты, которые описывают свойства объекта, их поведение и характеристики. Они позволяют управлять тем, как свойства могут быть использованы и изменены.</p>
+              `,
+            },
+            {
+              title: "Типы дескрипторов",
+              type: "list",
+              description: `
+                <p>Существует два типа дескрипторов:</p>
+                <ul>
+                  <li><strong>Данные дескриптора</strong>: хранят значение и могут быть настроены для записи.</li>
+                  <li><strong>Accessor дескрипторы</strong>: используют геттеры и сеттеры для управления доступом к значениям.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "Геттеры",
+              type: "text",
+              description: `
+                <p>Геттеры — это специальные методы, которые позволяют получать значения свойств объекта. Они определяются с помощью ключевого слова <code>get</code>.</p>
+              `,
+            },
+            {
+              title: "Пример геттера",
+              type: "code",
+              description: `
+                <p>Пример использования геттера в объекте:</p>
+              `,
+              code: `
+const person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  get fullName() {
+    return \`\${this.firstName} \${this.lastName}\`;
+  }
+};
+
+console.log(person.fullName); // John Doe
+              `,
+            },
+            {
+              title: "Сеттеры",
+              type: "text",
+              description: `
+                <p>Сеттеры — это специальные методы, которые позволяют задавать значения свойств объекта. Они определяются с помощью ключевого слова <code>set</code>.</p>
+              `,
+            },
+            {
+              title: "Пример сеттера",
+              type: "code",
+              description: `
+                <p>Пример использования сеттера в объекте:</p>
+              `,
+              code: `
+const person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  set fullName(name) {
+    [this.firstName, this.lastName] = name.split(' ');
+  }
+};
+
+person.fullName = 'Jane Smith';
+console.log(person.firstName); // Jane
+console.log(person.lastName); // Smith
+              `,
+            },
+            {
+              title: "Заключение",
+              type: "text",
+              description: `
+                <p>Дескрипторы, геттеры и сеттеры позволяют управлять доступом к свойствам объектов, обеспечивая более гибкий и контролируемый способ работы с данными в JavaScript.</p>
+              `,
+            },
+            {
+              title: "Подробнее на learn.javascript.ru",
+              type: "link",
+              url: "https://learn.javascript.ru/descriptors-getters-setters",
+            }
+          ],
+        },
+        {
+          title: "Destructuring objects in JS",
+          children: [
+            {
+              title: "",
+              description:
+                "Деструктуризация объектов позволяет извлекать значения из объекта и присваивать их переменным в краткой форме",
+              type: "code",
+              code: `
+const person = { name: 'Alice', age: 25 };
+const { name, age } = person;
+console.log(name, age);`,
+            },
+          ],
+        },
+        {
+          title: "Difference between null and undefined / Разница между null и undefined",
+          children: [
+            {
+              title: "Описание null и undefined",
+              type: "code",
+              description: `
+                <p><strong>null</strong>: Это специальное значение, указывающее на отсутствие какого-либо объектного значения. Оно явно назначается переменной, чтобы показать, что эта переменная не содержит ничего.</p>
+                <p><strong>undefined</strong>: Это значение автоматически назначается переменной, которая была объявлена, но не инициализирована. Также это происходит, если функция не возвращает значения.</p>
+                <ul>
+                  <li>Оба значения представляют отсутствие значения, но в разных контекстах.</li>
+                </ul>
+              `,
+              code: `
+// Примеры null и undefined
+let a = null;      // Явно задано значение null
+let b;             // Не инициализирована, значение undefined
+
+console.log(a);   // null
+console.log(b);   // undefined
+
+// Проверка типов
+console.log(typeof a); // "object"
+console.log(typeof b); // "undefined"
+              `,
+            },
+            {
+              title: "Сравнение null и undefined",
+              type: "code",
+              description: `
+                <p>Важно понимать, что при нестрогом сравнении они равны друг другу:</p>
+              `,
+              code: `
+console.log(null == undefined); // true (нестрогое сравнение)
+console.log(null === undefined); // false (строгое сравнение)
+              `,
+            },
+          ],
+        },
+        {
+          title: "Drag and Drop / Перетаскивание",
+          children: [
+            {
+              title: "Mouse Drag and Drop",
+              type: "link",
+              url: "https://learn.javascript.ru/mouse-drag-and-drop",
+            },
+            {
+              title: "Основы Drag and Drop",
+              type: "text",
+              description: `
+                <p>Drag and Drop — это способ улучшить интерфейс, позволяя пользователю перемещать элементы с помощью мыши. Это может быть полезно для копирования и перемещения документов, а также для других действий, таких как добавление элементов в корзину.</p>
+              `,
+            },
+            {
+              title: "Алгоритм Drag and Drop",
+              type: "list",
+              description: `
+                <p>Базовый алгоритм Drag and Drop включает следующие шаги:</p>
+                <ul>
+                  <li><strong>mousedown</strong>: Подготовка элемента к перемещению.</li>
+                  <li><strong>mousemove</strong>: Перемещение элемента на новые координаты.</li>
+                  <li><strong>mouseup</strong>: Завершение перемещения элемента.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "Правильное позиционирование",
+              type: "text",
+              description: `
+                <p>Чтобы избежать «прыжков» элемента при начале Drag and Drop, запоминаем расстояние от курсора до элемента и используем его при перемещении.</p>
+              `,
+            },
+            {
+              title: "Цели переноса (Droppable)",
+              type: "list",
+              description: `
+                <p>Для реализации переноса элемента в другую цель, используйте метод <code>document.elementFromPoint</code> для определения, над каким элементом находится указатель.</p>
+                <ul>
+                  <li>Подсвечивайте элементы, когда мышь находится над ними.</li>
+                  <li>Обрабатывайте окончание переноса, чтобы выполнить действия с элементами.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "Пример кода",
+              type: "code",
+              description: `
+                <p>Пример реализации Drag and Drop:</p>
+              `,
+              code: `
+ball.onmousedown = function(event) {
+  // код для начала переноса
+};
+
+function onMouseMove(event) {
+  // код для перемещения элемента
+}
+              `,
+            },
+          ],
+        },
+        {
+          title: "ES6",
+          children: [
+            {
+              title: "Destructuring assignment",
+              type: "title",
+            },
+            {
+              title: "Arrow functions () => {} ",
+              type: "title",
+            },
+            {
+              title: "Template strings `${}`",
+              type: "title",
+            },
+            {
+              title: "variable declaration with let and const",
+              type: "title",
+            },
+            {
+              title: "Classes",
+              type: "title",
+            },
+            {
+              title: "IIFE (immediately invoked function expression)",
+              type: "title",
+            },
+            {
+              title: "Multi-line strings",
+              type: "title",
+            },
+            {
+              title: "Promises",
+              type: "title",
+            },
+            {
+              title: "forEach and for...of",
+              type: "title",
+            },
+            {
+              title: "Default parameters",
+              type: "title",
+            },
+            {
+              title: "Rest-параметры и Spread-оператор ...",
+              type: "title",
+            },
+          ],
+        },
+        {
+          title: "Event Loop / Цикл событий",
+          children: [
+            {
+              title:
+                "Цикл событий (event loop) — это механизм, который позволяет JavaScript выполнять асинхронные операции, не блокируя основной поток выполнения. Он обеспечивает обработку событий и выполнение колбеков (callback functions) в ответ на события, такие как клики мыши, нажатия клавиш и завершение асинхронных операций.",
+              type: "list",
+              description: `
+              <p>Вот как работает цикл событий:</p>
+                <li>Обработка асинхронного кода: Если в обработчике события есть асинхронный код, такой как таймеры или сетевые запросы, он не блокирует выполнение других событий. Вместо этого асинхронный код помещается в очередь задач (task queue) для выполнения в будущем.</li>
+                <li>Очередь сообщений (Message Queue): Когда асинхронная операция (например, запрос к серверу) завершается, соответствующий колбек помещается в очередь сообщений.</li>
+                <li>Цикл событий: Цикл событий постоянно проверяет стек вызовов и очередь сообщений. Если стек пуст, он берет первое сообщение из очереди и помещает его в стек вызовов для выполнения.</li>
+                <p>Таким образом, цикл событий позволяет JavaScript обрабатывать асинхронные операции, не блокируя выполнение других кода, что делает его эффективным для работы с пользовательскими интерфейсами и сетевыми запросами.</p>
+              `,
+            },
+          ],
+        },
+        {
+          title: "Function Levenshtein / Функция Левенштейна",
+          children: [
+            {
+              title: "Function Levenshtein or Levenshtein Distance",
+              type: "code",
+              description: `
+                <p>Функция Левенштейна, или расстояние Левенштейна, измеряет различие между двумя строками, 
+                определяя минимальное количество операций, необходимых для преобразования одной строки в другую.
+                </p>
+                <ul>Операциями могут быть:
+                  <li>Замена: Заменить один символ на другой;</li>
+                  <li>Удаление: Удалить символ из строки;</li>
+                  <li>Вставка: Вставить символ в строку;</li>
+                </ul>
+                <p>Суть и применение</p>
+                <ul>
+                  <li>Сравнение строк: Функция используется для нахождения «похожести» строк. Чем меньше расстояние Левенштейна, тем более похожи строки.</li>
+                  <li>Поиск и исправление ошибок: Часто применяется в системах проверки правописания, для поиска похожих слов и исправления ошибок.</li>
+                  <li>Обработка естественного языка: Используется в алгоритмах для сравнения слов и предложений, что может быть полезно в чат-ботах, поисковых системах и других NLP приложениях.</li>
+                </ul>
+                            `,
+              code: `
+function levenshtein(a, b) {
+  if (a.length === 0) return b.length;
+  if (b.length === 0) return a.length;
+  const matrix = [];
+  for (let i = 0; i <= b.length; matrix[i] = [i]) i++;
+  for (let j = 0; j <= a.length; matrix[0][j] = j++) j++;
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      matrix[i][j] = b[i - 1] === a[j - 1]
+        ? matrix[i - 1][j - 1]
+        : Math.min(
+          matrix[i - 1][j - 1] + 1,
+          Math.min(matrix[i][j - 1] + 1, matrix[i - 1][j] + 1)
+        );
+    }
+  }
+  return matrix[b.length][a.length];
+}
+`
+            },
+          ],
+        },
+        {
+          title: "function declaration and expression, arrow function",
+          children: [
+            {
+              title: "Описание объявлений и выражений функций",
+              type: "code",
+              description: `
+                <p><strong>Объявление функции</strong>: Это способ определения функции с использованием ключевого слова <code>function</code>. Функция может быть вызвана до ее определения (подъем).</p>
+                <p><strong>Выражение функции</strong>: Это определение функции, которое присваивается переменной. Функция не может быть вызвана до ее объявления.</p>
+              `,
+              code: `
+// Объявление функции
+function sayHello() {
+  console.log("Hello!");
+}
+sayHello(); // "Hello!"
+
+// Выражение функции
+const greet = function() {
+  console.log("Hi!");
+};
+greet(); // "Hi!"
+              `,
+            },
+            {
+              title: "Стрелочные функции",
+              type: "code",
+              description: `
+                <p><strong>Стрелочные функции</strong>: Это упрощенный синтаксис для объявления функций, введенный в ES6. Они не имеют собственного значения <code>this</code> и не могут быть использованы в качестве конструктора.</p>
+              `,
+              code: `
+const multiply = (x, y) => x * y;
+console.log(multiply(2, 3)); // 6
+
+const add = (a, b) => {
+  return a + b;
+};
+console.log(add(2, 3)); // 5
+              `,
+            },
+            {
+              title: "Сравнение синтаксиса",
+              type: "code",
+              description: `
+                <p>Различия в синтаксисе между обычными и стрелочными функциями:</p>
+              `,
+              code: `
+// Обычная функция
+function square(x) {
+  return x * x;
+}
+
+// Стрелочная функция
+const squareArrow = (x) => x * x;
+
+console.log(square(4)); // 16
+console.log(squareArrow(4)); // 16
+              `,
+            },
+            {
+              title: "Преимущества",
+              type: "code",
+              description: `
+                <p>Стрелочные функции обеспечивают более лаконичный синтаксис и удобнее работают с <code>this</code> в контексте методов, так как они наследуют <code>this</code> от родительской области видимости.</p>
+              `,
+              code: `
+const obj = {
+  value: 100,
+  regularFunction: function() {
+    console.log(this.value);
+  },
+  arrowFunction: () => {
+    console.log(this.value);
+  },
+};
+
+obj.regularFunction(); // 100
+obj.arrowFunction();   // undefined (т.к. 'this' не ссылается на obj)
+              `,
+            },
+          ],
+        },
+        {
+          title: "Features of arrow functions / Особенности стрелочных функций",
+          children: [
+            {
+              title: "1. Синтаксис",
+              type: "code",
+              description: `
+                <p>Стрелочные функции имеют более компактный синтаксис по сравнению с обычными функциями:</p>
+              `,
+              code: `
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // 5
+              `,
+            },
+            {
+              title: "2. Лексическое значение this",
+              type: "code",
+              description: `
+                <p>Стрелочные функции не имеют своего собственного <code>this</code>; вместо этого они используют <code>this</code> из окружающего контекста:</p>
+              `,
+              code: `
+function Person() {
+  this.age = 0;
+
+  setInterval(() => {
+  this.age++; // 'this' ссылается на объект Person
+    console.log(this.age);
+  }, 1000);
+}
+
+  const p = new Person(); // будет выводить возраст каждую секунду
+              `,
+            },
+            {
+              title: "3. Отсутствие объекта arguments",
+              type: "code",
+              description: `
+                <p>Стрелочные функции не имеют собственного объекта <code>arguments</code>. Для доступа к аргументам можно использовать оператор <code>rest</code>:</p>
+              `,
+              code: `
+const sum = (...args) => args.reduce((a, b) => a + b, 0);
+console.log(sum(1, 2, 3, 4)); // 10
+              `,
+            },
+            {
+              title: "4. Не могут быть использованы как конструкторы",
+              type: "code",
+              description: `
+                <p>Стрелочные функции не могут быть использованы с оператором <code>new</code>:</p>
+              `,
+              code: `
+const Person = () => {};
+// const p = new Person(); // ошибка: Person is not a constructor
+              `,
+            },
+            {
+              title: "5. Не имеют свойства prototype",
+              type: "code",
+              description: `
+                <p>Стрелочные функции не имеют свойства <code>prototype</code>, что делает их непригодными для создания методов объектов:</p>
+              `,
+              code: `
+const arrowFunc = () => {};
+console.log(arrowFunc.prototype); // undefined
+              `,
+            },
+            {
+              title: "6. Возврат значений",
+              type: "code",
+              description: `
+                <p>Если стрелочная функция состоит из одного выражения, то фигурные скобки и ключевое слово <code>return</code> можно опустить:</p>
+              `,
+              code: `
+const square = x => x * x;
+console.log(square(4)); // 16
+              `,
+            },
+          ],
+        },
+        {
+          title: "Global window object / Глобальный объект window",
+          children: [
+            {
+              title: "1. Что такое объект window?",
+              type: "text",
+              description: `
+                <p>Объект <code>window</code> представляет собой глобальный объект в браузере, который является корнем для всех объектов и функций в JavaScript.</p>
+                <p>Он предоставляет доступ к свойствам и методам, связанным с окном браузера.</p>
+              `,
+            },
+            {
+              title: "2. Свойства объекта window",
+              type: "text",
+              description: `
+                <p>Некоторые ключевые свойства объекта <code>window</code>:</p>
+                <ul>
+                  <li><code>window.document</code> - доступ к DOM-документу.</li>
+                  <li><code>window.location</code> - информация о текущем URL.</li>
+                  <li><code>window.history</code> - управление историей браузера.</li>
+                  <li><code>window.navigator</code> - информация о браузере и его версиях.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "3. Методы объекта window",
+              type: "text",
+              description: `
+                <p>Некоторые полезные методы объекта <code>window</code>:</p>
+                <ul>
+                  <li><code>window.alert()</code> - отображает простое окно с сообщением.</li>
+                  <li><code>window.confirm()</code> - показывает диалоговое окно с вопросом и кнопками "OK" и "Cancel".</li>
+                  <li><code>window.open()</code> - открывает новое окно или вкладку.</li>
+                  <li><code>window.setTimeout()</code> - выполняет функцию через заданный интервал времени.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "4. Пример использования объекта window",
+              type: "code",
+              description: `
+                <p>Пример использования объекта <code>window</code> для отображения сообщения:</p>
+              `,
+              code: `
+window.alert('Привет, мир!');
+              `
+            },
+            {
+              title: "5. Особенности объекта window",
+              type: "text",
+              description: `
+                <p>Объект <code>window</code> является единственным экземпляром глобального объекта в браузере, что означает, что:</p>
+                <ul>
+                  <li>Все глобальные переменные и функции доступны как свойства объекта <code>window</code>.</li>
+                  <li>Вы можете обращаться к методам и свойствам через <code>this</code> в глобальном контексте.</li>
+                </ul>
+              `,
+            },
+          ],
+        },
+        {
+          title: "How objects become primitives / Как объекты превращаются в примитивы",
+          children: [
+            {
+              title: "Преобразование объектов в примитивы",
+              type: "code",
+              description: `
+                <p>В JavaScript объекты могут быть автоматически преобразованы в примитивные значения в контекстах, таких как сравнение, арифметические операции или приведение типов. Процесс преобразования включает:</p>
+                <ul>
+                  <li>Попытка вызова метода <strong>valueOf()</strong></li>
+                  <li>Попытка вызова метода <strong>toString()</strong></li>
+                </ul>
+              `,
+              code: `
+const obj = {
+  valueOf: function() {
+    return 42;
+  }
+};
+
+console.log(obj + 10); // 52 (вызывается obj.valueOf())
+              `,
+            },
+            {
+              title: "Этапы преобразования",
+              type: "code",
+              description: `
+                <p>Когда JavaScript пытается преобразовать объект в примитив, он выполняет следующие шаги:</p>
+                <ol>
+                  <li>Вызывать метод <strong>valueOf()</strong>. Если он возвращает примитив, то это значение используется.</li>
+                  <li>Если <strong>valueOf()</strong> возвращает объект, то JavaScript попытется вызвать <strong>toString()</strong>. Если <strong>toString()</strong> возвращает примитив, то это значение используется.</li>
+                </ol>
+              `,
+              code: `
+const obj2 = {
+  toString: function() {
+    return 'Hello';
+  }
+};
+
+console.log(obj2 + ' World'); // "Hello World" (вызывается obj2.toString())
+              `,
+            },
+            {
+              title: "Примеры преобразования",
+              type: "code",
+              description: `
+                <p>Пример объекта с реализацией обоих методов:</p>
+              `,
+              code: `
+const obj3 = {
+  valueOf: function() {
+    return 10;
+  },
+  toString: function() {
+    return 'I am an object';
+  }
+};
+
+console.log(obj3 + 5); // 15 (вызывается valueOf)
+console.log(String(obj3)); // "I am an object" (вызывается toString)
+              `,
+            },
+            {
+              title: "Использование операторов",
+              type: "code",
+              description: `
+                <p>Объекты могут быть преобразованы в примитивы при использовании операторов:</p>
+                <ul>
+                  <li>Сравнение: ==, ===</li>
+                  <li>Арифметические операции: +, -, *, /</li>
+                  <li>Приведение типов: String(), Number(), Boolean()</li>
+                </ul>
+              `,
+              code: `
+console.log([] + '1'); // "1" (вызывается toString)
+console.log([1] == 1); // true (нестрогое сравнение, вызывается valueOf)
+              `,
+            },
+            {
+              title: "Вывод",
+              type: "code",
+              description: `
+                <p>Объекты в JavaScript автоматически преобразуются в примитивные значения с использованием методов valueOf() и toString(). Контекст и ситуация определяют, какой метод будет вызван.</p>
+              `,
+              code: `
+const obj4 = {
+  valueOf: function() {
+    return '5';
+  },
+  toString: function() {
+    return 'I am an object';
+  }
+};
+
+console.log(obj4 + 1); // "51" (вызывается valueOf)
+console.log(obj4 == '5'); // true (нестрогое сравнение, вызывается valueOf)
+              `,
+            },
+          ],
+        },
+        {
+          title: "Hoisting / поднятие",
+          children: [
+            {
+              title: "1. Определение Hoisting",
+              type: "text",
+              description: `
+                <p>Hoisting (поднятие) в JavaScript - это механизм, при котором объявления переменных и функций поднимаются в верхнюю часть своей области видимости во время выполнения кода.</p>
+              `,
+            },
+            {
+              title: "2. Как работает Hoisting?",
+              type: "text",
+              description: `
+                <p>При выполнении кода JavaScript сначала обрабатывает все объявления переменных и функций, а затем выполняет код. Это означает, что вы можете использовать функции и переменные до их фактического объявления в коде.</p>
+              `,
+            },
+            {
+              title: "3. Пример Hoisting с функциями",
+              type: "code",
+              description: `
+                <p>Пример поднятия функций:</p>
+              `,
+              code: `
+sayHello(); // Работает, выводит "Hello!"
+
+function sayHello() {
+  console.log("Hello!");
+}
+              `
+            },
+            {
+              title: "4. Пример Hoisting с переменными",
+              type: "code",
+              description: `
+                <p>Пример поднятия переменных:</p>
+              `,
+              code: `
+console.log(myVar); // undefined
+
+var myVar = 5;
+console.log(myVar); // 5
+              `
+            },
+            {
+              title: "5. Что происходит на самом деле?",
+              type: "text",
+              description: `
+                <p>Когда код выполняется, JavaScript фактически обрабатывает его следующим образом:</p>
+                <pre>
+        var myVar; // Объявление переменной поднимается
+        console.log(myVar); // undefined
+        myVar = 5; // Инициализация переменной
+                </pre>
+              `,
+            },
+            {
+              title: "6. Hoisting с let и const",
+              type: "text",
+              description: `
+                <p>Переменные, объявленные с помощью <code>let</code> и <code>const</code>, также поднимаются, но они находятся в Temporal Dead Zone (TDZ) до их инициализации:</p>
+              `,
+            },
+            {
+              title: "7. Пример Hoisting с let и const",
+              type: "code",
+              description: `
+                <p>Пример с <code>let</code> и <code>const</code>:</p>
+              `,
+              code: `
+console.log(a); // ReferenceError: Cannot access 'a' before initialization
+let a = 10;
+
+console.log(b); // ReferenceError: Cannot access 'b' before initialization
+const b = 20;
+              `
+            },
+            {
+              title: "8. Важность понимания Hoisting",
+              type: "text",
+              description: `
+                <p>Понимание Hoisting помогает избежать неожиданных ошибок и улучшает качество кода. Важно помнить, что хотя функции могут быть вызваны до их объявления, поведение переменных может привести к неожиданным результатам.</p>
+              `,
+            },
+          ],
+        },
+        {
+          title: "Inheritance / наследование",
+          children: [
+            {
+              title: "Прототипное наследование",
+              type: "code",
+              description: `
+                <p><strong>Прототипное наследование</strong>: В JavaScript объекты могут наследовать свойства и методы от других объектов через механизм прототипов. Каждый объект имеет внутреннюю ссылку на свой прототип, который может содержать свойства и методы, доступные наследуемым объектам.</p>
+                <p>Это характерно для JavaScript и позволяет разработчикам расширять возможности объектов без необходимости использовать классы.</p>
+              `,
+              code: `
+// Создаем объект родитель
+const parent = {
+  greet: function() {
+    console.log("Hello from parent!");
+  }
+};
+
+// Создаем объект child с наследованием от parent
+const child = Object.create(parent);
+child.greet(); // "Hello from parent!"
+              `,
+            },
+            {
+              title: "Классы ES6",
+              type: "code",
+              description: `
+                <p><strong>Классы ES6</strong>: С появлением ES6 в JavaScript появилась возможность использования классов. Классы предоставляют более удобный и понятный синтаксис для реализации наследования. Классы также используют механизм прототипов под капотом.</p>
+              `,
+              code: `
+class Parent {
+  greet() {
+    console.log("Hello from parent class!");
+  }
+}
+
+class Child extends Parent {
+  greet() {
+    console.log("Hello from child class!");
+  }
+}
+
+const childInstance = new Child();
+childInstance.greet(); // "Hello from child class!"
+const parentInstance = new Parent();
+parentInstance.greet(); // "Hello from parent class!"
+              `,
+            },
+            {
+              title:
+                "Наследование с использованием Object.setPrototypeOf",
+              type: "code",
+              description: `
+                <p><strong>Object.setPrototypeOf</strong>: Этот метод можно использовать для изменения прототипа существующего объекта. Это также позволяет реализовать наследование, но рекомендуется использовать в основном в особых случаях, т.к. может привести к ухудшению производительности.</p>
+              `,
+              code: `
+const parent = {
+  greet: function() {
+    console.log("Hello from parent!");
+  }
+};
+
+const child = {};
+Object.setPrototypeOf(child, parent);
+child.greet(); // "Hello from parent!"
+              `,
+            },
+            {
+              title: "Сравнение различных способов наследования",
+              type: "code",
+              description: `
+                <p>Различные способы реализации наследования в JavaScript имеют свои преимущества и недостатки:</p>
+                <ul>
+                  <li><strong>Прототипное наследование:</strong> Гибкость, но может быть сложнее для понимания начинающим.</li>
+                  <li><strong>Классы ES6:</strong> Более читаемый и привычный синтаксис, похожий на другие языки программирования.</li>
+                  <li><strong>Object.setPrototypeOf:</strong> Не рекомендуется для частого использования, так как имеет низкую производительность.</li>
+                </ul>
+              `,
+              code: `
+// Обзор методов
+console.log(Object.getPrototypeOf(child) === parent); // true
+console.log(child instanceof Child); // true
+console.log(child instanceof Parent); // true
+              `,
+            },
+          ],
+        },
+        {
+          title: "IIFE (Immediately Invoked Function Expression) / (Немедленно вызванное функциональное выражение)",
+          children: [
+            {
+              title: "Описание IIFE",
+              type: "code",
+              description: `
+                <p>
+                  <strong>IIFE</strong>: Это функциональное выражение, которое выполняется сразу после его определения. Это позволяет создать локальную область видимости и изолировать переменные от глобальной области видимости.
+                </p>
+                <p>
+                  IIFE часто используется для организации кода и предотвращения загрязнения глобального пространства имен.
+                </p>
+              `,
+              code: `
+(function() {
+  var localVariable = 'I am local';
+  console.log(localVariable); // 'I am local'
+})();
+
+// console.log(localVariable); // Uncaught ReferenceError: localVariable is not defined
+              `,
+            },
+            {
+              title: "Синтаксис IIFE",
+              type: "code",
+              description: `
+                <p>Стандартный синтаксис включает в себя определение функции, заключенное в круглые скобки, и сразу же вызываемое с использованием дополнительных круглых скобок.</p>
+              `,
+              code: `
+(function() {
+  // Код здесь
+})();
+
+// Или с использованием стрелочной функции
+(() => {
+  // Код здесь
+})();
+              `,
+            },
+            {
+              title: "Преимущества использования IIFE",
+              type: "code",
+              description: `
+                <p>
+                  <strong>Преимущества:</strong>
+                  <ul>
+                    <li>Изолированная область видимости для переменных.</li>
+                    <li>Предотвращение конфликтов переменных с глобальной областью видимости.</li>
+                    <li>Помогает безопасно избегать переменных, которые могут повлиять на другие скрипты.</li>
+                  </ul>
+                </p>
+              `,
+              code: `
+(function() {
+  var count = 0; // Локальная переменная, недоступная вне IIFE
+  console.log(count); // 0
+})();
+
+// console.log(count); // Uncaught ReferenceError: count is not defined
+              `,
+            },
+          ],
+        },
+        {
+          title: "Lexical Environment / Лексическое окружение",
+          children: [
+            {
+              title: "1. Определение лексического окружения",
+              type: "text",
+              description: `
+                <p>Лексическое окружение в JavaScript - это структура, которая хранит все переменные и функции, доступные в определённой области видимости. Оно создаётся во время исполнения кода и используется для определения, где и как переменные могут быть использованы.</p>
+              `,
+            },
+            {
+              title: "2. Составляющие лексического окружения",
+              type: "text",
+              description: `
+                <p>Лексическое окружение состоит из двух основных частей:</p>
+                <ul>
+                  <li><strong>Объект окружения:</strong> Содержит все переменные и функции, доступные в данной области видимости.</li>
+                  <li><strong>Ссылка на внешнее окружение:</strong> Указывает на лексическое окружение, в котором была создана текущая функция. Это позволяет функции доступ к переменным из внешней области видимости.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "3. Пример лексического окружения",
+              type: "code",
+              description: `
+                <p>Пример, иллюстрирующий лексическое окружение:</p>
+              `,
+              code: `
+function outerFunction() {
+  let outerVar = 'I am outside!';
+
+  function innerFunction() {
+    console.log(outerVar); // Доступ к переменной outerVar из внешнего окружения
+  }
+
+  return innerFunction;
+}
+
+const myInnerFunction = outerFunction();
+myInnerFunction(); // Вывод: "I am outside!"
+              `
+            },
+            {
+              title: "4. Как лексическое окружение связано с замыканиями?",
+              type: "text",
+              description: `
+                <p>Когда функция создаётся, она захватывает свое лексическое окружение. Это означает, что даже после завершения внешней функции, внутренние функции могут продолжать получать доступ к переменным, объявленным в этом окружении. Это и есть замыкание.</p>
+              `,
+            },
+            {
+              title: "5. Значение лексического окружения для производительности",
+              type: "text",
+              description: `
+                <p>Лексическое окружение помогает JavaScript управлять памятью и областью видимости. Понимание этой концепции помогает разработчикам писать более эффективный и управляемый код.</p>
+              `,
+            },
+          ],
+        },
+        {
+          title: "Living and nonliving collections / Живые и неживые коллекции",
+          children: [
+            {
+              title: "1. Что такое коллекции в JavaScript?",
+              type: "text",
+              description: `
+                <p>Коллекции в JavaScript - это объекты, которые хранят группы элементов. Они могут быть живыми или неживыми в зависимости от их поведения при изменении DOM.</p>
+              `,
+            },
+            {
+              title: "2. Живые коллекции",
+              type: "text",
+              description: `
+                <p>Живые коллекции автоматически обновляются при изменении DOM. Примеры:</p>
+                <ul>
+                  <li><code>document.getElementsByTagName()</code></li>
+                  <li><code>document.getElementsByClassName()</code></li>
+                  <li><code>document.childNodes</code></li>
+                </ul>
+                <p>При добавлении или удалении элементов, живые коллекции будут отражать эти изменения.</p>
+              `,
+            },
+            {
+              title: "3. Неживые коллекции",
+              type: "text",
+              description: `
+                <p>Неживые коллекции не обновляются при изменении DOM. Примеры:</p>
+                <ul>
+                  <li><code>document.querySelectorAll()</code></li>
+                  <li><code>Array.from()</code> (при преобразовании живых коллекций)</li>
+                </ul>
+                <p>Эти коллекции сохраняют состояние на момент их создания и не реагируют на изменения в DOM.</p>
+              `,
+            },
+            {
+              title: "4. Пример работы с живыми коллекциями",
+              type: "code",
+              description: `
+                <p>Пример использования живой коллекции:</p>
+              `,
+              code: `
+        const elements = document.getElementsByClassName('example');
+        console.log(elements.length); // Выводит количество элементов с классом 'example'
+        
+        // Добавим новый элемент с классом 'example'
+        const newElement = document.createElement('div');
+        newElement.className = 'example';
+        document.body.appendChild(newElement);
+        
+        console.log(elements.length); // Теперь длина коллекции увеличилась
+              `
+            },
+            {
+              title: "5. Пример работы с неживыми коллекциями",
+              type: "code",
+              description: `
+                <p>Пример использования неживой коллекции:</p>
+              `,
+              code: `
+        const staticElements = document.querySelectorAll('.example');
+        console.log(staticElements.length); // Выводит количество элементов с классом 'example'
+        
+        // Добавим новый элемент с классом 'example'
+        const newStaticElement = document.createElement('div');
+        newStaticElement.className = 'example';
+        document.body.appendChild(newStaticElement);
+        
+        console.log(staticElements.length); // Длина коллекции не изменилась
+              `
+            },
+          ],
+        },
+        {
+          title: "Methods",
+          children: [
+            {
+              title: "Array Methods",
+              children: [
+                {
+                  title: "1. pop() => removes the last element from an array.",
+                  type: "title",
+                },
+                {
+                  title: "2.shift() => удаляет элемент в начале массива",
+                  type: "title",
+                },
+                {
+                  title:
+                    "3.push() => добавляется несколько элементов в конец массива",
+                  type: "title",
+                },
+                {
+                  title:
+                    "4.unshift() => добавляет несколько элементов в начало массива",
+                  type: "title",
+                },
+                {
+                  title: "5.length => получаем число элементов массива",
+                  type: "title",
+                },
+                {
+                  title: `6.splice() => добавление нескольких элементов в массив; 
+                            первый аргумент указывает где начать вставку элементов по индексу; 
+                            второй аргумент указывает сколько элементов нужно удалить, если аргумент не указать, то удаления не будет, просто добавится новый элемент в массиве; самые новые элементы указываются в скобках данного метода в кавычках,`,
+                  type: "title",
+                },
+                {
+                  title: `7.slice() => вырезает один или несколько элементов массива
+                            через указатель аргумента начала вырезания и второй аргумент где закончить срез;
+                            принимает отрицательные значения.`,
+                  type: "title",
+                },
+                {
+                  title: "8.concat() => конкатенация двух массивов",
+                  type: "title",
+                },
+                {
+                  title: `9.map() => принимает массив и применяет указанную функцию для
+                            всех элементов массива; возвращает новый массив.`,
+                  type: "title",
+                },
+                {
+                  title: `10.every() => проверяет, соответствуют ли все элементы указанному
+                            массиву определённому условию; если все элементы соответствуют условию, то возвращает
+                            метод true, в противном случае вернёт false.`,
+                  type: "title",
+                },
+                {
+                  title: `11.includes() => проверяет на наличие в массиве элемента; если
+                            элемент найден, то возвращает true.`,
+                  type: "title",
+                },
+                {
+                  title: `12.spread() => превращает массив в строки с помощью специальных
+                            разделителей … сохраняет между ними границу или по умолчанию между строками образуются
+                            пробелы.`,
+                  type: "title",
+                },
+                {
+                  title: `13.filter() => возвращает новый массив из всех элементов соответствующих
+                            заданному условию.`,
+                  type: "title",
+                },
+                {
+                  title:
+                    "14.reduce(function (previousValue, item, index, array) { … }, [initial]); => сводит массив к одному значению.",
+                  type: "title",
+                },
+                {
+                  title:
+                    "15.reduceRight() => сводит массив к одному значение с права на лево.",
+                  type: "title",
+                },
+                {
+                  title: `16.indexOf() => возвращает первый индекс по которому может быть найден
+                            элемент в массиве и -1 если такого элемента нет; это не тоже самое что и Boolean values,
+                            мы можем получать 2 и более индекса совпадений по массиву.`,
+                  type: "title",
+                },
+                {
+                  title: `17.sort() => возвращает отсортированный массив; если compareFunction
+                            предоставлена, то массив сортируется в соответствиями с этими условиями.`,
+                  type: "title",
+                },
+                {
+                  title: `18.find() => возвращает значение первого найденного в массиве элемента,
+                            который удовлетворяет условию указанных в функции, в противном случае возвращает undefined.`,
+                  type: "title",
+                },
+                {
+                  title: `19.findIndex() => возвращает индекс в массиве, если элемент удовлетворяет
+                            условиям проверяющей функции, в противном случае вернёт -1.`,
+                  type: "title",
+                },
+                {
+                  title: `20.forEach(function (item, index, array) { … } => выполняет указанную
+                            функцию один раз для каждого элемента в массиве.`,
+                  type: "title",
+                },
+                {
+                  title:
+                    "21.join(‘, ’) => преобразовывает массив в строку с заданным разделителем.",
+                  type: "title",
+                },
+                {
+                  title:
+                    "22.isArray() => проверяем массив ли этот объект или нет.",
+                  type: "title",
+                },
+                {
+                  title: "Learn more about array methods.",
+                  type: "link",
+                  url: "https://learn.javascript.ru/array-methods",
+                },
+                {
+                  title: "Visual representation of array methods.",
+                  type: "link",
+                  url: "https://medium.com/@sewolpe/visualizing-javascript-array-methods-7babf560f7be",
+                },
+              ],
+            },
+            {
+              title: "Strings Methods",
+              children: [
+                {
+                  title: "1.toUpperCase() => перевод строки в верхний регистр",
+                  type: "title",
+                },
+                {
+                  title: "2.toLowerCase() => перевод строки в нижний регистр",
+                  type: "title",
+                },
+                {
+                  title: "3.trim() => удаляет пробелы в начале и конце строки",
+                  type: "title",
+                },
+                {
+                  title: "4.length => получаем длину строки",
+                  type: "title",
+                },
+                {
+                  title: `5.includes() => проверяет на наличие в строке элемента; если элемент найден, то возвращает true.`,
+                  type: "title",
+                },
+                {
+                  title: `6.spread() => превращает массив в строки с помощью специальных разделителей ... сохраняет между ними границу или по умолчанию между строками образуются пробелы.`,
+                  type: "title",
+                },
+                {
+                  title: `7.repeat() => повторяет строку указанное количество раз.`,
+                  type: "title",
+                },
+                {
+                  title: `8.split() => разбивает строку на массив подстроки по указанному разделителю. Возвращает новый массив, который содержит подстроки полученные в ходе разбиения.`,
+                  type: "title",
+                },
+                {
+                  title: `9.startsWith() => проверяет на наличие в начале строки указанного элемента. Возвращает true или false`,
+                  type: "title",
+                },
+                {
+                  title: `10.endsWith() => проверяет на наличие в конце строки указанного элемента. Возвращает true или false`,
+                  type: "title",
+                },
+                {
+                  title: `11.slice() => вырезает один или несколько элементов внутри строки через указатель аргумента начала вырезания и второй аргумент где закончить срез; принимает отрицательные значения.`,
+                  type: "title",
+                },
+                {
+                  title: `12.substring() => возвращает вырезанную часть строки, но не принимает отрицательные числа в качестве аргументов.`,
+                  type: "title",
+                },
+                {
+                  title: `13.concat() => конкатенация между собой строк в одну строку`,
+                  type: "title",
+                },
+                {
+                  title: `14.charCodeAt() => возвращает значение символа по Юникод.`,
+                  type: "title",
+                },
+                {
+                  title: `15.charAt() => возвращает символ по Юникод.`,
+                  type: "title",
+                },
+                {
+                  title: `16.trimStart() => удаляет пробелы в начале строки.`,
+                  type: "title",
+                },
+                {
+                  title: `17.trimEnd() => удаляет пробелы в конце строки.`,
+                  type: "title",
+                },
+                {
+                  title: `18.padStart() => добавляет символы в начале строки, чтобы результирующая строка получила указанную длину; по умолчанию метод возвращает пустую строку до указанной длины, но может принимать и другие символы указанные во втором аргументе.`,
+                  type: "title",
+                },
+                {
+                  title: `19.padEnd() => добавляет символы в конце строки, чтобы результирующая строка получила указанную длину.`,
+                  type: "title",
+                },
+                {
+                  title: `20.indexOf() => возвращает индекс первого вхождения указанного элемента в строку. Если элемент не найден, возвращает -1.`,
+                  type: "title",
+                },
+                {
+                  title: `21.at(-1) или at() => получает последний символ строки или символ согласно индексу слева на право, так же как при отрицательном значении принимает символ с право на лево.`,
+                  type: "title",
+                },
+                {
+                  title: `22.search()`,
+                  type: "code",
+                  description: `search() => возвращает индекс первого вхождения подстроки в строке.`,
+                  code: `console.log(str.search('World')); // 9`
+                }
+              ],
+            },
+            {
+              title: "Numbers Methods",
+              children: [
+                {
+                  title:
+                    "1.toFixed() => форматирует число с использованием записи с фиксированной запятой.",
+                  type: "title",
+                },
+                {
+                  title:
+                    "2.parseFloat() => принимает строку в качестве аргумента и возвращает число с плавающей точной.",
+                  type: "title",
+                },
+                {
+                  title:
+                    "3.parseInt() => принимает строку в качестве аргумента и возвращает целое число в соответствии с указанной системой счисления.",
+                  type: "title",
+                },
+                {
+                  title:
+                    "4.Number() => преобразовывает строку в числовой тип данных.",
+                  type: "title",
+                },
+                {
+                  title: "toExponential()",
+                  type: "code",
+                  description:
+                    "<p>Преобразует число в экспоненциальное представление.</p>",
+                  code: "var x = 9.656; console.log(x.toExponential(2)); // '9.66e+0'",
+                },
+                {
+                  title: "toPrecision()",
+                  type: "code",
+                  description:
+                    "<p>Возвращает строку с числом, записанным с указанной длиной.</p>",
+                  code: "var x = 9.656; console.log(x.toPrecision(4)); // '9.656'",
+                },
+                {
+                  title: "Методы Math",
+                  children: [
+                    {
+                      title: "Math.max()",
+                      type: "code",
+                      description: "<p>Возвращает наибольшее значение.</p>",
+                      code: "console.log(Math.max(1, 2, 3)); // 3",
+                    },
+                    {
+                      title: "Math.min()",
+                      type: "code",
+                      description: "<p>Возвращает наименьшее значение.</p>",
+                      code: "console.log(Math.min(1, 2, 3)); // 1",
+                    },
+                    {
+                      title: "Math.random()",
+                      type: "code",
+                      description:
+                        "<p>Генерирует случайное число от 0 до 1.</p>",
+                      code: `
+function getRandomInt(min, max) {
+  // генерация случайного целого числа
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log(getRandomInt(1, 10)); // случайное число от 1 до 10
+                      `,
+                    },
+                    {
+                      title: "Math.round()",
+                      type: "code",
+                      description:
+                        "<p>Округляет число до ближайшего целого.</p>",
+                      code: "console.log(Math.round(4.6)); // 5",
+                    },
+                    {
+                      title: "5.Math.sqrt() => возвращает квадратный корень числа.",
+                      type: "title",
+                    },
+                    {
+                      title: "6.Math.cbrt() => возвращает кубический корень числа.",
+                      type: "title",
+                    },
+                    {
+                      title:
+                        "7.Math.abs() => возвращает абсолютное значение числа.",
+                      type: "title",
+                    },
+                    {
+                      title:
+                        "8.Math.pow() => возвращает число, возведённое в степень.",
+                      type: "title",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Object Methods",
+              children: [
+                {
+                  title: "1.Object.keys(obj): Возвращает массив строк, содержащий имена собственных перечисляемых свойств объекта.",
+                  type: "code",
+                  description: `<p>Примеры использования <code>Object.keys()</code>:</p>`,
+                  code: `
+const person = { name: 'Alice', age: 25 };
+console.log(Object.keys(person)); // ['name', 'age']
+                                      `,
+                },
+                {
+                  title: "2.Object.values(obj): Возвращает массив значений собственных перечисляемых свойств объекта.",
+                  type: "code",
+                  description: `<p>Примеры использования <code>Object.values()</code>:</p>`,
+                  code: `
+const person = { name: 'Alice', age: 25 };
+console.log(Object.values(person)); // ['Alice', 25]
+                                      `,
+                },
+                {
+                  title: "3.Object.create(proto, propertiesObject): Создает новый объект с указанным прототипом и свойствами.",
+                  type: "code",
+                  description: `<p>Примеры использования <code>Object.create()</code>:</p>`,
+                  code: `
+const proto = { greet() { console.log('Hello!'); } };
+const obj = Object.create(proto);
+obj.greet(); // 'Hello!'
+                  `,
+                },
+                {
+                  title: "4.Object.freeze(obj): Замораживает объект, предотвращая добавление, удаление или изменение его свойств.",
+                  type: "code",
+                  description: `<p>Примеры использования <code>Object.freeze()</code>:</p>`,
+                  code: `
+const obj = { name: 'Alice' };
+Object.freeze(obj);
+obj.name = 'Bob'; // не сработает
+console.log(obj.name); // 'Alice'
+                  `,
+                },
+                {
+                  title: "5.Object.assign(target, ...sources): Копирует значения всех собственных перечисляемых свойств из одного или более источников в целевой объект и возвращает его.",
+                  type: "code",
+                  description: `<p>Примеры использования <code>Object.assign()</code>:</p>`,
+                  code: `
+const target = { a: 1 };
+const source = { b: 2, c: 3 };
+const returnedTarget = Object.assign(target, source);
+console.log(returnedTarget); // { a: 1, b: 2, c: 3 }
+                  `,
+                },
+                {
+                  title: "6.Object.entries(obj): Возвращает массив пар [ключ, значение] для собственных перечисляемых свойств объекта.",
+                  type: "code",
+                  description: `<p>Примеры использования <code>Object.entries()</code>:</p>`,
+                  code: `
+const person = { name: 'Alice', age: 25 };
+console.log(Object.entries(person)); // [['name', 'Alice'], ['age', 25]]
+                  `,
+                },
+                {
+                  title:
+                    "7.Object.seal(obj): Замораживает объект, предотвращая добавление, удаление или изменение его свойств.",
+                  type: "code",
+                  description: `<p>Примеры использования <code>Object.seal()</code>:</p>`,
+                  code: `
+const obj = { name: 'Alice' };
+Object.seal(obj);
+obj.age = 25; // не сработает
+obj.name = 'Bob'; // сработает
+console.log(obj); // { name: 'Bob' }
+                  `,
+                },
+                {
+                  title:
+                    "8.Object.is(value1, value2): Определяет, являются ли два значения одним и тем же значением.",
+                  type: "code",
+                  description: `<p>Примеры использования <code>Object.is()</code>:</p>`,
+                  code: `
+console.log(Object.is('abc', 'abc')); // true
+console.log(Object.is(0, -0)); // false
+console.log(Object.is(NaN, NaN)); // true
+console.log(Object.is(null, undefined)); // false
+                  `,
+                },
+                {
+                  title: "9. Object.prototype.hasOwnProperty(): Возвращает булево значение, указывающее, является ли указанное свойство собственным свойством объекта.",
+                  type: "code",
+                  description: `<p>Примеры использования <code>Object.prototype.hasOwnProperty()</code>:</p>`,
+                  code: `
+const obj = { name: 'Alice' };
+console.log(obj.hasOwnProperty('name')); // true
+console.log(obj.hasOwnProperty('age')); // false
+                  `,
+                },
+              ],
+            },
+            {
+              title: "Cycle",
+              children: [
+                {
+                  title: "for, while, do while",
+                  children: [
+                    {
+                      title: "Использование циклов for, while, do while",
+                      type: "code",
+                      description: `
+                      <p>В JavaScript существуют различные виды циклов, которые позволяют повторять выполнение блока кода определенное количество раз или до тех пор, пока выполняется заданное условие.</p>
+                      <ul>
+                        <li><strong>Цикл for</strong>: Используется, когда известно количество итераций.</li>
+                        <li><strong>Цикл while</strong>: Используется, когда количество итераций неизвестно, и необходимо повторять выполнение до тех пор, пока условие истинно.</li>
+                        <li><strong>Цикл do while</strong>: Похож на цикл while, но гарантирует хотя бы одну итерацию.</li>
+                      </ul>
+                      `,
+                      code: `
+// Пример цикла for
+for (let i = 0; i < 5; i++) {
+  console.log("Итерация: " + i); // Выводит 0, 1, 2, 3, 4
+}
+
+// Пример цикла while
+let j = 0; 
+while (j < 5) {
+  console.log("Итерация: " + j); // Выводит 0, 1, 2, 3, 4
+  j++;
+}
+
+// Пример цикла do while
+let k = 0;
+do {
+  console.log("Итерация: " + k); // Выводит 0, 1, 2, 3, 4
+  k++;
+} while (k < 5);
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title:"1.for => повторяет блок кода определённое количество раз.",
+                  type: "title",
+                },
+                {
+                  title:"2.while => повторяет блок кода до тех пор, пока не выполнится условие.",
+                  type: "title",
+                },
+                {
+                  title:"3.do while => повторяет блок кода до тех пор, пока не выполнится условие. После чего выполняется блок кода.",
+                  type: "title",
+                },
+                {
+                  title:"4.for...of => повторяет блок кода для каждого элемента в массиве.",
+                  type: "title",
+                },
+                {
+                  title:"5.forEach() => повторяет блок кода для каждого элемента в массиве.",
+                  type: "title",
+                },
+                {
+                  title:"6.for in => повторяет блок кода для каждого свойства в объекте.",
+                  type: "title",
+                },
+                {
+                  title: "7.break => прерывает выполнение цикла.",
+                  type: "title",
+                },
+                {
+                  title:"8.continue => прерывает текущую итерацию цикла и переходит к следующей.",
+                  type: "title",
+                },
+              ],
+            },
+            {
+              title: "work with JSON",
+              children: [
+                {
+                  title: `JSON.stringify(value, replacer, space): Преобразует значение в строку JSON.`,
+                  type: "title",
+                },
+                {
+                  title: `JSON.parse(text, reviver): Преобразует строку JSON в значение.`,
+                  type: "title",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: "NaN (Not-a-Number)",
+          children: [
+            {
+              title: "Использование NaN в JavaScript",
+              type: "code",
+              description: `
+                <p>NaN (Not-a-Number) — специальное значение в JavaScript, которое представляет собой результат вычисления, не являющегося числом.</p>
+                <ul>
+                  <li>NaN является единственным значением, которое не равно ни одному числу, включая само себя.</li>
+                  <li>Для проверки на NaN в JavaScript следует использовать функцию <code>isNaN()</code> или <code>Number.isNaN()</code>.</li>
+                </ul>
+                <p>Вот примеры работы с NaN:</p>
+              `,
+              code: `
+// Примеры, когда результатом является NaN
+console.log(0 / 0); // NaN
+console.log(Math.sqrt(-1)); // NaN
+console.log(parseInt('abc')); // NaN
+
+// Проверка на NaN
+console.log(isNaN(NaN)); // true
+console.log(isNaN('abc')); // true
+console.log(isNaN(123)); // false
+
+// Использование Number.isNaN
+console.log(Number.isNaN(NaN)); // true
+console.log(Number.isNaN('abc')); // false
+console.log(Number.isNaN(undefined)); // false
+              `,
+            },
+          ],
+        },
+        {
+          title: "Override browser defaults / Отмена действий браузера по умолчанию",
+          children: [
+            {
+              title: "1. Что такое действия по умолчанию?",
+              type: "text",
+              description: `
+                <p>Действия по умолчанию - это стандартные реакции браузера на определенные события, например:</p>
+                <ul>
+                  <li>Переход по ссылке при клике на элемент <code>&lt;a&gt;</code>.</li>
+                  <li>Отправка формы при нажатии кнопки <code>&lt;button&gt;</code>.</li>
+                  <li>Прокрутка страницы при нажатии клавиш со стрелками.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "2. Как отменить действия по умолчанию?",
+              type: "text",
+              description: `
+                <p>Для отмены действий по умолчанию используйте метод <code>event.preventDefault()</code>.</p>
+                <p>Этот метод предотвращает выполнение стандартной реакции браузера на событие.</p>
+              `,
+            },
+            {
+              title: "3. Пример отмены действий по умолчанию",
+              type: "code",
+              description: `
+                <p>Пример отмены перехода по ссылке:</p>
+              `,
+              code: `
+const link = document.getElementById('myLink');
+
+link.addEventListener('click', function(event) {
+  event.preventDefault(); // Отменяет переход по ссылке
+  console.log('Переход отменен!');
+});
+              `
+            },
+            {
+              title: "4. Когда использовать отмену действий по умолчанию?",
+              type: "text",
+              description: `
+                <p>Отмена действий по умолчанию полезна, когда вы хотите:</p>
+                <ul>
+                  <li>Изменить стандартное поведение элемента.</li>
+                  <li>Добавить свою логику обработки события.</li>
+                  <li>Создать пользовательский интерфейс с уникальным поведением.</li>
+                </ul>
+              `,
+            },
+          ],
+        },
+        {
+          title: "Promise",
+          children: [
+            {
+              title: "Определение",
+              type: "list",
+              description: `
+                <p>Promise — это объект, представляющий конечный результат асинхронной операции. Он может находиться в одном из трех состояний:</p>
+                <ul>
+                  <li><strong>Ожидание (pending)</strong>: начальное состояние, ни выполнено, ни отклонено.</li>
+                  <li><strong>Выполнено (fulfilled)</strong>: операция завершена успешно.</li>
+                  <li><strong>Отклонено (rejected)</strong>: операция завершена с ошибкой.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "Создание Promise",
+              type: "code",
+              description: `
+                <p>Promise создается с помощью конструктора <code>Promise</code>, который принимает функцию с двумя аргументами: <code>resolve</code> и <code>reject</code>.</p>
+              `,
+              code: `
+const myPromise = new Promise((resolve, reject) => {
+  // Асинхронная операция
+  const success = true; // поменяйте на false для теста отклонения
+
+  if (success) {
+    resolve('Operation was successful!');
+  } else {
+    reject('Operation failed.');
+    }
+});
+              `,
+            },
+            {
+              title: "Основные статические методы Promise",
+              type: "list",
+              description: `
+                <p>Promise предоставляет несколько статических методов:</p>
+                <ul>
+                  <li><strong>Promise.all(iterable)</strong>: Ожидает выполнения всех переданных промисов и возвращает массив результатов. Если любой из промисов будет отклонен, возвращается ошибка.</li>
+                  <li><strong>Promise.allSettled(iterable)</strong>: Ожидает выполнения всех переданных промисов и возвращает массив объектов с результатами (выполнено или отклонено) для каждого промиса.</li>
+                  <li><strong>Promise.any(iterable)</strong>: Ожидает выполнения первого успешного промиса. Если все промисы будут отклонены, возвращается ошибка.</li>
+                  <li><strong>Promise.race(iterable)</strong>: Ожидает выполнения первого завершенного промиса (выполнено или отклонено).</li>
+                  <li><strong>Promise.resolve(value)</strong>: Возвращает промис, который выполнен с заданным значением.</li>
+                  <li><strong>Promise.reject(reason)</strong>: Возвращает промис, который отклонен с заданной причиной.</li>
+                </ul>
+              `,
+            },
+          ],
+        },
+        {
+          title: "Page Visibility API",
+          children: [
+            {
+              title:
+                "Реализация паузы/старта видео в зависимости от состояния видимости страницы",
+              description: `Page Visibility API — это API браузера, который проверяет видимость страницы. Он помогает определять, скрыта или свернута текущая страница, и тем самым позволяет контролировать ее поведение и использование ресурсов`,
+              type: "code",
+              code: `
+const video = document.querySelector('video');
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    video.pause();
+  } else {
+    video.play();
+  }
+});
+`,
+              link: "Подробнее — MDN",
+              url: "https://medium.com/nuances-of-programming/%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-page-visibility-api-fca074a5b113",
+            },
+          ],
+        },
+        {
+          title: "Recursion",
+          children: [
+            {
+              title: "Определение",
+              type: "list",
+              description: `
+                <p><strong>Рекурсия</strong> — это функция вызывающая саму себя для решения подзадач. Рекурсивные функции обычно разбивают задачу на меньшие подзадачи, которые решаются аналогичным образом.</p>
+              `,
+            },
+            {
+              title: "Структура рекурсивной функции",
+              type: "code",
+              description: `
+                <p>Рекурсивная функция должна иметь:</p>
+                <ul>
+                  <li><strong>Базовый случай</strong>: Условие, при котором функция прекращает вызывать саму себя, чтобы избежать бесконечной рекурсии.</li>
+                  <li><strong>Рекурсивный случай</strong>: Вызов самой функции с меньшей или более простой версией задачи.</li>
+                </ul>
+              `,
+              code: `
+function factorial(n) {
+  if (n === 0) { // базовый случай
+    return 1;
+  }
+  return n * factorial(n - 1); // рекурсивный случай
+}
+console.log(factorial(5)); // 120
+              `,
+            },
+            {
+              title: "Примеры использования",
+              type: "list",
+              description: `
+                <p>Рекурсия может быть использована в следующих ситуациях:</p>
+                <ul>
+                  <li>Вычисление факториала.</li>
+                  <li>Обход деревьев и графов.</li>
+                  <li>Решение задач, таких как сортировка (например, быстрая сортировка, сортировка слиянием).</li>
+                  <li>Решение задач, связанных с последовательностями (например, числа Фибоначчи).</li>
+                </ul>
+              `,
+            },
+            {
+              title: "Преимущества и недостатки",
+              type: "list",
+              description: `
+                <p>Преимущества и недостатки рекурсии:</p>
+                <ul>
+                  <li><strong>Преимущества:</strong> Код более лаконичен и понятен, особенно при работе со сложными структурами данных.</li>
+                  <li><strong>Недостатки:</strong> Рекурсия может приводить к большому потреблению памяти из-за хранения состояния вызовов стека и может быть менее эффективной по сравнению с итеративными подходами.</li>
+                </ul>
+              `,
+            },
+          ],
+        },
+        {
+          title: "Reducers",
+          children: [
+            {
+              title: "Определение редьюсера",
+              type: "text",
+              description: `
+                <p>Редьюсер — это чистая функция, которая принимает текущее состояние и действие, и возвращает новое состояние.</p>
+              `,
+            },
+            {
+              title: "Аргументы редьюсера",
+              type: "list",
+              description: `
+                <p>Редьюсер принимает два аргумента:</p>
+                <ul>
+                  <li><strong>state</strong>: текущее состояние.</li>
+                  <li><strong>action</strong>: объект, описывающий действие.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "Пример редьюсера",
+              type: "code",
+              description: `
+                <p>Пример простого редьюсера для управления задачами:</p>
+              `,
+              code: `
+const initialState = { todos: [] };
+
+function todoReducer(state = initialState, action) {
+  switch (action.type) {
+    case 'ADD_TODO':
+      return { ...state, todos: [...state.todos, action.payload] };
+    case 'REMOVE_TODO':
+      return {
+        ...state,
+        todos: state.todos.filter((_, index) => index !== action.payload),
+      };
+    default:
+      return state;
+  }
+}
+              `,
+            },
+            {
+              title: "Использование редьюсера",
+              type: "text",
+              description: `
+                <p>Редьюсеры комбинируются с помощью функции <code>combineReducers</code> для создания общего состояния в Redux.</p>
+              `,
+            },
+            {
+              title: "Пример с использованием useReducer",
+              type: "code",
+              description: `
+                <p>Пример использования <code>useReducer</code> в React:</p>
+              `,
+              code: `
+import React, { useReducer } from 'react';
+
+const initialState = { count: 0 };
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    default:
+      throw new Error();
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <>
+      Count: {state.count}
+      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+    </>
+  );
+}
+              `,
+            },
+            {
+              title: "Заключение",
+              type: "text",
+              description: `
+                <p>Редьюсеры обеспечивают предсказуемое и централизованное управление состоянием в приложениях.</p>
+              `,
+            },
+          ],
+        },
+        {
+          title: "Switch",
+          children: [
+            {
+              title: "Использование конструкции switch и где это нужно",
+              type: "code",
+              description: `
+              <p>Конструкция switch позволяет выполнять различные действия на основе значения выражения.</p>
+              <ul>
+                <li>Мы можем использовать switch вместо многочисленных if-else, когда нужно проверить одно значение на несколько возможных вариантов.</li>
+                <li>Это делает код более читаемым и поддерживаемым.</li>
+              </ul>
+              <p>Вот несколько примеров использования switch:</p>
+              `,
+              code: `
+// Пример 1: Определение дня недели
+const day = 3;
+let dayName;
+
+switch (day) {
+  case 1:
+  dayName = 'Понедельник';
+  break;
+  case 2:
+  dayName = 'Вторник';
+  break;
+  case 3:
+  dayName = 'Среда';
+  break;
+  case 4:
+  dayName = 'Четверг';
+  break;
+  case 5:
+  dayName = 'Пятница';
+  break;
+  case 6:
+  dayName = 'Суббота';
+  break;
+  case 7:
+  dayName = 'Воскресенье';
+  break;
+  default:
+  dayName = 'Некорректный день';
+}
+
+console.log(dayName); // "Среда"
+
+
+// Пример 2: Использование switch с выражением
+const fruit = 'яблоко';
+let color;
+
+switch (fruit) {
+  case 'банан':
+  color = 'желтый';
+  break;
+  case 'яблоко':
+  color = 'красный';
+  break;
+  case 'виноград':
+  color = 'зеленый';
+  break;
+  default:
+  color = 'неизвестный цвет';
+}
+
+console.log(color); // "красный"
+
+
+// Пример 3: Объединение случаев
+const grade = 'B';
+let message;
+
+switch (grade) {
+  case 'A':
+  case 'B':
+  message = 'Отлично!';
+  break;
+  case 'C':
+  message = 'Хорошо!';
+  break;
+  case 'D':
+  message = 'Удовлетворительно!';
+  break;
+  case 'F':
+  message = 'Неп satisfactoriously!';
+  break;
+  default:
+  message = 'Некорректная оценка';
+}
+
+console.log(message); // "Отлично!"
+              `,
+            },
+          ],
+        },
+        {
+          title: "Sort functions",
+          children: [
+            {
+              title: "Сортировка пузырьком",
+              type: "code",
+              description: `
+                <p>Алгоритм сортировки пузырьком сравнивает пары соседних элементов и меняет их местами, если порядок неправильный.</p>
+                <p>Задача: Реализовать сортировку массива с использованием алгоритма пузырька.</p>
+              `,
+              code: `
+function bubbleSort(arr) {
+  const n = arr.length;
+  let swapped;
+  do {
+    swapped = false;
+    for (let i = 0; i < n - 1; i++) {
+    if (arr[i] > arr[i + 1]) {
+      [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]; // обмен элементов
+      swapped = true;
+      }
+    }
+  } while (swapped);
+    return arr;
+}
+              `,
+            },
+          ]
+        },
+        {
+          title: "Search function",
+          children: [
+
+          ]
+        },
+        {
+          title: "Strict comparison",
+          children: [
+            {
+              title: "Использование строгого сравнения в JavaScript",
+              type: "code",
+              description: `
+                <p>В JavaScript есть два типа сравнения: нестрогое (==) и строгое (===).</p>
+                <ul>
+                  <li><strong>Нестрогое сравнение (==)</strong>: Приводит операнды к одному типу перед сравнением.</li>
+                  <li><strong>Строгое сравнение (===)</strong>: Сравнивает как значение, так и тип данных.</li>
+                </ul>
+                <p>Вот примеры использования строгого сравнения:</p>
+              `,
+              code: `
+// Пример нестрогого сравнения
+console.log(5 == '5'); // true
+console.log(null == undefined); // true
+
+// Пример строгого сравнения
+console.log(5 === '5'); // false
+console.log(null === undefined); // false
+
+// Строгое сравнение с разными типами
+console.log(1 === 1); // true
+console.log(true === 1); // false
+              `,
+            },
+          ],
+        },
+        {
+          title: "Scope",
+          children: [
+            {
+              title: "1. Определение Scope",
+              type: "text",
+              description: `
+                <p>Scope (область видимости) в JavaScript определяет, где переменные, функции и объекты доступны для использования в коде.</p>
+              `,
+            },
+            {
+              title: "2. Типы области видимости",
+              type: "text",
+              description: `
+                <p>В JavaScript существуют два основных типа области видимости:</p>
+                <ul>
+                  <li><strong>Глобальная область видимости:</strong> Переменные, объявленные вне любой функции, доступны везде в коде.</li>
+                  <li><strong>Локальная область видимости:</strong> Переменные, объявленные внутри функции, доступны только внутри этой функции.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "3. Области видимости с использованием let и const",
+              type: "text",
+              description: `
+                <p>Переменные, объявленные с помощью <code>let</code> и <code>const</code>, имеют блочную область видимости, что означает, что они доступны только внутри блока кода (например, внутри фигурных скобок).</p>
+              `,
+            },
+            {
+              title: "4. Пример глобальной области видимости",
+              type: "code",
+              description: `
+                <p>Пример глобальной области видимости:</p>
+              `,
+              code: `
+var globalVar = "I'm global!";
+
+function testGlobal() {
+  console.log(globalVar); // Доступно
+}
+testGlobal();
+              `
+            },
+            {
+              title: "5. Пример локальной области видимости",
+              type: "code",
+              description: `
+                <p>Пример локальной области видимости:</p>
+              `,
+              code: `
+function testLocal() {
+  var localVar = "I'm local!";
+  console.log(localVar); // Доступно
+}
+testLocal();
+console.log(localVar); // ReferenceError: localVar is not defined
+              `
+            },
+            {
+              title: "6. Блочная область видимости",
+              type: "code",
+              description: `
+                <p>Пример блочной области видимости с let:</p>
+              `,
+              code: `
+{
+  let blockVar = "I'm in a block!";
+  console.log(blockVar); // Доступно
+}
+console.log(blockVar); // ReferenceError: blockVar is not defined
+              `
+            },
+            {
+              title: "7. Иерархия области видимости",
+              type: "text",
+              description: `
+                <p>JavaScript использует иерархию области видимости, что означает, что внутренняя функция имеет доступ к переменным своей внешней функции.</p>
+              `,
+            },
+            {
+              title: "8. Пример иерархии области видимости",
+              type: "code",
+              description: `
+                <p>Пример иерархии области видимости:</p>
+              `,
+              code: `
+function outerFunction() {
+  var outerVar = "I'm outside!";
+  
+  function innerFunction() {
+    console.log(outerVar); // Доступно
+  }
+  innerFunction();
+}
+outerFunction();
+              `
+            },
+          ],
+        },
+        {
+          title: "Temporal Dead Zone / Временная мертвая зона",
+          children: [
+            {
+              title: "1. Определение Temporal Dead Zone",
+              type: "text",
+              description: `
+                <p>Temporal Dead Zone (TDZ) - это область кода в JavaScript, где переменная не может быть доступна, даже если она была объявлена. Это происходит до момента, когда она инициализирована.</p>
+                <p>TDZ применяется к переменным, объявленным с помощью <code>let</code> и <code>const</code>.</p>
+              `,
+            },
+            {
+              title: "2. Как работает Temporal Dead Zone?",
+              type: "text",
+              description: `
+                <p>Когда вы пытаетесь получить доступ к переменной, объявленной с помощью <code>let</code> или <code>const</code>, до её инициализации, JavaScript выбросит ошибку ReferenceError.</p>
+              `,
+            },
+            {
+              title: "3. Пример Temporal Dead Zone",
+              type: "code",
+              description: `
+                <p>Пример, демонстрирующий TDZ:</p>
+              `,
+              code: `
+console.log(a); // ReferenceError: Cannot access 'a' before initialization
+let a = 5;
+              `
+            },
+            {
+              title: "4. Важность понимания TDZ",
+              type: "text",
+              description: `
+                <p>Понимание TDZ важно для предотвращения ошибок в коде:</p>
+                <ul>
+                  <li>Помогает избежать неожиданных ошибок при доступе к переменным.</li>
+                  <li>Способствует лучшему пониманию области видимости и инициализации переменных.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "5. Сравнение с var",
+              type: "text",
+              description: `
+                <p>В отличие от <code>let</code> и <code>const</code>, переменные, объявленные с помощью <code>var</code>, имеют всплытие (hoisting) и могут быть доступны до их объявления, хотя инициализированы они будут только в момент выполнения кода:</p>
+              `,
+            },
+            {
+              title: "6. Пример с var",
+              type: "code",
+              description: `
+                <p>Пример, показывающий поведение <code>var</code>:</p>
+              `,
+              code: `
+console.log(b); // undefined
+var b = 10;
+              `
+            },
+          ],
+        },
+        {
+          title: "Ternary operator and logical operators",
+          children: [
+            {
+              title:
+                "Использование тернарного оператора и логических операторов",
+              type: "code",
+              description: `
+                <p>В JavaScript есть несколько удобных операторов, которые помогают упростить код и избавиться от лишних проверок.</p>
+                <ul>
+                  <li><strong>Тернарный оператор</strong>: Сокращенная форма if-else, позволяет записать условную логику в одной строке.</li>
+                  <li><strong>Оператор нулевого объединения (??)</strong>: Позволяет вернуть правое значение, если левое значение равно null или undefined.</li>
+                  <li><strong>Необязательное связывание (?.)</strong>: Позволяет безопасно получать доступ к вложенным свойствам объектов без необходимости проверки каждой промежуточной ссылки.</li>
+                </ul>
+              `,
+              code: `
+// Пример тернарного оператора
+const age = 18;
+const canVote = (age >= 18) ? "Да" : "Нет";
+console.log(canVote); // "Да"
+
+// Пример оператора нулевого объединения
+const userInput = null;
+const defaultValue = userInput ?? "Значение по умолчанию";
+console.log(defaultValue); // "Значение по умолчанию"
+
+// Пример необязательного связывания
+const user = {
+  profile: {
+    name: "Alice",
+    age: 30,
+  },
+};
+const userCity = user.profile?.city ?? "Город не указан";
+console.log(userCity); // "Город не указан" (поскольку city не существует)
+
+// Пример логического И (&&) и ИЛИ (||)
+const isAuthenticated = true;
+const userRole = isAuthenticated && "admin";
+// вернёт "admin", если isAuthenticated true
+const fallback = userRole || "guest"; // вернёт "guest", если userRole falsy
+              `,
+            },
+          ],
+        },
+        {
+          title: "typeof operator ",
+          children: [
+            {
+              title: "Описание оператора typeof",
+              type: "code",
+              description: `
+                <p><strong>typeof</strong>: Это оператор в JavaScript, который используется для определения типа переменной или выражения. Он возвращает строку, описывающую тип аргумента.</p>
+                <ul>
+                  <li>Примеры типов: "undefined", "boolean", "number", "string", "object", "function", "symbol".</li>
+                </ul>
+              `,
+              code: `
+// Примеры использования оператора typeof
+console.log(typeof undefined); // "undefined"
+console.log(typeof null);      // "object" (это известная ошибка в JavaScript)
+console.log(typeof 42);        // "number"
+console.log(typeof 'hello');   // "string"
+console.log(typeof {});         // "object"
+console.log(typeof [];          // "object"
+console.log(typeof function(){}); // "function"
+              `,
+            },
+            {
+              title: "Практическое применение",
+              type: "code",
+              description: `
+                <p>Оператор typeof часто используется для проверки типов переменных перед выполнением операций:</p>
+              `,
+              code: `
+let value;
+
+if (typeof value === 'undefined') {
+  console.log('Переменная value не инициализирована.');
+}
+
+value = 10;
+
+if (typeof value === 'number') {
+  console.log('value является числом.');
+}
+              `,
+            },
+            {
+              title: "Ограничения оператора typeof",
+              type: "code",
+              description: `
+                <p>Некоторые особенности и ограничения:</p>
+                <ul>
+                  <li>Для объектов и массивов оператор возвращает "object".</li>
+                  <li>Для null он также возвращает "object", что является известной особенностью JavaScript.</li>
+                  <li>Для функций возвращает "function", но это подтип объекта.</li>
+                </ul>
+              `,
+              code: `
+console.log(typeof null);       // "object"
+console.log(typeof [1, 2, 3]);  // "object"
+console.log(typeof {};           // "object"
+console.log(typeof (() => {})); // "function"
+              `,
+            },
+            {
+              title: "Вывод",
+              type: "code",
+              description: `
+                <p>Оператор typeof является полезным инструментом в JavaScript для проверки типов данных и может помочь избежать ошибок при работе с переменными.</p>
+              `,
+              code: `
+let value = 'test';
+console.log(typeof value); // "string"
+              `,
+            },
+          ],
+        },
+        {
+          title: "Variables: let, const, var and hoisting / Переменные: let, const, var и хоистинг",
+          children: [
+            {
+              title: "Область видимости переменных",
+              type: "code",
+              description: `
+                <p>В JavaScript есть три типа областей видимости: глобальная, функция и блок.</p>
+                <ul>
+                  <li><strong>Глобальная</strong>: Переменные, доступные во всем скрипте.</li>
+                  <li><strong>Функция</strong>: Переменные, доступные только внутри функции.</li>
+                  <li><strong>Блок</strong>: Переменные, объявленные внутри блока (например, внутри 'if', 'for', и т. д.).</li>
+                </ul>
+              `,
+              code: `
+let globalVar = 'I'm global';
+
+function testScope() {
+  let functionVar = 'I'm local to function';
+  if (true) {
+    let blockVar = 'I exist only in this block';
+    console.log(blockVar); // доступен здесь
+  }
+  console.log(functionVar); // доступен здесь
+  // console.log(blockVar); // ошибка: blockVar не доступен здесь
+}
+console.log(globalVar); // доступен здесь
+              `,
+            },
+            {
+              title: "Описание переменных",
+              type: "code",
+              description: `
+                <p><strong>var</strong>: Используется для объявления переменных. Переменные, объявленные с помощью var, имеют функциональную или глобальную область видимости и могут быть переопределены. Они также подвержены механизму поднятия (hoisting).</p>
+                <p><strong>let</strong>: Вводится в ES6 (ECMAScript 2015). Используется для объявления переменных с блочной областью видимости. Переменные, объявленные с помощью let, не могут быть переопределены в пределах одной и той же области видимости. Также подвержены подъеманию, но не инициализируются до фактической строки кода.</p>
+                <p><strong>const</strong>: Также введена в ES6. Используется для объявления констант, значение которых не может быть переопределено. Как и let, имеет блочную область видимости.</p>
+              `,
+              code: `
+var a = 'Hello';
+console.log(a); // 'Hello'
+
+let b = 'World';
+console.log(b); // 'World'
+
+const c = '!';
+console.log(c); // '!'
+              `,
+            },
+            {
+              title: "Сравнение области видимости",
+              type: "code",
+              description: `
+                <p>Область видимости переменных var, let и const:</p>
+                <ul>
+                  <li><strong>var</strong>: Функциональная или глобальная область видимости.</li>
+                  <li><strong>let</strong> и <strong>const</strong>: Блочная область видимости.</li>
+                </ul>
+              `,
+              code: `
+if (true) {
+  var x = 10;
+  let y = 20;
+  const z = 30;
+}
+
+console.log(x); // 10
+console.log(y); // ReferenceError: y is not defined
+console.log(z); // ReferenceError: z is not defined
+              `,
+            },
+            {
+              title: "Hoisting / Подъем переменных",
+              type: "code",
+              description: `
+                <p>Все три типа переменных поднимаются, но их инициализация происходит на разных стадиях:</p>
+              `,
+              code: `
+console.log(aVar); // undefined (подъем, но не инициализация)
+var aVar = 'test';
+
+// console.log(aLet); // ReferenceError: Cannot access 'aLet' before initialization
+let aLet = 'test';
+
+// console.log(aConst); // ReferenceError: Cannot access 'aConst' before initialization
+const aConst = 'test';
+              `,
+            },
+            {
+              title: "Использование",
+              type: "code",
+              description: `
+                <p>Рекомендуется использовать let и const вместо var, чтобы избежать неожиданных ошибок и путаницы:</p>
+              `,
+              code: `
+let name = 'John';
+const age = 30;
+
+name = 'Doe'; // корректно, значение переменной может меняться
+// age = 31; // TypeError: Assignment to constant variable. (ошибка)
+              `,
+            },
+            {
+              title: "Вывод",
+              type: "code",
+              description: `
+                <p>Необходимо использовать let и const в современных приложениях, чтобы избежать проблем с областью видимости, поднятием и переопределением переменных.</p>
+              `,
+              code: `
+if (true) {
+  let message = "Hello, block!";
+  console.log(message); // "Hello, block!"
+}
+// console.log(message); // ReferenceError: message is not defined
+              `,
+            },
+          ],
+        },
+        {
+          title: "Variable declarations / Объявления переменных",
+          children: [
+            {
+              title: "1. Использование var",
+              type: "code",
+              description: `
+                <p><strong>var</strong>: Объявляет переменную с функциональной или глобальной областью видимости.</p>
+                <ul>
+                  <li>Переменные, объявленные с помощью <code>var</code>, могут быть переопределены.</li>
+                  <li>Подвержены механизму поднятия (hoisting).</li>
+                </ul>
+              `,
+              code: `
+var name = 'Alice';
+console.log(name); // 'Alice'
+var name = 'Bob'; // переопределение
+console.log(name); // 'Bob'
+              `,
+            },
+            {
+              title: "2. Использование let",
+              type: "code",
+              description: `
+                <p><strong>let</strong>: Объявляет переменную с блочной областью видимости.</p>
+                <ul>
+                  <li>Переменные, объявленные с помощью <code>let</code>, не могут быть переопределены в пределах одной области видимости.</li>
+                  <li>Также подвержены поднятию, но не инициализируются до фактической строки кода.</li>
+                </ul>
+              `,
+              code: `
+let age = 25;
+console.log(age); // 25
+// let age = 30; // ошибка: Identifier 'age' has already been declared
+              `,
+            },
+            {
+              title: "3. Использование const",
+              type: "code",
+              description: `
+                <p><strong>const</strong>: Объявляет константу, значение которой не может быть переопределено.</p>
+                <ul>
+                  <li>Имеет блочную область видимости.</li>
+                  <li>Объявленные с помощью <code>const</code> переменные должны быть инициализированы при объявлении.</li>
+                </ul>
+              `,
+              code: `
+const pi = 3.14;
+console.log(pi); // 3.14
+// pi = 3.14159; // ошибка: Assignment to constant variable.
+              `,
+            },
+            {
+              title: "4. Групповое объявление",
+              type: "code",
+              description: `
+                <p>Можно объявить несколько переменных в одной строке:</p>
+              `,
+              code: `
+let x = 10, y = 20, z = 30;
+console.log(x, y, z); // 10 20 30
+              `,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: "React",
+      children: [
+        {
+          title: "React JS",
+          children: [
+            {
+              title: "Introduction to React JS",
+              type: "link",
+              url: "https://it-shpora.pp.ua/category/react/",
+            },
+            {
+              title: "Advanced React JS",
+              type: "link",
+              url: "https://devdocs.io/react/",
+            },
+            {
+              title: "Storybook",
+              type: "link",
+              url: "https://storybook.js.org/docs/writing-stories",
+            },
+            {
+              title: "React JS Drag to Select",
+              type: "link",
+              url: "https://www.joshuawootonn.com/react-drag-to-select",
+            },
+          ],
+        },
+        {
+          title: "React TS",
+          children: [
+            {
+              title: "Introduction to React TypeScript",
+              type: "link",
+              url: "https://it-shpora.pp.ua/category/react-typescript/",
+            },
+            {
+              title: "Advanced React Typescript",
+              type: "link",
+              url: "https://reactjs.org/docs/getting-started",
+            },
+          ],
+        },
+        {
+          title: "React Native",
+          children: [
+            {
+              title: "Introduction to React Native",
+              type: "link",
+              url: "https://it-shpora.pp.ua/category/react-native/",
+            },
+            {
+              title: "Advanced React Native",
+              type: "link",
+              url: "https://reactnative.dev/",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Next.js",
+      children: [
+        {
+          title: "Next.js Crash Course Tutorial",
+          children: [
+            {
+              title: "#1 - Introduction & New Features",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=TJQbDPGzm0Y&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT",
+            },
+            {
+              title: "#2 - SSR & Server Components (theory)",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=YEG2_fSJswc&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=2",
+            },
+            {
+              title: "#3 - Pages & Routes",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=vwg4Wrk-kWE&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=3",
+            },
+            {
+              title: "#4 - Layouts & Links",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=R7A5vBDfZ18&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=4",
+            },
+            {
+              title: "#5 - Styles, Fonts & Images",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=oWUQQD97Rz0&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=5",
+            },
+            {
+              title: "#6 - Fetching & Revalidating Data",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=PAXWRgEo7Ns&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=6",
+            },
+            {
+              title: "#7 - Dynamic Segments (Params)",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=ZwajQ9ywgIU&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=7",
+            },
+            {
+              title: "#8 - Static Rendering",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=ihmyC4Ei2zY&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=8",
+            },
+            {
+              title: "#9 - Custom 404 Page",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=PbFH_VE1Iks&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=9",
+            },
+            {
+              title: "#10 - Loading UI & Suspense",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=Lzml9L3f4IM&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=10",
+            },
+            {
+              title: "#11 - Client Form Component",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=nSfu7sHPE9M&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=11",
+            },
+            {
+              title: "#12 - Building the App",
+              type: "video",
+              url: "https://www.youtube.com/embed?v=Yi_zS8jSln8&list=PL4cUxeGkcC9jZIVqmy_QhfQdi6mzQvJnT&index=12",
+            },
+          ],
+        },
+        {
+          title: "Routing",
+          children: [
+            {
+              title: "Learn more about routing",
+              description:
+                "The skeleton of every application is routing. This page will introduce you to the fundamental concepts of routing for the web and how to handle routing in Next.js.",
+              type: "link",
+              url: "https://nextjs.org/docs/app/building-your-application/routing#terminology",
+            },
+          ],
+        },
+      ],
+    },
+    {
       title: "Patterns, principles, methodologies",
       children: [
         {
@@ -4526,9 +5357,9 @@ console.log(typeof value); // "string"
                 <p>Пример хорошего кода с понятными названиями:</p>
               `,
               code: `
-  function calculateArea(radius) {
+function calculateArea(radius) {
   return Math.PI * radius * radius;
-  }
+}
               `,
             },
             {
@@ -4538,9 +5369,9 @@ console.log(typeof value); // "string"
                 <p>Пример плохого кода с непонятными названиями:</p>
               `,
               code: `
-  function c(r) {
+function c(r) {
   return 3.14 * r * r;
-  }
+}
               `,
             },
             {
@@ -4640,7 +5471,7 @@ console.log(typeof value); // "string"
           ]
         },
         {
-          title: "Design patterns",
+          title: "Design patterns / Шаблоны проектирования",
           children: [
             {
               title: "Определение",
@@ -4701,6 +5532,58 @@ console.log(typeof value); // "string"
           ],
         },
         {
+          title: "Делегирование событий",
+          children: [
+            {
+              title: "1. Что такое делегирование событий?",
+              type: "text",
+              description: `
+                <p>Делегирование событий - это паттерн, при котором обработчик события добавляется к родительскому элементу вместо каждого дочернего элемента.</p>
+                <p>Это позволяет обрабатывать события, возникающие на дочерних элементах, более эффективно.</p>
+              `,
+            },
+            {
+              title: "2. Преимущества делегирования событий",
+              type: "text",
+              description: `
+                <ul>
+                  <li><strong>Упрощение кода:</strong> Меньше обработчиков для управления.</li>
+                  <li><strong>Повышение производительности:</strong> Уменьшение количества обработчиков, особенно при динамическом добавлении элементов.</li>
+                  <li><strong>Легкость в управлении:</strong> Изменение структуры DOM не требует изменения обработчиков.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "3. Пример делегирования событий",
+              type: "code",
+              description: `
+                <p>Пример делегирования событий на списке элементов:</p>
+              `,
+              code: `
+        const list = document.getElementById('myList');
+        
+        list.addEventListener('click', function(event) {
+          if (event.target.tagName === 'LI') {
+            console.log('Элемент списка нажат:', event.target.textContent);
+          }
+        });
+              `
+            },
+            {
+              title: "4. Когда использовать делегирование событий?",
+              type: "text",
+              description: `
+                <p>Делегирование событий полезно, когда:</p>
+                <ul>
+                  <li>Необходимо обрабатывать события на множестве дочерних элементов.</li>
+                  <li>Элементы могут динамически добавляться или удаляться из DOM.</li>
+                  <li>Хотите уменьшить количество обработчиков событий для повышения производительности.</li>
+                </ul>
+              `,
+            },
+          ],
+        },
+        {
           title: "Functional programming",
           children: [
             {
@@ -4742,9 +5625,9 @@ console.log(typeof value); // "string"
                 <p>Пример чистой функции, которая вычисляет сумму двух чисел:</p>
               `,
               code: `
-                function add(a, b) {
-                  return a + b;
-                }
+function add(a, b) {
+  return a + b;
+}
               `,
             },
             {
@@ -4754,15 +5637,15 @@ console.log(typeof value); // "string"
                 <p>Пример функции высшего порядка, которая принимает другую функцию в качестве аргумента:</p>
               `,
               code: `
-                function applyFunction(fn, value) {
-                  return fn(value);
-                }
-        
-                function double(x) {
-                  return x * 2;
-                }
-        
-                const result = applyFunction(double, 5); // 10
+function applyFunction(fn, value) {
+  return fn(value);
+}
+
+function double(x) {
+  return x * 2;
+}
+
+const result = applyFunction(double, 5); // 10
               `,
             },
             {
@@ -4791,11 +5674,11 @@ console.log(typeof value); // "string"
                 <p>Пример императивного подхода на JavaScript:</p>
               `,
               code: `
-                let sum = 0;
-                for (let i = 1; i <= 5; i++) {
-                  sum += i;
-                }
-                console.log(sum); // 15
+let sum = 0;
+for (let i = 1; i <= 5; i++) {
+  sum += i;
+}
+console.log(sum); // 15
               `,
             },
             {
@@ -4812,8 +5695,8 @@ console.log(typeof value); // "string"
                 <p>Пример декларативного подхода на JavaScript:</p>
               `,
               code: `
-                const sum = [1, 2, 3, 4, 5].reduce((acc, curr) => acc + curr, 0);
-                console.log(sum); // 15
+const sum = [1, 2, 3, 4, 5].reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // 15
               `,
             },
             {
@@ -5265,6 +6148,109 @@ console.log(typeof value); // "string"
                   ],
                 },
                 {
+                  title: "Что такое BOM",
+                  children: [
+                    {
+                      title: "Определение BOM",
+                      type: "list",
+                      description: `
+                      <p>BOM (Browser Object Model) — это интерфейс, который предоставляет JavaScript доступ к объектам, представляющим браузер и его окружение. С помощью BOM разработчики могут взаимодействовать с элементами браузера, такими как окно, история, адресная строка и другие аспекты, не относящиеся непосредственно к документу.</p>
+                      `,
+                    },
+                    {
+                      title: "Основные объекты BOM",
+                      type: "list",
+                      description: `
+                        <ul>
+                          <li><strong>window:</strong> Главный объект, представляющий окно браузера. Все другие объекты BOM являются его свойствами.</li>
+                          <li><strong>document:</strong> Объект, представляющий текущий HTML-документ, к которому можно получить доступ через 'window.document'.</li>
+                          <li><strong>navigator:</strong> Объект, предоставляющий информацию о браузере и операционной системе пользователя.</li>
+                          <li><strong>location:</strong> Объект, содержащий информацию о текущем URL и позволяющий изменять его.</li>
+                          <li><strong>history:</strong> Объект, позволяющий взаимодействовать с историей браузера (например, переход назад и вперед).</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Примеры использования BOM",
+                      type: "list",
+                      description: `
+                        <ul>
+                          <li><strong>Изменение URL:</strong> С помощью 'location.href' можно менять адрес текущей страницы.</li>
+                          <li><strong>Получение информации о браузере:</strong> 'navigator.userAgent' позволяет узнать информацию о браузере пользователя.</li>
+                          <li><strong>Управление историей:</strong> 'history.back()' и 'history.forward()' позволяют навигировать по истории посещенных страниц.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Преимущества и недостатки BOM",
+                      type: "list",
+                      description: `
+                        <ul>
+                          <li><strong>Преимущества:</strong> Позволяет взаимодействовать с браузером, что дает возможность создавать более динамичные и интерактивные веб-приложения.</li>
+                          <li><strong>Недостатки:</strong> BOM не стандартизирован, поэтому могут быть различия в реализации между разными браузерами.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Заключение",
+                      type: "paragraph",
+                      description: `
+                        <p>BOM является важной частью разработки веб-приложений, предоставляя доступ к объектам браузера и позволяя создавать более интерактивные интерфейсы. Понимание BOM поможет разработчикам лучше использовать возможности браузера для улучшения пользовательского опыта.</p>
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: "Фазы событий в DOM",
+                  children: [
+                    {
+                      title: "1. Фаза захвата (Capturing Phase)",
+                      type: "text",
+                      description: `
+                        <p>Событие начинает движение от верхнего уровня DOM-дерева к целевому элементу.</p>
+                        <p>Событие "захватывается" верхними элементами, начиная с объекта <code>window</code> и проходя через все родительские элементы.</p>
+                      `,
+                    },
+                    {
+                      title: "2. Фаза целевого элемента (Target Phase)",
+                      type: "text",
+                      description: `
+                        <p>Событие достигает целевого элемента, на который было инициировано.</p>
+                        <p>В этой фазе событие обрабатывается непосредственно целевым элементом.</p>
+                      `,
+                    },
+                    {
+                      title: "3. Фаза всплытия (Bubbling Phase)",
+                      type: "text",
+                      description: `
+                        <p>После обработки события целевым элементом оно начинает всплывать обратно к родительским элементам.</p>
+                        <p>Событие проходит через всех родителей целевого элемента, начиная с непосредственного родителя и до корня документа.</p>
+                      `,
+                    },
+                    {
+                      title: "Пример работы фаз событий",
+                      type: "text",
+                      description: `
+                        <p>1. Пользователь кликает на кнопку внутри <code>&lt;div&gt;</code>.<br>
+                        2. Событие "клик" проходит от объекта <code>window</code> вниз к <code>&lt;div&gt;</code>, затем к кнопке (фаза захвата).<br>
+                        3. Событие обрабатывается кнопкой (фаза целевого элемента).<br>
+                        4. Затем событие "всплывает" обратно к <code>&lt;div&gt;</code> и выше (фаза всплытия).</p>
+                      `,
+                    },
+                    {
+                      title: "Обработка событий",
+                      type: "code",
+                      description: `
+                        <p>Можно указать, в какой фазе будет срабатывать обработчик, используя третий аргумент в <code>addEventListener</code>.</p>
+                      `,
+                      code: `
+element.addEventListener('click', handler, true); // Фаза захвата
+element.addEventListener('click', handler, false); // Фаза всплытия
+                      `
+                    },
+                  ],
+                },
+                {
                   title: "Из чего состоит HTTP запрос",
                   children: [
                     {
@@ -5325,7 +6311,7 @@ console.log(typeof value); // "string"
                   ],
                 },
                 {
-                  title: "Основные события при построении HTML-страницы",
+                  title: "Жизненный цикл страницы: три ключевых события",
                   children: [
                     {
                       title: "Загрузка и парсинг HTML",
@@ -5336,6 +6322,7 @@ console.log(typeof value); // "string"
                           <li><strong>Событие</strong>: Браузер загружает HTML-документ и начинает его парсить.</li>
                           <li><strong>Результат</strong>: Создается дерево элементов (DOM — Document Object Model).</li>
                           <li><strong>Зависимости</strong>: В процессе могут обнаруживаться внешние ресурсы (CSS, JavaScript).</li>
+                          <li><strong>Ключевое событие</strong>: <code>DOMContentLoaded</code> срабатывает, когда HTML полностью загружен и разобран.</li>
                         </ul>
                       `,
                     },
@@ -5359,64 +6346,26 @@ console.log(typeof value); // "string"
                         <ul>
                           <li><strong>Событие</strong>: Браузер создает дерево рендеринга и отображает страницу.</li>
                           <li><strong>Результат</strong>: Объединение DOM и CSSOM для создания визуального представления.</li>
-                          <li><strong>Влияние</strong>: Рендеринг зависит от порядка загрузки и выполнения JavaScript.</li>
-                        </ul>
-                      `,
-                    },
-                  ],
-                },
-                {
-                  title: "Структура классического HTML-документа",
-                  children: [
-                    {
-                      title: "<!DOCTYPE html>",
-                      type: "list",
-                      description: `
-                        <p>Определяет тип документа и версию HTML.</p>
-                        <ul>
-                          <li><strong>Версия</strong>: HTML5.</li>
+                          <li><strong>Ключевое событие</strong>: <code>load</code> срабатывает, когда вся страница и ее зависимости загружены.</li>
                         </ul>
                       `,
                     },
                     {
-                      title: "<html>",
+                      title: "Закрытие (beforeunload)",
                       type: "list",
                       description: `
-                        <p>Корневой элемент документа.</p>
-                        <ul>
-                          <li><strong>Атрибуты</strong>: может содержать атрибуты, такие как lang.</li>
-                        </ul>
-                      `,
-                    },
-                    {
-                      title: "<head>",
-                      type: "list",
-                      description: `
-                        <p>Содержит метаданные о документе.</p>
-                        <ul>
-                          <li><strong>meta charset="UTF-8"</strong>: Устанавливает кодировку документа.</li>
-                          <li><strong>meta name="viewport"</strong>: Настройки для адаптивного дизайна.</li>
-                          <li><strong>title </strong>: Заголовок, отображаемый в заголовке вкладки браузера.</li>
-                          <li><strong>link </strong>: Подключение CSS-файлов.</li>
-                          <li><strong>script </strong>: Подключение JavaScript-файлов.</li>
-                        </ul>
-                      `,
-                    },
-                    {
-                      title: "<body>",
-                      type: "list",
-                      description: `
-                        <p>Основное содержимое документа.</p>
-                        <ul>
-                          <li><strong>header</strong>: Заголовок сайта, может содержать навигацию.</li>
-                          <li><strong>main</strong>: Основной контент страницы.</li>
-                          <li><strong>footer</strong>: Нижний колонтитул, содержащий информацию о правами и другие ссылки.</li>
-                        </ul>
+                        <p>Событие 'beforeunload' срабатывает, когда пользователь пытается покинуть страницу или обновить ее. Оно позволяет разработчикам предупреждать пользователей о том, что у них есть несохраненные изменения, и дает возможность предотвратить случайное закрытие страницы.</p>
                       `,
                     },
                   ],
                 },
               ],
+            },
+            {
+              title: "HTML/CSS questions",
+              children: [
+                
+              ]
             },
             {
               title: "JS questions",
@@ -5463,11 +6412,11 @@ console.log(typeof value); // "string"
                         </ul>
                       `,
                       code: `
-  function factorial(n) {
-    if (n < 0) return -1; // факториал не существует для отрицательных чисел
-    if (n === 0) return 1; // 0! = 1
-    return n * factorial(n - 1); // рекурсивный вызов
-  }
+function factorial(n) {
+  if (n < 0) return -1; // факториал не существует для отрицательных чисел
+  if (n === 0) return 1; // 0! = 1
+  return n * factorial(n - 1); // рекурсивный вызов
+}
                       `,
                     },
                   ],
@@ -5550,10 +6499,11 @@ console.log(typeof value); // "string"
                       type: "list",
                       description: `
                         <ul>
-                          <li>Состав базовой HTML-страницы.</li>
+                          <li>Структура HTML документа.</li>
                           <li>Способы подключения стилей в HTML.</li>
                           <li>На что нужно обратить внимание при разработке мультиязычных сайтов?</li>
                           <li>Что такое DOCTYPE и зачем он нужен?</li>
+                          <li>Что такое BEM?</li>
                         </ul>
                       `,
                     },
@@ -5630,6 +6580,13 @@ console.log(typeof value); // "string"
                           <li>Почему результатом сравнения двух похожих объектов является false.</li>
                           <li>Как создать объект, не имеющий прототипа.</li>
                           <li>Что такое замыкания и как они работают?</li>
+                          <li>Что такое this в JavaScript?</li>
+                          <li>Что такое стрелочные функции?</li>
+                          <li>Какие существуют способы передачи функции в качестве аргумента?</li>
+                          <li>Что такое «call()» и как они работают?</li>
+                          <li>Что такое «apply()» и как они работают?</li>
+                          <li>Что такое «bind()» и как они работают?</li>
+                          <li>Какие аргументы у addEventListener()?</li>
                         </ul>
                       `,
                     },
@@ -5665,6 +6622,7 @@ console.log(typeof value); // "string"
                           <li>Чем отличается Map от WeakMap?</li>
                           <li>Чем отличается Set от WeakSet?</li>
                           <li>Как работает сборщик мусора в JS?</li>
+                          <li>Живые и неживые коллекции?</li>
                         </ul>
                       `,
                     },
@@ -5676,6 +6634,7 @@ console.log(typeof value); // "string"
                           <li>Как получить доступ к элементу DOM?</li>
                           <li>Как отследить изменения поля объекта в функциональном компоненте?</li>
                           <li>Как добавить и удалить элементы из DOM?</li>
+                          <li>Фазы событий в DOM?</li>
                         </ul>
                       `,
                     },
@@ -5710,12 +6669,33 @@ console.log(typeof value); // "string"
                       description: `
                         <ul>
                           <li>Как работает механизм замыкания?</li>
-                          <li>Что такое hoisting и как он работает?</li>
                           <li>Каковы особенности работы с асинхронным кодом?</li>
                           <li>Что такое Event Loop в JavaScript?</li>
+                          <li>Отмена всплытия и погружения событий?</li>
+                          <li>Как работает прототипная подстановка?</li>
+                          <li>Отмена действий браузера по умолчанию?</li>
+                          <li>Делегирование событий?</li>
+                          <li>CRP (Cross-Origin Resource Policy)?</li>
+                          <li>Как работают заголовки CORS?</li>
+                          <li>Глобальный объект window и его свойства и методы?</li>
+                          <li>Что такое Scope?</li>
+                          <li>Что такое hoisting и как он работает?</li>
+                          <li>Что такое Temporal Dead Zone?</li>
                         </ul>
                       `,
                     },
+                    {
+                      title: "Остальные вопросы",
+                      type: "list",
+                      description: `
+                        <ul>
+                          <li>Bind, call, apply можно использовать на стрелочных функциях ?</li>
+                          <li>Какой контекст берет стрелочная функция в объекте / в классе?</li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                      `
+                    }
                   ],
                 },
                 {
@@ -5770,6 +6750,7 @@ console.log(typeof value); // "string"
                           <li>Websocket</li>
                           <li>SSE</li>
                           <li>CORS</li>
+                          <li>CRP</li>
                           <li>REST</li>
                         </ul>
                       `,
@@ -5794,6 +6775,7 @@ console.log(typeof value); // "string"
                           <li>Как работает механизм JWT?</li>
                           <li>Что такое идемпотентность и когда она важна?</li>
                           <li>Как обрабатывать ошибки в HTTP?</li>
+                          <li>Что происходит когда пользователь переходит по ссылке?</li>
                         </ul>
                       `,
                     },
@@ -6034,6 +7016,11 @@ console.log(typeof value); // "string"
         {
           title: "Definitions",
           children: [
+            {
+              title: "",
+              type: "list",
+              description: `<strong>BEM</strong> — это парадигма, которая используется для описания структуры элементов интерфейса.`,
+            },
             {
               title: "",
               type: "list",
