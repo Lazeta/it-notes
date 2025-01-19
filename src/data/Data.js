@@ -3742,6 +3742,74 @@ myInnerFunction(); // Вывод: "I am outside!"
           ],
         },
         {
+          title: "Linear equation / Линейное уравнение",
+          children: [
+            {
+              title: "1. Определение линейного уравнения",
+              type: "text",
+              description: `
+                <p>Линейное уравнение - это алгебраическое уравнение, в котором каждая переменная имеет степень 1. Общее уравнение с двумя переменными (x и y) имеет вид:</p>
+                <p><code>ax + by = c</code>,</p>
+                <p>где <code>a</code> и <code>b</code> - коэффициенты, <code>x</code> и <code>y</code> - переменные, <code>c</code> - константа.</p>
+              `,
+            },
+            {
+              title: "2. Графическое представление",
+              type: "text",
+              description: `
+                <p>График линейного уравнения представляет собой прямую линию в координатной плоскости. Угловой коэффициент определяет наклон этой линии, а y-перехват указывает, где линия пересекает ось y.</p>
+              `,
+            },
+            {
+              title: "3. Пример линейного уравнения",
+              type: "code",
+              description: `
+                <p>Пример линейного уравнения в стандартной форме:</p>
+              `,
+              code: `
+2x + 3y = 6
+              `
+            },
+            {
+              title: "4. Преобразование в форму с угловым коэффициентом",
+              type: "code",
+              description: `
+                <p>Преобразование стандартного уравнения в форму с угловым коэффициентом:</p>
+              `,
+              code: `
+y = -\\frac{2}{3}x + 2
+              `
+            },
+            {
+              title: "5. Пример кода для решения линейного уравнения",
+              type: "code",
+              description: `
+                <p>Пример кода на JavaScript, который решает линейное уравнение:</p>
+              `,
+              code: `
+function solveLinearEquation(a, b, c) {
+  // Решение уравнения ax + by = c для y
+  let y = (c - a) / b;
+  return y;
+}
+
+let a = 2;
+let b = 3;
+let c = 6;
+
+console.log(solveLinearEquation(a, b, c)); // Вывод: 0
+              `
+            },
+            {
+              title: "6. Применение линейных уравнений",
+              type: "text",
+              description: `
+                <p>Линейные уравнения используются в различных областях, таких как экономика, физика и инженерное дело. Они помогают моделировать отношения между переменными и находить решения для различных задач.</p>
+              `,
+            },
+          ],
+        },
+        {
           title: "Methods",
           children: [
             {
@@ -3970,17 +4038,17 @@ myInnerFunction(); // Вывод: "I am outside!"
               children: [
                 {
                   title:
-                    "1.toFixed() => форматирует число с использованием записи с фиксированной запятой.",
+                    "1.toFixed(number) => форматирует число с использованием записи с фиксированной запятой. Аргументам принимает количество знаков после запяты.",
                   type: "title",
                 },
                 {
                   title:
-                    "2.parseFloat() => принимает строку в качестве аргумента и возвращает число с плавающей точной.",
+                    "2.parseFloat(string) => принимает строку в качестве аргумента и возвращает число с плавающей точной.",
                   type: "title",
                 },
                 {
                   title:
-                    "3.parseInt() => принимает строку в качестве аргумента и возвращает целое число в соответствии с указанной системой счисления.",
+                    "3.parseInt(string, radix) => принимает строку в качестве аргумента и возвращает целое число в соответствии с указанной системой счисления.",
                   type: "title",
                 },
                 {
@@ -4287,7 +4355,7 @@ console.log(Number.isNaN(undefined)); // false
               title: "1. Что такое действия по умолчанию?",
               type: "text",
               description: `
-                <p>Действия по умолчанию - это стандартные реакции браузера на определенные события, например:</p>
+                <p>Действия по умолчанию - это стандартные действия браузера на определенные события, например:</p>
                 <ul>
                   <li>Переход по ссылке при клике на элемент <code>&lt;a&gt;</code>.</li>
                   <li>Отправка формы при нажатии кнопки <code>&lt;button&gt;</code>.</li>
@@ -5179,6 +5247,319 @@ console.log(x, y, z); // 10 20 30
             },
           ],
         },
+        {
+          title: "Tasks",
+          children: [
+            {
+              title: "Task 1",
+              children: [
+                {
+                  title: "Count Odd Numbers below n",
+                  type: 'code',
+                  description: `
+                    Given a number n, return the number of positive odd numbers below n, EASY!
+    
+                    Examples (Input -> Output)
+                    7  -> 3 (because odd numbers below 7 are [1, 3, 5])
+                    15 -> 7 (because odd numbers below 15 are [1, 3, 5, 7, 9, 11, 13])
+                    Expect large Inputs!
+                  `,
+                  code: `
+function oddCount(n){
+  if (n <= 0){
+    return 0
+  }
+  if (n % 2 === 0){
+    return n / 2
+  } else {
+    return (n - 1) / 2
+  }
+}
+
+// or
+
+function oddCount(n){
+  return n % 2 === 0 ? n / 2 : (n - 1) / 2 
+}
+
+// or 
+
+const oddCount = n => n % 2 === 0 ? n / 2 : (n - 1) / 2
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 2",
+              children: [
+                {
+                  title: "Pole Vault Starting Marks",
+                  type: 'code',
+                  description: `
+                  For a pole vaulter, it is very important to begin the approach run at the best possible starting mark. This is affected by numerous factors and requires fine-tuning in practice. But there is a guideline that will help a beginning vaulter start at approximately the right location for the so-called "three-step approach," based on the vaulter's body height.
+                  This guideline was taught to me in feet and inches, but due to the international nature of Codewars, I am creating this kata to use metric units instead.
+                  You are given the following two guidelines to begin with: (1) A vaulter with a height of 1.52 meters should start at 9.45 meters on the runway. (2) A vaulter with a height of 1.83 meters should start at 10.67 meters on the runway.
+                  You will receive a vaulter's height in meters (which will always lie in a range between a minimum of 1.22 meters and a maximum of 2.13 meters). Your job is to return the best starting mark in meters, rounded to two decimal places.
+                  Hint: Based on the two guidelines given above, you will want to account for the change in starting mark per change in body height. This involves a linear relationship. (If you're not clear on that, search online for "linear equation.") But there is also a constant offset involved. If you can determine the rate of change described above, you should be able to determine that constant offset.
+                  `,
+                  code: `
+// Remember: Body height of 1.52 m --> starting mark: 9.45 m
+//           Body height of 1.83 m --> starting mark: 10.67 m
+// All other starting marks are based on these guidelines!
+
+function startingMark(bodyHeight){
+  const slope = (10.67 - 9.45) / (1.83 - 1.52)
+  const freeMember = 9.45 - (slope * 1.52)
+  const result = slope * bodyHeight + freeMember
+  return parseFloat(result.toFixed(2))
+}
+
+// or
+
+const startingMark = bodyHeight => {
+  const slope = (10.67 - 9.45)/(1.83 - 1.52);
+  const freeMember = 9.45 - (slope * 1.52);
+  const x = slope * bodyHeight + freeMember;
+  return parseFloat(x.toFixed(2)) 
+}
+
+// or 
+
+function startingMark(bodyHeight) {
+  let a = {x: 1.52, y: 9.45},
+      b = {x: 1.83, y: 10.67},
+      slope = (b.y - a.y) / (b.x - a.x);
+  return Math.round((slope * bodyHeight + b.y - slope * b.x) * 100) / 100;
+}
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 3",
+              children: [
+                {
+                  title: "Playing with cubes II",
+                  type: 'code',
+                  description: `
+                  Hey Codewarrior!
+                  In the previous kata, you have implemented a Cube class, but now we need your help again! I'm talking about constructors. We don't have one. Let's code one (or more) such that one can instantiate an object via it, handling either no arguments or a single integer. 
+                  Also we got a problem with negative values. Correct the code so negative values will be switched to positive ones!    
+                  The constructor taking no arguments should assign 0 to Cube's Side property.
+                  `,
+                  code: `
+// This Cube class needs help
+// Implement the constructor so that it can take an integer for the side or no args
+class Cube {
+  
+  getSide() {
+    return this.side; 
+  }
+  setSide(n) {
+    this.side = Math.abs(n);
+  }
+}
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 4",
+              children: [
+                {
+                  title: "title",
+                  type: 'code',
+                  description: `
+                    word
+                  `,
+                  code: `
+                  // code 
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 5",
+              children: [
+                {
+                  title: "title",
+                  type: 'code',
+                  description: `
+                    word
+                  `,
+                  code: `
+                  // code 
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 6",
+              children: [
+                {
+                  title: "title",
+                  type: 'code',
+                  description: `
+                    word
+                  `,
+                  code: `
+                  // code 
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 7",
+              children: [
+                {
+                  title: "title",
+                  type: 'code',
+                  description: `
+                    word
+                  `,
+                  code: `
+                  // code 
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 8",
+              children: [
+                {
+                  title: "title",
+                  type: 'code',
+                  description: `
+                    word
+                  `,
+                  code: `
+                  // code 
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 9",
+              children: [
+                {
+                  title: "title",
+                  type: 'code',
+                  description: `
+                    word
+                  `,
+                  code: `
+                  // code 
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 10",
+              children: [
+                {
+                  title: "title",
+                  type: 'code',
+                  description: `
+                    word
+                  `,
+                  code: `
+                  // code 
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 11",
+              children: [
+                {
+                  title: "title",
+                  type: 'code',
+                  description: `
+                    word
+                  `,
+                  code: `
+                  // code 
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 12",
+              children: [
+                {
+                  title: "title",
+                  type: 'code',
+                  description: `
+                    word
+                  `,
+                  code: `
+                  // code 
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 13",
+              children: [
+                {
+                  title: "title",
+                  type: 'code',
+                  description: `
+                    word
+                  `,
+                  code: `
+                  // code 
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 14",
+              children: [
+                {
+                  title: "title",
+                  type: 'code',
+                  description: `
+                    word
+                  `,
+                  code: `
+                  // code 
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 15",
+              children: [
+                {
+                  title: "title",
+                  type: 'code',
+                  description: `
+                    word
+                  `,
+                  code: `
+                  // code 
+                  `,
+                }
+              ]
+            },
+            {
+              title: "Task 16",
+              children: [
+                {
+                  title: "title",
+                  type: 'code',
+                  description: `
+                    word
+                  `,
+                  code: `
+                  // code 
+                  `,
+                }
+              ]
+            }
+          ]
+        }
       ],
     },
     {
