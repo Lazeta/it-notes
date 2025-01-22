@@ -1547,8 +1547,7 @@ font-weight: bold;
                   title: "Коробчатая модель (box-sizing)",
                   children: [
                     {
-                      title:
-                        "Коробчатая модель описывает пространство, занимаемое элементом",
+                      title: "Коробчатая модель описывает пространство, занимаемое элементом",
                       type: "code",
                       description: `
                         <p>Она включает в себя следующие свойства:</p>
@@ -1561,12 +1560,39 @@ font-weight: bold;
                         <p>Пример:</p>
                       `,
                       code: `
-div {
-  margin: 10px;
-  border: 1px solid black;
-  padding: 5px;
-  width: 100px;
-}
+                div {
+                  margin: 10px;
+                  border: 1px solid black;
+                  padding: 5px;
+                  width: 100px;
+                }
+                      `,
+                    },
+                    {
+                      title: "Зачем нужен box-sizing?",
+                      type: "text",
+                      description: `
+                        <p>Свойство <code>box-sizing</code> определяет, как рассчитывается ширина и высота элемента. Оно позволяет избежать путаницы с размерами элементов, особенно когда используются отступы и границы. Без <code>box-sizing: border-box</code>, добавление <strong>padding</strong> и <strong>border</strong> увеличивает фактические размеры элемента, что может привести к нежелательным эффектам, особенно в макетах на основе сеток.</p>
+                        <p>С помощью <code>box-sizing: border-box</code> вы можете установить ширину и высоту элемента так, чтобы они включали в себя <strong>padding</strong> и <strong>border</strong>, что делает управление размерами более предсказуемым.</p>
+                      `,
+                    },
+                    {
+                      title: "Пример использования box-sizing",
+                      type: "code",
+                      description: `
+                        <p>Пример применения свойства <code>box-sizing</code>:</p>
+                      `,
+                      code: `
+                * {
+                  box-sizing: border-box;
+                }
+                
+                div {
+                  margin: 10px;
+                  border: 1px solid black;
+                  padding: 5px;
+                  width: 100px; // Включает в себя padding и border
+                }
                       `,
                     },
                   ],
@@ -2070,7 +2096,60 @@ circle.setAttribute("stroke", "yellow"); // Изменяем цвет обвод
           title: "Структура HTML документа",
           children: [
             {
-              title: "<!DOCTYPE html>",
+              title: "<!DOCTYPE html>",{
+                title: "Коробчатая модель (box-sizing)",
+                children: [
+                  {
+                    title: "Коробчатая модель описывает пространство, занимаемое элементом",
+                    type: "code",
+                    description: `
+                      <p>Она включает в себя следующие свойства:</p>
+                      <ul>
+                        <li><strong>Content</strong>: Содержимое элемента.</li>
+                        <li><strong>Padding</strong>: Поля вокруг содержимого.</li>
+                        <li><strong>Border</strong>: Граница вокруг элемента.</li>
+                        <li><strong>Margin</strong>: Отступы между элементами.</li>
+                      </ul>
+                      <p>Пример:</p>
+                    `,
+                    code: `
+              div {
+                margin: 10px;
+                border: 1px solid black;
+                padding: 5px;
+                width: 100px;
+              }
+                    `,
+                  },
+                  {
+                    title: "Зачем нужен box-sizing?",
+                    type: "text",
+                    description: `
+                      <p>Свойство <code>box-sizing</code> определяет, как рассчитывается ширина и высота элемента. Оно позволяет избежать путаницы с размерами элементов, особенно когда используются отступы и границы. Без <code>box-sizing: border-box</code>, добавление <strong>padding</strong> и <strong>border</strong> увеличивает фактические размеры элемента, что может привести к нежелательным эффектам, особенно в макетах на основе сеток.</p>
+                      <p>С помощью <code>box-sizing: border-box</code> вы можете установить ширину и высоту элемента так, чтобы они включали в себя <strong>padding</strong> и <strong>border</strong>, что делает управление размерами более предсказуемым.</p>
+                    `,
+                  },
+                  {
+                    title: "Пример использования box-sizing",
+                    type: "code",
+                    description: `
+                      <p>Пример применения свойства <code>box-sizing</code>:</p>
+                    `,
+                    code: `
+              * {
+                box-sizing: border-box;
+              }
+              
+              div {
+                margin: 10px;
+                border: 1px solid black;
+                padding: 5px;
+                width: 100px; // Включает в себя padding и border
+              }
+                    `,
+                  },
+                ],
+              }
               type: "list",
               description: `
                 <p>Объявляет тип документа и версию HTML:</p>
@@ -3079,7 +3158,8 @@ greet(); // "Hi!"
               title: "Стрелочные функции",
               type: "code",
               description: `
-                <p><strong>Стрелочные функции</strong>: Это упрощенный синтаксис для объявления функций, введенный в ES6. Они не имеют собственного значения <code>this</code> и не могут быть использованы в качестве конструктора.</p>
+                <p><strong>Стрелочные функции</strong>: Это упрощенный синтаксис для объявления функций, введенный в ES6. Они не имеют собственного значения <code>this</code> и не могут быть использованы 
+                в качестве конструктора.</p>
               `,
               code: `
 const multiply = (x, y) => x * y;
@@ -3114,7 +3194,8 @@ console.log(squareArrow(4)); // 16
               title: "Преимущества",
               type: "code",
               description: `
-                <p>Стрелочные функции обеспечивают более лаконичный синтаксис и удобнее работают с <code>this</code> в контексте методов, так как они наследуют <code>this</code> от родительской области видимости.</p>
+                <p>Стрелочные функции обеспечивают более лаконичный синтаксис и удобнее работают с <code>this</code> в контексте методов, так как они наследуют <code>this</code> 
+                от родительской области видимости.</p>
               `,
               code: `
 const obj = {
@@ -5351,11 +5432,27 @@ function startingMark(bodyHeight) {
 // This Cube class needs help
 // Implement the constructor so that it can take an integer for the side or no args
 class Cube {
-  
+  constructor(side){
+    this.side = (side !== undefined) ? Math.abs(side) : 0
+  }
   getSide() {
     return this.side; 
   }
   setSide(n) {
+    this.side = Math.abs(n);
+  }
+}
+
+// or
+
+class Cube {
+  constructor(side){
+    this.setSide(side)
+  }
+  getSide() {
+    return this.side; 
+  }
+  setSide(n = 0) {
     this.side = Math.abs(n);
   }
 }
