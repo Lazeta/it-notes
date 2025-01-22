@@ -2096,60 +2096,7 @@ circle.setAttribute("stroke", "yellow"); // Изменяем цвет обвод
           title: "Структура HTML документа",
           children: [
             {
-              title: "<!DOCTYPE html>",{
-                title: "Коробчатая модель (box-sizing)",
-                children: [
-                  {
-                    title: "Коробчатая модель описывает пространство, занимаемое элементом",
-                    type: "code",
-                    description: `
-                      <p>Она включает в себя следующие свойства:</p>
-                      <ul>
-                        <li><strong>Content</strong>: Содержимое элемента.</li>
-                        <li><strong>Padding</strong>: Поля вокруг содержимого.</li>
-                        <li><strong>Border</strong>: Граница вокруг элемента.</li>
-                        <li><strong>Margin</strong>: Отступы между элементами.</li>
-                      </ul>
-                      <p>Пример:</p>
-                    `,
-                    code: `
-              div {
-                margin: 10px;
-                border: 1px solid black;
-                padding: 5px;
-                width: 100px;
-              }
-                    `,
-                  },
-                  {
-                    title: "Зачем нужен box-sizing?",
-                    type: "text",
-                    description: `
-                      <p>Свойство <code>box-sizing</code> определяет, как рассчитывается ширина и высота элемента. Оно позволяет избежать путаницы с размерами элементов, особенно когда используются отступы и границы. Без <code>box-sizing: border-box</code>, добавление <strong>padding</strong> и <strong>border</strong> увеличивает фактические размеры элемента, что может привести к нежелательным эффектам, особенно в макетах на основе сеток.</p>
-                      <p>С помощью <code>box-sizing: border-box</code> вы можете установить ширину и высоту элемента так, чтобы они включали в себя <strong>padding</strong> и <strong>border</strong>, что делает управление размерами более предсказуемым.</p>
-                    `,
-                  },
-                  {
-                    title: "Пример использования box-sizing",
-                    type: "code",
-                    description: `
-                      <p>Пример применения свойства <code>box-sizing</code>:</p>
-                    `,
-                    code: `
-              * {
-                box-sizing: border-box;
-              }
-              
-              div {
-                margin: 10px;
-                border: 1px solid black;
-                padding: 5px;
-                width: 100px; // Включает в себя padding и border
-              }
-                    `,
-                  },
-                ],
-              }
+              title: "<!DOCTYPE html>",
               type: "list",
               description: `
                 <p>Объявляет тип документа и версию HTML:</p>
