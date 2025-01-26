@@ -4058,7 +4058,82 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
                   type: "code",
                   description: `search() => возвращает индекс первого вхождения подстроки в строке.`,
                   code: `console.log(str.search('World')); // 9`
-                }
+                },
+                {
+                  title: "Метод replace()",
+                  children: [
+                    {
+                      title: "Определение",
+                      type: "text",
+                      description: `
+                        <p>Метод <code>replace()</code> используется для замены части строки на другую строку. Он возвращает новую строку, в которой все (или первое) вхождения искомой подстроки заменены на указанную.</p>
+                      `,
+                    },
+                    {
+                      title: "Синтаксис",
+                      type: "code",
+                      description: `
+                        <p>Синтаксис метода <code>replace()</code> выглядит следующим образом:</p>
+                      `,
+                      code: `
+                str.replace(searchValue, newValue);
+                      `,
+                    },
+                    {
+                      title: "Параметры",
+                      type: "list",
+                      description: `
+                        <p>Метод принимает два параметра:</p>
+                        <ul>
+                          <li><strong>searchValue</strong>: Строка или регулярное выражение, определяющее, что нужно заменить.</li>
+                          <li><strong>newValue</strong>: Строка, на которую нужно заменить <code>searchValue</code>.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Примеры использования",
+                      type: "list",
+                      description: `
+                        <p>Вот несколько примеров использования метода <code>replace()</code>:</p>
+                      `,
+                      code: `
+                1. Замена подстроки:
+                let str1 = "Hello, world!";
+                let newStr1 = str1.replace("world", "JavaScript");
+                console.log(newStr1); // Вывод: "Hello, JavaScript!"
+                
+                2. Замена с использованием регулярного выражения:
+                let str2 = "I like cats, cats are great.";
+                let newStr2 = str2.replace(/cats/g, "dogs");
+                console.log(newStr2); // Вывод: "I like dogs, dogs are great."
+                
+                3. Замена первого вхождения:
+                let str3 = "one one one";
+                let newStr3 = str3.replace("one", "two");
+                console.log(newStr3); // Вывод: "two one one"
+                
+                4. Использование функции в качестве второго аргумента:
+                let str4 = "I have 2 apples and 3 oranges.";
+                let newStr4 = str4.replace(/\\d+/g, (match) => {
+                  return parseInt(match) * 2; // Умножаем каждое число на 2
+                });
+                console.log(newStr4); // Вывод: "I have 4 apples and 6 oranges."
+                      `,
+                    },
+                    {
+                      title: "Особенности",
+                      type: "list",
+                      description: `
+                        <p>Некоторые особенности метода <code>replace()</code>:</p>
+                        <ul>
+                          <li>Метод не изменяет исходную строку; он возвращает новую.</li>
+                          <li>Если <code>searchValue</code> — строка, замена будет регистронезависимой.</li>
+                          <li>При использовании регулярного выражения с флагом <code>g</code> будут заменены все вхождения.</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
               ],
             },
             {
@@ -5461,13 +5536,53 @@ class Cube {
               title: "Task 4",
               children: [
                 {
-                  title: "title",
+                  title: "Polish alphabet",
                   type: 'code',
                   description: `
-                    word
+                  There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
+                  Your task is to change the letters with diacritics:
+                  ą -> a,
+                  ć -> c,
+                  ę -> e,
+                  ł -> l,
+                  ń -> n,
+                  ó -> o,
+                  ś -> s,
+                  ź -> z,
+                  ż -> z
+                  and print out the string without the use of the Polish letters.
+                  For example:
+                  "Jędrzej Błądziński"  -->  "Jedrzej Bladzinski"
                   `,
                   code: `
-                  // code 
+function correctPolishLetters (string) {
+  const ArrayDiacriticsLetters = [
+    { key: 'ą', value: 'a' },
+    { key: 'ć', value: 'c' },
+    { key: 'ę', value: 'e' },
+    { key: 'ł', value: 'l' },
+    { key: 'ń', value: 'n' },
+    { key: 'ó', value: 'o' },
+    { key: 'ś', value: 's' },
+    { key: 'ź', value: 'z' },
+    { key: 'ż', value: 'z' }
+  ]
+  
+  let spreadString = [...string]
+  let result = []
+  for(let i = 0; i < string.length; i++){
+    for(let j = 0; j < ArrayDiacriticsLetters.length; j++){
+      if(spreadString[i] === ArrayDiacriticsLetters[j].key){
+        result.push(ArrayDiacriticsLetters[j].value)
+      }
+    }
+    if(!(result[i]) === true){
+      result.push(spreadString[i])
+    } 
+  }
+  
+  return result.join('')
+}
                   `,
                 }
               ]
