@@ -4010,57 +4010,61 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
                   type: "title",
                 },
                 {
-                  title: `11.slice() => вырезает один или несколько элементов внутри строки через указатель аргумента начала вырезания и второй аргумент где закончить срез; принимает отрицательные значения.`,
+                  title: `11.str.substr(0, 2) => возвращает часть этой строки, начиная с указанного индекса и продолжая заданное количество символов после него. P.S.Deprecate`,
                   type: "title",
                 },
                 {
-                  title: `12.substring() => возвращает вырезанную часть строки, но не принимает отрицательные числа в качестве аргументов.`,
+                  title: `12.str.slice(0, -2) => вырезает один или несколько элементов внутри строки через указатель аргумента начала вырезания и второй аргумент где закончить срез; принимает отрицательные значения.`,
                   type: "title",
                 },
                 {
-                  title: `13.concat() => конкатенация между собой строк в одну строку`,
+                  title: `13.substring() => возвращает вырезанную часть строки, но не принимает отрицательные числа в качестве аргументов.`,
                   type: "title",
                 },
                 {
-                  title: `14.charCodeAt() => возвращает значение символа по Юникод.`,
+                  title: `14.concat() => конкатенация между собой строк в одну строку`,
                   type: "title",
                 },
                 {
-                  title: `15.charAt() => возвращает символ по Юникод.`,
+                  title: `15.charCodeAt() => возвращает значение символа по Юникод.`,
                   type: "title",
                 },
                 {
-                  title: `16.trimStart() => удаляет пробелы в начале строки.`,
+                  title: `16.charAt() => возвращает символ по Юникод.`,
                   type: "title",
                 },
                 {
-                  title: `17.trimEnd() => удаляет пробелы в конце строки.`,
+                  title: `17.trimStart() => удаляет пробелы в начале строки.`,
                   type: "title",
                 },
                 {
-                  title: `18.padStart() => добавляет символы в начале строки, чтобы результирующая строка получила указанную длину; по умолчанию метод возвращает пустую строку до указанной длины, но может принимать и другие символы указанные во втором аргументе.`,
+                  title: `18.trimEnd() => удаляет пробелы в конце строки.`,
                   type: "title",
                 },
                 {
-                  title: `19.padEnd() => добавляет символы в конце строки, чтобы результирующая строка получила указанную длину.`,
+                  title: `19.padStart() => добавляет символы в начале строки, чтобы результирующая строка получила указанную длину; по умолчанию метод возвращает пустую строку до указанной длины, но может принимать и другие символы указанные во втором аргументе.`,
                   type: "title",
                 },
                 {
-                  title: `20.indexOf() => возвращает индекс первого вхождения указанного элемента в строку. Если элемент не найден, возвращает -1.`,
+                  title: `20.padEnd() => добавляет символы в конце строки, чтобы результирующая строка получила указанную длину.`,
                   type: "title",
                 },
                 {
-                  title: `21.at(-1) или at() => получает последний символ строки или символ согласно индексу слева на право, так же как при отрицательном значении принимает символ с право на лево.`,
+                  title: `21.indexOf() => возвращает индекс первого вхождения указанного элемента в строку. Если элемент не найден, возвращает -1.`,
                   type: "title",
                 },
                 {
-                  title: `22.search()`,
+                  title: `22.at(-1) или at() => получает последний символ строки или символ согласно индексу слева на право, так же как при отрицательном значении принимает символ с право на лево.`,
+                  type: "title",
+                },
+                {
+                  title: `23.search()`,
                   type: "code",
                   description: `search() => возвращает индекс первого вхождения подстроки в строке.`,
                   code: `console.log(str.search('World')); // 9`
                 },
                 {
-                  title: "Метод replace()",
+                  title: "24.str.replace()",
                   children: [
                     {
                       title: "Определение",
@@ -4775,6 +4779,98 @@ function Counter() {
               type: "text",
               description: `
                 <p>Редьюсеры обеспечивают предсказуемое и централизованное управление состоянием в приложениях.</p>
+              `,
+            },
+          ],
+        },
+        {
+          title: "Set",
+          children: [
+            {
+              title: "Определение",
+              type: "text",
+              description: `
+                <p><code>Set</code> — это встроенный объект в JavaScript, который позволяет хранить коллекцию уникальных значений. Это означает, что в одном <code>Set</code> не может быть дубликатов. Значения могут быть любого типа, включая объекты и примитивы.</p>
+              `,
+            },
+            {
+              title: "Создание Set",
+              type: "code",
+              description: `
+                <p>Создание нового <code>Set</code> осуществляется с помощью конструктора <code>Set()</code>.</p>
+              `,
+              code: `
+const mySet = new Set();
+              `,
+            },
+            {
+              title: "Добавление значений",
+              type: "code",
+              description: `
+                <p>Для добавления значений в <code>Set</code> используется метод <code>add()</code>.</p>
+              `,
+              code: `
+mySet.add(1);
+mySet.add(2);
+mySet.add(2); // Дубликат не будет добавлен
+console.log(mySet); // Вывод: Set { 1, 2 }
+              `,
+            },
+            {
+              title: "Основные методы Set",
+              type: "list",
+              description: `
+                <p>Вот несколько основных методов, доступных для <code>Set</code>:</p>
+                <ul>
+                  <li><strong>add(value)</strong>: Добавляет новое значение в <code>Set</code>.</li>
+                  <li><strong>delete(value)</strong>: Удаляет значение из <code>Set</code>. Возвращает <code>true</code>, если значение было удалено, и <code>false</code>, если его не было.</li>
+                  <li><strong>has(value)</strong>: Проверяет, присутствует ли значение в <code>Set</code>. Возвращает <code>true</code> или <code>false</code>.</li>
+                  <li><strong>clear()</strong>: Удаляет все значения из <code>Set</code>.</li>
+                  <li><strong>size</strong>: Свойство, возвращающее количество уникальных значений в <code>Set</code>.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "Пример использования Set",
+              type: "code",
+              description: `
+                <p>Вот простой пример использования <code>Set</code>:</p>
+              `,
+              code: `
+const numbers = new Set([1, 2, 3, 4, 5]);
+
+// Добавление значений
+numbers.add(6);
+numbers.add(2); // Дубликат не добавится
+
+console.log(numbers); // Вывод: Set { 1, 2, 3, 4, 5, 6 }
+
+// Проверка наличия значения
+console.log(numbers.has(3)); // Вывод: true
+console.log(numbers.has(7)); // Вывод: false
+
+// Удаление значения
+numbers.delete(4);
+console.log(numbers); // Вывод: Set { 1, 2, 3, 5, 6 }
+
+// Размер Set
+console.log(numbers.size); // Вывод: 5
+
+// Очистка Set
+numbers.clear();
+console.log(numbers.size); // Вывод: 0
+              `,
+            },
+            {
+              title: "Преимущества использования Set",
+              type: "text",
+              description: `
+                <p>Использование <code>Set</code> имеет несколько преимуществ:</p>
+                <ul>
+                  <li>Уникальность значений: автоматически удаляет дубликаты.</li>
+                  <li>Быстрые операции: добавление, удаление и проверка наличия значений выполняется быстро.</li>
+                  <li>Поддержка любых типов данных, включая объекты.</li>
+                </ul>
               `,
             },
           ],
@@ -5624,13 +5720,24 @@ const correctPolishLetters = str => {
               title: "Task 5",
               children: [
                 {
-                  title: "title",
+                  title: "Who is going to pay for the wall?",
                   type: 'code',
                   description: `
-                    word
+                    Don Drumphet lives in a nice neighborhood, but one of his neighbors has started to let his house go. Don Drumphet wants to build a wall between his house and his neighbor’s, and is trying to get the neighborhood association to pay for it. He begins to solicit his neighbors to petition to get the association to build the wall. Unfortunately for Don Drumphet, he cannot read very well, has a very limited attention span, and can only remember two letters from each of his neighbors’ names. As he collects signatures, he insists that his neighbors keep truncating their names until two letters remain, and he can finally read them.
+                    Your code will show Full name of the neighbor and the truncated version of the name as an array. If the number of the characters in name is less than or equal to two, it will return an array containing only the name as is.
                   `,
                   code: `
-                  // code 
+function whoIsPaying(name){
+  const sliceName = name.slice(0, 2)
+  if(name.length > 2){
+    return [name, sliceName]
+  }
+  return [name]
+}
+
+// or 
+
+const whoIsPaying = name => name.length > 2 ? ([name, name.substr(0, 2)]) : [name]
                   `,
                 }
               ]
@@ -5639,13 +5746,46 @@ const correctPolishLetters = str => {
               title: "Task 6",
               children: [
                 {
-                  title: "title",
+                  title: "Smallest unused ID",
                   type: 'code',
                   description: `
-                    word
+                    Hey awesome programmer!
+
+                    You've got much data to manage and of course you use zero-based and non-negative ID's to make each data item unique!
+
+                    Therefore you need a method, which returns the smallest unused ID for your next new data item...
+
+                    Note: The given array of used IDs may be unsorted. For test reasons there may be duplicate IDs, but you don't have to find or remove them!
+
+                    Go on and code some pure awesomeness!
                   `,
                   code: `
-                  // code 
+function nextId(ids){
+  let maxId = Math.max(...ids)
+  for(let i = 0; i <= maxId; i++){
+    if(!ids.includes(i)){
+      return i
+    }
+  }
+  return maxId + 1
+} 
+
+// or 
+
+ function nextId(ids){
+  var x = 0;
+  while (ids.includes(x)) x++;
+  return x;
+}
+
+// or 
+
+function nextId(ids){
+	const used = new Set(ids);
+  for (let i = 0; i <= ids.length; i++) {
+  	if (!used.has(i)) return i;
+  }
+}
                   `,
                 }
               ]
