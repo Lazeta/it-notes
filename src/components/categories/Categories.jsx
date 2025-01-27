@@ -32,14 +32,14 @@ export default function Categories({ data }) {
         padding: '0 10px',
         backgroundColor: '#f5f5f5',
       }}>
-      {data.type === "title" ? (
+      {data.type === "paragraph" ? (
         <p
           style={{
             margin: '0',
             maxWidth: '100%',
             padding: '0 10px',
             textAlign: 'justify',
-          }}>{data.title.split('\n').map((line, index) => (
+          }}>{data.paragraph.split('\n').map((line, index) => (
             <span key={index}>{line}<br /></span>
           ))}
         </p>

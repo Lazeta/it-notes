@@ -2971,47 +2971,47 @@ function onMouseMove(event) {
           children: [
             {
               title: "Destructuring assignment",
-              type: "title",
+              type: "paragraph",
             },
             {
               title: "Arrow functions () => {} ",
-              type: "title",
+              type: "paragraph",
             },
             {
               title: "Template strings `${}`",
-              type: "title",
+              type: "paragraph",
             },
             {
               title: "variable declaration with let and const",
-              type: "title",
+              type: "paragraph",
             },
             {
               title: "Classes",
-              type: "title",
+              type: "paragraph",
             },
             {
               title: "IIFE (immediately invoked function expression)",
-              type: "title",
+              type: "paragraph",
             },
             {
               title: "Multi-line strings",
-              type: "title",
+              type: "paragraph",
             },
             {
               title: "Promise",
-              type: "title",
+              type: "paragraph",
             },
             {
               title: "forEach and for...of",
-              type: "title",
+              type: "paragraph",
             },
             {
               title: "Default parameters",
-              type: "title",
+              type: "paragraph",
             },
             {
               title: "Rest-параметры и Spread-оператор ...",
-              type: "title",
+              type: "paragraph",
             },
           ],
         },
@@ -3845,114 +3845,114 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
               children: [
                 {
                   title: "1. pop() => removes the last element from an array.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: "2.shift() => удаляет элемент в начале массива",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:
                     "3.push() => добавляется несколько элементов в конец массива",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:
                     "4.unshift() => добавляет несколько элементов в начало массива",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: "5.length => получаем число элементов массива",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `6.splice() => добавление нескольких элементов в массив; 
                             первый аргумент указывает где начать вставку элементов по индексу; 
                             второй аргумент указывает сколько элементов нужно удалить, если аргумент не указать, то удаления не будет, просто добавится новый элемент в массиве; самые новые элементы указываются в скобках данного метода в кавычках,`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `7.slice() => вырезает один или несколько элементов массива
                             через указатель аргумента начала вырезания и второй аргумент где закончить срез;
                             принимает отрицательные значения.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: "8.concat() => конкатенация двух массивов",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `9.map() => принимает массив и применяет указанную функцию для
                             всех элементов массива; возвращает новый массив.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `10.every() => проверяет, соответствуют ли все элементы указанному
                             массиву определённому условию; если все элементы соответствуют условию, то возвращает
                             метод true, в противном случае вернёт false.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `11.includes() => проверяет на наличие в массиве элемента; если
                             элемент найден, то возвращает true.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `12.spread() => превращает массив в строки с помощью специальных
                             разделителей … сохраняет между ними границу или по умолчанию между строками образуются
                             пробелы.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `13.filter() => возвращает новый массив из всех элементов соответствующих
                             заданному условию.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:
                     "14.reduce(function (previousValue, item, index, array) { … }, [initial]); => сводит массив к одному значению.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:
                     "15.reduceRight() => сводит массив к одному значение с права на лево.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `16.indexOf() => возвращает первый индекс по которому может быть найден
                             элемент в массиве и -1 если такого элемента нет; это не тоже самое что и Boolean values,
                             мы можем получать 2 и более индекса совпадений по массиву.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `17.sort() => возвращает отсортированный массив; если compareFunction
                             предоставлена, то массив сортируется в соответствиями с этими условиями.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `18.find() => возвращает значение первого найденного в массиве элемента,
                             который удовлетворяет условию указанных в функции, в противном случае возвращает undefined.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `19.findIndex() => возвращает индекс в массиве, если элемент удовлетворяет
                             условиям проверяющей функции, в противном случае вернёт -1.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `20.forEach(function (item, index, array) { … } => выполняет указанную
                             функцию один раз для каждого элемента в массиве.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:
                     "21.join(‘, ’) => преобразовывает массив в строку с заданным разделителем.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:
                     "22.isArray() => проверяем массив ли этот объект или нет.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: "Learn more about array methods.",
@@ -3971,91 +3971,91 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
               children: [
                 {
                   title: "1.toUpperCase() => перевод строки в верхний регистр",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: "2.toLowerCase() => перевод строки в нижний регистр",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: "3.trim() => удаляет пробелы в начале и конце строки",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: "4.length => получаем длину строки",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `5.includes() => проверяет на наличие в строке элемента; если элемент найден, то возвращает true.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `6.spread() => превращает массив в строки с помощью специальных разделителей ... сохраняет между ними границу или по умолчанию между строками образуются пробелы.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `7.repeat() => повторяет строку указанное количество раз.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `8.split() => разбивает строку на массив подстроки по указанному разделителю. Возвращает новый массив, который содержит подстроки полученные в ходе разбиения.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `9.startsWith() => проверяет на наличие в начале строки указанного элемента. Возвращает true или false`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `10.endsWith() => проверяет на наличие в конце строки указанного элемента. Возвращает true или false`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `11.str.substr(0, 2) => возвращает часть этой строки, начиная с указанного индекса и продолжая заданное количество символов после него. P.S.Deprecate`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `12.str.slice(0, -2) => вырезает один или несколько элементов внутри строки через указатель аргумента начала вырезания и второй аргумент где закончить срез; принимает отрицательные значения.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `13.substring() => возвращает вырезанную часть строки, но не принимает отрицательные числа в качестве аргументов.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `14.concat() => конкатенация между собой строк в одну строку`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `15.charCodeAt() => возвращает значение символа по Юникод.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `16.charAt() => возвращает символ по Юникод.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `17.trimStart() => удаляет пробелы в начале строки.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `18.trimEnd() => удаляет пробелы в конце строки.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `19.padStart() => добавляет символы в начале строки, чтобы результирующая строка получила указанную длину; по умолчанию метод возвращает пустую строку до указанной длины, но может принимать и другие символы указанные во втором аргументе.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `20.padEnd() => добавляет символы в конце строки, чтобы результирующая строка получила указанную длину.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `21.indexOf() => возвращает индекс первого вхождения указанного элемента в строку. Если элемент не найден, возвращает -1.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `22.at(-1) или at() => получает последний символ строки или символ согласно индексу слева на право, так же как при отрицательном значении принимает символ с право на лево.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `23.search()`,
@@ -4146,22 +4146,22 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
                 {
                   title:
                     "1.toFixed(number) => форматирует число с использованием записи с фиксированной запятой. Аргументам принимает количество знаков после запяты.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:
                     "2.parseFloat(string) => принимает строку в качестве аргумента и возвращает число с плавающей точной.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:
                     "3.parseInt(string, radix) => принимает строку в качестве аргумента и возвращает целое число в соответствии с указанной системой счисления.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:
                     "4.Number() => преобразовывает строку в числовой тип данных.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: "toExponential()",
@@ -4214,21 +4214,21 @@ console.log(getRandomInt(1, 10)); // случайное число от 1 до 1
                     },
                     {
                       title: "5.Math.sqrt() => возвращает квадратный корень числа.",
-                      type: "title",
+                      type: "paragraph",
                     },
                     {
                       title: "6.Math.cbrt() => возвращает кубический корень числа.",
-                      type: "title",
+                      type: "paragraph",
                     },
                     {
                       title:
                         "7.Math.abs() => возвращает абсолютное значение числа.",
-                      type: "title",
+                      type: "paragraph",
                     },
                     {
                       title:
                         "8.Math.pow() => возвращает число, возведённое в степень.",
-                      type: "title",
+                      type: "paragraph",
                     },
                   ],
                 },
@@ -4375,35 +4375,35 @@ do {
                 },
                 {
                   title:"1.for => повторяет блок кода определённое количество раз.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:"2.while => повторяет блок кода до тех пор, пока не выполнится условие.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:"3.do while => повторяет блок кода до тех пор, пока не выполнится условие. После чего выполняется блок кода.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:"4.for...of => повторяет блок кода для каждого элемента в массиве.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:"5.forEach() => повторяет блок кода для каждого элемента в массиве.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:"6.for in => повторяет блок кода для каждого свойства в объекте.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: "7.break => прерывает выполнение цикла.",
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title:"8.continue => прерывает текущую итерацию цикла и переходит к следующей.",
-                  type: "title",
+                  type: "paragraph",
                 },
               ],
             },
@@ -4412,14 +4412,100 @@ do {
               children: [
                 {
                   title: `JSON.stringify(value, replacer, space): Преобразует значение в строку JSON.`,
-                  type: "title",
+                  type: "paragraph",
                 },
                 {
                   title: `JSON.parse(text, reviver): Преобразует строку JSON в значение.`,
-                  type: "title",
+                  type: "paragraph",
                 },
               ],
             },
+            {
+              title: "Regular Expressions",
+              children: [
+                {
+                  title: "Метод match()",
+                  children: [
+                    {
+                      title: "Определение",
+                      type: "text",
+                      description: `
+                        <p>Метод <code>match()</code> используется для поиска совпадений в строке с использованием регулярного выражения. Он возвращает массив с найденными совпадениями или <code>null</code>, если совпадения не найдены.</p>
+                      `,
+                    },
+                    {
+                      title: "Синтаксис",
+                      type: "code",
+                      description: `
+                        <p>Синтаксис метода <code>match()</code> выглядит следующим образом:</p>
+                      `,
+                      code: `
+str.match(regexp);
+                      `,
+                    },
+                    {
+                      title: "Параметры",
+                      type: "list",
+                      description: `
+                        <p>Метод принимает один параметр:</p>
+                        <ul>
+                          <li><strong>regexp</strong>: Регулярное выражение, по которому производится поиск.</li>
+                        </ul>
+                      `,
+                    },
+                    {
+                      title: "Примеры использования",
+                      type: "code",
+                      description: `
+                        <p>Вот несколько примеров использования метода <code>match()</code>:</p>
+                      `,
+                      code: `
+1. Поиск простого совпадения:
+let str1 = "Hello, world!";
+let result1 = str1.match(/world/);
+console.log(result1); // Вывод: ["world"]
+
+2. Поиск с флагом g:
+let str2 = "The rain in Spain stays mainly in the plain.";
+let result2 = str2.match(/in/g);
+console.log(result2); // Вывод: ["in", "in", "in"]
+
+3. Регистронезависимый поиск с флагом i:
+let str3 = "Hello, World!";
+let result3 = str3.match(/world/i);
+console.log(result3); // Вывод: ["World"]
+
+4. Получение информации о совпадениях:
+let str4 = "The quick brown fox jumps over the lazy dog.";
+let result4 = str4.match(/(quick|lazy)/);
+console.log(result4); // Вывод: ["quick", "quick", index: 4, ... ]
+
+5. Использование групп для извлечения данных:
+let str5 = "2023-01-27";
+let result5 = str5.match(/(\\d{4})-(\\d{2})-(\\d{2})/);
+console.log(result5); // Вывод: ["2023-01-27", "2023", "01", "27", ... ]
+                      `,
+                    },
+                    {
+                      title: "Особенности",
+                      type: "list",
+                      description: `
+                        <p>Некоторые особенности метода <code>match()</code>:</p>
+                        <ul>
+                          <li>Если регулярное выражение не находит совпадений, метод вернёт <code>null</code>.</li>
+                          <li>Метод <code>match()</code> не изменяет исходную строку.</li>
+                          <li>Использование флага <code>g</code> возвращает массив всех совпадений, но не предоставляет информации о позициях совпадений.</li>
+                        </ul>
+                      `,
+                    },
+                  ],
+                },
+                {
+                  title: ``,
+                  type: "paragraph",
+                },
+              ]
+            }
           ],
         },
         {
@@ -4781,6 +4867,127 @@ function Counter() {
                 <p>Редьюсеры обеспечивают предсказуемое и централизованное управление состоянием в приложениях.</p>
               `,
             },
+          ],
+        },
+        {
+          title: "Regular Expressions / Регулярные выражения",
+          children: [
+            {
+              title: "Определение",
+              type: "text",
+              description: `
+                <p>Регулярное выражение (regex) — это последовательность символов, используемая для поиска, сопоставления и манипуляции строками. Регулярные выражения позволяют выполнять сложные шаблонные операции над текстом, такие как валидация данных, поиск и замена.</p>
+              `,
+            },
+            {
+              title: "Способы объявления регулярных выражений",
+              type: "list",
+              description: `
+                <p>В JavaScript регулярные выражения можно объявлять двумя основными способами:</p>
+              `,
+            },
+            {
+              title: "Литеральный синтаксис",
+              type: "code",
+              description: `
+                <p>Регулярное выражение можно создать с помощью литералов, заключённых в косые черты <code>/.../</code>.</p>
+                <p>Пример:</p>
+              `,
+              code: `
+const regex = /abc/;
+              `,
+            },
+            {
+              title: "Конструктор RegExp",
+              type: "code",
+              description: `
+                <p>Регулярное выражение также можно создать с помощью конструктора <code>RegExp</code>. Это полезно, когда вам нужно динамически создавать регулярные выражения.</p>
+                <p>Пример:</p>
+              `,
+              code: `
+const regex = new RegExp('abc');
+              `,
+            },
+            {
+              title: "Примеры использования",
+              type: "text",
+              description: `
+                <p>Вот несколько примеров использования регулярных выражений:</p>
+              `,
+            },
+            {
+              title: "Поиск совпадений",
+              type: "code",
+              description: `
+                <p>Вы можете использовать регулярные выражения для поиска совпадений в строке:</p>
+              `,
+              code: `
+const str = "Hello, world!";
+const regex = /world/;
+const result = str.match(regex);
+console.log(result); // Вывод: ["world"]
+              `,
+            },
+            {
+              title: "Замена текста",
+              type: "code",
+              description: `
+                <p>Регулярные выражения можно использовать для замены текста:</p>
+              `,
+              code: `
+const str = "I like cats.";
+const newStr = str.replace(/cats/, "dogs");
+console.log(newStr); // Вывод: "I like dogs."
+              `,
+            },
+            {
+              title: "Валидация формата",
+              type: "code",
+              description: `
+                <p>Регулярные выражения часто используются для проверки формата данных, например, адресов электронной почты:</p>
+              `,
+              code: `
+const email = "example@example.com";
+const regex = /^[\\w-.]+@[\\w-]+\\.[a-z]{2,}$/i;
+console.log(regex.test(email)); // Вывод: true (если формат корректен)
+              `,
+            },
+            {
+              title: "Некоторые особенности регулярных выражений:",
+              type: "list",
+              description: `
+                <ul>
+                  <li>Регулярные выражения могут быть регистронезависимыми с использованием флага <code>i</code>.</li>
+                  <li>Можно использовать флаги, такие как <code>g</code> (глобальный поиск) и <code>m</code> (многострочный режим).</li>
+                  <li>Регулярные выражения поддерживают группы, классы символов и квантификаторы.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "MDN Web Docs (Mozilla Developer Network):",
+              type: "link",
+              url: "https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Regular_expressions"
+            },
+            {
+              title: "Regex101:",
+              type: "link",
+              url: "https://regex101.com"
+            },
+            {
+              title: "Regular-Expressions.info:",
+              type: "link",
+              url: "https://www.regular-expressions.info"
+            },
+            {
+              title: "Mastering Regular Expressions (книга):",
+              type: "link",
+              url: "https://www.oreilly.com/library/view/mastering-regular-expressions/9781491971700/"
+            },
+            {
+              title: "YouTube Tutorials:",
+              type: "link",
+              url: "https://www.youtube.com/results?search_query=Regular+Expressions+tutorial"
+            }
           ],
         },
         {
@@ -5794,13 +6001,70 @@ function nextId(ids){
               title: "Task 7",
               children: [
                 {
-                  title: "title",
+                  title: "Did she say hallo?",
                   type: 'code',
                   description: `
-                    word
+You received a whatsup message from an unknown number. Could it be from that girl/boy with a foreign accent you met yesterday evening?
+
+Write a simple function to check if the string contains the word hallo in different languages.
+
+These are the languages of the possible people you met the night before:
+
+hello - english
+ciao - italian
+salut - french
+hallo - german
+hola - spanish
+ahoj - czech republic
+czesc - polish
+Notes
+
+you can assume the input is a string.
+to keep this a beginner exercise you don't need to check if the greeting is a subset of word (Hallowen can pass the test)
+function should be case insensitive to pass the tests
                   `,
                   code: `
-                  // code 
+function validateHello(str) {
+  const greetings = ['hello', 'ciao', 'salut', 'hallo', 'hola', 'ahoj', 'czesc'];
+  const lowerStr = str.toLowerCase()
+  const words = lowerStr.match(/\w+/g)
+  for (let word of words){
+    if(greetings.includes(word)){
+      return true
+    }
+  }
+  return false
+}
+
+// or 
+
+const validateHello = greetings => /h[ae]llo|ciao|salut|hola|ahoj|czesc/i.test(greetings);
+
+// or
+
+const hellos = {
+hello: 'english',
+ciao: 'italian',
+salut: 'french',
+hallo: 'german',
+hola: 'spanish',
+ahoj: 'czech republic',
+czesc: 'polish',
+}
+
+const validateHello = greetings => {
+  for (key in hellos) {
+   if (greetings.toLowerCase().includes(key)) {
+     return true
+   }
+  }
+  return false
+}
+
+// or
+
+const vivas = ['hello', 'ciao', 'salut', 'hallo', 'hola', 'ahoj', 'czesc'];
+const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
                   `,
                 }
               ]
@@ -7772,7 +8036,7 @@ function factorial(n) {
           children: [
             {
               title: "new topic",
-              // type: "title",
+              // type: "paragraph",
             },
           ],
         },
