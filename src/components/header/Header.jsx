@@ -1,6 +1,17 @@
 import { useState, useEffect } from 'react';
 import { NoteForm } from "../forms/NoteForm";
-import "./Header.module.css";
+import styled from 'styled-components';
+
+const StyledComponent = styled.header`
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+`
 
 export const Header = () => {
   const [notes, setNotes] = useState([]);
@@ -23,9 +34,9 @@ export const Header = () => {
   };
 
   return (
-    <div className={"header"}>
+    <StyledComponent>
       <h2>Programming Notes</h2>
       <NoteForm addNote={addNote} />
-    </div>
+    </StyledComponent>
   );
 };

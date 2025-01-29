@@ -1,44 +1,4 @@
-.App {
-    text-align: center;
-    padding: 10px;
-    background-color: #acccc0e3;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
 
-section {
-    text-align: center;
-    padding: 10px;
-    background-color: #acccc0e3;
-    /* min-height: 100vh; урезает высоту вмещаемости остальные кнопок в разделе */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-span {
-    font-size: 1.2rem;
-}
-
-hr {
-    border: none;
-    height: 2px;
-    background-color: #6d9ac4;
-    width: 100%;
-}
-
-a {
-    color: rgba(8, 152, 235, 0.685);
-    padding: 0 5px;
-}
-
-.parent input,
-textarea,
-select {
-    width: -webkit-fill-available;
-}
 
 
 

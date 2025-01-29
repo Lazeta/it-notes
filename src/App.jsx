@@ -1,14 +1,14 @@
-import { Body } from './components/body/Body';
+import "./scss/app.css";
 import { Header } from './components/header/Header';
 import { Line } from './components/line/Line';
-import "./App.css";
+import { Main } from './components/body/Main';
 
 function App() {
   return (
-    <div className={"App"}>
+    <div className="App">
       <Header />
       <Line />
-      <Body />
+      <Main />
     </div>
   );
 }

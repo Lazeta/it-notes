@@ -1,6 +1,29 @@
 import { useState } from "react";
 import Button from "../buttons/Button";
-import "./NoteForm.module.css";
+import styled from "styled-components";
+
+const StyledForm = styled.form`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 15px;
+  margin-top: 20px;
+  text-align: center;
+
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5 {
+    min-width: 300px;
+    width: 100%;
+  }
+
+  input,
+  textarea,
+  select {
+    width: -webkit-fill-available;
+  }
+`;
 
 export const NoteForm = ({ addNote }) => {
   const [title, setTitle] = useState("");
@@ -24,27 +47,35 @@ export const NoteForm = ({ addNote }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={"parent form"}>
-      <div className={"div1"}>
-        <input type="text" placeholder="Title" value={title} required
+    <StyledForm onSubmit={handleSubmit}>
+      <div className="div1">
+        <input
+          type="text"
+          placeholder="Title"
+          value={title}
+          required
           onChange={(e) => setTitle(e.target.value)}
         />
       </div>
-      <div className={"div2"}>
-        <textarea placeholder="Content" value={content} required
+      <div className="div2">
+        <textarea
+          placeholder="Content"
+          value={content}
+          required
           onChange={(e) => setContent(e.target.value)}
         />
       </div>
-      <div className={"div3"}>
-        <input type="text" placeholder="Category" value={category} required
+      <div className="div3">
+        <input
+          type="text"
+          placeholder="Category"
+          value={category}
+          required
           onChange={(e) => setCategory(e.target.value)}
         />
       </div>
-      <div className={"div4"}>
-        <select value={type}
-          onChange={(e) =>
-            setType(e.target.value)
-          }>
+      <div className="div4">
+        <select value={type} onChange={(e) => setType(e.target.value)}>
           <option value="notes">Notes</option>
           <option value="article">Article</option>
           <option value="site">Site</option>
@@ -54,9 +85,9 @@ export const NoteForm = ({ addNote }) => {
           <option value="video">Video</option>
         </select>
       </div>
-      <div className={"div5"}>
+      <div className="div5">
         <Button type="submit" title="Add note" />
       </div>
-    </form>
+    </StyledForm>
   );
 };
