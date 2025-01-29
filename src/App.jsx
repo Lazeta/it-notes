@@ -1,7 +1,7 @@
 import "./scss/app.css";
 import { Header } from './components/header/Header';
 import { Line } from './components/line/Line';
-import { Main } from './components/body/Main';
+import { Main } from './components/main/Main';
 
 function App() {
   return (
