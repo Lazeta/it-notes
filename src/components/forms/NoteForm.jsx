@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Button from "../buttons/Button";
+import "./NoteForm.module.css";
 
 export const NoteForm = ({ addNote }) => {
   const [title, setTitle] = useState("");
@@ -23,38 +24,24 @@ export const NoteForm = ({ addNote }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="parent">
-      <div className="div1">
-        <input
-          type="text"
-          placeholder="Title"
-          value={title}
+    <form onSubmit={handleSubmit} className={"parent form"}>
+      <div className={"div1"}>
+        <input type="text" placeholder="Title" value={title} required
           onChange={(e) => setTitle(e.target.value)}
-          required
-
         />
       </div>
-      <div className="div2">
-        <textarea
-          placeholder="Content"
-          value={content}
+      <div className={"div2"}>
+        <textarea placeholder="Content" value={content} required
           onChange={(e) => setContent(e.target.value)}
-          required
-
         />
       </div>
-      <div className="div3">
-        <input
-          type="text"
-          placeholder="Category"
-          value={category}
+      <div className={"div3"}>
+        <input type="text" placeholder="Category" value={category} required
           onChange={(e) => setCategory(e.target.value)}
-          required
         />
       </div>
-      <div className="div4">
-        <select
-          value={type}
+      <div className={"div4"}>
+        <select value={type}
           onChange={(e) =>
             setType(e.target.value)
           }>
@@ -67,7 +54,7 @@ export const NoteForm = ({ addNote }) => {
           <option value="video">Video</option>
         </select>
       </div>
-      <div className="div5">
+      <div className={"div5"}>
         <Button type="submit" title="Add note" />
       </div>
     </form>

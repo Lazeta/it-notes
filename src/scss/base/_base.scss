@@ -1,0 +1,157 @@
+.App {
+    text-align: center;
+    padding: 10px;
+    background-color: #acccc0e3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+section {
+    text-align: center;
+    padding: 10px;
+    background-color: #acccc0e3;
+    /* min-height: 100vh; урезает высоту вмещаемости остальные кнопок в разделе */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+span {
+    font-size: 1.2rem;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #6d9ac4;
+    width: 100%;
+}
+
+a {
+    color: rgba(8, 152, 235, 0.685);
+    padding: 0 5px;
+}
+
+.parent input,
+textarea,
+select {
+    width: -webkit-fill-available;
+}
+
+
+
+
+
+
+
+
+
+// * {
+//   box-sizing: border-box;
+// }
+
+// html {
+//   font-style: normal;
+//   font-size: 10px;
+//   line-height: 10px;
+// }
+// body {
+//   @include font();
+//   @include media-mobile {
+//     @include font();
+//   }
+// }
+// h1 {
+//   margin: 0;
+//   padding: 0;
+//   letter-spacing: -1px;
+//   @extend %font-aleo;
+//   color: $color-primary;
+//   @include font(8rem, 9.6rem, 700);
+//   @include media-mobile {
+//     @include font(4rem, 5rem);
+//   }
+// }
+
+// h2 {
+//   margin: 0;
+//   padding: 0;
+//   @extend %font-aleo;
+//   color: $color-secondary;
+//   @include font(3.5rem, 4.2rem);
+//   @include media-mobile {
+//     @include font(3rem, 3rem);
+//   }
+// }
+
+// h3 {
+//   margin: 0;
+//   padding: 0;
+//   @extend %font-red-hat-text;
+//   color: $color-accent;
+//   @include font(4rem, 5.3rem, Bold);
+//   @include media-mobile {
+//     @include font(3rem, 4rem);
+//   }
+// }
+
+// h4 {
+//   margin: 0;
+//   padding: 0;
+//   @extend %font-red-hat-text;
+//   @include font(3.2rem, 4.2rem, Bold);
+//   @include media-mobile {
+//     @include font(2.2rem, 3rem);
+//   }
+// }
+
+// h6 {
+//   margin: 0;
+//   padding: 0;
+//   color: $color-primary;
+//   @extend %font-magra;
+//   @include font(3.2rem, 3.9rem, Bold);
+//   @include media-mobile {
+//     @include font(2.5rem, 3rem);
+//   }
+// }
+
+// p {
+//   @extend %font-aleo;
+//   color: $color-secondary;
+//   @include font(2rem, 2.4rem);
+//   @include media-mobile {
+//     @include font(1.6rem, 2rem);
+//   }
+// }
+
+// li, a {
+//   @extend %font-red-hat-text;
+//   @include font(1.6rem, 2.1rem, Bold);
+//   list-style-type: none;
+//   text-decoration: none;
+//   @include media-mobile {
+//     @include font(1rem, 2rem);
+//   }
+// }
+
+// button {
+//   cursor: pointer;
+// }
+
+// figure {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// figcaption { 
+//   margin: 0;
+//   padding: 0;
+// }
+
+// ul {
+//   margin: 0;
+//   padding: 0;
+// }
