@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "../buttons/Button";
-import { StyledCategories } from "../../scss/components/categories/categories.styled";
+import { StyledCategories } from "../../styles/components/categories/categories.styled";
 
 
 export default function Categories({ data }) {

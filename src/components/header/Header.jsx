@@ -9,7 +9,7 @@ const StyledComponent = styled.header`
   display: flex;
   flex-direction: column;
   align-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
 `
 
