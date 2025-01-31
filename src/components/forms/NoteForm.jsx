@@ -9,11 +9,7 @@ const StyledForm = styled.form`
   margin-top: 20px;
   text-align: center;
 
-  .div1,
-  .div2,
-  .div3,
-  .div4,
-  .div5 {
+  div {
     min-width: 300px;
     width: 100%;
   }
@@ -48,7 +44,7 @@ export const NoteForm = ({ addNote }) => {
 
   return (
     <StyledForm onSubmit={handleSubmit}>
-      <div className="div1">
+      <div>
         <input
           type="text"
           placeholder="Title"
@@ -57,7 +53,7 @@ export const NoteForm = ({ addNote }) => {
           onChange={(e) => setTitle(e.target.value)}
         />
       </div>
-      <div className="div2">
+      <div>
         <textarea
           placeholder="Content"
           value={content}
@@ -65,7 +61,7 @@ export const NoteForm = ({ addNote }) => {
           onChange={(e) => setContent(e.target.value)}
         />
       </div>
-      <div className="div3">
+      <div>
         <input
           type="text"
           placeholder="Category"
@@ -74,7 +70,7 @@ export const NoteForm = ({ addNote }) => {
           onChange={(e) => setCategory(e.target.value)}
         />
       </div>
-      <div className="div4">
+      <div>
         <select value={type} onChange={(e) => setType(e.target.value)}>
           <option value="notes">Notes</option>
           <option value="article">Article</option>
@@ -85,7 +81,7 @@ export const NoteForm = ({ addNote }) => {
           <option value="video">Video</option>
         </select>
       </div>
-      <div className="div5">
+      <div>
         <Button type="submit" title="Add note" />
       </div>
     </StyledForm>

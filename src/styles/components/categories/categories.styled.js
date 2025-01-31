@@ -67,8 +67,4 @@ export const StyledCategories = styled.section`
     max-height: 500px;
     object-fit: cover;
   }
-  .wrapper__childrens {
-    padding: 5px 0;
-    margin-top: 5px;
-  }
 `;
