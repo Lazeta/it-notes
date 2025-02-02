@@ -1,9 +1,31 @@
-import Button from "../buttons/Button";
+import { useState } from "react";
 import { StyledCategories } from "../../styles/components/categories/categories.styled";
-import FilterTopics from "./filters/FilterTopics";
+import Button from "../buttons/Button";
+import styled from "styled-components";
 
+const StyledContainer = styled.div`
+  padding: 5px 0;
+  margin-top: 5px;
+`;
 
-export default function Categories({ data, onExpand}) {
+export default function Categories({ data }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [searchTerm] = useState('');
+
+  const expand = () => {
+    setIsVisible(!isVisible);
+  }
+
+  const filterChildren = (children) => {
+    if (!children) return [];
+    return children.filter(child => {
+      const matchesTitle = child.title.toLowerCase().includes(searchTerm.toLowerCase());
+      const hasVisibleChildren = filterChildren(child.children).length > 0;
+      return matchesTitle || hasVisibleChildren;
+    });
+  }
+  const filteredChildren = filterChildren(data.children);
+
   return (
     <StyledCategories>
       {data.type === "paragraph" ? (
@@ -115,14 +137,22 @@ export default function Categories({ data, onExpand}) {
         </>
       ) : (
         <Button
-          onClick={onExpand}
+          onClick={expand}
           type="button"
           title={data.title}
           className={"button__title"}
         />
       )}
 
-      <FilterTopics data={data}/>
+      {isVisible && filteredChildren.length > 0 && (
+        <StyledContainer>
+          {filteredChildren.map((child, index) => (
+            <div key={index} >
+              <Categories data={child} />
+            </div>
+          ))}
+        </StyledContainer>
+      )}
     </StyledCategories>
   );
 }
