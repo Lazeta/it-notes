@@ -4,5 +4,5 @@ export type types = {
     content: string;
     category: string;
     subtopics: string;
-    type: 'article' | 'link' | 'image' | 'video' | 'code' | 'site' | 'notes';
+    type: 'article' | 'link' | 'image' | 'video' | 'code' | 'site' | 'notes' | "paragraph" | "list" | "text";
 }

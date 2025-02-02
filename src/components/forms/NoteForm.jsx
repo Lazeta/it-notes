@@ -1,5 +1,25 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Button from "../buttons/Button";
+import styled from "styled-components";
+
+const StyledForm = styled.form`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 15px;
+  margin-top: 20px;
+  text-align: center;
+
+  div {
+    min-width: 300px;
+    width: 100%;
+  }
+
+  input,
+  textarea,
+  select {
+    width: -webkit-fill-available;
+  }
+`;
 
 export const NoteForm = ({ addNote }) => {
   const [title, setTitle] = useState("");
@@ -23,41 +43,35 @@ export const NoteForm = ({ addNote }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="parent">
-      <div className="div1">
+    <StyledForm onSubmit={handleSubmit}>
+      <div>
         <input
           type="text"
           placeholder="Title"
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
           required
-
+          onChange={(e) => setTitle(e.target.value)}
         />
       </div>
-      <div className="div2">
+      <div>
         <textarea
           placeholder="Content"
           value={content}
-          onChange={(e) => setContent(e.target.value)}
           required
-
+          onChange={(e) => setContent(e.target.value)}
         />
       </div>
-      <div className="div3">
+      <div>
         <input
           type="text"
           placeholder="Category"
           value={category}
-          onChange={(e) => setCategory(e.target.value)}
           required
+          onChange={(e) => setCategory(e.target.value)}
         />
       </div>
-      <div className="div4">
-        <select
-          value={type}
-          onChange={(e) =>
-            setType(e.target.value)
-          }>
+      <div>
+        <select value={type} onChange={(e) => setType(e.target.value)}>
           <option value="notes">Notes</option>
           <option value="article">Article</option>
           <option value="site">Site</option>
@@ -67,9 +81,9 @@ export const NoteForm = ({ addNote }) => {
           <option value="video">Video</option>
         </select>
       </div>
-      <div className="div5">
+      <div>
         <Button type="submit" title="Add note" />
       </div>
-    </form>
+    </StyledForm>
   );
 };
