@@ -2,8 +2,15 @@ import { useState } from "react";
 import { StyledCategories } from "../../styles/components/categories/categories.styled";
 import Button from "../buttons/Button";
 import styled from "styled-components";
+import Paragraph from "../types/Paragraph";
+import Text from "../types/Text";
+import Link from "../types/Link";
+import Image from "../types/Image";
+import List from "../types/List";
+import Code from "../types/Code";
+import Video from "../types/Video";
 
-const StyledContainer = styled.div`
+const StyledChildItems = styled.div`
   padding: 5px 0;
   margin-top: 5px;
 `;
@@ -28,114 +35,14 @@ export default function Categories({ data }) {
 
   return (
     <StyledCategories>
-      {data.type === "paragraph" ? (
-        <>
-          {data.title && (
-            <p className={"paragraph__item"}>
-              {data.title.split("\n").map((line, index) => (
-                <span key={index}>
-                  {line}
-                  <br />
-                </span>
-              ))}
-            </p>
-          )}
-        </>
-      ) : data.type === "text" ? (
-        <>
-          {data.title && (
-            <h3 className={"text__item"}>
-              {data.title.split("\n").map((line, index) => (
-                <span key={index}>
-                  {line}
-                  <br />
-                </span>
-              ))}
-            </h3>
-          )}
-          {data.description && (
-            <div dangerouslySetInnerHTML={{ __html: data.description }} />
-          )}
-          {data.link && data.url && (
-            <a href={data.url} target="_blank" rel="noopener noreferrer">
-              {data.link}
-            </a>
-          )}
-        </>
-      ) : data.type === "link" ? (
-        <>
-          {data.description && <p>{data.description}</p>}
-          <a
-            href={data.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={"link__item"}
-          >
-            {data.title}
-          </a>
-        </>
-      ) : data.type === "image" ? (
-        <img src={data.url} alt={data.title} className={"image__item"} />
-      ) : data.type === "list" ? (
-        <div>
-          {data.title && (
-            <h3 className={"list__item__title"}>
-              {data.title.split("\n").map((line, index) => (
-                <span key={index}>
-                  {line}
-                  <br />
-                </span>
-              ))}
-            </h3>
-          )}
-          {data.description && (
-            <div dangerouslySetInnerHTML={{ __html: data.description }} />
-          )}
-          {data.link && data.url && (
-            <a href={data.url} target="_blank" rel="noopener noreferrer">
-              {data.link}
-            </a>
-          )}
-        </div>
-      ) : data.type === "code" ? (
-        <>
-          {data.title && (
-            <h3 className={"code__item__title"}>
-              {data.title.split("\n").map((line, index) => (
-                <span key={index}>
-                  {line}
-                  <br />
-                </span>
-              ))}
-            </h3>
-          )}
-          {data.description && (
-            <div dangerouslySetInnerHTML={{ __html: data.description }} />
-          )}
-          <div className={"code__item__description"}>
-            <pre>
-              <code>{data.code}</code>
-            </pre>
-          </div>
-          {data.link && data.url && (
-            <a href={data.url} target="_blank" rel="noopener noreferrer">
-              {data.link}
-            </a>
-          )}
-        </>
-      ) : data.type === "video" ? (
-        <>
-          <h3 className={"video__title"}>{data.title}</h3>
-          {data.description && <p>{data.description}</p>}
-          <iframe
-            className={"video__item"}
-            src={data.url}
-            title={data.title}
-            frameBorder="0"
-            allowFullScreen
-          />
-        </>
-      ) : (
+      {data.type === "paragraph" ? (<Paragraph data={data} />) : 
+      data.type === "text" ? (<Text data={data} />) : 
+      data.type === "link" ? (<Link data={data} />) : 
+      data.type === "image" ? (<Image data={data} />) : 
+      data.type === "list" ? (<List data={data} />) : 
+      data.type === "code" ? (<Code data={data} />) : 
+      data.type === "video" ? (<Video data={data} />) : 
+      (
         <Button
           onClick={expand}
           type="button"
@@ -145,13 +52,13 @@ export default function Categories({ data }) {
       )}
 
       {isVisible && filteredChildren.length > 0 && (
-        <StyledContainer>
+        <StyledChildItems>
           {filteredChildren.map((child, index) => (
             <div key={index} >
               <Categories data={child} />
             </div>
           ))}
-        </StyledContainer>
+        </StyledChildItems>
       )}
     </StyledCategories>
   );

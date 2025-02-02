@@ -1,28 +1,37 @@
-export default function List() {
-  <>
-    {data.title && (
-      <h3
-        style={{
-          maxWidth: "100%",
-          padding: "0 10px",
-          textAlign: "justify",
-        }}
-      >
-        {data.title.split("\n").map((line, index) => (
-          <span key={index}>
-            {line}
-            <br />
-          </span>
-        ))}
-      </h3>
-    )}
-    {data.description && (
-      <div dangerouslySetInnerHTML={{ __html: data.description }} />
-    )}
-    {data.link && data.url && (
-      <a href={data.url} target="_blank" rel="noopener noreferrer">
-        {data.link}
-      </a>
-    )}
-  </>;
+import styled from "styled-components"
+
+export default function List({data}) {
+  const StyledList = styled.div`
+    &>h3 {
+      max-width: 100%;
+      padding: 0 10px;
+      text-align: justify;
+    }
+    &>a {
+      margin: 0;
+    }
+  `
+
+  return (
+    <StyledList>
+      {data.title && (
+        <h3>
+          {data.title.split("\n").map((line, index) => (
+            <span key={index}>
+              {line}
+              <br />
+            </span>
+          ))}
+        </h3>
+      )}
+      {data.description && (
+        <div dangerouslySetInnerHTML={{ __html: data.description }} />
+      )}
+      {data.link && data.url && (
+        <a href={data.url} target="_blank" rel="noopener noreferrer">
+          {data.link}
+        </a>
+      )}
+    </StyledList>
+  )
 }

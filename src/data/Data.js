@@ -1144,7 +1144,7 @@ export const data = {
                 <p>Пример настройки заголовка CRP в серверном приложении:</p>
               `,
               code: `
-        response.setHeader('Cross-Origin-Resource-Policy', 'same-origin');
+  response.setHeader('Cross-Origin-Resource-Policy', 'same-origin');
               `
             },
             {
@@ -2907,74 +2907,74 @@ console.log(null === undefined); // false (строгое сравнение)
           title: "Drag and Drop / Перетаскивание",
           children: [
             {
-              title: "Mouse Drag and Drop",
-              type: "link",
-              url: "https://learn.javascript.ru/mouse-drag-and-drop",
-            },
-            {
               title: "Основы Drag and Drop",
               type: "text",
               description: `
-                <p>Drag and Drop — это способ улучшить интерфейс, позволяя пользователю перемещать элементы с помощью мыши. Это может быть полезно для копирования и перемещения документов, а также для других действий, таких как добавление элементов в корзину.</p>
+              <p>Drag and Drop — это способ улучшить интерфейс, позволяя пользователю перемещать элементы с помощью мыши. Это может быть полезно для копирования и перемещения документов, а также для других действий, таких как добавление элементов в корзину.</p>
               `,
             },
             {
               title: "Алгоритм Drag and Drop",
               type: "list",
               description: `
-                <p>Базовый алгоритм Drag and Drop включает следующие шаги:</p>
+              <p>Базовый алгоритм Drag and Drop включает следующие шаги:</p>
                 <ul>
                   <li><strong>mousedown</strong>: Подготовка элемента к перемещению.</li>
                   <li><strong>mousemove</strong>: Перемещение элемента на новые координаты.</li>
                   <li><strong>mouseup</strong>: Завершение перемещения элемента.</li>
-                </ul>
-              `,
-            },
-            {
-              title: "Правильное позиционирование",
-              type: "text",
-              description: `
-                <p>Чтобы избежать «прыжков» элемента при начале Drag and Drop, запоминаем расстояние от курсора до элемента и используем его при перемещении.</p>
-              `,
-            },
-            {
-              title: "Цели переноса (Droppable)",
-              type: "list",
-              description: `
-                <p>Для реализации переноса элемента в другую цель, используйте метод <code>document.elementFromPoint</code> для определения, над каким элементом находится указатель.</p>
-                <ul>
+                  </ul>
+                  `,
+                },
+                {
+                  title: "Правильное позиционирование",
+                  type: "text",
+                  description: `
+                  <p>Чтобы избежать «прыжков» элемента при начале Drag and Drop, запоминаем расстояние от курсора до элемента и используем его при перемещении.</p>
+                  `,
+                },
+                {
+                  title: "Цели переноса (Droppable)",
+                  type: "list",
+                  description: `
+                  <p>Для реализации переноса элемента в другую цель, используйте метод <code>document.elementFromPoint</code> для определения, над каким элементом находится указатель.</p>
+                  <ul>
                   <li>Подсвечивайте элементы, когда мышь находится над ними.</li>
                   <li>Обрабатывайте окончание переноса, чтобы выполнить действия с элементами.</li>
-                </ul>
-              `,
-            },
-            {
-              title: "Пример кода",
-              type: "code",
-              description: `
-                <p>Пример реализации Drag and Drop:</p>
-              `,
-              code: `
+                  </ul>
+                  `,
+                },
+                {
+                  title: "Пример кода",
+                  type: "code",
+                  description: `
+                  <p>Пример реализации Drag and Drop:</p>
+                  `,
+                  code: `
+// код для начала переноса
 ball.onmousedown = function(event) {
-  // код для начала переноса
 };
 
+// код для перемещения элемента
 function onMouseMove(event) {
-  // код для перемещения элемента
 }
-              `,
-            },
-          ],
-        },
-        {
-          title: "ES6",
-          children: [
-            {
-              title: "Destructuring assignment",
-              type: "paragraph",
+                  `,
+                },
+                {
+                  title: "Mouse Drag and Drop",
+                  type: "link",
+                  url: "https://learn.javascript.ru/mouse-drag-and-drop",
+                },
+              ],
             },
             {
-              title: "Arrow functions () => {} ",
+              title: "ES6",
+              children: [
+                {
+                  title: "Destructuring assignment",
+                  type: "paragraph",
+                },
+                {
+                  title: "Arrow functions () => {} ",
               type: "paragraph",
             },
             {
@@ -6000,7 +6000,7 @@ function nextId(ids){
                   title: "Did she say hallo?",
                   type: 'code',
                   description: `
-You received a whatsup message from an unknown number. Could it be from that girl/boy with a foreign accent you met yesterday evening?
+You received a whats up message from an unknown number. Could it be from that girl/boy with a foreign accent you met yesterday evening?
 
 Write a simple function to check if the string contains the word hallo in different languages.
 
@@ -6016,7 +6016,7 @@ czesc - polish
 Notes
 
 you can assume the input is a string.
-to keep this a beginner exercise you don't need to check if the greeting is a subset of word (Hallowen can pass the test)
+to keep this a beginner exercise you don't need to check if the greeting is a subset of word (Halloween can pass the test)
 function should be case insensitive to pass the tests
                   `,
                   code: `
@@ -8326,5 +8326,187 @@ function factorial(n) {
         },
       ],
     },
+
+
+    {
+      title: "<<<test>>>",
+      children: [
+        {
+          title: "ссылки",
+          children: [
+            {
+              title: "нажми на ссылку",
+              type: "link",
+              url: "https://learn.javascript.ru",
+            },
+          ]
+        },
+        {
+          title: "картинки",
+          children: [
+            {
+              title: "Заголовок картинки",
+              type: "image",
+              url: "https://i.pinimg.com/enabled_hi/564x/54/e9/87/54e98761c2348545244bf25487c5be23.jpg",
+            },
+            {
+              title: "", // можем оставить поле заголовка пустым
+              type: "image",
+              url: "https://i.pinimg.com/enabled_hi/564x/54/e9/87/54e98761c2348545244bf25487c5be23.jpg",
+            },
+            {
+              title: "Заголовок картинки",
+              type: "image",
+              url: "", // если адрес не корректный или мы вовсе в объекте не указали url, 
+              // то возвращает alt атрибут и его содержимое ({data.title})
+            },
+          ]
+        },
+        {
+          title: "видео",
+          children: [
+            {
+              title: "Заголовок видео",
+              type: "video",
+              url: "https://www.youtube.com/embed/gVxyTOPPEPc",
+            },
+            {
+              title: "", // если не требуется заголовок видео, то выводим лишь само видео
+              type: "video",
+              url: "https://www.youtube.com/embed/gVxyTOPPEPc",
+            },
+            {
+              title: "Заголовок видео",
+              type: "video",
+              description: "Описание видео", // {/* нужно ли описание к видео??? */}
+              url: "https://www.youtube.com/embed/gVxyTOPPEPc",
+            },
+            {
+              title: "Заголовок видео",
+              type: "video",
+              url: "", // если нет свойства url или нет адреса в объекте или он не верен, 
+              // то возвращаем сообщение об ошибке в виде параграфа
+            },
+          ]
+        },
+        {
+          title: "код",
+          children: [
+            {
+              title: "Код с описанием и заголовком",
+              type: "code",
+              description: `
+                <p>Пример добавления обработчика события клика:</p>
+              `,
+              code: `
+const button = document.getElementById('myButton');
+
+button.addEventListener('click', function(event) {
+  console.log('Кнопка нажата!');
+}, {
+  capture: false,
+  once: true
+});
+              `
+            },
+            {
+              title: "Код с заголовком без описания",
+              type: "code",
+              code: `
+const button = document.getElementById('myButton');
+
+button.addEventListener('click', function(event) {
+  console.log('Кнопка нажата!');
+}, {
+  capture: false,
+  once: true
+});
+              `
+            },
+            {
+              title: "", // Код без заголовка и описания
+              type: "code",
+              code: `
+const button = document.getElementById('myButton');
+
+button.addEventListener('click', function(event) {
+  console.log('Кнопка нажата!');
+}, {
+  capture: false,
+  once: true
+});
+              `
+            },
+            {
+              title: "Код с заголовком, описанием в виде списков и каких других структур текста",
+              type: "code",
+              description: `
+                <ul>
+                  <li><strong>глобальный селектор *</strong>: не имеет веса</li>
+                  <li><strong>Инлайновые стили</strong>: 1000</li>
+                  <li><strong>ID-селекторы</strong>: 100</li>
+                  <li><strong>Классы, атрибуты и псевдоклассы</strong>: 10</li>
+                  <li><strong>Теги и псевдоэлементы</strong>: 1</li>
+                </ul>
+                <p>Пример:</p>
+              `,
+              code: `
+// Специфичность: 0 (глобальный селектор)
+* {
+color: black;
+}                    
+
+/* Специфичность: 1 (тег) */
+p {
+color: blue;
+}
+
+/* Специфичность: 10 (класс) */
+.myClass {
+color: red;
+}
+
+/* Специфичность: 100 (ID) */
+#myId {
+color: green;
+}
+
+/* Специфичность: 1000 (инлайн стиль) */
+&lt;p style="color: yellow;"&gt;Hello&lt;/p&gt;
+              `,
+            },
+          ]
+        },
+        {
+          title: "Текст",
+          children: [
+            {
+              title: "type: 'text'",
+              type: "text",
+              description: `
+                <p><code><strong>Set</strong></code> — это встроенный объект в JavaScript, который позволяет хранить коллекцию уникальных значений. Это означает, что в одном <code>Set</code> не может быть дубликатов. Значения могут быть любого типа, включая объекты и примитивы.</p>
+              `,
+            },
+          ]
+        },
+        {
+          title: "список",
+          children: [
+            {
+              title: "type: 'list'",
+              type: "list",
+              description: `
+                <p>Использование <code><strong>Set</strong></code> имеет несколько преимуществ:</p>
+                <ul>
+                  <li>Уникальность значений: автоматически удаляет дубликаты.</li>
+                  <li>Быстрые операции: добавление, удаление и проверка наличия значений выполняется быстро.</li>
+                  <li>Поддержка любых типов данных, включая объекты.</li>
+                </ul>
+              `,
+            },
+          ]
+        },     
+      ]
+    }
   ],
 };

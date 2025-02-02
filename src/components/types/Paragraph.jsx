@@ -1,19 +1,24 @@
-export default function Paragraph() {
-  <>
-    {/* <p
-      style={{
-        margin: "0",
-        maxWidth: "100%",
-        padding: "0 10px",
-        textAlign: "justify",
-      }}
-    >
-      {data.paragraph.split("\n").map((line, index) => (
-        <span key={index}>
-          {line}
-          <br />
-        </span>
-      ))}
-    </p>; */}
-  </>;
+import styled from "styled-components";
+
+export default function Paragraph({ data }) {
+  const StyledParagraph = styled.p`
+    max-width: 100%;
+    padding: 0 5px;
+    text-align: justify;
+  `
+
+  return (
+    <>
+      {data.title && (
+        <StyledParagraph>
+          {data.title.split("\n").map((line, index) => (
+            <span key={index}>
+              {line}
+              <br />
+            </span>
+          ))}
+        </StyledParagraph>
+      )}
+    </>
+  );
 }

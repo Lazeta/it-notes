@@ -1,8 +1,7 @@
 export type types = {
     id: number;
     title:string;
-    content: string;
-    category: string;
-    subtopics: string;
+    description: string;
+    children?: types[];
     type: 'article' | 'link' | 'image' | 'video' | 'code' | 'site' | 'notes' | "paragraph" | "list" | "text";
 }
