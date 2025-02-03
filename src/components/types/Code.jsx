@@ -34,17 +34,19 @@ export default function Code({ data }) {
           ))}
         </h3>
       )}
-      {data.description && (
+      {data.description && 
         <div dangerouslySetInnerHTML={{ __html: data.description }} />
+      }
+      {data.code && (
+        <pre>
+          <code>{data.code}</code>
+        </pre>
       )}
-      <pre>
-        <code>{data.code}</code>
-      </pre>
-      {data.link && data.url && (
+      {data.link && data.url &&
         <a href={data.url} target="_blank" rel="noopener noreferrer">
           {data.link}
         </a>
-      )}
+      }
     </StyledCode>
   )
 }

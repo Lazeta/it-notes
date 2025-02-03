@@ -2,7 +2,6 @@ import { useState } from "react";
 import { StyledCategories } from "../../styles/components/categories/categories.styled";
 import Button from "../buttons/Button";
 import styled from "styled-components";
-import Paragraph from "../types/Paragraph";
 import Text from "../types/Text";
 import Link from "../types/Link";
 import Image from "../types/Image";
@@ -35,8 +34,7 @@ export default function Categories({ data }) {
 
   return (
     <StyledCategories>
-      {data.type === "paragraph" ? (<Paragraph data={data} />) : 
-      data.type === "text" ? (<Text data={data} />) : 
+      {data.type === "text" ? (<Text data={data} />) : 
       data.type === "link" ? (<Link data={data} />) : 
       data.type === "image" ? (<Image data={data} />) : 
       data.type === "list" ? (<List data={data} />) : 

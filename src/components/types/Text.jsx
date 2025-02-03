@@ -2,10 +2,15 @@ import styled from "styled-components";
 
 export default function Text({data}) {
   const StyledText = styled.div`
-    &>h3 {
+    & > h3 {
       max-width: 100%;
       padding: 0 10px;
       text-align: justify;
+    }
+    & > p {
+      max-width: 100%;
+      padding: 0 10px;
+      font-size: 1.05rem;
     }
   `
 
@@ -22,7 +27,7 @@ export default function Text({data}) {
         </h3>
       )}
       {data.description && (
-        <div dangerouslySetInnerHTML={{ __html: data.description }} />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} />
       )}
       {data.link && data.url && (
         <a href={data.url} target="_blank" rel="noopener noreferrer">
