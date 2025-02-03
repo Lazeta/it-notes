@@ -1,28 +1,53 @@
-export default function List() {
-  <>
-    {data.title && (
-      <h3
-        style={{
-          maxWidth: "100%",
-          padding: "0 10px",
-          textAlign: "justify",
-        }}
-      >
-        {data.title.split("\n").map((line, index) => (
-          <span key={index}>
-            {line}
-            <br />
-          </span>
-        ))}
-      </h3>
-    )}
-    {data.description && (
-      <div dangerouslySetInnerHTML={{ __html: data.description }} />
-    )}
-    {data.link && data.url && (
-      <a href={data.url} target="_blank" rel="noopener noreferrer">
-        {data.link}
-      </a>
-    )}
-  </>;
+import styled from "styled-components"
+
+const StyledList = styled.div`
+  & > h3 {
+    padding: 0 10px;
+    text-align: justify;
+  }
+  & > p {
+    padding: 0 10px;
+  }
+`
+
+export default function List({ data }) {
+  function formatLink() {
+    if (!data.link && !data.url) {
+      return null
+    } else {
+      if (data.link && data.url) {
+        const isValidUrl = data.link && data.url && data.url.startsWith("https://");
+        if (!isValidUrl) {
+          return <p style={{ color: "red" }}>Invalid or missing link URL. Please check the URL.</p>
+        } else {
+          return (
+            <p>
+              <a href={data.url} target="_blank" rel="noopener noreferrer">
+                {data.link}
+              </a>
+            </p>
+          )
+        }
+      }
+    }
+  }
+
+  return (
+    <StyledList>
+      {data.title && (
+        <h3>
+          {data.title.split("\n").map((line, index) => (
+            <span key={index}>
+              {line}
+              <br />
+            </span>
+          ))}
+        </h3>
+      )}
+      {data.description && (
+        <p dangerouslySetInnerHTML={{ __html: data.description }} />
+      )}
+      {formatLink()}
+    </StyledList>
+  )
 }

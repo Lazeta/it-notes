@@ -1144,8 +1144,8 @@ export const data = {
                 <p>Пример настройки заголовка CRP в серверном приложении:</p>
               `,
               code: `
-        response.setHeader('Cross-Origin-Resource-Policy', 'same-origin');
-              `
+  response.setHeader('Cross-Origin-Resource-Policy', 'same-origin');
+              `,
             },
             {
               title: "5. Когда использовать CRP?",
@@ -1413,7 +1413,7 @@ export const data = {
             },
           ],
         },
-      ]
+      ],
     },
     {
       title: "HTML/CSS",
@@ -1547,7 +1547,8 @@ font-weight: bold;
                   title: "Коробчатая модель (box-sizing)",
                   children: [
                     {
-                      title: "Коробчатая модель описывает пространство, занимаемое элементом",
+                      title:
+                        "Коробчатая модель описывает пространство, занимаемое элементом",
                       type: "code",
                       description: `
                         <p>Она включает в себя следующие свойства:</p>
@@ -1624,7 +1625,8 @@ font-size: 1.5rem; /* 24px */
                   ],
                 },
                 {
-                  title: "Позиционирование: поток документов, overflow, z-index",
+                  title:
+                    "Позиционирование: поток документов, overflow, z-index",
                   children: [
                     {
                       title:
@@ -1801,7 +1803,7 @@ gap: 10px; /* расстояние между элементами */
   }
 }`,
                     },
-                  ]
+                  ],
                 },
                 {
                   title: "Разница между блочными и строчными элементами",
@@ -1852,7 +1854,7 @@ gap: 10px; /* расстояние между элементами */
                       type: "video",
                       url: "https://www.youtube.com/embed/gVxyTOPPEPc",
                     },
-                  ]
+                  ],
                 },
                 {
                   title: "Принципы семантической верстки",
@@ -2144,15 +2146,12 @@ circle.setAttribute("stroke", "yellow"); // Изменяем цвет обвод
           ],
         },
 
-
-
-
         {
-          title: "На что нужно обратить внимание при разработке мультиязычных сайтов",
+          title:
+            "На что нужно обратить внимание при разработке мультиязычных сайтов",
           children: [
             {
-              title:
-                "При разработке мультиязычных сайтов стоит учитывать:",
+              title: "При разработке мультиязычных сайтов стоит учитывать:",
               type: "code",
               description: `
               <ul>
@@ -2284,8 +2283,8 @@ document.getElementById('content').innerHTML = data.content;
 <label for="Number">Ваше любимое число:</label>
 <input id="number">`,
             },
-          ]
-        }
+          ],
+        },
       ],
     },
     {
@@ -2339,7 +2338,7 @@ button.addEventListener('click', function(event) {
   capture: false,
   once: true
 });
-              `
+              `,
             },
           ],
         },
@@ -2588,7 +2587,7 @@ function show() {
           event.stopPropagation(); // Отменяет всплытие события
           console.log('Кнопка нажата, всплытие отменено!');
         });
-              `
+              `,
             },
           ],
         },
@@ -2628,7 +2627,7 @@ function outerFunction() {
 
 const myInnerFunction = outerFunction();
 myInnerFunction(); // Вывод: "I am outside!"
-              `
+              `,
             },
             {
               title: "4. Применение замыканий",
@@ -2643,7 +2642,8 @@ myInnerFunction(); // Вывод: "I am outside!"
               `,
             },
             {
-              title: "5. Пример использования замыкания для приватных переменных",
+              title:
+                "5. Пример использования замыкания для приватных переменных",
               type: "code",
               description: `
                 <p>Пример создания приватной переменной:</p>
@@ -2672,7 +2672,7 @@ console.log(counter.increment()); // 1
 console.log(counter.increment()); // 2
 console.log(counter.getCount()); // 2
 console.log(counter.decrement()); // 1
-              `
+              `,
             },
             {
               title: "6. Замыкания и производительность",
@@ -2846,7 +2846,7 @@ console.log(person.lastName); // Smith
               title: "Подробнее на learn.javascript.ru",
               type: "link",
               url: "https://learn.javascript.ru/descriptors-getters-setters",
-            }
+            },
           ],
         },
         {
@@ -2865,7 +2865,8 @@ console.log(name, age);`,
           ],
         },
         {
-          title: "Difference between null and undefined / Разница между null и undefined",
+          title:
+            "Difference between null and undefined / Разница между null и undefined",
           children: [
             {
               title: "Описание null и undefined",
@@ -2907,62 +2908,62 @@ console.log(null === undefined); // false (строгое сравнение)
           title: "Drag and Drop / Перетаскивание",
           children: [
             {
-              title: "Mouse Drag and Drop",
-              type: "link",
-              url: "https://learn.javascript.ru/mouse-drag-and-drop",
-            },
-            {
               title: "Основы Drag and Drop",
               type: "text",
               description: `
-                <p>Drag and Drop — это способ улучшить интерфейс, позволяя пользователю перемещать элементы с помощью мыши. Это может быть полезно для копирования и перемещения документов, а также для других действий, таких как добавление элементов в корзину.</p>
+              <p>Drag and Drop — это способ улучшить интерфейс, позволяя пользователю перемещать элементы с помощью мыши. Это может быть полезно для копирования и перемещения документов, а также для других действий, таких как добавление элементов в корзину.</p>
               `,
             },
             {
               title: "Алгоритм Drag and Drop",
               type: "list",
               description: `
-                <p>Базовый алгоритм Drag and Drop включает следующие шаги:</p>
+              <p>Базовый алгоритм Drag and Drop включает следующие шаги:</p>
                 <ul>
                   <li><strong>mousedown</strong>: Подготовка элемента к перемещению.</li>
                   <li><strong>mousemove</strong>: Перемещение элемента на новые координаты.</li>
                   <li><strong>mouseup</strong>: Завершение перемещения элемента.</li>
-                </ul>
-              `,
+                  </ul>
+                  `,
             },
             {
               title: "Правильное позиционирование",
               type: "text",
               description: `
-                <p>Чтобы избежать «прыжков» элемента при начале Drag and Drop, запоминаем расстояние от курсора до элемента и используем его при перемещении.</p>
-              `,
+                  <p>Чтобы избежать «прыжков» элемента при начале Drag and Drop, запоминаем расстояние от курсора до элемента и используем его при перемещении.</p>
+                  `,
             },
             {
               title: "Цели переноса (Droppable)",
               type: "list",
               description: `
-                <p>Для реализации переноса элемента в другую цель, используйте метод <code>document.elementFromPoint</code> для определения, над каким элементом находится указатель.</p>
-                <ul>
+                  <p>Для реализации переноса элемента в другую цель, используйте метод <code>document.elementFromPoint</code> для определения, над каким элементом находится указатель.</p>
+                  <ul>
                   <li>Подсвечивайте элементы, когда мышь находится над ними.</li>
                   <li>Обрабатывайте окончание переноса, чтобы выполнить действия с элементами.</li>
-                </ul>
-              `,
+                  </ul>
+                  `,
             },
             {
               title: "Пример кода",
               type: "code",
               description: `
-                <p>Пример реализации Drag and Drop:</p>
-              `,
+                  <p>Пример реализации Drag and Drop:</p>
+                  `,
               code: `
+// код для начала переноса
 ball.onmousedown = function(event) {
-  // код для начала переноса
 };
 
+// код для перемещения элемента
 function onMouseMove(event) {
-  // код для перемещения элемента
 }
-              `,
+                  `,
+            },
+            {
+              title: "Mouse Drag and Drop",
+              type: "link",
+              url: "https://learn.javascript.ru/mouse-drag-and-drop",
             },
           ],
         },
@@ -2970,48 +2971,59 @@ function onMouseMove(event) {
           title: "ES6",
           children: [
             {
-              title: "Destructuring assignment",
-              type: "paragraph",
+              title: "",
+              type: "text",
+              description: "Destructuring assignment",
             },
             {
-              title: "Arrow functions () => {} ",
-              type: "paragraph",
+              title: "",
+              type: "text",
+              description: "Arrow functions () => {}",
             },
             {
-              title: "Template strings `${}`",
-              type: "paragraph",
+              title: "",
+              type: "text",
+              description: "Template strings `${}`",
             },
             {
-              title: "variable declaration with let and const",
-              type: "paragraph",
+              title: "",
+              type: "text",
+              description: "variable declaration with let and const",
             },
             {
-              title: "Classes",
-              type: "paragraph",
+              title: "",
+              type: "text",
+              description: "Classes",
             },
             {
-              title: "IIFE (immediately invoked function expression)",
-              type: "paragraph",
+              title: "",
+              type: "text",
+              description: "IIFE (immediately invoked function expression)",
             },
             {
-              title: "Multi-line strings",
-              type: "paragraph",
+              title: "",
+              type: "text",
+              description: "Multi-line strings",
             },
             {
-              title: "Promise",
-              type: "paragraph",
+              title: "",
+              type: "text",
+              description: "Promise",
             },
             {
-              title: "forEach and for...of",
-              type: "paragraph",
+              title: "",
+              type: "text",
+              description: "forEach and for...of",
             },
             {
-              title: "Default parameters",
-              type: "paragraph",
+              title: "",
+              type: "text",
+              description: "Default parameters",
             },
             {
-              title: "Rest-параметры и Spread-оператор ...",
-              type: "paragraph",
+              title: "",
+              type: "text",
+              description: "Rest-параметры и Spread-оператор ...",
             },
           ],
         },
@@ -3073,7 +3085,7 @@ function levenshtein(a, b) {
   }
   return matrix[b.length][a.length];
 }
-`
+`,
             },
           ],
         },
@@ -3285,7 +3297,7 @@ console.log(square(4)); // 16
               `,
               code: `
 window.alert('Привет, мир!');
-              `
+              `,
             },
             {
               title: "5. Особенности объекта window",
@@ -3301,7 +3313,8 @@ window.alert('Привет, мир!');
           ],
         },
         {
-          title: "How objects become primitives / Как объекты превращаются в примитивы",
+          title:
+            "How objects become primitives / Как объекты превращаются в примитивы",
           children: [
             {
               title: "Преобразование объектов в примитивы",
@@ -3430,7 +3443,7 @@ sayHello(); // Работает, выводит "Hello!"
 function sayHello() {
   console.log("Hello!");
 }
-              `
+              `,
             },
             {
               title: "4. Пример Hoisting с переменными",
@@ -3443,7 +3456,7 @@ console.log(myVar); // undefined
 
 var myVar = 5;
 console.log(myVar); // 5
-              `
+              `,
             },
             {
               title: "5. Что происходит на самом деле?",
@@ -3476,7 +3489,7 @@ let a = 10;
 
 console.log(b); // ReferenceError: Cannot access 'b' before initialization
 const b = 20;
-              `
+              `,
             },
             {
               title: "8. Важность понимания Hoisting",
@@ -3536,8 +3549,7 @@ parentInstance.greet(); // "Hello from parent class!"
               `,
             },
             {
-              title:
-                "Наследование с использованием Object.setPrototypeOf",
+              title: "Наследование с использованием Object.setPrototypeOf",
               type: "code",
               description: `
                 <p><strong>Object.setPrototypeOf</strong>: Этот метод можно использовать для изменения прототипа существующего объекта. Это также позволяет реализовать наследование, но рекомендуется использовать в основном в особых случаях, т.к. может привести к ухудшению производительности.</p>
@@ -3575,7 +3587,8 @@ console.log(child instanceof Parent); // true
           ],
         },
         {
-          title: "IIFE (Immediately Invoked Function Expression) / (Немедленно вызванное функциональное выражение)",
+          title:
+            "IIFE (Immediately Invoked Function Expression) / (Немедленно вызванное функциональное выражение)",
           children: [
             {
               title: "Описание IIFE",
@@ -3678,7 +3691,7 @@ function outerFunction() {
 
 const myInnerFunction = outerFunction();
 myInnerFunction(); // Вывод: "I am outside!"
-              `
+              `,
             },
             {
               title: "4. Как лексическое окружение связано с замыканиями?",
@@ -3688,7 +3701,8 @@ myInnerFunction(); // Вывод: "I am outside!"
               `,
             },
             {
-              title: "5. Значение лексического окружения для производительности",
+              title:
+                "5. Значение лексического окружения для производительности",
               type: "text",
               description: `
                 <p>Лексическое окружение помогает JavaScript управлять памятью и областью видимости. Понимание этой концепции помогает разработчикам писать более эффективный и управляемый код.</p>
@@ -3747,7 +3761,7 @@ myInnerFunction(); // Вывод: "I am outside!"
         document.body.appendChild(newElement);
         
         console.log(elements.length); // Теперь длина коллекции увеличилась
-              `
+              `,
             },
             {
               title: "5. Пример работы с неживыми коллекциями",
@@ -3765,7 +3779,7 @@ myInnerFunction(); // Вывод: "I am outside!"
         document.body.appendChild(newStaticElement);
         
         console.log(staticElements.length); // Длина коллекции не изменилась
-              `
+              `,
             },
           ],
         },
@@ -3796,7 +3810,7 @@ myInnerFunction(); // Вывод: "I am outside!"
               `,
               code: `
 2x + 3y = 6
-              `
+              `,
             },
             {
               title: "4. Преобразование в форму с угловым коэффициентом",
@@ -3806,7 +3820,7 @@ myInnerFunction(); // Вывод: "I am outside!"
               `,
               code: `
 y = -\\frac{2}{3}x + 2
-              `
+              `,
             },
             {
               title: "5. Пример кода для решения линейного уравнения",
@@ -3826,7 +3840,7 @@ let b = 3;
 let c = 6;
 
 console.log(solveLinearEquation(a, b, c)); // Вывод: 0
-              `
+              `,
             },
             {
               title: "6. Применение линейных уравнений",
@@ -3844,115 +3858,133 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
               title: "Array Methods",
               children: [
                 {
-                  title: "1. pop() => removes the last element from an array.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "1. pop() => removes the last element from an array.",
                 },
                 {
-                  title: "2.shift() => удаляет элемент в начале массива",
-                  type: "paragraph",
-                },
-                {
-                  title:
-                    "3.push() => добавляется несколько элементов в конец массива",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "2.shift() => удаляет элемент в начале массива",
                 },
                 {
                   title:
-                    "4.unshift() => добавляет несколько элементов в начало массива",
-                  type: "paragraph",
-                },
-                {
-                  title: "5.length => получаем число элементов массива",
-                  type: "paragraph",
-                },
-                {
-                  title: `6.splice() => добавление нескольких элементов в массив; 
-                            первый аргумент указывает где начать вставку элементов по индексу; 
-                            второй аргумент указывает сколько элементов нужно удалить, если аргумент не указать, то удаления не будет, просто добавится новый элемент в массиве; самые новые элементы указываются в скобках данного метода в кавычках,`,
-                  type: "paragraph",
-                },
-                {
-                  title: `7.slice() => вырезает один или несколько элементов массива
-                            через указатель аргумента начала вырезания и второй аргумент где закончить срез;
-                            принимает отрицательные значения.`,
-                  type: "paragraph",
-                },
-                {
-                  title: "8.concat() => конкатенация двух массивов",
-                  type: "paragraph",
-                },
-                {
-                  title: `9.map() => принимает массив и применяет указанную функцию для
-                            всех элементов массива; возвращает новый массив.`,
-                  type: "paragraph",
-                },
-                {
-                  title: `10.every() => проверяет, соответствуют ли все элементы указанному
-                            массиву определённому условию; если все элементы соответствуют условию, то возвращает
-                            метод true, в противном случае вернёт false.`,
-                  type: "paragraph",
-                },
-                {
-                  title: `11.includes() => проверяет на наличие в массиве элемента; если
-                            элемент найден, то возвращает true.`,
-                  type: "paragraph",
-                },
-                {
-                  title: `12.spread() => превращает массив в строки с помощью специальных
-                            разделителей … сохраняет между ними границу или по умолчанию между строками образуются
-                            пробелы.`,
-                  type: "paragraph",
-                },
-                {
-                  title: `13.filter() => возвращает новый массив из всех элементов соответствующих
-                            заданному условию.`,
-                  type: "paragraph",
+                    "",
+                  type: "text",
+                  description: "3.push() => добавляется несколько элементов в конец массива",
                 },
                 {
                   title:
-                    "14.reduce(function (previousValue, item, index, array) { … }, [initial]); => сводит массив к одному значению.",
-                  type: "paragraph",
+                    "",
+                  type: "text",
+                  description: "4.unshift() => добавляет несколько элементов в начало массива",
                 },
                 {
-                  title:
-                    "15.reduceRight() => сводит массив к одному значение с права на лево.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "5.length => получаем число элементов массива",
                 },
                 {
-                  title: `16.indexOf() => возвращает первый индекс по которому может быть найден
-                            элемент в массиве и -1 если такого элемента нет; это не тоже самое что и Boolean values,
-                            мы можем получать 2 и более индекса совпадений по массиву.`,
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: `6.splice() => добавление нескольких элементов в массив; 
+                  первый аргумент указывает где начать вставку элементов по индексу; 
+                  второй аргумент указывает сколько элементов нужно удалить, если аргумент не указать, то удаления не будет, просто добавится новый элемент в массиве; самые новые элементы указываются в скобках данного метода в кавычках,`,
                 },
                 {
-                  title: `17.sort() => возвращает отсортированный массив; если compareFunction
-                            предоставлена, то массив сортируется в соответствиями с этими условиями.`,
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: `7.slice() => вырезает один или несколько элементов массива
+                  через указатель аргумента начала вырезания и второй аргумент где закончить срез;
+                  принимает отрицательные значения.`,
                 },
                 {
-                  title: `18.find() => возвращает значение первого найденного в массиве элемента,
-                            который удовлетворяет условию указанных в функции, в противном случае возвращает undefined.`,
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "8.concat() => конкатенация двух массивов",
                 },
                 {
-                  title: `19.findIndex() => возвращает индекс в массиве, если элемент удовлетворяет
-                            условиям проверяющей функции, в противном случае вернёт -1.`,
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: `9.map() => принимает массив и применяет указанную функцию для
+                  всех элементов массива; возвращает новый массив.`,
                 },
                 {
-                  title: `20.forEach(function (item, index, array) { … } => выполняет указанную
-                            функцию один раз для каждого элемента в массиве.`,
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: `10.every() => проверяет, соответствуют ли все элементы указанному
+                  массиву определённому условию; если все элементы соответствуют условию, то возвращает
+                  метод true, в противном случае вернёт false.`,
                 },
                 {
-                  title:
-                    "21.join(‘, ’) => преобразовывает массив в строку с заданным разделителем.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: `11.includes() => проверяет на наличие в массиве элемента; если
+                  элемент найден, то возвращает true.`,
                 },
                 {
-                  title:
-                    "22.isArray() => проверяем массив ли этот объект или нет.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: `12.spread() => превращает массив в строки с помощью специальных
+                  разделителей … сохраняет между ними границу или по умолчанию между строками образуются
+                  пробелы.`,
+                },
+                {
+                  title: "",
+                  type: "text",
+                  description: `13.filter() => возвращает новый массив из всех элементов соответствующих
+                  заданному условию.`,
+                },
+                {
+                  title: "",
+                  type: "text",
+                  description: `14.reduce(function (previousValue, item, index, array) { … }, [initial]); => сводит массив к одному значению.`,
+                },
+                {
+                  title: "",
+                  type: "text",
+                  description: "15.reduceRight() => сводит массив к одному значение с права на лево.",
+                },
+                {
+                  title: "",
+                  type: "text",
+                  description: `16.indexOf() => возвращает первый индекс по которому может быть найден
+                  элемент в массиве и -1 если такого элемента нет; это не тоже самое что и Boolean values,
+                  мы можем получать 2 и более индекса совпадений по массиву.`,
+                },
+                {
+                  title: "",
+                  type: "text",
+                  description: `17.sort() => возвращает отсортированный массив; если compareFunction
+                  предоставлена, то массив сортируется в соответствиями с этими условиями.`,
+                },
+                {
+                  title: "",
+                  type: "text",
+                  description: `18.find() => возвращает значение первого найденного в массиве элемента,
+                  который удовлетворяет условию указанных в функции, в противном случае возвращает undefined.`,
+                },
+                {
+                  title: "",
+                  type: "text",
+                  description: `19.findIndex() => возвращает индекс в массиве, если элемент удовлетворяет
+                  условиям проверяющей функции, в противном случае вернёт -1.`,
+                },
+                {
+                  title: "",
+                  type: "text",
+                  description: `20.forEach(function (item, index, array) { … } => выполняет указанную
+                  функцию один раз для каждого элемента в массиве.`,
+                },
+                {
+                  title: "",
+                  type: "text",
+                  description: "21.join(‘, ’) => преобразовывает массив в строку с заданным разделителем.",
+                },
+                {
+                  title: "",
+                  type: "text",
+                  description: `22.isArray() => проверяем массив ли этот объект или нет.`
                 },
                 {
                   title: "Learn more about array methods.",
@@ -3970,98 +4002,120 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
               title: "Strings Methods",
               children: [
                 {
-                  title: "1.toUpperCase() => перевод строки в верхний регистр",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "1.toUpperCase() => перевод строки в верхний регистр",
                 },
                 {
-                  title: "2.toLowerCase() => перевод строки в нижний регистр",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "2.toLowerCase() => перевод строки в нижний регистр",
                 },
                 {
-                  title: "3.trim() => удаляет пробелы в начале и конце строки",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "3.trim() => удаляет пробелы в начале и конце строки",
                 },
                 {
-                  title: "4.length => получаем длину строки",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "4.length => получаем длину строки",
                 },
                 {
-                  title: `5.includes() => проверяет на наличие в строке элемента; если элемент найден, то возвращает true.`,
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: `5.includes() => проверяет на наличие в строке элемента; если элемент найден, то возвращает true.`,
                 },
                 {
-                  title: `6.spread() => превращает массив в строки с помощью специальных разделителей ... сохраняет между ними границу или по умолчанию между строками образуются пробелы.`,
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: `6.spread() => превращает массив в строки с помощью специальных разделителей ... сохраняет между ними границу или по умолчанию между строками образуются пробелы.`,
                 },
                 {
-                  title: `7.repeat() => повторяет строку указанное количество раз.`,
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: `7.repeat() => повторяет строку указанное количество раз.`,
                 },
                 {
-                  title: `8.split() => разбивает строку на массив подстроки по указанному разделителю. Возвращает новый массив, который содержит подстроки полученные в ходе разбиения.`,
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: `8.split() => разбивает строку на массив подстроки по указанному разделителю. Возвращает новый массив, который содержит подстроки полученные в ходе разбиения.`,
                 },
                 {
-                  title: `9.startsWith() => проверяет на наличие в начале строки указанного элемента. Возвращает true или false`,
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "9.startsWith() => проверяет на наличие в начале строки указанного элемента. Возвращает true или false",
                 },
                 {
-                  title: `10.endsWith() => проверяет на наличие в конце строки указанного элемента. Возвращает true или false`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "10.endsWith() => проверяет на наличие в конце строки указанного элемента. Возвращает true или false",
                 },
                 {
-                  title: `11.str.substr(0, 2) => возвращает часть этой строки, начиная с указанного индекса и продолжая заданное количество символов после него. P.S.Deprecate`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "11.str.substr(0, 2) => возвращает часть этой строки, начиная с указанного индекса и продолжая заданное количество символов после него. P.S.Deprecate",
                 },
                 {
-                  title: `12.str.slice(0, -2) => вырезает один или несколько элементов внутри строки через указатель аргумента начала вырезания и второй аргумент где закончить срез; принимает отрицательные значения.`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "12.str.slice(0, -2) => вырезает один или несколько элементов внутри строки через указатель аргумента начала вырезания и второй аргумент где закончить срез; принимает отрицательные значения.",
                 },
                 {
-                  title: `13.substring() => возвращает вырезанную часть строки, но не принимает отрицательные числа в качестве аргументов.`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "13.substring() => возвращает вырезанную часть строки, но не принимает отрицательные числа в качестве аргументов.",
                 },
                 {
-                  title: `14.concat() => конкатенация между собой строк в одну строку`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "14.concat() => конкатенация между собой строк в одну строку",
                 },
                 {
-                  title: `15.charCodeAt() => возвращает значение символа по Юникод.`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "15.charCodeAt() => возвращает значение символа по Юникод.",
                 },
                 {
-                  title: `16.charAt() => возвращает символ по Юникод.`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "16.charAt() => возвращает символ по Юникод.",
                 },
                 {
-                  title: `17.trimStart() => удаляет пробелы в начале строки.`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "17.trimStart() => удаляет пробелы в начале строки.",
                 },
                 {
-                  title: `18.trimEnd() => удаляет пробелы в конце строки.`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "18.trimEnd() => удаляет пробелы в конце строки.",
                 },
                 {
-                  title: `19.padStart() => добавляет символы в начале строки, чтобы результирующая строка получила указанную длину; по умолчанию метод возвращает пустую строку до указанной длины, но может принимать и другие символы указанные во втором аргументе.`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "19.padStart() => добавляет символы в начале строки, чтобы результирующая строка получила указанную длину; по умолчанию метод возвращает пустую строку до указанной длины, но может принимать и другие символы указанные во втором аргументе.",
                 },
                 {
-                  title: `20.padEnd() => добавляет символы в конце строки, чтобы результирующая строка получила указанную длину.`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "20.padEnd() => добавляет символы в конце строки, чтобы результирующая строка получила указанную длину.",
                 },
                 {
-                  title: `21.indexOf() => возвращает индекс первого вхождения указанного элемента в строку. Если элемент не найден, возвращает -1.`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "21.indexOf() => возвращает индекс первого вхождения указанного элемента в строку. Если элемент не найден, возвращает -1.",
                 },
                 {
-                  title: `22.at(-1) или at() => получает последний символ строки или символ согласно индексу слева на право, так же как при отрицательном значении принимает символ с право на лево.`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "22.at(-1) или at() => получает последний символ строки или символ согласно индексу слева на право, так же как при отрицательном значении принимает символ с право на лево.",
                 },
                 {
                   title: `23.search()`,
                   type: "code",
                   description: `search() => возвращает индекс первого вхождения подстроки в строке.`,
-                  code: `console.log(str.search('World')); // 9`
+                  code: `console.log(str.search('World')); // 9`,
                 },
                 {
                   title: "24.str.replace()",
@@ -4144,24 +4198,24 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
               title: "Numbers Methods",
               children: [
                 {
-                  title:
-                    "1.toFixed(number) => форматирует число с использованием записи с фиксированной запятой. Аргументам принимает количество знаков после запяты.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "1.toFixed(number) => форматирует число с использованием записи с фиксированной запятой. Аргументам принимает количество знаков после запяты.",
                 },
                 {
-                  title:
-                    "2.parseFloat(string) => принимает строку в качестве аргумента и возвращает число с плавающей точной.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "2.parseFloat(string) => принимает строку в качестве аргумента и возвращает число с плавающей точной.",
                 },
                 {
-                  title:
-                    "3.parseInt(string, radix) => принимает строку в качестве аргумента и возвращает целое число в соответствии с указанной системой счисления.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "3.parseInt(string, radix) => принимает строку в качестве аргумента и возвращает целое число в соответствии с указанной системой счисления.",
                 },
                 {
-                  title:
-                    "4.Number() => преобразовывает строку в числовой тип данных.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "4.Number() => преобразовывает строку в числовой тип данных.",
                 },
                 {
                   title: "toExponential()",
@@ -4214,21 +4268,23 @@ console.log(getRandomInt(1, 10)); // случайное число от 1 до 1
                     },
                     {
                       title: "5.Math.sqrt() => возвращает квадратный корень числа.",
-                      type: "paragraph",
+                      type: "text",
+                      description: "5.Math.sqrt() => возвращает квадратный корень числа.",
                     },
                     {
-                      title: "6.Math.cbrt() => возвращает кубический корень числа.",
-                      type: "paragraph",
+                      title: "",
+                      type: "text",
+                      description: "6.Math.cbrt() => возвращает кубический корень числа.",
                     },
                     {
-                      title:
-                        "7.Math.abs() => возвращает абсолютное значение числа.",
-                      type: "paragraph",
+                      title: "",
+                      type: "text",
+                      description: "7.Math.abs() => возвращает абсолютное значение числа.",
                     },
                     {
-                      title:
-                        "8.Math.pow() => возвращает число, возведённое в степень.",
-                      type: "paragraph",
+                      title: "",
+                      type: "text",
+                      description: "8.Math.pow() => возвращает число, возведённое в степень.",
                     },
                   ],
                 },
@@ -4238,7 +4294,8 @@ console.log(getRandomInt(1, 10)); // случайное число от 1 до 1
               title: "Object Methods",
               children: [
                 {
-                  title: "1.Object.keys(obj): Возвращает массив строк, содержащий имена собственных перечисляемых свойств объекта.",
+                  title:
+                    "1.Object.keys(obj): Возвращает массив строк, содержащий имена собственных перечисляемых свойств объекта.",
                   type: "code",
                   description: `<p>Примеры использования <code>Object.keys()</code>:</p>`,
                   code: `
@@ -4247,7 +4304,8 @@ console.log(Object.keys(person)); // ['name', 'age']
                                       `,
                 },
                 {
-                  title: "2.Object.values(obj): Возвращает массив значений собственных перечисляемых свойств объекта.",
+                  title:
+                    "2.Object.values(obj): Возвращает массив значений собственных перечисляемых свойств объекта.",
                   type: "code",
                   description: `<p>Примеры использования <code>Object.values()</code>:</p>`,
                   code: `
@@ -4256,7 +4314,8 @@ console.log(Object.values(person)); // ['Alice', 25]
                                       `,
                 },
                 {
-                  title: "3.Object.create(proto, propertiesObject): Создает новый объект с указанным прототипом и свойствами.",
+                  title:
+                    "3.Object.create(proto, propertiesObject): Создает новый объект с указанным прототипом и свойствами.",
                   type: "code",
                   description: `<p>Примеры использования <code>Object.create()</code>:</p>`,
                   code: `
@@ -4266,7 +4325,8 @@ obj.greet(); // 'Hello!'
                   `,
                 },
                 {
-                  title: "4.Object.freeze(obj): Замораживает объект, предотвращая добавление, удаление или изменение его свойств.",
+                  title:
+                    "4.Object.freeze(obj): Замораживает объект, предотвращая добавление, удаление или изменение его свойств.",
                   type: "code",
                   description: `<p>Примеры использования <code>Object.freeze()</code>:</p>`,
                   code: `
@@ -4277,7 +4337,8 @@ console.log(obj.name); // 'Alice'
                   `,
                 },
                 {
-                  title: "5.Object.assign(target, ...sources): Копирует значения всех собственных перечисляемых свойств из одного или более источников в целевой объект и возвращает его.",
+                  title:
+                    "5.Object.assign(target, ...sources): Копирует значения всех собственных перечисляемых свойств из одного или более источников в целевой объект и возвращает его.",
                   type: "code",
                   description: `<p>Примеры использования <code>Object.assign()</code>:</p>`,
                   code: `
@@ -4288,7 +4349,8 @@ console.log(returnedTarget); // { a: 1, b: 2, c: 3 }
                   `,
                 },
                 {
-                  title: "6.Object.entries(obj): Возвращает массив пар [ключ, значение] для собственных перечисляемых свойств объекта.",
+                  title:
+                    "6.Object.entries(obj): Возвращает массив пар [ключ, значение] для собственных перечисляемых свойств объекта.",
                   type: "code",
                   description: `<p>Примеры использования <code>Object.entries()</code>:</p>`,
                   code: `
@@ -4322,7 +4384,8 @@ console.log(Object.is(null, undefined)); // false
                   `,
                 },
                 {
-                  title: "9. Object.prototype.hasOwnProperty(): Возвращает булево значение, указывающее, является ли указанное свойство собственным свойством объекта.",
+                  title:
+                    "9. Object.prototype.hasOwnProperty(): Возвращает булево значение, указывающее, является ли указанное свойство собственным свойством объекта.",
                   type: "code",
                   description: `<p>Примеры использования <code>Object.prototype.hasOwnProperty()</code>:</p>`,
                   code: `
@@ -4374,36 +4437,44 @@ do {
                   ],
                 },
                 {
-                  title:"1.for => повторяет блок кода определённое количество раз.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "1.for => повторяет блок кода определённое количество раз.",
                 },
                 {
-                  title:"2.while => повторяет блок кода до тех пор, пока не выполнится условие.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "2.while => повторяет блок кода до тех пор, пока не выполнится условие.",
                 },
                 {
-                  title:"3.do while => повторяет блок кода до тех пор, пока не выполнится условие. После чего выполняется блок кода.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "3.do while => повторяет блок кода до тех пор, пока не выполнится условие. После чего выполняется блок кода.",
                 },
                 {
-                  title:"4.for...of => повторяет блок кода для каждого элемента в массиве.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "4.for...of => повторяет блок кода для каждого элемента в массиве.",
                 },
                 {
-                  title:"5.forEach() => повторяет блок кода для каждого элемента в массиве.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "5.forEach() => повторяет блок кода для каждого элемента в массиве.",
                 },
                 {
-                  title:"6.for in => повторяет блок кода для каждого свойства в объекте.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "6.for in => повторяет блок кода для каждого свойства в объекте.",
                 },
                 {
-                  title: "7.break => прерывает выполнение цикла.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "7.break => прерывает выполнение цикла.",
                 },
                 {
-                  title:"8.continue => прерывает текущую итерацию цикла и переходит к следующей.",
-                  type: "paragraph",
+                  title: "",
+                  type: "text",
+                  description: "8.continue => прерывает текущую итерацию цикла и переходит к следующей.",
                 },
               ],
             },
@@ -4411,12 +4482,14 @@ do {
               title: "work with JSON",
               children: [
                 {
-                  title: `JSON.stringify(value, replacer, space): Преобразует значение в строку JSON.`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "JSON.stringify(value, replacer, space): Преобразует значение в строку JSON.",
                 },
                 {
-                  title: `JSON.parse(text, reviver): Преобразует строку JSON в значение.`,
-                  type: "paragraph",
+                  title: ``,
+                  type: "text",
+                  description: "JSON.parse(text, reviver): Преобразует строку JSON в значение.",
                 },
               ],
             },
@@ -4500,8 +4573,8 @@ console.log(result5); // Вывод: ["2023-01-27", "2023", "01", "27", ... ]
                     },
                   ],
                 },
-              ]
-            }
+              ],
+            },
           ],
         },
         {
@@ -4538,7 +4611,8 @@ console.log(Number.isNaN(undefined)); // false
           ],
         },
         {
-          title: "Override browser defaults / Отмена действий браузера по умолчанию",
+          title:
+            "Override browser defaults / Отмена действий браузера по умолчанию",
           children: [
             {
               title: "1. Что такое действия по умолчанию?",
@@ -4573,7 +4647,7 @@ link.addEventListener('click', function(event) {
   event.preventDefault(); // Отменяет переход по ссылке
   console.log('Переход отменен!');
 });
-              `
+              `,
             },
             {
               title: "4. Когда использовать отмену действий по умолчанию?",
@@ -4962,28 +5036,28 @@ console.log(regex.test(email)); // Вывод: true (если формат ко�
             {
               title: "MDN Web Docs (Mozilla Developer Network):",
               type: "link",
-              url: "https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Regular_expressions"
+              url: "https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Regular_expressions",
             },
             {
               title: "Regex101:",
               type: "link",
-              url: "https://regex101.com"
+              url: "https://regex101.com",
             },
             {
               title: "Regular-Expressions.info:",
               type: "link",
-              url: "https://www.regular-expressions.info"
+              url: "https://www.regular-expressions.info",
             },
             {
               title: "Mastering Regular Expressions (книга):",
               type: "link",
-              url: "https://www.oreilly.com/library/view/mastering-regular-expressions/9781491971700/"
+              url: "https://www.oreilly.com/library/view/mastering-regular-expressions/9781491971700/",
             },
             {
               title: "YouTube Tutorials:",
               type: "link",
-              url: "https://www.youtube.com/results?search_query=Regular+Expressions+tutorial"
-            }
+              url: "https://www.youtube.com/results?search_query=Regular+Expressions+tutorial",
+            },
           ],
         },
         {
@@ -5201,13 +5275,11 @@ function bubbleSort(arr) {
 }
               `,
             },
-          ]
+          ],
         },
         {
           title: "Search function",
-          children: [
-
-          ]
+          children: [],
         },
         {
           title: "Strict comparison",
@@ -5280,7 +5352,7 @@ function testGlobal() {
   console.log(globalVar); // Доступно
 }
 testGlobal();
-              `
+              `,
             },
             {
               title: "5. Пример локальной области видимости",
@@ -5295,7 +5367,7 @@ function testLocal() {
 }
 testLocal();
 console.log(localVar); // ReferenceError: localVar is not defined
-              `
+              `,
             },
             {
               title: "6. Блочная область видимости",
@@ -5309,7 +5381,7 @@ console.log(localVar); // ReferenceError: localVar is not defined
   console.log(blockVar); // Доступно
 }
 console.log(blockVar); // ReferenceError: blockVar is not defined
-              `
+              `,
             },
             {
               title: "7. Иерархия области видимости",
@@ -5334,7 +5406,7 @@ function outerFunction() {
   innerFunction();
 }
 outerFunction();
-              `
+              `,
             },
           ],
         },
@@ -5365,7 +5437,7 @@ outerFunction();
               code: `
 console.log(a); // ReferenceError: Cannot access 'a' before initialization
 let a = 5;
-              `
+              `,
             },
             {
               title: "4. Важность понимания TDZ",
@@ -5394,7 +5466,7 @@ let a = 5;
               code: `
 console.log(b); // undefined
 var b = 10;
-              `
+              `,
             },
           ],
         },
@@ -5518,7 +5590,8 @@ console.log(typeof value); // "string"
           ],
         },
         {
-          title: "Variables: let, const, var and hoisting / Переменные: let, const, var и хоистинг",
+          title:
+            "Variables: let, const, var and hoisting / Переменные: let, const, var и хоистинг",
           children: [
             {
               title: "Область видимости переменных",
@@ -5707,7 +5780,7 @@ console.log(x, y, z); // 10 20 30
               children: [
                 {
                   title: "Count Odd Numbers below n",
-                  type: 'code',
+                  type: "code",
                   description: `
                     Given a number n, return the number of positive odd numbers below n, EASY!
     
@@ -5738,15 +5811,15 @@ function oddCount(n){
 
 const oddCount = n => n % 2 === 0 ? n / 2 : (n - 1) / 2
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 2",
               children: [
                 {
                   title: "Pole Vault Starting Marks",
-                  type: 'code',
+                  type: "code",
                   description: `
                   For a pole vaulter, it is very important to begin the approach run at the best possible starting mark. This is affected by numerous factors and requires fine-tuning in practice. But there is a guideline that will help a beginning vaulter start at approximately the right location for the so-called "three-step approach," based on the vaulter's body height.
                   This guideline was taught to me in feet and inches, but due to the international nature of Codewars, I am creating this kata to use metric units instead.
@@ -5784,15 +5857,15 @@ function startingMark(bodyHeight) {
   return Math.round((slope * bodyHeight + b.y - slope * b.x) * 100) / 100;
 }
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 3",
               children: [
                 {
                   title: "Playing with cubes II",
-                  type: 'code',
+                  type: "code",
                   description: `
                   Hey Codewarrior!
                   In the previous kata, you have implemented a Cube class, but now we need your help again! I'm talking about constructors. We don't have one. Let's code one (or more) such that one can instantiate an object via it, handling either no arguments or a single integer. 
@@ -5828,15 +5901,15 @@ class Cube {
   }
 }
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 4",
               children: [
                 {
                   title: "Polish alphabet",
-                  type: 'code',
+                  type: "code",
                   description: `
                   There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
                   Your task is to change the letters with diacritics:
@@ -5916,15 +5989,15 @@ const correctPolishLetters = str => {
   return str.replace(/[ąćęłńóśźż]/g, match => diacritics[match])
 }
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 5",
               children: [
                 {
                   title: "Who is going to pay for the wall?",
-                  type: 'code',
+                  type: "code",
                   description: `
                     Don Drumphet lives in a nice neighborhood, but one of his neighbors has started to let his house go. Don Drumphet wants to build a wall between his house and his neighbor’s, and is trying to get the neighborhood association to pay for it. He begins to solicit his neighbors to petition to get the association to build the wall. Unfortunately for Don Drumphet, he cannot read very well, has a very limited attention span, and can only remember two letters from each of his neighbors’ names. As he collects signatures, he insists that his neighbors keep truncating their names until two letters remain, and he can finally read them.
                     Your code will show Full name of the neighbor and the truncated version of the name as an array. If the number of the characters in name is less than or equal to two, it will return an array containing only the name as is.
@@ -5942,15 +6015,15 @@ function whoIsPaying(name){
 
 const whoIsPaying = name => name.length > 2 ? ([name, name.substr(0, 2)]) : [name]
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 6",
               children: [
                 {
                   title: "Smallest unused ID",
-                  type: 'code',
+                  type: "code",
                   description: `
                     Hey awesome programmer!
 
@@ -5990,17 +6063,17 @@ function nextId(ids){
   }
 }
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 7",
               children: [
                 {
                   title: "Did she say hallo?",
-                  type: 'code',
+                  type: "code",
                   description: `
-You received a whatsup message from an unknown number. Could it be from that girl/boy with a foreign accent you met yesterday evening?
+You received a whats up message from an unknown number. Could it be from that girl/boy with a foreign accent you met yesterday evening?
 
 Write a simple function to check if the string contains the word hallo in different languages.
 
@@ -6016,7 +6089,7 @@ czesc - polish
 Notes
 
 you can assume the input is a string.
-to keep this a beginner exercise you don't need to check if the greeting is a subset of word (Hallowen can pass the test)
+to keep this a beginner exercise you don't need to check if the greeting is a subset of word (Halloween can pass the test)
 function should be case insensitive to pass the tests
                   `,
                   code: `
@@ -6062,146 +6135,146 @@ const validateHello = greetings => {
 const vivas = ['hello', 'ciao', 'salut', 'hallo', 'hola', 'ahoj', 'czesc'];
 const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 8",
               children: [
                 {
                   title: "title",
-                  type: 'code',
+                  type: "code",
                   description: `
                     word
                   `,
                   code: `
                   // code 
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 9",
               children: [
                 {
                   title: "title",
-                  type: 'code',
+                  type: "code",
                   description: `
                     word
                   `,
                   code: `
                   // code 
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 10",
               children: [
                 {
                   title: "title",
-                  type: 'code',
+                  type: "code",
                   description: `
                     word
                   `,
                   code: `
                   // code 
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 11",
               children: [
                 {
                   title: "title",
-                  type: 'code',
+                  type: "code",
                   description: `
                     word
                   `,
                   code: `
                   // code 
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 12",
               children: [
                 {
                   title: "title",
-                  type: 'code',
+                  type: "code",
                   description: `
                     word
                   `,
                   code: `
                   // code 
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 13",
               children: [
                 {
                   title: "title",
-                  type: 'code',
+                  type: "code",
                   description: `
                     word
                   `,
                   code: `
                   // code 
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 14",
               children: [
                 {
                   title: "title",
-                  type: 'code',
+                  type: "code",
                   description: `
                     word
                   `,
                   code: `
                   // code 
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 15",
               children: [
                 {
                   title: "title",
-                  type: 'code',
+                  type: "code",
                   description: `
                     word
                   `,
                   code: `
                   // code 
                   `,
-                }
-              ]
+                },
+              ],
             },
             {
               title: "Task 16",
               children: [
                 {
                   title: "title",
-                  type: 'code',
+                  type: "code",
                   description: `
                     word
                   `,
                   code: `
                   // code 
                   `,
-                }
-              ]
-            }
-          ]
-        }
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
     {
@@ -6426,7 +6499,8 @@ function c(r) {
           ],
         },
         {
-          title: "Continuous Integration vs Continuous Deployment vs Delivery Pipeline",
+          title:
+            "Continuous Integration vs Continuous Deployment vs Delivery Pipeline",
           children: [
             {
               title: "Определение",
@@ -6491,7 +6565,7 @@ function c(r) {
               description:
                 "<strong>DRY (Don't Repeat Yourself)</strong> - Принцип, согласно которому информация и логика не должны повторяться в коде, чтобы уменьшить дублирование и облегчить поддержку.",
             },
-          ]
+          ],
         },
         {
           title: "Design patterns / Шаблоны проектирования",
@@ -6590,7 +6664,7 @@ function c(r) {
             console.log('Элемент списка нажат:', event.target.textContent);
           }
         });
-              `
+              `,
             },
             {
               title: "4. Когда использовать делегирование событий?",
@@ -6747,7 +6821,7 @@ console.log(sum); // 15
               description:
                 "<strong>KISS (Keep It Simple, Stupid)</strong> - это принцип, который подразумевает, что системы следует проектировать максимально просто; избегать ненужной сложности.",
             },
-          ]
+          ],
         },
         {
           title: "Methodology BEM",
@@ -7087,9 +7161,9 @@ console.log(sum); // 15
               description:
                 "<strong>YAGNI (You Aren't Gonna Need It)</strong> - Принцип, который гласит, что не следует добавлять функциональности, пока не возникнет реальная необходимость, чтобы избежать излишней сложности.",
             },
-          ]
+          ],
         },
-      ]
+      ],
     },
     {
       title: "Interview",
@@ -7269,7 +7343,7 @@ console.log(sum); // 15
                       code: `
 element.addEventListener('click', handler, true); // Фаза захвата
 element.addEventListener('click', handler, false); // Фаза всплытия
-                      `
+                      `,
                     },
                   ],
                 },
@@ -7386,9 +7460,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
             },
             {
               title: "HTML/CSS questions",
-              children: [
-                
-              ]
+              children: [],
             },
             {
               title: "JS questions",
@@ -7452,9 +7524,7 @@ function factorial(n) {
             },
             {
               title: "TypeScript questions",
-              children: [
-
-              ],
+              children: [],
             },
             {
               title: "Темы интервью 📚",
@@ -7717,8 +7787,8 @@ function factorial(n) {
                           <li></li>
                           <li></li>
                         </ul>
-                      `
-                    }
+                      `,
+                    },
                   ],
                 },
                 {
@@ -8032,7 +8102,6 @@ function factorial(n) {
           children: [
             {
               title: "new topic",
-              // type: "paragraph",
             },
           ],
         },
@@ -8047,7 +8116,7 @@ function factorial(n) {
             {
               title: "",
               type: "list",
-              description: `<strong>Functional programming</strong> — это парадигма программирования, в которой основное внимание уделяется использованию функций и избеганию изменения состояния и данных.`
+              description: `<strong>Functional programming</strong> — это парадигма программирования, в которой основное внимание уделяется использованию функций и избеганию изменения состояния и данных.`,
             },
             {
               title: "",
@@ -8322,6 +8391,340 @@ function factorial(n) {
               type: "link",
               url: "https://hotkeycheatsheet.com/ru/hotkey-cheatsheet/pycharm",
             },
+          ],
+        },
+      ],
+    },
+
+    {
+      title: "<<<test>>>",
+      children: [
+        {
+          title: "ссылки",
+          children: [
+            {
+              title: "ссылка рабочая",
+              type: "link",
+              url: "https://learn.javascript.ru",
+            },
+            {
+              title: "ссылка пустая",
+              type: "link",
+              url: "",
+            },
+            {
+              title: "ссылка с неверным URL",
+              type: "link",
+              url: "http://learn.javascript.ru",
+            },
+          ],
+        },
+        {
+          title: "картинки",
+          children: [
+            {
+              title: "Заголовок картинки",
+              type: "image",
+              url: "https://i.pinimg.com/enabled_hi/564x/54/e9/87/54e98761c2348545244bf25487c5be23.jpg",
+            },
+            {
+              title: "", // можем оставить поле заголовка пустым
+              type: "image",
+              url: "https://i.pinimg.com/enabled_hi/564x/54/e9/87/54e98761c2348545244bf25487c5be23.jpg",
+            },
+            {
+              title: "Заголовок картинки",
+              type: "image",
+              url: "", // если адрес не корректный или мы вовсе в объекте не указали url,
+              // то возвращает alt атрибут и его содержимое ({data.title})
+            },
+          ],
+        },
+        {
+          title: "видео",
+          children: [
+            {
+              title: "Заголовок видео",
+              type: "video",
+              url: "https://www.youtube.com/embed/gVxyTOPPEPc",
+            },
+            {
+              title: "", // если не требуется заголовок видео, то выводим лишь само видео
+              type: "video",
+              url: "https://www.youtube.com/embed/gVxyTOPPEPc",
+            },
+            {
+              title: "Заголовок видео",
+              type: "video",
+              description: "Описание видео", // {/* нужно ли описание к видео??? */}
+              url: "https://www.youtube.com/embed/gVxyTOPPEPc",
+            },
+            {
+              title: "Заголовок видео",
+              type: "video",
+              url: "", // если нет свойства url или нет адреса в объекте или он не верен,
+              // то возвращаем сообщение об ошибке в виде параграфа
+            },
+          ],
+        },
+        {
+          title: "Текст",
+          children: [
+            {
+              title: "Заголовок текста с описанием",
+              type: "text",
+              description: `
+                <p><code><strong>Set</strong></code> — это встроенный объект в JavaScript, который позволяет хранить коллекцию уникальных значений. Это означает, что в одном <code>Set</code> не может быть дубликатов. Значения могут быть любого типа, включая объекты и примитивы.</p>
+              `,
+            },
+            {
+              title: "",
+              type: "text",
+              description: `без заголовка просто описание = JSON.parse(text, reviver): Преобразует строку JSON в значение.`,
+            },
+            {
+              title: "",
+              type: "text",
+              description: `без заголовка описание и ссылка = JSON.parse(text, reviver): Преобразует строку JSON в значение.`,
+              link: "ссылка",
+              url: "https://learn.javascript.ru/promise-basics",
+            },
+            {
+              title: "Заголовок текста",
+              type: "text",
+              description: `
+                <p><code><strong>Get</strong></code> — это встроенный объект в JavaScript, который позволяет получить значение свойства объекта по его имени.</p>
+              `,
+              link: "ссылка",
+              url: "https://learn.javascript.ru/promise-basics",
+            },
+            {
+              title: "",
+              type: "text",
+              description: `без заголовка описание и неверная ссылка = JSON.parse(text, reviver): Преобразует строку JSON в значение.`,
+              link: "ссылка",
+              url: "http:",
+            },
+          ],
+        },
+        {
+          title: "список",
+          children: [
+            {
+              title: "список с заголовком и описанием",
+              type: "list",
+              description: `
+                <p>Использование <code><strong>Set</strong></code> имеет несколько преимуществ:</p>
+                <ul>
+                  <li>Уникальность значений: автоматически удаляет дубликаты.</li>
+                  <li>Быстрые операции: добавление, удаление и проверка наличия значений выполняется быстро.</li>
+                  <li>Поддержка любых типов данных, включая объекты.</li>
+                </ul>
+              `,
+            },
+            {
+              title: "список с заголовком, описанием и ссылкой",
+              type: "list",
+              description: `
+                <p>Использование <code><strong>Set</strong></code> имеет несколько преимуществ:</p>
+                <ul>
+                  <li>Уникальность значений: автоматически удаляет дубликаты.</li>
+                  <li>Быстрые операции: добавление, удаление и проверка наличия значений выполняется быстро.</li>
+                  <li>Поддержка любых типов данных, включая объекты.</li>
+                </ul>
+              `,
+              url: "https://",
+              link: "ссылка",
+            },
+            {
+              title: "список с заголовком, описанием и неправильной ссылкой",
+              type: "list",
+              description: `
+                <p>Использование <code><strong>Set</strong></code> имеет несколько преимуществ:</p>
+                <ul>
+                  <li>Уникальность значений: автоматически удаляет дубликаты.</li>
+                  <li>Быстрые операции: добавление, удаление и проверка наличия значений выполняется быстро.</li>
+                  <li>Поддержка любых типов данных, включая объекты.</li>
+                </ul>
+              `,
+              url: "http://",
+              link: "ссылка",
+            },
+            {
+              title: "список с заголовком, описанием и пустой ссылкой",
+              type: "list",
+              description: `
+                <p>Использование <code><strong>Set</strong></code> имеет несколько преимуществ:</p>
+                <ul>
+                  <li>Уникальность значений: автоматически удаляет дубликаты.</li>
+                  <li>Быстрые операции: добавление, удаление и проверка наличия значений выполняется быстро.</li>
+                  <li>Поддержка любых типов данных, включая объекты.</li>
+                </ul>
+              `,
+              url: "",
+              link: "ссылка",
+            },
+            {
+              title: "список с заголовком и описанием",
+              type: "list",
+              description: `
+                <p>Использование <code><strong>Set</strong></code> имеет несколько преимуществ:</p>
+                <ul>
+                  <li>Уникальность значений: автоматически удаляет дубликаты.</li>
+                  <li>Быстрые операции: добавление, удаление и проверка наличия значений выполняется быстро.</li>
+                  <li>Поддержка любых типов данных, включая объекты:</li>
+                    <ul>
+                      <li>Уникальность значений: автоматически удаляет дубликаты.</li>
+                      <li>Быстрые операции: добавление, удаление и проверка наличия значений выполняется быстро.</li>
+                      <li>Поддержка любых типов данных, включая объекты.</li>
+                    </ul>
+                </ul>
+              `,
+            },
+            {
+              title: "нумерованный список с заголовком и описанием",
+              type: "list",
+              description: `
+                <p>Использование <code><strong>Set</strong></code> имеет несколько преимуществ:</p>
+                <ol>
+                  <li>Уникальность значений: автоматически удаляет дубликаты.</li>
+                  <li>Быстрые операции: добавление, удаление и проверка наличия значений выполняется быстро.</li>
+                  <li>Поддержка любых типов данных, включая объекты:</li>
+                    <ul>
+                      <li>Уникальность значений: автоматически удаляет дубликаты.</li>
+                      <li>Быстрые операции: добавление, удаление и проверка наличия значений выполняется быстро.</li>
+                      <li>Поддержка любых типов данных, включая объекты.</li>
+                    </ul>
+                </ol>
+              `,
+            },
+          ],
+        },
+        {
+          title: "код",
+          children: [
+            {
+              title: "Код с описанием и заголовком",
+              type: "code",
+              description: `
+                <p>Пример добавления обработчика события клика:</p>
+              `,
+              code: `
+const button = document.getElementById('myButton');
+
+button.addEventListener('click', function(event) {
+  console.log('Кнопка нажата!');
+}, {
+  capture: false,
+  once: true
+});
+              `,
+            },
+            {
+              title: "Код с заголовком без описания",
+              type: "code",
+              code: `
+const button = document.getElementById('myButton');
+
+button.addEventListener('click', function(event) {
+  console.log('Кнопка нажата!');
+}, {
+  capture: false,
+  once: true
+});
+              `,
+            },
+            {
+              title: "", // Код без заголовка и описания
+              type: "code",
+              code: `
+const button = document.getElementById('myButton');
+
+button.addEventListener('click', function(event) {
+  console.log('Кнопка нажата!');
+}, {
+  capture: false,
+  once: true
+});
+              `,
+            },
+            {
+              title:
+                "Код с заголовком, описанием в виде списков и каких других структур текста",
+              type: "code",
+              description: `
+                <ul>
+                  <li><strong>глобальный селектор *</strong>: не имеет веса</li>
+                  <li><strong>Инлайновые стили</strong>: 1000</li>
+                  <li><strong>ID-селекторы</strong>: 100</li>
+                  <li><strong>Классы, атрибуты и псевдоклассы</strong>: 10</li>
+                  <li><strong>Теги и псевдоэлементы</strong>: 1</li>
+                </ul>
+                <p>Пример:</p>
+              `,
+              code: `
+// Специфичность: 0 (глобальный селектор)
+* {
+color: black;
+}                    
+
+/* Специфичность: 1 (тег) */
+p {
+color: blue;
+}
+
+/* Специфичность: 10 (класс) */
+.myClass {
+color: red;
+}
+
+/* Специфичность: 100 (ID) */
+#myId {
+color: green;
+}
+
+/* Специфичность: 1000 (инлайн стиль) */
+&lt;p style="color: yellow;"&gt;Hello&lt;/p&gt;
+              `,
+            },
+            {
+              title: "Код с заголовком без описания с ссылкой и телом ссылки",
+              type: "code",
+              code: `
+const button = document.getElementById('myButton');
+
+button.addEventListener('click', function(event) {
+  console.log('Кнопка нажата!');
+}, {
+  capture: false,
+  once: true
+});
+              `,
+              link: "ссылка",
+              url: "https://learn.javascript.ru/promise-basics",
+            },
+            {
+              title: "Код с заголовком без описания с неправильной ссылкой",
+              type: "code",
+              code: `
+button.addEventListener('click', function(event) {
+  console.log('Кнопка нажата!');
+}              
+              `,
+              link: "ссылка",
+              url: "http:",
+            },
+            {
+              title: "Код с заголовком без описания с пустой ссылкой",
+              type: "code",
+              code: `
+button.addEventListener('click', function(event) {
+  console.log('Кнопка нажата!');
+}              
+              `,
+              link: "ссылка",
+              url: "",
+            }
           ],
         },
       ],
