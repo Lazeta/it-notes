@@ -1,16 +1,36 @@
 import styled from "styled-components"
 
-export default function List({data}) {
-  const StyledList = styled.div`
-    &>h3 {
-      max-width: 100%;
-      padding: 0 10px;
-      text-align: justify;
+const StyledList = styled.div`
+  & > h3 {
+    padding: 0 10px;
+    text-align: justify;
+  }
+  & > p {
+    padding: 0 10px;
+  }
+`
+
+export default function List({ data }) {
+  function formatLink() {
+    if (!data.link && !data.url) {
+      return null
+    } else {
+      if (data.link && data.url) {
+        const isValidUrl = data.link && data.url && data.url.startsWith("https://");
+        if (!isValidUrl) {
+          return <p style={{ color: "red" }}>Invalid or missing link URL. Please check the URL.</p>
+        } else {
+          return (
+            <p>
+              <a href={data.url} target="_blank" rel="noopener noreferrer">
+                {data.link}
+              </a>
+            </p>
+          )
+        }
+      }
     }
-    &>a {
-      margin: 0;
-    }
-  `
+  }
 
   return (
     <StyledList>
@@ -25,13 +45,9 @@ export default function List({data}) {
         </h3>
       )}
       {data.description && (
-        <div dangerouslySetInnerHTML={{ __html: data.description }} />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} />
       )}
-      {data.link && data.url && (
-        <a href={data.url} target="_blank" rel="noopener noreferrer">
-          {data.link}
-        </a>
-      )}
+      {formatLink()}
     </StyledList>
   )
 }

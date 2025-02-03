@@ -34,12 +34,12 @@ export default function Categories({ data }) {
 
   return (
     <StyledCategories>
-      {data.type === "text" ? (<Text data={data} />) : 
-      data.type === "link" ? (<Link data={data} />) : 
+      {data.type === "link" ? (<Link data={data} />) : 
       data.type === "image" ? (<Image data={data} />) : 
+      data.type === "video" ? (<Video data={data} />) : 
+      data.type === "text" ? (<Text data={data} />) : 
       data.type === "list" ? (<List data={data} />) : 
       data.type === "code" ? (<Code data={data} />) : 
-      data.type === "video" ? (<Video data={data} />) : 
       (
         <Button
           onClick={expand}

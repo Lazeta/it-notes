@@ -34,8 +34,8 @@ hr {
 }
 
 a {
-    color: rgba(8, 152, 235, 0.685);
-    padding: 0 5px;
+    color: rgb(60, 106, 235);
+    padding: 0 10px;
 }
 
 .parent input,

@@ -1,24 +1,30 @@
 import styled from "styled-components"
 
-export default function Link({ data }) {
-  const StyledLink = styled.div`
-    &>a {
+const StyledLink = styled.div`
+  & > p {
+    color: red;
+  }
+  & > span {
+    font-size: 1rem;
+    & > a {
       text-decoration: none;
-      padding: 0 10px;
-      text-align: justify;
     }
-  `
+  }
+`
+
+export default function Link({ data }) {
+  const isValidUrl = data.url && data.url.startsWith("https://");
 
   return (
     <StyledLink>
-      {data.url && (
-        <a
-          href={data.url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {data.title}
-        </a>
+      {isValidUrl ? (
+        <span>
+          <a href={data.url} target="_blank" rel="noopener noreferrer">
+            {data.title}
+          </a>
+        </span>
+      ) : (
+        <p>Invalid or missing link URL. Please check the URL.</p>
       )}
     </StyledLink>
   )

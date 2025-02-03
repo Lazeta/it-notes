@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 const StyledImage = styled.div`
-  & > span {
+  & > p {
+    color: red;
+  }
+  & > span > p {
     text-align: center;
-    & > p {
-      margin: 0;
-      padding: 0;
-    }
   }
   & > img {
     padding: 10px 0;
@@ -17,7 +16,7 @@ const StyledImage = styled.div`
 
 export default function Image({ data }) {
   const isValidUrl = data.url && data.url.startsWith("https://");
-
+  
   return (
     <StyledImage>
       {data.title && (
@@ -30,7 +29,7 @@ export default function Image({ data }) {
       {isValidUrl ? (
         <img src={data.url} alt={data.title}/>
       ) : (
-        <p style={{ color: "red" }}>Invalid or missing image URL. Please check the URL.</p>
+        <p>Invalid or missing image URL. Please check the URL.</p>
       )}
       {/* добавим логику опциональную добавления картинки с локального устройства и места хранения */}
     </StyledImage>
