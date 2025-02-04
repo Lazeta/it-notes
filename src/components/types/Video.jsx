@@ -1,9 +1,6 @@
 import styled from "styled-components"
 
 const StyledVideo = styled.div`
-  & > p {
-    color: red;
-  }
   & > h3 {
     margin: 0;
   }
@@ -24,9 +21,9 @@ export default function Video({ data }) {
       {isValidUrl ? (
         <iframe src={data.url} title={data.title} frameBorder="0" allowFullScreen/>
       ) : (
-        <p>Invalid or missing video URL. Please check the URL.</p>
+        <p style={{ color: "red" }}>Invalid or missing video URL. Please check the URL.</p>
       )}
-      {/* добавим логику опциональную добавления видео с локального устройства и места хранения */}
+      {/* добавим логику опциональную добавления видео загружаемого с локального устройства */}
     </StyledVideo>
   )
 }
