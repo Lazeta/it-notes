@@ -15,7 +15,7 @@ const StyledVideo = styled.div`
   }
 `
 export default function Video({ data }) {
-  const isValidUrl = data.url && data.url.startsWith("https://www.youtube.com/embed/");
+  const isValidUrl = data.url && data.url.startsWith("https://www.youtube.com/embed");
 
   return (
     <StyledVideo>

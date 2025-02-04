@@ -1,5 +1,5 @@
 export const data = {
-  title: "Topic navigation",
+  title: "Sections",
   children: [
     {
       title: "Web-technology",
@@ -9,7 +9,7 @@ export const data = {
           children: [
             {
               title: "1. Запрос по сети",
-              type: "list",
+              type: "text",
               description: `
                 <ul>
                   <li><strong>Клик по ссылке:</strong> Пользователь нажимает на ссылку, инициируя процесс загрузки страницы.</li>
@@ -19,7 +19,7 @@ export const data = {
             },
             {
               title: "2. Установление соединения",
-              type: "list",
+              type: "text",
               description: `
                 <ul>
                   <li><strong>TCP-соединение:</strong> Браузер устанавливает TCP-соединение с сервером.</li>
@@ -29,7 +29,7 @@ export const data = {
             },
             {
               title: "3. Отправка HTTP-запроса",
-              type: "list",
+              type: "text",
               description: `
                 <ul>
                   <li><strong>HTTP-запрос:</strong> Браузер отправляет запрос на сервер для получения ресурса (HTML-документа).</li>
@@ -38,7 +38,7 @@ export const data = {
             },
             {
               title: "4. Получение ответа от сервера",
-              type: "list",
+              type: "text",
               description: `
                 <ul>
                   <li><strong>HTTP-ответ:</strong> Сервер обрабатывает запрос и отправляет обратно статус-код, заголовки и тело ответа.</li>
@@ -47,7 +47,7 @@ export const data = {
             },
             {
               title: "5. Обработка ответа",
-              type: "list",
+              type: "text",
               description: `
                 <ul>
                   <li><strong>Загрузка и парсинг HTML:</strong> Браузер начинает загружать и парсить HTML-документ, создавая DOM.</li>
@@ -57,7 +57,7 @@ export const data = {
             },
             {
               title: "6. Обработка CSS и JavaScript",
-              type: "list",
+              type: "text",
               description: `
                 <ul>
                   <li><strong>Загрузка и парсинг CSS:</strong> Браузер загружает и парсит CSS, создавая CSSOM.</li>
@@ -67,7 +67,7 @@ export const data = {
             },
             {
               title: "7. Создание рендеринга",
-              type: "list",
+              type: "text",
               description: `
                 <ul>
                   <li><strong>Создание дерева рендеринга:</strong> Браузер объединяет DOM и CSSOM для создания визуального представления.</li>
@@ -77,7 +77,7 @@ export const data = {
             },
             {
               title: "8. Завершение загрузки",
-              type: "list",
+              type: "text",
               description: `
                 <ul>
                   <li><strong>Событие 'DOMContentLoaded':</strong> Срабатывает, когда HTML полностью загружен и разобран.</li>
@@ -88,7 +88,7 @@ export const data = {
             },
             {
               title: "9. Взаимодействие с пользователем",
-              type: "list",
+              type: "text",
               description: `
                 <p><strong>Интерактивность:</strong> Пользователь начинает взаимодействовать с загруженной страницей, и скрипты обрабатывают события.</p>
               `,
@@ -100,14 +100,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>JWT (JSON Web Token) — это открытый стандарт (RFC 7519), который определяет компактный и автономный способ безопасной передачи информации между сторонами в виде JSON-объекта. Эта информация может быть проверена и доверена, так как она подписана цифровой подписью.</p>
               `,
             },
             {
               title: "Структура JWT",
-              type: "list",
+              type: "text",
               description: `
                 <p>JWT состоит из трех частей, разделенных точками:</p>
                 <ul>
@@ -119,7 +119,7 @@ export const data = {
             },
             {
               title: "Преимущества JWT",
-              type: "list",
+              type: "text",
               description: `
                 <p>Преимущества использования JWT:</p>
                 <ul>
@@ -131,7 +131,7 @@ export const data = {
             },
             {
               title: "Недостатки JWT",
-              type: "list",
+              type: "text",
               description: `
                 <p>Недостатки использования JWT:</p>
                 <ul>
@@ -143,7 +143,7 @@ export const data = {
             },
             {
               title: "Использование JWT",
-              type: "list",
+              type: "text",
               description: `
                 <p>JWT часто используется для:</p>
                 <ul>
@@ -160,14 +160,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Простые и сложные запросы относятся к типам запросов, используемых в базах данных и системах управления данными для извлечения информации. Простые запросы выполняются с использованием одной таблицы, тогда как сложные запросы могут включать несколько таблиц и более сложные условия.</p>
               `,
             },
             {
               title: "Простые запросы",
-              type: "list",
+              type: "text",
               description: `
                 <p>Простые запросы обычно выполняют базовые операции извлечения данных и имеют следующую структуру:</p>
                 <ul>
@@ -179,7 +179,7 @@ export const data = {
             },
             {
               title: "Сложные запросы",
-              type: "list",
+              type: "text",
               description: `
                 <p>Сложные запросы могут включать объединение нескольких таблиц, подзапросы и более сложные условия:</p>
                 <ul>
@@ -192,7 +192,7 @@ export const data = {
             },
             {
               title: "Преимущества и недостатки",
-              type: "list",
+              type: "text",
               description: `
                 <p>Сравнение простых и сложных запросов:</p>
                 <ul>
@@ -213,7 +213,7 @@ export const data = {
             },
             {
               title: "Примеры использования",
-              type: "list",
+              type: "text",
               description: `
                 <p>Примеры использования:</p>
                 <ul>
@@ -229,14 +229,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>HTTP (HyperText Transfer Protocol) — это протокол, используемый для передачи данных в интернете. HTTPS (HTTP Secure) — защищенная версия HTTP, использующая шифрование для обеспечения безопасности данных во время передачи.</p>
               `,
             },
             {
               title: "HTTP",
-              type: "list",
+              type: "text",
               description: `
                 <p>Основные характеристики HTTP:</p>
                 <ul>
@@ -248,7 +248,7 @@ export const data = {
             },
             {
               title: "HTTPS",
-              type: "list",
+              type: "text",
               description: `
                 <p>Основные характеристики HTTPS:</p>
                 <ul>
@@ -260,7 +260,7 @@ export const data = {
             },
             {
               title: "Преимущества HTTPS",
-              type: "list",
+              type: "text",
               description: `
                 <p>Преимущества использования HTTPS:</p>
                 <ul>
@@ -272,7 +272,7 @@ export const data = {
             },
             {
               title: "Недостатки и ограничения",
-              type: "list",
+              type: "text",
               description: `
                 <p>Недостатки и ограничения:</p>
                 <ul>
@@ -283,7 +283,7 @@ export const data = {
             },
             {
               title: "Рекомендации",
-              type: "list",
+              type: "text",
               description: `
                 <p>Рекомендации по использованию:</p>
                 <ul>
@@ -300,7 +300,7 @@ export const data = {
           children: [
             {
               title: "HTTP/1.x",
-              type: "list",
+              type: "text",
               description: `
                 <p>HTTP/1.x включает в себя версии HTTP/1.0 и HTTP/1.1:</p>
                 <ul>
@@ -323,7 +323,7 @@ export const data = {
             },
             {
               title: "HTTP/2",
-              type: "list",
+              type: "text",
               description: `
                 <p>HTTP/2 был выпущен в 2015 году и включает в себя следующие улучшения:</p>
                 <ul>
@@ -335,7 +335,7 @@ export const data = {
             },
             {
               title: "HTTP/3",
-              type: "list",
+              type: "text",
               description: `
                 <p>HTTP/3 является последней версией протокола, находящейся в разработке и основанной на QUIC:</p>
                 <ul>
@@ -347,7 +347,7 @@ export const data = {
             },
             {
               title: "Сравнение версий",
-              type: "list",
+              type: "text",
               description: `
                 <p>Сравнение версий HTTP:</p>
                 <ul>
@@ -359,7 +359,7 @@ export const data = {
             },
             {
               title: "Рекомендации",
-              type: "list",
+              type: "text",
               description: `
                 <p>Рекомендации по переходу на новые версии:</p>
                 <ul>
@@ -375,14 +375,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Идемпотентные методы HTTP — это методы, которые могут быть выполнены несколько раз без изменения результата за пределами первоначального применения. Это означает, что повторный запрос с теми же параметрами не изменит состояние ресурса на сервере после первого запроса.</p>
               `,
             },
             {
               title: "Идемпотентные методы",
-              type: "list",
+              type: "text",
               description: `
                 <p>К основным идемпотентным методам HTTP относятся:</p>
                 <ul>
@@ -395,7 +395,7 @@ export const data = {
             },
             {
               title: "Неидемпотентные методы",
-              type: "list",
+              type: "text",
               description: `
                 <p>Неидемпотентные методы:</p>
                 <ul>
@@ -405,7 +405,7 @@ export const data = {
             },
             {
               title: "Преимущества идемпотентности",
-              type: "list",
+              type: "text",
               description: `
                 <p>Преимущества использования идемпотентных методов:</p>
                 <ul>
@@ -417,7 +417,7 @@ export const data = {
             },
             {
               title: "Применение идемпотентных методов",
-              type: "list",
+              type: "text",
               description: `
                 <p>Идемпотентные методы часто используются в следующих сценариях:</p>
                 <ul>
@@ -434,14 +434,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>TCP (Transmission Control Protocol) и UDP (User Datagram Protocol) — это два основных протокола транспортного уровня в модели OSI, используемых для передачи данных по сети.</p>
               `,
             },
             {
               title: "TCP (Transmission Control Protocol)",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики TCP:</p>
                 <ul>
@@ -454,7 +454,7 @@ export const data = {
             },
             {
               title: "UDP (User Datagram Protocol)",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики UDP:</p>
                 <ul>
@@ -467,7 +467,7 @@ export const data = {
             },
             {
               title: "Сравнение TCP и UDP",
-              type: "list",
+              type: "text",
               description: `
                 <p>Сравнение протоколов:</p>
                 <ul>
@@ -479,7 +479,7 @@ export const data = {
             },
             {
               title: "Рекомендации",
-              type: "list",
+              type: "text",
               description: `
                 <p>Рекомендации по выбору протокола:</p>
                 <ul>
@@ -495,14 +495,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Long Polling и Short Polling — это техники, используемые для получения данных с сервера в реальном времени, особенно в веб-приложениях.</p>
               `,
             },
             {
               title: "Short Polling",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики Short Polling:</p>
                 <ul>
@@ -515,7 +515,7 @@ export const data = {
             },
             {
               title: "Long Polling",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики Long Polling:</p>
                 <ul>
@@ -528,7 +528,7 @@ export const data = {
             },
             {
               title: "Сравнение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Сравнение Short Polling и Long Polling:</p>
                 <ul>
@@ -540,7 +540,7 @@ export const data = {
             },
             {
               title: "Рекомендации",
-              type: "list",
+              type: "text",
               description: `
                 <p>Рекомендации по выбору:</p>
                 <ul>
@@ -556,14 +556,14 @@ export const data = {
           children: [
             {
               title: "Определение WebSocket",
-              type: "list",
+              type: "text",
               description: `
                 <p>WebSocket — это протокол для двусторонней связи между клиентом и сервером через одно TCP-соединение. Он позволяет обмениваться данными в режиме реального времени без необходимости постоянно открывать и закрывать соединения.</p>
               `,
             },
             {
               title: "Предшествующие технологии",
-              type: "list",
+              type: "text",
               description: `
                 <p>До появления WebSocket использовались несколько технологий для реализации коммуникации в реальном времени:</p>
                 <ul>
@@ -595,7 +595,7 @@ export const data = {
             },
             {
               title: "Преимущества WebSocket",
-              type: "list",
+              type: "text",
               description: `
                 <p>Преимущества использования WebSocket:</p>
                 <ul>
@@ -607,7 +607,7 @@ export const data = {
             },
             {
               title: "Применение WebSocket",
-              type: "list",
+              type: "text",
               description: `
                 <p>WebSocket используется в различных приложениях:</p>
                 <ul>
@@ -625,14 +625,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Server-Sent Events (SSE) — это технология, позволяющая серверу отправлять обновления клиенту в режиме реального времени через однонаправленное HTTP-соединение.</p>
               `,
             },
             {
               title: "Основные характеристики",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики SSE:</p>
                 <ul>
@@ -645,7 +645,7 @@ export const data = {
             },
             {
               title: "Как работает SSE",
-              type: "list",
+              type: "text",
               description: `
                 <p>Процесс работы SSE:</p>
                 <ul>
@@ -658,7 +658,7 @@ export const data = {
             },
             {
               title: "Преимущества SSE",
-              type: "list",
+              type: "text",
               description: `
                 <p>Преимущества использования SSE:</p>
                 <ul>
@@ -670,7 +670,7 @@ export const data = {
             },
             {
               title: "Недостатки SSE",
-              type: "list",
+              type: "text",
               description: `
                 <p>Недостатки SSE:</p>
                 <ul>
@@ -682,7 +682,7 @@ export const data = {
             },
             {
               title: "Применение SSE",
-              type: "list",
+              type: "text",
               description: `
                 <p>Ситуации, в которых используются SSE:</p>
                 <ul>
@@ -699,14 +699,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>PATCH и PUT — это HTTP-методы, используемые для обновления ресурсов на сервере, но они имеют различные подходы и цели.</p>
               `,
             },
             {
               title: "PUT",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики метода PUT:</p>
                 <ul>
@@ -719,7 +719,7 @@ export const data = {
             },
             {
               title: "PATCH",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики метода PATCH:</p>
                 <ul>
@@ -732,7 +732,7 @@ export const data = {
             },
             {
               title: "Сравнение PUT и PATCH",
-              type: "list",
+              type: "text",
               description: `
                 <p>Сравнение методов PUT и PATCH:</p>
                 <ul>
@@ -744,7 +744,7 @@ export const data = {
             },
             {
               title: "Рекомендации по использованию",
-              type: "list",
+              type: "text",
               description: `
                 <p>Когда использовать PUT и PATCH:</p>
                 <ul>
@@ -760,14 +760,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>GET и POST — это два основных метода HTTP, используемых для взаимодействия с ресурсами на сервере. Они имеют различные цели и особенности.</p>
               `,
             },
             {
               title: "GET",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики метода GET:</p>
                 <ul>
@@ -781,7 +781,7 @@ export const data = {
             },
             {
               title: "POST",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики метода POST:</p>
                 <ul>
@@ -795,7 +795,7 @@ export const data = {
             },
             {
               title: "Сравнение GET и POST",
-              type: "list",
+              type: "text",
               description: `
                 <p>Сравнение методов GET и POST:</p>
                 <ul>
@@ -808,7 +808,7 @@ export const data = {
             },
             {
               title: "Рекомендации по использованию",
-              type: "list",
+              type: "text",
               description: `
                 <p>Когда использовать GET и POST:</p>
                 <ul>
@@ -824,14 +824,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Метод OPTIONS в HTTP используется для получения информации о том, какие методы и заголовки поддерживаются сервером для определенного ресурса или по определенному URL.</p>
               `,
             },
             {
               title: "Характеристики",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики метода OPTIONS:</p>
                 <ul>
@@ -844,7 +844,7 @@ export const data = {
             },
             {
               title: "Применение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Метод OPTIONS используется в следующих сценариях:</p>
                 <ul>
@@ -856,7 +856,7 @@ export const data = {
             },
             {
               title: "Пример запроса",
-              type: "list",
+              type: "text",
               description: `
                 <p>Пример запроса OPTIONS:</p>
                 <pre><code>OPTIONS /api/users HTTP/1.1
@@ -875,14 +875,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Модель OSI (Open Systems Interconnection) — это концептуальная модель, разработанная для стандартизации процессов взаимодействия компьютерных систем в сети. Она делит сетевые функции на семь уровней, каждый из которых выполняет свою уникальную роль.</p>
               `,
             },
             {
               title: "Уровни модели OSI",
-              type: "list",
+              type: "text",
               description: `
                 <p>Семь уровней модели OSI:</p>
                 <ol>
@@ -898,7 +898,7 @@ export const data = {
             },
             {
               title: "Применение модели OSI",
-              type: "list",
+              type: "text",
               description: `
                 <p>Модель OSI используется в следующих целях:</p>
                 <ul>
@@ -910,7 +910,7 @@ export const data = {
             },
             {
               title: "Сравнение с моделью TCP/IP",
-              type: "list",
+              type: "text",
               description: `
                 <p>Сравнение модели OSI и модели TCP/IP:</p>
                 <ul>
@@ -927,14 +927,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Метод CONNECT в HTTP используется для установления туннельного соединения к серверу через прокси-сервер. Этот метод позволяет клиенту устанавливать TCP-соединение с сервером через прокси, что полезно для работы с зашифрованными соединениями, такими как HTTPS.</p>
               `,
             },
             {
               title: "Характеристики",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики метода CONNECT:</p>
                 <ul>
@@ -947,7 +947,7 @@ export const data = {
             },
             {
               title: "Применение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Метод CONNECT используется в следующих ситуациях:</p>
                 <ul>
@@ -959,7 +959,7 @@ export const data = {
             },
             {
               title: "Пример запроса",
-              type: "list",
+              type: "text",
               description: `
                 <p>Пример запроса CONNECT:</p>
                 <pre><code>CONNECT www.example.com:443 HTTP/1.1
@@ -977,14 +977,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Модель Request/Response (Запрос/Ответ) — это основополагающая модель взаимодействия в сетевых протоколах, особенно в HTTP. Она описывает процесс, при котором клиент отправляет запрос на сервер, а сервер отвечает на этот запрос.</p>
               `,
             },
             {
               title: "Структура запроса",
-              type: "list",
+              type: "text",
               description: `
                 <p>Структура HTTP-запроса включает следующие компоненты:</p>
                 <ul>
@@ -998,7 +998,7 @@ export const data = {
             },
             {
               title: "Структура ответа",
-              type: "list",
+              type: "text",
               description: `
                 <p>Структура HTTP-ответа включает следующие компоненты:</p>
                 <ul>
@@ -1012,7 +1012,7 @@ export const data = {
             },
             {
               title: "Процесс взаимодействия",
-              type: "list",
+              type: "text",
               description: `
                 <p>Процесс взаимодействия между клиентом и сервером:</p>
                 <ol>
@@ -1026,7 +1026,7 @@ export const data = {
             },
             {
               title: "Применение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Модель Request/Response используется в различных приложениях и протоколах:</p>
                 <ul>
@@ -1043,21 +1043,21 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>CORS (Cross-Origin Resource Sharing) — это механизм, который позволяет ограничивать или разрешать доступ к ресурсам на веб-сервере из других источников (доменных имен). Он используется для обеспечения безопасности при выполнении запросов между разными доменами.</p>
               `,
             },
             {
               title: "Проблема кросс-доменных запросов",
-              type: "list",
+              type: "text",
               description: `
                 <p>Современные браузеры применяют политику одного источника (Same-Origin Policy), которая ограничивает выполнение запросов с одного домена к ресурсам другого домена. CORS позволяет обойти это ограничение при помощи специальных HTTP-заголовков.</p>
               `,
             },
             {
               title: "Как работает CORS",
-              type: "list",
+              type: "text",
               description: `
                 <p>Процесс работы CORS включает следующие шаги:</p>
                 <ol>
@@ -1070,7 +1070,7 @@ export const data = {
             },
             {
               title: "Основные CORS-заголовки",
-              type: "list",
+              type: "text",
               description: `
                 <p>Некоторые ключевые заголовки, связанные с CORS:</p>
                 <ul>
@@ -1083,14 +1083,14 @@ export const data = {
             },
             {
               title: "Предварительные запросы",
-              type: "list",
+              type: "text",
               description: `
                 <p>В некоторых случаях браузеры отправляют предварительный запрос (preflight request) с методом OPTIONS, чтобы проверить, разрешены ли кросс-доменные запросы с указанным методом и заголовками.</p>
               `,
             },
             {
               title: "Применение",
-              type: "list",
+              type: "text",
               description: `
                 <p>CORS широко используется в веб-разработке для:</p>
                 <ul>
@@ -1139,7 +1139,7 @@ export const data = {
             },
             {
               title: "4. Пример использования CRP",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример настройки заголовка CRP в серверном приложении:</p>
               `,
@@ -1166,14 +1166,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>REST (Representational State Transfer) — это архитектурный стиль, используемый для разработки веб-сервисов. Он основывается на принципах работы HTTP и предназначен для упрощения взаимодействия между клиентом и сервером.</p>
               `,
             },
             {
               title: "Принципы REST",
-              type: "list",
+              type: "text",
               description: `
                 <p>Основные принципы REST:</p>
                 <ul>
@@ -1187,7 +1187,7 @@ export const data = {
             },
             {
               title: "HTTP-методы в REST",
-              type: "list",
+              type: "text",
               description: `
                 <p>REST использует стандартные HTTP-методы для выполнения операций над ресурсами:</p>
                 <ul>
@@ -1200,14 +1200,14 @@ export const data = {
             },
             {
               title: "Ресурсы и URI",
-              type: "list",
+              type: "text",
               description: `
                 <p>В REST ресурсы идентифицируются с помощью URI (Uniform Resource Identifier). Каждому ресурсу соответствует уникальный URI, по которому можно получить доступ к этому ресурсу.</p>
               `,
             },
             {
               title: "Форматы данных",
-              type: "list",
+              type: "text",
               description: `
                 <p>RESTful API может использовать различные форматы данных для обмена информацией, включая:</p>
                 <ul>
@@ -1219,7 +1219,7 @@ export const data = {
             },
             {
               title: "Применение",
-              type: "list",
+              type: "text",
               description: `
                 <p>REST широко используется в разработке веб-приложений и API:</p>
                 <ul>
@@ -1236,14 +1236,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Web-угрозы — это потенциальные опасности, связанные с использованием веб-технологий и интернет-ресурсов, которые могут привести к компрометации данных, нарушению конфиденциальности или повреждению систем.</p>
               `,
             },
             {
               title: "Типы Web-угроз",
-              type: "list",
+              type: "text",
               description: `
                 <p>Основные типы Web-угроз:</p>
                 <ul>
@@ -1258,7 +1258,7 @@ export const data = {
             },
             {
               title: "Причины Web-угроз",
-              type: "list",
+              type: "text",
               description: `
                 <p>Причины возникновения Web-угроз:</p>
                 <ul>
@@ -1270,7 +1270,7 @@ export const data = {
             },
             {
               title: "Защита от Web-угроз",
-              type: "list",
+              type: "text",
               description: `
                 <p>Методы защиты от Web-угроз:</p>
                 <ul>
@@ -1284,7 +1284,7 @@ export const data = {
             },
             {
               title: "Заключение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Web-угрозы представляют собой серьезную проблему для пользователей и организаций. Понимание типов угроз и методов защиты поможет минимизировать риски и обеспечить безопасность в интернете.</p>
               `,
@@ -1296,14 +1296,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Заголовки HTTP — это части HTTP-запросов и ответов, которые содержат метаинформацию о сообщении. Они используются для передачи информации между клиентом и сервером, определяя параметры запроса или ответа.</p>
               `,
             },
             {
               title: "Типы заголовков",
-              type: "list",
+              type: "text",
               description: `
                 <p>Заголовки HTTP делятся на несколько категорий:</p>
                 <ul>
@@ -1316,7 +1316,7 @@ export const data = {
             },
             {
               title: "Примеры заголовков",
-              type: "list",
+              type: "text",
               description: `
                 <p>Некоторые распространенные заголовки HTTP:</p>
                 <ul>
@@ -1331,7 +1331,7 @@ export const data = {
             },
             {
               title: "Роль заголовков в HTTP",
-              type: "list",
+              type: "text",
               description: `
                 <p>Заголовки HTTP играют важную роль в:</p>
                 <ul>
@@ -1343,7 +1343,7 @@ export const data = {
             },
             {
               title: "Заключение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Заголовки HTTP являются важной частью протокола и обеспечивают гибкость и функциональность в обмене данными между клиентами и серверами. Понимание их структуры и назначения помогает эффективно разрабатывать и использовать веб-приложения.</p>
               `,
@@ -1355,14 +1355,14 @@ export const data = {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Коды ответа (Response Codes) — это числовые коды, которые сервер возвращает в ответ на HTTP-запросы. Они указывают на статус обработки запроса и помогают клиенту понять, что произошло с запросом.</p>
               `,
             },
             {
               title: "Структура кодов ответа",
-              type: "list",
+              type: "text",
               description: `
                 <p>Коды ответа HTTP состоят из трех цифр и делятся на пять основных классов:</p>
                 <ul>
@@ -1376,7 +1376,7 @@ export const data = {
             },
             {
               title: "Примеры кодов ответа",
-              type: "list",
+              type: "text",
               description: `
                 <p>Некоторые распространенные коды ответа:</p>
                 <ul>
@@ -1394,7 +1394,7 @@ export const data = {
             },
             {
               title: "Роль кодов ответа",
-              type: "list",
+              type: "text",
               description: `
                 <p>Коды ответа играют важную роль в веб-разработке:</p>
                 <ul>
@@ -1406,7 +1406,7 @@ export const data = {
             },
             {
               title: "Заключение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Коды ответа являются важной частью протокола HTTP и необходимы для эффективного взаимодействия между клиентами и серверами. Понимание их значений и использования помогает в разработке и отладке веб-приложений.</p>
               `,
@@ -1429,7 +1429,7 @@ export const data = {
                   children: [
                     {
                       title: "1. Внешний стиль (External CSS)",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Подключение стилей через отдельный файл:</p>
                         <ul>
@@ -1443,7 +1443,7 @@ export const data = {
                     },
                     {
                       title: "2. Встроенный стиль (Internal CSS)",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Подключение стилей в <code>&lt;head&gt;</code> документа:</p>
                         <ul>
@@ -1457,7 +1457,7 @@ export const data = {
                     },
                     {
                       title: "3. Инлайновый стиль (Inline CSS)",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Применение стилей непосредственно к элементам:</p>
                         <ul>
@@ -1477,7 +1477,7 @@ export const data = {
                     {
                       title:
                         "Специфичность в CSS определяет, какой стиль применяется к элементу при наличии множества правил. Она рассчитывается на основе различных типов селекторов:",
-                      type: "code",
+                      type: "text",
                       description: `
                         <ul>
                           <li><strong>глобальный селектор *</strong>: не имеет веса</li>
@@ -1521,7 +1521,7 @@ p {
                     {
                       title:
                         "Псевдоклассы и псевдоэлементы позволяют стилизовать элементы на основе их состояния или позиции:",
-                      type: "code",
+                      type: "text",
                       description: `
                         <ul>
                           <li><strong>Псевдоклассы</strong>: <code>:hover</code>, <code>:focus</code>, <code>:nth-child()</code></li>
@@ -1549,7 +1549,7 @@ font-weight: bold;
                     {
                       title:
                         "Коробчатая модель описывает пространство, занимаемое элементом",
-                      type: "code",
+                      type: "text",
                       description: `
                         <p>Она включает в себя следующие свойства:</p>
                         <ul>
@@ -1579,7 +1579,7 @@ font-weight: bold;
                     },
                     {
                       title: "Пример использования box-sizing",
-                      type: "code",
+                      type: "text",
                       description: `
                         <p>Пример применения свойства <code>box-sizing</code>:</p>
                       `,
@@ -1604,7 +1604,7 @@ font-weight: bold;
                     {
                       title:
                         "<code>em</code> и <code>rem</code> - это относительные единицы измерения, используемые в CSS:",
-                      type: "code",
+                      type: "text",
                       description: `
                         <ul>
                           <li><strong>em</strong>: Относится к текущему элементу. Если размер шрифта родительского элемента равен 16px, то 1em = 16px.</li>
@@ -1631,7 +1631,7 @@ font-size: 1.5rem; /* 24px */
                     {
                       title:
                         "Позиционирование в CSS управляет размещением элементов на странице:",
-                      type: "code",
+                      type: "text",
                       description: `
                         <ul>
                           <li><strong>position: static</strong>: Обычное потоковое позиционирование.</li>
@@ -1661,7 +1661,7 @@ top: 0;
                     },
                     {
                       title: "Переполнение (Overflow)",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Свойство <code>overflow</code> в CSS управляет тем, как обрабатывается содержимое, выходящее за пределы блока. Оно может принимать следующие значения:</p>
                         <ul>
@@ -1674,7 +1674,7 @@ top: 0;
                     },
                     {
                       title: "Пример использования overflow",
-                      type: "code",
+                      type: "text",
                       description: `
                         <p>Пример CSS с использованием свойства <code>overflow</code>:</p>
                       `,
@@ -1688,7 +1688,7 @@ top: 0;
                     },
                     {
                       title: "z-индекс (z-index)",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Свойство <code>z-index</code> управляет порядком наложения элементов на странице. Оно определяет, какой элемент будет отображаться сверху, когда элементы перекрываются. Некоторые важные моменты:</p>
                         <ul>
@@ -1700,7 +1700,7 @@ top: 0;
                     },
                     {
                       title: "Пример использования z-index",
-                      type: "code",
+                      type: "text",
                       description: `
                         <p>Пример CSS с использованием свойства <code>z-index</code>:</p>
                       `,
@@ -1725,7 +1725,7 @@ top: 0;
                     {
                       title:
                         "Флексбокс - это метод расположения элементов в одной строке или колонке с возможностью изменения их размеров:",
-                      type: "code",
+                      type: "text",
                       description: `
                         <ul>
                           <li><strong>display: flex</strong>: Включает флексбокс на родительском элементе.</li>
@@ -1751,7 +1751,7 @@ top: 0;
                   children: [
                     {
                       title: "CSS Grid",
-                      type: "code",
+                      type: "text",
                       description: `
                       <p>CSS Grid - это мощный инструмент для создания гибких и сложных макетов. Основные моменты:</p>
                       <ul>
@@ -1783,7 +1783,7 @@ gap: 10px; /* расстояние между элементами */
                       title: `⚡️ Мультиколонки:
         Основная идея мультиколонок заключается в том, что вы можете взять фрагмент содержимого и поместить его в несколько колонок, как в газете
                       `,
-                      type: "code",
+                      type: "text",
                       code: `
 .article-content {
   columns: auto 10rem;
@@ -1810,7 +1810,7 @@ gap: 10px; /* расстояние между элементами */
                   children: [
                     {
                       title: "Блочные элементы",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Характеристики блочных элементов:</p>
                         <ul>
@@ -1822,7 +1822,7 @@ gap: 10px; /* расстояние между элементами */
                     },
                     {
                       title: "Строчные элементы",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Характеристики строчных элементов:</p>
                         <ul>
@@ -1834,7 +1834,7 @@ gap: 10px; /* расстояние между элементами */
                     },
                     {
                       title: "Сводная таблица различий",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Краткое сравнение:</p>
                         <ul>
@@ -1861,7 +1861,7 @@ gap: 10px; /* расстояние между элементами */
                   children: [
                     {
                       title: "Принципы семантической верстки включают:",
-                      type: "code",
+                      type: "text",
                       description: `
                       <ul>
                         <li>Использование HTML-тегов по назначению (например, &lt;header&gt;, &lt;article&gt;, &lt;footer&gt;).</li>
@@ -1888,7 +1888,7 @@ gap: 10px; /* расстояние между элементами */
                     {
                       title:
                         "Shadow DOM позволяет создавать отдельные области DOM, чтобы избежать конфликтов стилей",
-                      type: "list",
+                      type: "text",
                       description: `
                               <ul>
                                   <li>Поддержка инкапсуляции: Стили внутри Shadow DOM не влияют на родительский DOM.</li>
@@ -1903,7 +1903,7 @@ gap: 10px; /* расстояние между элементами */
                   children: [
                     {
                       title: "Существует несколько популярных CSS-методологий:",
-                      type: "list",
+                      type: "text",
                       description: `
                               <ul>
                                   <li><strong>BEM</strong> (Block, Element, Modifier) - способствует созданию доступных и модульных стилей.</li>
@@ -1919,7 +1919,7 @@ gap: 10px; /* расстояние между элементами */
                   children: [
                     {
                       title: "Изменение цвета",
-                      type: "code",
+                      type: "text",
                       description: `
                               <p>Существует несколько способов изменить цвет в SVG:</p>
                               <ul>
@@ -2007,7 +2007,7 @@ circle.setAttribute("stroke", "yellow"); // Изменяем цвет обвод
           children: [
             {
               title: "HTML атрибуты для создания макета:",
-              type: "code",
+              type: "text",
               description: `
                 <ul>
                   <li><strong>Атрибуты <code>div</code>:</strong>
@@ -2034,7 +2034,7 @@ circle.setAttribute("stroke", "yellow"); // Изменяем цвет обвод
             },
             {
               title: "CSS свойства для создания макета:",
-              type: "code",
+              type: "text",
               description: `
                 <ul>
                   <li><strong>Свойство <code>display</code>:</strong>
@@ -2061,7 +2061,7 @@ circle.setAttribute("stroke", "yellow"); // Изменяем цвет обвод
             },
             {
               title: "HTML5 семантические элементы:",
-              type: "list",
+              type: "text",
               description: `
                 <ul>
                   <li><strong>&lt;header&gt;</strong>, <strong>&lt;nav&gt;</strong>, <strong>&lt;main&gt;</strong>, <strong>&lt;section&gt;</strong>, <strong>&lt;article&gt;</strong>, <strong>&lt;aside&gt;</strong>, <strong>&lt;footer&gt;</strong>: Эти элементы помогают улучшить SEO и доступность.</li>
@@ -2070,7 +2070,7 @@ circle.setAttribute("stroke", "yellow"); // Изменяем цвет обвод
             },
             {
               title: "Flexbox и Grid для создания макетов:",
-              type: "code",
+              type: "text",
               description: `
                 <ul>
                   <li><strong>Flexbox:</strong> Упрощает выравнивание элементов вдоль одной оси.</li>
@@ -2099,7 +2099,7 @@ circle.setAttribute("stroke", "yellow"); // Изменяем цвет обвод
           children: [
             {
               title: "<!DOCTYPE html>",
-              type: "list",
+              type: "text",
               description: `
                 <p>Объявляет тип документа и версию HTML:</p>
                 <ul>
@@ -2109,7 +2109,7 @@ circle.setAttribute("stroke", "yellow"); // Изменяем цвет обвод
             },
             {
               title: "<html>",
-              type: "list",
+              type: "text",
               description: `
                 <p>Корневой элемент HTML-документа:</p>
                 <ul>
@@ -2119,7 +2119,7 @@ circle.setAttribute("stroke", "yellow"); // Изменяем цвет обвод
             },
             {
               title: "<head>",
-              type: "list",
+              type: "text",
               description: `
                 <p>Содержит метаданные о документе:</p>
                 <ul>
@@ -2133,7 +2133,7 @@ circle.setAttribute("stroke", "yellow"); // Изменяем цвет обвод
             },
             {
               title: "<body>",
-              type: "list",
+              type: "text",
               description: `
                 <p>Основное содержимое страницы:</p>
                 <ul>
@@ -2152,7 +2152,7 @@ circle.setAttribute("stroke", "yellow"); // Изменяем цвет обвод
           children: [
             {
               title: "При разработке мультиязычных сайтов стоит учитывать:",
-              type: "code",
+              type: "text",
               description: `
               <ul>
                 <li>Хранение текста: использовать JSON или базы данных для хранения переведенных текстов.</li>
@@ -2177,7 +2177,7 @@ circle.setAttribute("stroke", "yellow"); // Изменяем цвет обвод
             {
               title:
                 "Прогрессивная развертка - это подход к разработке страниц, при котором отображение контента происходит по мере его загрузки",
-              type: "code",
+              type: "text",
               description: `
               <ul>
                 <li>Сначала загружается основной контент</li>
@@ -2201,7 +2201,7 @@ document.getElementById('content').innerHTML = data.content;
           children: [
             {
               title: "Загрузки скриптов",
-              type: "code",
+              type: "text",
               description: `
               <p>Существует три способа подключения скриптов в HTML:</p>
               <ul>
@@ -2224,7 +2224,7 @@ document.getElementById('content').innerHTML = data.content;
           children: [
             {
               title: "1. Внешний скрипт (External Script)",
-              type: "list",
+              type: "text",
               description: `
                 <p>Подключение скрипта через отдельный файл:</p>
                 <ul>
@@ -2238,7 +2238,7 @@ document.getElementById('content').innerHTML = data.content;
             },
             {
               title: "2. Встроенный скрипт (Internal Script)",
-              type: "list",
+              type: "text",
               description: `
                 <p>Подключение скрипта непосредственно в документе:</p>
                 <ul>
@@ -2252,7 +2252,7 @@ document.getElementById('content').innerHTML = data.content;
             },
             {
               title: "Атрибуты тега <script>",
-              type: "list",
+              type: "text",
               description: `
                 <p>Основные атрибуты:</p>
                 <ul>
@@ -2272,7 +2272,7 @@ document.getElementById('content').innerHTML = data.content;
           children: [
             {
               title: ``,
-              type: "code",
+              type: "text",
               description: `
               Он связывает элемент <label> с соответствующим полем < input >, позволяя пользователям 
               кликать по тексту метки для выбора или фокуса на связанном элементе управления.
@@ -2325,7 +2325,7 @@ document.getElementById('content').innerHTML = data.content;
             },
             {
               title: "Пример использования",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример добавления обработчика события клика:</p>
               `,
@@ -2347,14 +2347,14 @@ button.addEventListener('click', function(event) {
           children: [
             {
               title: "Basics of async programming",
-              type: "list",
+              type: "text",
               description: `
                 <p><strong>Асинхронное программирование</strong> — это парадигма, позволяющая выполнять операции, не блокируя основной поток выполнения. Это особенно полезно для задач, которые могут занять продолжительное время, таких как сетевые запросы или операции с файлами.</p>
               `,
             },
             {
               title: "Key Concepts",
-              type: "list",
+              type: "text",
               description: `
                 <p>Основные концепции асинхронного программирования:</p>
                 <ul>
@@ -2366,7 +2366,7 @@ button.addEventListener('click', function(event) {
             },
             {
               title: "Callback",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример использования колбеков:</p>
               `,
@@ -2384,7 +2384,7 @@ fetchData((data) => {
             },
             {
               title: "Promise",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример использования промисов:</p>
               `,
@@ -2404,7 +2404,7 @@ fetchData().then(data => {
             },
             {
               title: "Async/Await",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример использования async/await:</p>
               `,
@@ -2427,7 +2427,7 @@ fetchData().then(data => {
             },
             {
               title: "Benefits of Asynchronous Programming",
-              type: "list",
+              type: "text",
               description: `
                 <p>Преимущества асинхронного программирования:</p>
                 <ul>
@@ -2444,13 +2444,13 @@ fetchData().then(data => {
           children: [
             {
               title: "Описание",
-              type: "list",
+              type: "text",
               description:
                 "this – это специальное ключевое слово в JavaScript, которое ссылается на объект, который в данный момент выполняет код. Значение `this` определяется не тем, как функция была объявлена, а тем, как она была вызвана.",
             },
             {
               title: "Контекст вызова",
-              type: "code",
+              type: "text",
               description: `Значение "this" зависит от контекста вызова функции. Вот основные правила:`,
               code: `
 // В глобальном контексте (вне функций) 'this' ссылается на глобальный объект (window в браузере).
@@ -2468,7 +2468,7 @@ obj.method(); // 'Obj'
             },
             {
               title: "Значение this в функциях",
-              type: "code",
+              type: "text",
               description:
                 "В обычной функции `this` ссылается на глобальный объект (или undefined в строгом режиме).",
               code: `
@@ -2481,7 +2481,7 @@ showThis(); // window (или undefined в строгом режиме)
             },
             {
               title: "Классы и this",
-              type: "code",
+              type: "text",
               description:
                 "В классах `this` ссылается на экземпляр класса, который был создан с помощью ключевого слова new.",
               code: `
@@ -2500,7 +2500,7 @@ instance.showValue(); // 10
             },
             {
               title: "Стрелочные функции и this",
-              type: "code",
+              type: "text",
               description:
                 "Стрелочные функции не имеют собственного `this` и наследуют его из родительского контекста, в котором они были созданы.",
               code: `
@@ -2519,7 +2519,7 @@ obj.method(); // 20
             },
             {
               title: "Способы контроля this",
-              type: "code",
+              type: "text",
               description:
                 "Можно контролировать значение `this` в функции с помощью методов `.call()`, `.apply()` и `.bind()`.",
               code: `
@@ -2535,7 +2535,7 @@ function show() {
             },
             {
               title: "Вывод",
-              type: "list",
+              type: "text",
               description:
                 "Контекст `this` в JavaScript может быть сложным для понимания. Важно понимать, как он работает в разных контекстах для избежания ошибок.",
             },
@@ -2578,7 +2578,7 @@ function show() {
             },
             {
               title: "Пример отмены всплытия",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример отмены всплытия события:</p>
               `,
@@ -2610,7 +2610,7 @@ function show() {
             },
             {
               title: "3. Пример замыкания",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример замыкания:</p>
               `,
@@ -2644,7 +2644,7 @@ myInnerFunction(); // Вывод: "I am outside!"
             {
               title:
                 "5. Пример использования замыкания для приватных переменных",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример создания приватной переменной:</p>
               `,
@@ -2688,7 +2688,7 @@ console.log(counter.decrement()); // 1
           children: [
             {
               title: "1. Числа (Number)",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики чисел:</p>
                 <ul>
@@ -2700,7 +2700,7 @@ console.log(counter.decrement()); // 1
             },
             {
               title: "2. Строки (String)",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики строк:</p>
                 <ul>
@@ -2712,7 +2712,7 @@ console.log(counter.decrement()); // 1
             },
             {
               title: "3. Логические значения (Boolean)",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики логических значений:</p>
                 <ul>
@@ -2724,7 +2724,7 @@ console.log(counter.decrement()); // 1
             },
             {
               title: "4. Объекты (Object)",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики объектов:</p>
                 <ul>
@@ -2736,7 +2736,7 @@ console.log(counter.decrement()); // 1
             },
             {
               title: "5. Массивы (Array)",
-              type: "list",
+              type: "text",
               description: `
                 <p>Характеристики массивов:</p>
                 <ul>
@@ -2748,7 +2748,7 @@ console.log(counter.decrement()); // 1
             },
             {
               title: "6. Специальные значения",
-              type: "list",
+              type: "text",
               description: `
                 <p>Некоторые специальные значения:</p>
                 <ul>
@@ -2774,7 +2774,7 @@ console.log(counter.decrement()); // 1
             },
             {
               title: "Типы дескрипторов",
-              type: "list",
+              type: "text",
               description: `
                 <p>Существует два типа дескрипторов:</p>
                 <ul>
@@ -2792,7 +2792,7 @@ console.log(counter.decrement()); // 1
             },
             {
               title: "Пример геттера",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример использования геттера в объекте:</p>
               `,
@@ -2817,7 +2817,7 @@ console.log(person.fullName); // John Doe
             },
             {
               title: "Пример сеттера",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример использования сеттера в объекте:</p>
               `,
@@ -2841,10 +2841,7 @@ console.log(person.lastName); // Smith
               description: `
                 <p>Дескрипторы, геттеры и сеттеры позволяют управлять доступом к свойствам объектов, обеспечивая более гибкий и контролируемый способ работы с данными в JavaScript.</p>
               `,
-            },
-            {
-              title: "Подробнее на learn.javascript.ru",
-              type: "link",
+              link: "Подробнее на learn.javascript.ru",
               url: "https://learn.javascript.ru/descriptors-getters-setters",
             },
           ],
@@ -2856,7 +2853,7 @@ console.log(person.lastName); // Smith
               title: "",
               description:
                 "Деструктуризация объектов позволяет извлекать значения из объекта и присваивать их переменным в краткой форме",
-              type: "code",
+              type: "text",
               code: `
 const person = { name: 'Alice', age: 25 };
 const { name, age } = person;
@@ -2870,7 +2867,7 @@ console.log(name, age);`,
           children: [
             {
               title: "Описание null и undefined",
-              type: "code",
+              type: "text",
               description: `
                 <p><strong>null</strong>: Это специальное значение, указывающее на отсутствие какого-либо объектного значения. Оно явно назначается переменной, чтобы показать, что эта переменная не содержит ничего.</p>
                 <p><strong>undefined</strong>: Это значение автоматически назначается переменной, которая была объявлена, но не инициализирована. Также это происходит, если функция не возвращает значения.</p>
@@ -2893,7 +2890,7 @@ console.log(typeof b); // "undefined"
             },
             {
               title: "Сравнение null и undefined",
-              type: "code",
+              type: "text",
               description: `
                 <p>Важно понимать, что при нестрогом сравнении они равны друг другу:</p>
               `,
@@ -2916,7 +2913,7 @@ console.log(null === undefined); // false (строгое сравнение)
             },
             {
               title: "Алгоритм Drag and Drop",
-              type: "list",
+              type: "text",
               description: `
               <p>Базовый алгоритм Drag and Drop включает следующие шаги:</p>
                 <ul>
@@ -2935,7 +2932,7 @@ console.log(null === undefined); // false (строгое сравнение)
             },
             {
               title: "Цели переноса (Droppable)",
-              type: "list",
+              type: "text",
               description: `
                   <p>Для реализации переноса элемента в другую цель, используйте метод <code>document.elementFromPoint</code> для определения, над каким элементом находится указатель.</p>
                   <ul>
@@ -2946,7 +2943,7 @@ console.log(null === undefined); // false (строгое сравнение)
             },
             {
               title: "Пример кода",
-              type: "code",
+              type: "text",
               description: `
                   <p>Пример реализации Drag and Drop:</p>
                   `,
@@ -2959,10 +2956,7 @@ ball.onmousedown = function(event) {
 function onMouseMove(event) {
 }
                   `,
-            },
-            {
-              title: "Mouse Drag and Drop",
-              type: "link",
+              link: "Mouse Drag and Drop",
               url: "https://learn.javascript.ru/mouse-drag-and-drop",
             },
           ],
@@ -3033,7 +3027,7 @@ function onMouseMove(event) {
             {
               title:
                 "Цикл событий (event loop) — это механизм, который позволяет JavaScript выполнять асинхронные операции, не блокируя основной поток выполнения. Он обеспечивает обработку событий и выполнение колбеков (callback functions) в ответ на события, такие как клики мыши, нажатия клавиш и завершение асинхронных операций.",
-              type: "list",
+              type: "text",
               description: `
               <p>Вот как работает цикл событий:</p>
                 <li>Обработка асинхронного кода: Если в обработчике события есть асинхронный код, такой как таймеры или сетевые запросы, он не блокирует выполнение других событий. Вместо этого асинхронный код помещается в очередь задач (task queue) для выполнения в будущем.</li>
@@ -3049,7 +3043,7 @@ function onMouseMove(event) {
           children: [
             {
               title: "Function Levenshtein or Levenshtein Distance",
-              type: "code",
+              type: "text",
               description: `
                 <p>Функция Левенштейна, или расстояние Левенштейна, измеряет различие между двумя строками, 
                 определяя минимальное количество операций, необходимых для преобразования одной строки в другую.
@@ -3094,7 +3088,7 @@ function levenshtein(a, b) {
           children: [
             {
               title: "Описание объявлений и выражений функций",
-              type: "code",
+              type: "text",
               description: `
                 <p><strong>Объявление функции</strong>: Это способ определения функции с использованием ключевого слова <code>function</code>. Функция может быть вызвана до ее определения (подъем).</p>
                 <p><strong>Выражение функции</strong>: Это определение функции, которое присваивается переменной. Функция не может быть вызвана до ее объявления.</p>
@@ -3115,7 +3109,7 @@ greet(); // "Hi!"
             },
             {
               title: "Стрелочные функции",
-              type: "code",
+              type: "text",
               description: `
                 <p><strong>Стрелочные функции</strong>: Это упрощенный синтаксис для объявления функций, введенный в ES6. Они не имеют собственного значения <code>this</code> и не могут быть использованы 
                 в качестве конструктора.</p>
@@ -3132,7 +3126,7 @@ console.log(add(2, 3)); // 5
             },
             {
               title: "Сравнение синтаксиса",
-              type: "code",
+              type: "text",
               description: `
                 <p>Различия в синтаксисе между обычными и стрелочными функциями:</p>
               `,
@@ -3151,7 +3145,7 @@ console.log(squareArrow(4)); // 16
             },
             {
               title: "Преимущества",
-              type: "code",
+              type: "text",
               description: `
                 <p>Стрелочные функции обеспечивают более лаконичный синтаксис и удобнее работают с <code>this</code> в контексте методов, так как они наследуют <code>this</code> 
                 от родительской области видимости.</p>
@@ -3178,7 +3172,7 @@ obj.arrowFunction();   // undefined (т.к. 'this' не ссылается на 
           children: [
             {
               title: "1. Синтаксис",
-              type: "code",
+              type: "text",
               description: `
                 <p>Стрелочные функции имеют более компактный синтаксис по сравнению с обычными функциями:</p>
               `,
@@ -3189,7 +3183,7 @@ console.log(add(2, 3)); // 5
             },
             {
               title: "2. Лексическое значение this",
-              type: "code",
+              type: "text",
               description: `
                 <p>Стрелочные функции не имеют своего собственного <code>this</code>; вместо этого они используют <code>this</code> из окружающего контекста:</p>
               `,
@@ -3208,7 +3202,7 @@ function Person() {
             },
             {
               title: "3. Отсутствие объекта arguments",
-              type: "code",
+              type: "text",
               description: `
                 <p>Стрелочные функции не имеют собственного объекта <code>arguments</code>. Для доступа к аргументам можно использовать оператор <code>rest</code>:</p>
               `,
@@ -3219,7 +3213,7 @@ console.log(sum(1, 2, 3, 4)); // 10
             },
             {
               title: "4. Не могут быть использованы как конструкторы",
-              type: "code",
+              type: "text",
               description: `
                 <p>Стрелочные функции не могут быть использованы с оператором <code>new</code>:</p>
               `,
@@ -3230,7 +3224,7 @@ const Person = () => {};
             },
             {
               title: "5. Не имеют свойства prototype",
-              type: "code",
+              type: "text",
               description: `
                 <p>Стрелочные функции не имеют свойства <code>prototype</code>, что делает их непригодными для создания методов объектов:</p>
               `,
@@ -3241,7 +3235,7 @@ console.log(arrowFunc.prototype); // undefined
             },
             {
               title: "6. Возврат значений",
-              type: "code",
+              type: "text",
               description: `
                 <p>Если стрелочная функция состоит из одного выражения, то фигурные скобки и ключевое слово <code>return</code> можно опустить:</p>
               `,
@@ -3291,7 +3285,7 @@ console.log(square(4)); // 16
             },
             {
               title: "4. Пример использования объекта window",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример использования объекта <code>window</code> для отображения сообщения:</p>
               `,
@@ -3318,7 +3312,7 @@ window.alert('Привет, мир!');
           children: [
             {
               title: "Преобразование объектов в примитивы",
-              type: "code",
+              type: "text",
               description: `
                 <p>В JavaScript объекты могут быть автоматически преобразованы в примитивные значения в контекстах, таких как сравнение, арифметические операции или приведение типов. Процесс преобразования включает:</p>
                 <ul>
@@ -3338,7 +3332,7 @@ console.log(obj + 10); // 52 (вызывается obj.valueOf())
             },
             {
               title: "Этапы преобразования",
-              type: "code",
+              type: "text",
               description: `
                 <p>Когда JavaScript пытается преобразовать объект в примитив, он выполняет следующие шаги:</p>
                 <ol>
@@ -3358,7 +3352,7 @@ console.log(obj2 + ' World'); // "Hello World" (вызывается obj2.toStri
             },
             {
               title: "Примеры преобразования",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример объекта с реализацией обоих методов:</p>
               `,
@@ -3378,7 +3372,7 @@ console.log(String(obj3)); // "I am an object" (вызывается toString)
             },
             {
               title: "Использование операторов",
-              type: "code",
+              type: "text",
               description: `
                 <p>Объекты могут быть преобразованы в примитивы при использовании операторов:</p>
                 <ul>
@@ -3394,7 +3388,7 @@ console.log([1] == 1); // true (нестрогое сравнение, вызы�
             },
             {
               title: "Вывод",
-              type: "code",
+              type: "text",
               description: `
                 <p>Объекты в JavaScript автоматически преобразуются в примитивные значения с использованием методов valueOf() и toString(). Контекст и ситуация определяют, какой метод будет вызван.</p>
               `,
@@ -3433,7 +3427,7 @@ console.log(obj4 == '5'); // true (нестрогое сравнение, выз
             },
             {
               title: "3. Пример Hoisting с функциями",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример поднятия функций:</p>
               `,
@@ -3447,7 +3441,7 @@ function sayHello() {
             },
             {
               title: "4. Пример Hoisting с переменными",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример поднятия переменных:</p>
               `,
@@ -3479,7 +3473,7 @@ console.log(myVar); // 5
             },
             {
               title: "7. Пример Hoisting с let и const",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример с <code>let</code> и <code>const</code>:</p>
               `,
@@ -3505,7 +3499,7 @@ const b = 20;
           children: [
             {
               title: "Прототипное наследование",
-              type: "code",
+              type: "text",
               description: `
                 <p><strong>Прототипное наследование</strong>: В JavaScript объекты могут наследовать свойства и методы от других объектов через механизм прототипов. Каждый объект имеет внутреннюю ссылку на свой прототип, который может содержать свойства и методы, доступные наследуемым объектам.</p>
                 <p>Это характерно для JavaScript и позволяет разработчикам расширять возможности объектов без необходимости использовать классы.</p>
@@ -3525,7 +3519,7 @@ child.greet(); // "Hello from parent!"
             },
             {
               title: "Классы ES6",
-              type: "code",
+              type: "text",
               description: `
                 <p><strong>Классы ES6</strong>: С появлением ES6 в JavaScript появилась возможность использования классов. Классы предоставляют более удобный и понятный синтаксис для реализации наследования. Классы также используют механизм прототипов под капотом.</p>
               `,
@@ -3550,7 +3544,7 @@ parentInstance.greet(); // "Hello from parent class!"
             },
             {
               title: "Наследование с использованием Object.setPrototypeOf",
-              type: "code",
+              type: "text",
               description: `
                 <p><strong>Object.setPrototypeOf</strong>: Этот метод можно использовать для изменения прототипа существующего объекта. Это также позволяет реализовать наследование, но рекомендуется использовать в основном в особых случаях, т.к. может привести к ухудшению производительности.</p>
               `,
@@ -3568,7 +3562,7 @@ child.greet(); // "Hello from parent!"
             },
             {
               title: "Сравнение различных способов наследования",
-              type: "code",
+              type: "text",
               description: `
                 <p>Различные способы реализации наследования в JavaScript имеют свои преимущества и недостатки:</p>
                 <ul>
@@ -3592,7 +3586,7 @@ console.log(child instanceof Parent); // true
           children: [
             {
               title: "Описание IIFE",
-              type: "code",
+              type: "text",
               description: `
                 <p>
                   <strong>IIFE</strong>: Это функциональное выражение, которое выполняется сразу после его определения. Это позволяет создать локальную область видимости и изолировать переменные от глобальной области видимости.
@@ -3612,7 +3606,7 @@ console.log(child instanceof Parent); // true
             },
             {
               title: "Синтаксис IIFE",
-              type: "code",
+              type: "text",
               description: `
                 <p>Стандартный синтаксис включает в себя определение функции, заключенное в круглые скобки, и сразу же вызываемое с использованием дополнительных круглых скобок.</p>
               `,
@@ -3629,7 +3623,7 @@ console.log(child instanceof Parent); // true
             },
             {
               title: "Преимущества использования IIFE",
-              type: "code",
+              type: "text",
               description: `
                 <p>
                   <strong>Преимущества:</strong>
@@ -3674,7 +3668,7 @@ console.log(child instanceof Parent); // true
             },
             {
               title: "3. Пример лексического окружения",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример, иллюстрирующий лексическое окружение:</p>
               `,
@@ -3747,7 +3741,7 @@ myInnerFunction(); // Вывод: "I am outside!"
             },
             {
               title: "4. Пример работы с живыми коллекциями",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример использования живой коллекции:</p>
               `,
@@ -3765,7 +3759,7 @@ myInnerFunction(); // Вывод: "I am outside!"
             },
             {
               title: "5. Пример работы с неживыми коллекциями",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример использования неживой коллекции:</p>
               `,
@@ -3804,7 +3798,7 @@ myInnerFunction(); // Вывод: "I am outside!"
             },
             {
               title: "3. Пример линейного уравнения",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример линейного уравнения в стандартной форме:</p>
               `,
@@ -3814,7 +3808,7 @@ myInnerFunction(); // Вывод: "I am outside!"
             },
             {
               title: "4. Преобразование в форму с угловым коэффициентом",
-              type: "code",
+              type: "text",
               description: `
                 <p>Преобразование стандартного уравнения в форму с угловым коэффициентом:</p>
               `,
@@ -3824,7 +3818,7 @@ y = -\\frac{2}{3}x + 2
             },
             {
               title: "5. Пример кода для решения линейного уравнения",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример кода на JavaScript, который решает линейное уравнение:</p>
               `,
@@ -3987,13 +3981,15 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
                   description: `22.isArray() => проверяем массив ли этот объект или нет.`
                 },
                 {
-                  title: "Learn more about array methods.",
-                  type: "link",
+                  title: "",
+                  type: "text",
+                  link: "Learn more about array methods.",
                   url: "https://learn.javascript.ru/array-methods",
                 },
                 {
-                  title: "Visual representation of array methods.",
-                  type: "link",
+                  title: "",
+                  type: "text",
+                  link: "Visual representation of array methods.",
                   url: "https://medium.com/@sewolpe/visualizing-javascript-array-methods-7babf560f7be",
                 },
               ],
@@ -4113,7 +4109,7 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
                 },
                 {
                   title: `23.search()`,
-                  type: "code",
+                  type: "text",
                   description: `search() => возвращает индекс первого вхождения подстроки в строке.`,
                   code: `console.log(str.search('World')); // 9`,
                 },
@@ -4129,7 +4125,7 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
                     },
                     {
                       title: "Синтаксис",
-                      type: "code",
+                      type: "text",
                       description: `
                         <p>Синтаксис метода <code>replace()</code> выглядит следующим образом:</p>
                       `,
@@ -4139,7 +4135,7 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
                     },
                     {
                       title: "Параметры",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Метод принимает два параметра:</p>
                         <ul>
@@ -4150,7 +4146,7 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
                     },
                     {
                       title: "Примеры использования",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Вот несколько примеров использования метода <code>replace()</code>:</p>
                       `,
@@ -4180,7 +4176,7 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
                     },
                     {
                       title: "Особенности",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Некоторые особенности метода <code>replace()</code>:</p>
                         <ul>
@@ -4219,14 +4215,14 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
                 },
                 {
                   title: "toExponential()",
-                  type: "code",
+                  type: "text",
                   description:
                     "<p>Преобразует число в экспоненциальное представление.</p>",
                   code: "var x = 9.656; console.log(x.toExponential(2)); // '9.66e+0'",
                 },
                 {
                   title: "toPrecision()",
-                  type: "code",
+                  type: "text",
                   description:
                     "<p>Возвращает строку с числом, записанным с указанной длиной.</p>",
                   code: "var x = 9.656; console.log(x.toPrecision(4)); // '9.656'",
@@ -4236,19 +4232,19 @@ console.log(solveLinearEquation(a, b, c)); // Вывод: 0
                   children: [
                     {
                       title: "Math.max()",
-                      type: "code",
+                      type: "text",
                       description: "<p>Возвращает наибольшее значение.</p>",
                       code: "console.log(Math.max(1, 2, 3)); // 3",
                     },
                     {
                       title: "Math.min()",
-                      type: "code",
+                      type: "text",
                       description: "<p>Возвращает наименьшее значение.</p>",
                       code: "console.log(Math.min(1, 2, 3)); // 1",
                     },
                     {
                       title: "Math.random()",
-                      type: "code",
+                      type: "text",
                       description:
                         "<p>Генерирует случайное число от 0 до 1.</p>",
                       code: `
@@ -4261,7 +4257,7 @@ console.log(getRandomInt(1, 10)); // случайное число от 1 до 1
                     },
                     {
                       title: "Math.round()",
-                      type: "code",
+                      type: "text",
                       description:
                         "<p>Округляет число до ближайшего целого.</p>",
                       code: "console.log(Math.round(4.6)); // 5",
@@ -4296,7 +4292,7 @@ console.log(getRandomInt(1, 10)); // случайное число от 1 до 1
                 {
                   title:
                     "1.Object.keys(obj): Возвращает массив строк, содержащий имена собственных перечисляемых свойств объекта.",
-                  type: "code",
+                  type: "text",
                   description: `<p>Примеры использования <code>Object.keys()</code>:</p>`,
                   code: `
 const person = { name: 'Alice', age: 25 };
@@ -4306,7 +4302,7 @@ console.log(Object.keys(person)); // ['name', 'age']
                 {
                   title:
                     "2.Object.values(obj): Возвращает массив значений собственных перечисляемых свойств объекта.",
-                  type: "code",
+                  type: "text",
                   description: `<p>Примеры использования <code>Object.values()</code>:</p>`,
                   code: `
 const person = { name: 'Alice', age: 25 };
@@ -4316,7 +4312,7 @@ console.log(Object.values(person)); // ['Alice', 25]
                 {
                   title:
                     "3.Object.create(proto, propertiesObject): Создает новый объект с указанным прототипом и свойствами.",
-                  type: "code",
+                  type: "text",
                   description: `<p>Примеры использования <code>Object.create()</code>:</p>`,
                   code: `
 const proto = { greet() { console.log('Hello!'); } };
@@ -4327,7 +4323,7 @@ obj.greet(); // 'Hello!'
                 {
                   title:
                     "4.Object.freeze(obj): Замораживает объект, предотвращая добавление, удаление или изменение его свойств.",
-                  type: "code",
+                  type: "text",
                   description: `<p>Примеры использования <code>Object.freeze()</code>:</p>`,
                   code: `
 const obj = { name: 'Alice' };
@@ -4339,7 +4335,7 @@ console.log(obj.name); // 'Alice'
                 {
                   title:
                     "5.Object.assign(target, ...sources): Копирует значения всех собственных перечисляемых свойств из одного или более источников в целевой объект и возвращает его.",
-                  type: "code",
+                  type: "text",
                   description: `<p>Примеры использования <code>Object.assign()</code>:</p>`,
                   code: `
 const target = { a: 1 };
@@ -4351,7 +4347,7 @@ console.log(returnedTarget); // { a: 1, b: 2, c: 3 }
                 {
                   title:
                     "6.Object.entries(obj): Возвращает массив пар [ключ, значение] для собственных перечисляемых свойств объекта.",
-                  type: "code",
+                  type: "text",
                   description: `<p>Примеры использования <code>Object.entries()</code>:</p>`,
                   code: `
 const person = { name: 'Alice', age: 25 };
@@ -4361,7 +4357,7 @@ console.log(Object.entries(person)); // [['name', 'Alice'], ['age', 25]]
                 {
                   title:
                     "7.Object.seal(obj): Замораживает объект, предотвращая добавление, удаление или изменение его свойств.",
-                  type: "code",
+                  type: "text",
                   description: `<p>Примеры использования <code>Object.seal()</code>:</p>`,
                   code: `
 const obj = { name: 'Alice' };
@@ -4374,7 +4370,7 @@ console.log(obj); // { name: 'Bob' }
                 {
                   title:
                     "8.Object.is(value1, value2): Определяет, являются ли два значения одним и тем же значением.",
-                  type: "code",
+                  type: "text",
                   description: `<p>Примеры использования <code>Object.is()</code>:</p>`,
                   code: `
 console.log(Object.is('abc', 'abc')); // true
@@ -4386,7 +4382,7 @@ console.log(Object.is(null, undefined)); // false
                 {
                   title:
                     "9. Object.prototype.hasOwnProperty(): Возвращает булево значение, указывающее, является ли указанное свойство собственным свойством объекта.",
-                  type: "code",
+                  type: "text",
                   description: `<p>Примеры использования <code>Object.prototype.hasOwnProperty()</code>:</p>`,
                   code: `
 const obj = { name: 'Alice' };
@@ -4404,7 +4400,7 @@ console.log(obj.hasOwnProperty('age')); // false
                   children: [
                     {
                       title: "Использование циклов for, while, do while",
-                      type: "code",
+                      type: "text",
                       description: `
                       <p>В JavaScript существуют различные виды циклов, которые позволяют повторять выполнение блока кода определенное количество раз или до тех пор, пока выполняется заданное условие.</p>
                       <ul>
@@ -4508,7 +4504,7 @@ do {
                     },
                     {
                       title: "Синтаксис",
-                      type: "code",
+                      type: "text",
                       description: `
                         <p>Синтаксис метода <code>match()</code> выглядит следующим образом:</p>
                       `,
@@ -4518,7 +4514,7 @@ str.match(regexp);
                     },
                     {
                       title: "Параметры",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Метод принимает один параметр:</p>
                         <ul>
@@ -4528,7 +4524,7 @@ str.match(regexp);
                     },
                     {
                       title: "Примеры использования",
-                      type: "code",
+                      type: "text",
                       description: `
                         <p>Вот несколько примеров использования метода <code>match()</code>:</p>
                       `,
@@ -4561,7 +4557,7 @@ console.log(result5); // Вывод: ["2023-01-27", "2023", "01", "27", ... ]
                     },
                     {
                       title: "Особенности",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Некоторые особенности метода <code>match()</code>:</p>
                         <ul>
@@ -4582,7 +4578,7 @@ console.log(result5); // Вывод: ["2023-01-27", "2023", "01", "27", ... ]
           children: [
             {
               title: "Использование NaN в JavaScript",
-              type: "code",
+              type: "text",
               description: `
                 <p>NaN (Not-a-Number) — специальное значение в JavaScript, которое представляет собой результат вычисления, не являющегося числом.</p>
                 <ul>
@@ -4636,7 +4632,7 @@ console.log(Number.isNaN(undefined)); // false
             },
             {
               title: "3. Пример отмены действий по умолчанию",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример отмены перехода по ссылке:</p>
               `,
@@ -4668,7 +4664,7 @@ link.addEventListener('click', function(event) {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Promise — это объект, представляющий конечный результат асинхронной операции. Он может находиться в одном из трех состояний:</p>
                 <ul>
@@ -4681,7 +4677,7 @@ link.addEventListener('click', function(event) {
             },
             {
               title: "Создание Promise",
-              type: "code",
+              type: "text",
               description: `
                 <p>Promise создается с помощью конструктора <code>Promise</code>, который принимает функцию с двумя аргументами: <code>resolve</code> и <code>reject</code>.</p>
               `,
@@ -4700,7 +4696,7 @@ link.addEventListener('click', function(event) {
             },
             {
               title: "Использование then и catch",
-              type: "code",
+              type: "text",
               description: `
                 <p>Методы <code>then</code> и <code>catch</code> используются для обработки результатов промисов.</p>
                 <p>Метод <code>then</code> принимает два параметра: функцию, которая будет выполнена при успешном завершении промиса, и (необязательную) функцию для обработки ошибок.</p>
@@ -4718,7 +4714,7 @@ link.addEventListener('click', function(event) {
             },
             {
               title: "Пример использования Promise",
-              type: "code",
+              type: "text",
               description: `
                 <p>Вот пример, который имитирует асинхронную операцию, такую как загрузка данных с сервера:</p>
               `,
@@ -4749,7 +4745,7 @@ link.addEventListener('click', function(event) {
             },
             {
               title: "Основные статические методы Promise",
-              type: "list",
+              type: "text",
               description: `
                 <p>Promise предоставляет несколько статических методов:</p>
                 <ul>
@@ -4771,7 +4767,7 @@ link.addEventListener('click', function(event) {
               title:
                 "Реализация паузы/старта видео в зависимости от состояния видимости страницы",
               description: `Page Visibility API — это API браузера, который проверяет видимость страницы. Он помогает определять, скрыта или свернута текущая страница, и тем самым позволяет контролировать ее поведение и использование ресурсов`,
-              type: "code",
+              type: "text",
               code: `
 const video = document.querySelector('video');
 document.addEventListener('visibilitychange', () => {
@@ -4792,14 +4788,14 @@ document.addEventListener('visibilitychange', () => {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p><strong>Рекурсия</strong> — это функция вызывающая саму себя для решения подзадач. Рекурсивные функции обычно разбивают задачу на меньшие подзадачи, которые решаются аналогичным образом.</p>
               `,
             },
             {
               title: "Структура рекурсивной функции",
-              type: "code",
+              type: "text",
               description: `
                 <p>Рекурсивная функция должна иметь:</p>
                 <ul>
@@ -4819,7 +4815,7 @@ console.log(factorial(5)); // 120
             },
             {
               title: "Примеры использования",
-              type: "list",
+              type: "text",
               description: `
                 <p>Рекурсия может быть использована в следующих ситуациях:</p>
                 <ul>
@@ -4832,7 +4828,7 @@ console.log(factorial(5)); // 120
             },
             {
               title: "Преимущества и недостатки",
-              type: "list",
+              type: "text",
               description: `
                 <p>Преимущества и недостатки рекурсии:</p>
                 <ul>
@@ -4855,7 +4851,7 @@ console.log(factorial(5)); // 120
             },
             {
               title: "Аргументы редьюсера",
-              type: "list",
+              type: "text",
               description: `
                 <p>Редьюсер принимает два аргумента:</p>
                 <ul>
@@ -4866,7 +4862,7 @@ console.log(factorial(5)); // 120
             },
             {
               title: "Пример редьюсера",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример простого редьюсера для управления задачами:</p>
               `,
@@ -4897,7 +4893,7 @@ function todoReducer(state = initialState, action) {
             },
             {
               title: "Пример с использованием useReducer",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример использования <code>useReducer</code> в React:</p>
               `,
@@ -4951,14 +4947,14 @@ function Counter() {
             },
             {
               title: "Способы объявления регулярных выражений",
-              type: "list",
+              type: "text",
               description: `
                 <p>В JavaScript регулярные выражения можно объявлять двумя основными способами:</p>
               `,
             },
             {
               title: "Литеральный синтаксис",
-              type: "code",
+              type: "text",
               description: `
                 <p>Регулярное выражение можно создать с помощью литералов, заключённых в косые черты <code>/.../</code>.</p>
                 <p>Пример:</p>
@@ -4969,7 +4965,7 @@ const regex = /abc/;
             },
             {
               title: "Конструктор RegExp",
-              type: "code",
+              type: "text",
               description: `
                 <p>Регулярное выражение также можно создать с помощью конструктора <code>RegExp</code>. Это полезно, когда вам нужно динамически создавать регулярные выражения.</p>
                 <p>Пример:</p>
@@ -4987,7 +4983,7 @@ const regex = new RegExp('abc');
             },
             {
               title: "Поиск совпадений",
-              type: "code",
+              type: "text",
               description: `
                 <p>Вы можете использовать регулярные выражения для поиска совпадений в строке:</p>
               `,
@@ -5000,7 +4996,7 @@ console.log(result); // Вывод: ["world"]
             },
             {
               title: "Замена текста",
-              type: "code",
+              type: "text",
               description: `
                 <p>Регулярные выражения можно использовать для замены текста:</p>
               `,
@@ -5012,7 +5008,7 @@ console.log(newStr); // Вывод: "I like dogs."
             },
             {
               title: "Валидация формата",
-              type: "code",
+              type: "text",
               description: `
                 <p>Регулярные выражения часто используются для проверки формата данных, например, адресов электронной почты:</p>
               `,
@@ -5024,7 +5020,7 @@ console.log(regex.test(email)); // Вывод: true (если формат ко�
             },
             {
               title: "Некоторые особенности регулярных выражений:",
-              type: "list",
+              type: "text",
               description: `
                 <ul>
                   <li>Регулярные выражения могут быть регистронезависимыми с использованием флага <code>i</code>.</li>
@@ -5034,28 +5030,33 @@ console.log(regex.test(email)); // Вывод: true (если формат ко�
               `,
             },
             {
-              title: "MDN Web Docs (Mozilla Developer Network):",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "MDN Web Docs (Mozilla Developer Network):",
               url: "https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Regular_expressions",
             },
             {
-              title: "Regex101:",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "Regex101:",
               url: "https://regex101.com",
             },
             {
-              title: "Regular-Expressions.info:",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "Regular-Expressions.info:",
               url: "https://www.regular-expressions.info",
             },
             {
-              title: "Mastering Regular Expressions (книга):",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "Mastering Regular Expressions (книга):",
               url: "https://www.oreilly.com/library/view/mastering-regular-expressions/9781491971700/",
             },
             {
-              title: "YouTube Tutorials:",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "YouTube Tutorials:",
               url: "https://www.youtube.com/results?search_query=Regular+Expressions+tutorial",
             },
           ],
@@ -5072,7 +5073,7 @@ console.log(regex.test(email)); // Вывод: true (если формат ко�
             },
             {
               title: "Создание Set",
-              type: "code",
+              type: "text",
               description: `
                 <p>Создание нового <code>Set</code> осуществляется с помощью конструктора <code>Set()</code>.</p>
               `,
@@ -5082,7 +5083,7 @@ const mySet = new Set();
             },
             {
               title: "Добавление значений",
-              type: "code",
+              type: "text",
               description: `
                 <p>Для добавления значений в <code>Set</code> используется метод <code>add()</code>.</p>
               `,
@@ -5095,7 +5096,7 @@ console.log(mySet); // Вывод: Set { 1, 2 }
             },
             {
               title: "Основные методы Set",
-              type: "list",
+              type: "text",
               description: `
                 <p>Вот несколько основных методов, доступных для <code>Set</code>:</p>
                 <ul>
@@ -5109,7 +5110,7 @@ console.log(mySet); // Вывод: Set { 1, 2 }
             },
             {
               title: "Пример использования Set",
-              type: "code",
+              type: "text",
               description: `
                 <p>Вот простой пример использования <code>Set</code>:</p>
               `,
@@ -5157,7 +5158,7 @@ console.log(numbers.size); // Вывод: 0
           children: [
             {
               title: "Использование конструкции switch и где это нужно",
-              type: "code",
+              type: "text",
               description: `
               <p>Конструкция switch позволяет выполнять различные действия на основе значения выражения.</p>
               <ul>
@@ -5253,7 +5254,7 @@ console.log(message); // "Отлично!"
           children: [
             {
               title: "Сортировка пузырьком",
-              type: "code",
+              type: "text",
               description: `
                 <p>Алгоритм сортировки пузырьком сравнивает пары соседних элементов и меняет их местами, если порядок неправильный.</p>
                 <p>Задача: Реализовать сортировку массива с использованием алгоритма пузырька.</p>
@@ -5286,7 +5287,7 @@ function bubbleSort(arr) {
           children: [
             {
               title: "Использование строгого сравнения в JavaScript",
-              type: "code",
+              type: "text",
               description: `
                 <p>В JavaScript есть два типа сравнения: нестрогое (==) и строгое (===).</p>
                 <ul>
@@ -5341,7 +5342,7 @@ console.log(true === 1); // false
             },
             {
               title: "4. Пример глобальной области видимости",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример глобальной области видимости:</p>
               `,
@@ -5356,7 +5357,7 @@ testGlobal();
             },
             {
               title: "5. Пример локальной области видимости",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример локальной области видимости:</p>
               `,
@@ -5371,7 +5372,7 @@ console.log(localVar); // ReferenceError: localVar is not defined
             },
             {
               title: "6. Блочная область видимости",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример блочной области видимости с let:</p>
               `,
@@ -5392,7 +5393,7 @@ console.log(blockVar); // ReferenceError: blockVar is not defined
             },
             {
               title: "8. Пример иерархии области видимости",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример иерархии области видимости:</p>
               `,
@@ -5430,7 +5431,7 @@ outerFunction();
             },
             {
               title: "3. Пример Temporal Dead Zone",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример, демонстрирующий TDZ:</p>
               `,
@@ -5459,7 +5460,7 @@ let a = 5;
             },
             {
               title: "6. Пример с var",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример, показывающий поведение <code>var</code>:</p>
               `,
@@ -5476,7 +5477,7 @@ var b = 10;
             {
               title:
                 "Использование тернарного оператора и логических операторов",
-              type: "code",
+              type: "text",
               description: `
                 <p>В JavaScript есть несколько удобных операторов, которые помогают упростить код и избавиться от лишних проверок.</p>
                 <ul>
@@ -5520,7 +5521,7 @@ const fallback = userRole || "guest"; // вернёт "guest", если userRole
           children: [
             {
               title: "Описание оператора typeof",
-              type: "code",
+              type: "text",
               description: `
                 <p><strong>typeof</strong>: Это оператор в JavaScript, который используется для определения типа переменной или выражения. Он возвращает строку, описывающую тип аргумента.</p>
                 <ul>
@@ -5540,7 +5541,7 @@ console.log(typeof function(){}); // "function"
             },
             {
               title: "Практическое применение",
-              type: "code",
+              type: "text",
               description: `
                 <p>Оператор typeof часто используется для проверки типов переменных перед выполнением операций:</p>
               `,
@@ -5560,7 +5561,7 @@ if (typeof value === 'number') {
             },
             {
               title: "Ограничения оператора typeof",
-              type: "code",
+              type: "text",
               description: `
                 <p>Некоторые особенности и ограничения:</p>
                 <ul>
@@ -5578,7 +5579,7 @@ console.log(typeof (() => {})); // "function"
             },
             {
               title: "Вывод",
-              type: "code",
+              type: "text",
               description: `
                 <p>Оператор typeof является полезным инструментом в JavaScript для проверки типов данных и может помочь избежать ошибок при работе с переменными.</p>
               `,
@@ -5590,12 +5591,11 @@ console.log(typeof value); // "string"
           ],
         },
         {
-          title:
-            "Variables: let, const, var and hoisting / Переменные: let, const, var и хоистинг",
+          title: "Variables: let, const, var and hoisting / Переменные: let, const, var и хоистинг",
           children: [
             {
               title: "Область видимости переменных",
-              type: "code",
+              type: "text",
               description: `
                 <p>В JavaScript есть три типа областей видимости: глобальная, функция и блок.</p>
                 <ul>
@@ -5621,7 +5621,7 @@ console.log(globalVar); // доступен здесь
             },
             {
               title: "Описание переменных",
-              type: "code",
+              type: "text",
               description: `
                 <p><strong>var</strong>: Используется для объявления переменных. Переменные, объявленные с помощью var, имеют функциональную или глобальную область видимости и могут быть переопределены. Они также подвержены механизму поднятия (hoisting).</p>
                 <p><strong>let</strong>: Вводится в ES6 (ECMAScript 2015). Используется для объявления переменных с блочной областью видимости. Переменные, объявленные с помощью let, не могут быть переопределены в пределах одной и той же области видимости. Также подвержены подъеманию, но не инициализируются до фактической строки кода.</p>
@@ -5640,7 +5640,7 @@ console.log(c); // '!'
             },
             {
               title: "Сравнение области видимости",
-              type: "code",
+              type: "text",
               description: `
                 <p>Область видимости переменных var, let и const:</p>
                 <ul>
@@ -5662,7 +5662,7 @@ console.log(z); // ReferenceError: z is not defined
             },
             {
               title: "Hoisting / Подъем переменных",
-              type: "code",
+              type: "text",
               description: `
                 <p>Все три типа переменных поднимаются, но их инициализация происходит на разных стадиях:</p>
               `,
@@ -5679,7 +5679,7 @@ const aConst = 'test';
             },
             {
               title: "Использование",
-              type: "code",
+              type: "text",
               description: `
                 <p>Рекомендуется использовать let и const вместо var, чтобы избежать неожиданных ошибок и путаницы:</p>
               `,
@@ -5693,7 +5693,7 @@ name = 'Doe'; // корректно, значение переменной мо�
             },
             {
               title: "Вывод",
-              type: "code",
+              type: "text",
               description: `
                 <p>Необходимо использовать let и const в современных приложениях, чтобы избежать проблем с областью видимости, поднятием и переопределением переменных.</p>
               `,
@@ -5712,7 +5712,7 @@ if (true) {
           children: [
             {
               title: "1. Использование var",
-              type: "code",
+              type: "text",
               description: `
                 <p><strong>var</strong>: Объявляет переменную с функциональной или глобальной областью видимости.</p>
                 <ul>
@@ -5729,7 +5729,7 @@ console.log(name); // 'Bob'
             },
             {
               title: "2. Использование let",
-              type: "code",
+              type: "text",
               description: `
                 <p><strong>let</strong>: Объявляет переменную с блочной областью видимости.</p>
                 <ul>
@@ -5745,7 +5745,7 @@ console.log(age); // 25
             },
             {
               title: "3. Использование const",
-              type: "code",
+              type: "text",
               description: `
                 <p><strong>const</strong>: Объявляет константу, значение которой не может быть переопределено.</p>
                 <ul>
@@ -5761,7 +5761,7 @@ console.log(pi); // 3.14
             },
             {
               title: "4. Групповое объявление",
-              type: "code",
+              type: "text",
               description: `
                 <p>Можно объявить несколько переменных в одной строке:</p>
               `,
@@ -5773,14 +5773,14 @@ console.log(x, y, z); // 10 20 30
           ],
         },
         {
-          title: "Tasks",
+          title: "Codewars",
           children: [
             {
               title: "Task 1",
               children: [
                 {
                   title: "Count Odd Numbers below n",
-                  type: "code",
+                  type: "text",
                   description: `
                     Given a number n, return the number of positive odd numbers below n, EASY!
     
@@ -5819,7 +5819,7 @@ const oddCount = n => n % 2 === 0 ? n / 2 : (n - 1) / 2
               children: [
                 {
                   title: "Pole Vault Starting Marks",
-                  type: "code",
+                  type: "text",
                   description: `
                   For a pole vaulter, it is very important to begin the approach run at the best possible starting mark. This is affected by numerous factors and requires fine-tuning in practice. But there is a guideline that will help a beginning vaulter start at approximately the right location for the so-called "three-step approach," based on the vaulter's body height.
                   This guideline was taught to me in feet and inches, but due to the international nature of Codewars, I am creating this kata to use metric units instead.
@@ -5865,7 +5865,7 @@ function startingMark(bodyHeight) {
               children: [
                 {
                   title: "Playing with cubes II",
-                  type: "code",
+                  type: "text",
                   description: `
                   Hey Codewarrior!
                   In the previous kata, you have implemented a Cube class, but now we need your help again! I'm talking about constructors. We don't have one. Let's code one (or more) such that one can instantiate an object via it, handling either no arguments or a single integer. 
@@ -5909,7 +5909,7 @@ class Cube {
               children: [
                 {
                   title: "Polish alphabet",
-                  type: "code",
+                  type: "text",
                   description: `
                   There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
                   Your task is to change the letters with diacritics:
@@ -5997,7 +5997,7 @@ const correctPolishLetters = str => {
               children: [
                 {
                   title: "Who is going to pay for the wall?",
-                  type: "code",
+                  type: "text",
                   description: `
                     Don Drumphet lives in a nice neighborhood, but one of his neighbors has started to let his house go. Don Drumphet wants to build a wall between his house and his neighbor’s, and is trying to get the neighborhood association to pay for it. He begins to solicit his neighbors to petition to get the association to build the wall. Unfortunately for Don Drumphet, he cannot read very well, has a very limited attention span, and can only remember two letters from each of his neighbors’ names. As he collects signatures, he insists that his neighbors keep truncating their names until two letters remain, and he can finally read them.
                     Your code will show Full name of the neighbor and the truncated version of the name as an array. If the number of the characters in name is less than or equal to two, it will return an array containing only the name as is.
@@ -6023,7 +6023,7 @@ const whoIsPaying = name => name.length > 2 ? ([name, name.substr(0, 2)]) : [nam
               children: [
                 {
                   title: "Smallest unused ID",
-                  type: "code",
+                  type: "text",
                   description: `
                     Hey awesome programmer!
 
@@ -6071,7 +6071,7 @@ function nextId(ids){
               children: [
                 {
                   title: "Did she say hallo?",
-                  type: "code",
+                  type: "text",
                   description: `
 You received a whats up message from an unknown number. Could it be from that girl/boy with a foreign accent you met yesterday evening?
 
@@ -6143,7 +6143,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
               children: [
                 {
                   title: "title",
-                  type: "code",
+                  type: "text",
                   description: `
                     word
                   `,
@@ -6158,7 +6158,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
               children: [
                 {
                   title: "title",
-                  type: "code",
+                  type: "text",
                   description: `
                     word
                   `,
@@ -6173,7 +6173,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
               children: [
                 {
                   title: "title",
-                  type: "code",
+                  type: "text",
                   description: `
                     word
                   `,
@@ -6188,7 +6188,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
               children: [
                 {
                   title: "title",
-                  type: "code",
+                  type: "text",
                   description: `
                     word
                   `,
@@ -6203,7 +6203,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
               children: [
                 {
                   title: "title",
-                  type: "code",
+                  type: "text",
                   description: `
                     word
                   `,
@@ -6218,7 +6218,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
               children: [
                 {
                   title: "title",
-                  type: "code",
+                  type: "text",
                   description: `
                     word
                   `,
@@ -6233,7 +6233,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
               children: [
                 {
                   title: "title",
-                  type: "code",
+                  type: "text",
                   description: `
                     word
                   `,
@@ -6248,7 +6248,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
               children: [
                 {
                   title: "title",
-                  type: "code",
+                  type: "text",
                   description: `
                     word
                   `,
@@ -6263,7 +6263,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
               children: [
                 {
                   title: "title",
-                  type: "code",
+                  type: "text",
                   description: `
                     word
                   `,
@@ -6284,23 +6284,27 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
           title: "React JS",
           children: [
             {
-              title: "Introduction to React JS",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "Introduction to React JS",
               url: "https://it-shpora.pp.ua/category/react/",
             },
             {
-              title: "Advanced React JS",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "Advanced React JS",
               url: "https://devdocs.io/react/",
             },
             {
-              title: "Storybook",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "Storybook",
               url: "https://storybook.js.org/docs/writing-stories",
             },
             {
-              title: "React JS Drag to Select",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "React JS Drag to Select",
               url: "https://www.joshuawootonn.com/react-drag-to-select",
             },
           ],
@@ -6309,13 +6313,15 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
           title: "React TS",
           children: [
             {
-              title: "Introduction to React TypeScript",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "Introduction to React TypeScript",
               url: "https://it-shpora.pp.ua/category/react-typescript/",
             },
             {
-              title: "Advanced React Typescript",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "Advanced React Typescript",
               url: "https://reactjs.org/docs/getting-started",
             },
           ],
@@ -6324,13 +6330,15 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
           title: "React Native",
           children: [
             {
-              title: "Introduction to React Native",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "Introduction to React Native",
               url: "https://it-shpora.pp.ua/category/react-native/",
             },
             {
-              title: "Advanced React Native",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "Advanced React Native",
               url: "https://reactnative.dev/",
             },
           ],
@@ -6409,10 +6417,10 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
           title: "Routing",
           children: [
             {
-              title: "Learn more about routing",
-              description:
-                "The skeleton of every application is routing. This page will introduce you to the fundamental concepts of routing for the web and how to handle routing in Next.js.",
-              type: "link",
+              title: "",
+              description: "The skeleton of every application is routing. This page will introduce you to the fundamental concepts of routing for the web and how to handle routing in Next.js.",
+              type: "text",
+              link: "Learn more about routing",
               url: "https://nextjs.org/docs/app/building-your-application/routing#terminology",
             },
           ],
@@ -6427,14 +6435,14 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Чистый код — это подход к написанию программного обеспечения, который акцентирует внимание на его читаемости, понятности и простоте. Он способствует более легкому пониманию и сопровождению кода.</p>
               `,
             },
             {
               title: "Основные принципы чистого кода",
-              type: "list",
+              type: "text",
               description: `
                 <p>Некоторые ключевые принципы чистого кода:</p>
                 <ul>
@@ -6448,7 +6456,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
             },
             {
               title: "Примеры хорошего кода",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример хорошего кода с понятными названиями:</p>
               `,
@@ -6460,7 +6468,7 @@ function calculateArea(radius) {
             },
             {
               title: "Примеры плохого кода",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример плохого кода с непонятными названиями:</p>
               `,
@@ -6472,7 +6480,7 @@ function c(r) {
             },
             {
               title: "Рекомендации по написанию чистого кода",
-              type: "list",
+              type: "text",
               description: `
                 <p>Некоторые рекомендации:</p>
                 <ul>
@@ -6486,7 +6494,7 @@ function c(r) {
             },
             {
               title: "Преимущества чистого кода",
-              type: "list",
+              type: "text",
               description: `
                 <p>Преимущества написания чистого кода:</p>
                 <ul>
@@ -6504,14 +6512,14 @@ function c(r) {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Continuous Integration (CI), Continuous Deployment (CD) и Delivery Pipeline — это практики разработки программного обеспечения, которые помогают обеспечить быструю и надежную поставку кода в рабочую среду.</p>
               `,
             },
             {
               title: "Continuous Integration (CI)",
-              type: "list",
+              type: "text",
               description: `
                 <p>CI — это практика, при которой разработчики регулярно интегрируют свои изменения в общий код. Каждый интегрированный код проходит автоматические тесты и сборку, что позволяет обнаруживать ошибки на ранних стадиях.</p>
                 <ul>
@@ -6522,7 +6530,7 @@ function c(r) {
             },
             {
               title: "Continuous Deployment (CD)",
-              type: "list",
+              type: "text",
               description: `
                 <p>CD — это практика, при которой изменения кода автоматически разворачиваются в рабочую среду после успешного прохождения всех тестов. Это позволяет командам быстрее реагировать на изменения и выпускать новые функции.</p>
                 <ul>
@@ -6533,7 +6541,7 @@ function c(r) {
             },
             {
               title: "Delivery Pipeline",
-              type: "list",
+              type: "text",
               description: `
                 <p>Delivery Pipeline — это автоматизированный процесс, который включает в себя все этапы от написания кода до его развертывания в рабочую среду. Он включает CI и CD и обеспечивает полный контроль над процессом доставки программного обеспечения.</p>
                 <ul>
@@ -6544,7 +6552,7 @@ function c(r) {
             },
             {
               title: "Сравнение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Сравнение CI, CD и Delivery Pipeline:</p>
                 <ul>
@@ -6561,7 +6569,7 @@ function c(r) {
           children: [
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>DRY (Don't Repeat Yourself)</strong> - Принцип, согласно которому информация и логика не должны повторяться в коде, чтобы уменьшить дублирование и облегчить поддержку.",
             },
@@ -6572,14 +6580,14 @@ function c(r) {
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Шаблоны проектирования — это общепринятые решения для часто встречающихся проблем в проектировании программного обеспечения. Они помогают разработчикам создавать более гибкие, поддерживаемые и устойчивые к изменениям системы.</p>
               `,
             },
             {
               title: "Типы шаблонов проектирования",
-              type: "list",
+              type: "text",
               description: `
                 <p>Существует три основных типа шаблонов проектирования:</p>
                 <ul>
@@ -6591,7 +6599,7 @@ function c(r) {
             },
             {
               title: "Примеры шаблонов",
-              type: "list",
+              type: "text",
               description: `
                 <p>Некоторые популярные шаблоны проектирования:</p>
                 <ul>
@@ -6604,7 +6612,7 @@ function c(r) {
             },
             {
               title: "Преимущества использования шаблонов проектирования",
-              type: "list",
+              type: "text",
               description: `
                 <p>Преимущества использования шаблонов проектирования:</p>
                 <ul>
@@ -6616,7 +6624,7 @@ function c(r) {
             },
             {
               title: "Рекомендации по применению",
-              type: "list",
+              type: "text",
               description: `
                 <p>Некоторые рекомендации по применению шаблонов проектирования:</p>
                 <ul>
@@ -6652,7 +6660,7 @@ function c(r) {
             },
             {
               title: "3. Пример делегирования событий",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример делегирования событий на списке элементов:</p>
               `,
@@ -6692,7 +6700,7 @@ function c(r) {
             },
             {
               title: "Основные концепции",
-              type: "list",
+              type: "text",
               description: `
                 <p>Ключевые концепции функционального программирования:</p>
                 <ul>
@@ -6717,7 +6725,7 @@ function c(r) {
             },
             {
               title: "Пример чистой функции",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример чистой функции, которая вычисляет сумму двух чисел:</p>
               `,
@@ -6729,7 +6737,7 @@ function add(a, b) {
             },
             {
               title: "Функции высшего порядка",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример функции высшего порядка, которая принимает другую функцию в качестве аргумента:</p>
               `,
@@ -6766,7 +6774,7 @@ const result = applyFunction(double, 5); // 10
             },
             {
               title: "Примеры императивного программирования",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример императивного подхода на JavaScript:</p>
               `,
@@ -6787,7 +6795,7 @@ console.log(sum); // 15
             },
             {
               title: "Примеры декларативного программирования",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример декларативного подхода на JavaScript:</p>
               `,
@@ -6817,7 +6825,7 @@ console.log(sum); // 15
           children: [
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>KISS (Keep It Simple, Stupid)</strong> - это принцип, который подразумевает, что системы следует проектировать максимально просто; избегать ненужной сложности.",
             },
@@ -6828,7 +6836,7 @@ console.log(sum); // 15
           children: [
             {
               title: "B - Блок (Block)",
-              type: "list",
+              type: "text",
               description: `
                 <p>Определение блока:</p>
                 <ul>
@@ -6839,7 +6847,7 @@ console.log(sum); // 15
             },
             {
               title: "E - Элемент (Element)",
-              type: "list",
+              type: "text",
               description: `
                 <p>Определение элемента:</p>
                 <ul>
@@ -6850,7 +6858,7 @@ console.log(sum); // 15
             },
             {
               title: "M - Модификатор (Modifier)",
-              type: "list",
+              type: "text",
               description: `
                 <p>Определение модификатора:</p>
                 <ul>
@@ -6861,7 +6869,7 @@ console.log(sum); // 15
             },
             {
               title: "Преимущества BEM",
-              type: "list",
+              type: "text",
               description: `
                 <p>Основные преимущества методологии BEM:</p>
                 <ul>
@@ -6878,14 +6886,14 @@ console.log(sum); // 15
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Agile — это методология разработки программного обеспечения, основанная на гибком подходе к планированию, тестированию и реализации проектов. Она акцентирует внимание на сотрудничестве, изменениях и быстром реагировании на отзывы клиентов.</p>
               `,
             },
             {
               title: "Основные принципы Agile",
-              type: "list",
+              type: "text",
               description: `
                 <p>Agile основывается на следующих принципах:</p>
                 <ul>
@@ -6898,7 +6906,7 @@ console.log(sum); // 15
             },
             {
               title: "Методы Agile",
-              type: "list",
+              type: "text",
               description: `
                 <p>Существует несколько методов Agile, среди которых:</p>
                 <ul>
@@ -6910,7 +6918,7 @@ console.log(sum); // 15
             },
             {
               title: "Преимущества Agile",
-              type: "list",
+              type: "text",
               description: `
                 <p>Преимущества использования Agile:</p>
                 <ul>
@@ -6923,7 +6931,7 @@ console.log(sum); // 15
             },
             {
               title: "Рекомендации по внедрению Agile",
-              type: "list",
+              type: "text",
               description: `
                 <p>Некоторые рекомендации по внедрению Agile:</p>
                 <ul>
@@ -6941,14 +6949,14 @@ console.log(sum); // 15
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Scrum — это фреймворк для управления проектами в рамках методологии Agile, который позволяет командам работать над сложными проектами, обеспечивая гибкость, прозрачность и регулярную доставку ценности.</p>
               `,
             },
             {
               title: "Основные роли в Scrum",
-              type: "list",
+              type: "text",
               description: `
                 <p>В Scrum выделяют три ключевые роли:</p>
                 <ul>
@@ -6960,7 +6968,7 @@ console.log(sum); // 15
             },
             {
               title: "Основные артефакты Scrum",
-              type: "list",
+              type: "text",
               description: `
                 <p>В Scrum используются следующие артефакты:</p>
                 <ul>
@@ -6972,7 +6980,7 @@ console.log(sum); // 15
             },
             {
               title: "Процесс Scrum",
-              type: "list",
+              type: "text",
               description: `
                 <p>Процесс Scrum включает в себя следующие этапы:</p>
                 <ul>
@@ -6986,7 +6994,7 @@ console.log(sum); // 15
             },
             {
               title: "Преимущества Scrum",
-              type: "list",
+              type: "text",
               description: `
                 <p>Преимущества использования Scrum:</p>
                 <ul>
@@ -6999,7 +7007,7 @@ console.log(sum); // 15
             },
             {
               title: "Рекомендации по внедрению Scrum",
-              type: "list",
+              type: "text",
               description: `
                 <p>Некоторые рекомендации по внедрению Scrum:</p>
                 <ul>
@@ -7017,14 +7025,14 @@ console.log(sum); // 15
           children: [
             {
               title: "Определение",
-              type: "list",
+              type: "text",
               description: `
                 <p>Kanban — это методология управления проектами, основанная на визуализации рабочего процесса и ограничении количества одновременно выполняемых задач. Она помогает командам улучшать эффективность и гибкость в управлении задачами.</p>
               `,
             },
             {
               title: "Основные принципы Kanban",
-              type: "list",
+              type: "text",
               description: `
                 <p>Kanban основывается на следующих ключевых принципах:</p>
                 <ul>
@@ -7037,7 +7045,7 @@ console.log(sum); // 15
             },
             {
               title: "Канбан-доска",
-              type: "list",
+              type: "text",
               description: `
                 <p>Канбан-доска — это визуальный инструмент, который помогает командам отслеживать статус задач на разных этапах их выполнения. Обычно она включает следующие колонки:</p>
                 <ul>
@@ -7049,7 +7057,7 @@ console.log(sum); // 15
             },
             {
               title: "Преимущества Kanban",
-              type: "list",
+              type: "text",
               description: `
                 <p>Преимущества использования Kanban:</p>
                 <ul>
@@ -7062,7 +7070,7 @@ console.log(sum); // 15
             },
             {
               title: "Рекомендации по внедрению Kanban",
-              type: "list",
+              type: "text",
               description: `
                 <p>Некоторые рекомендации по внедрению Kanban:</p>
                 <ul>
@@ -7081,7 +7089,7 @@ console.log(sum); // 15
             {
               title:
                 "Объектно-ориентированное программирование (ООП) — это парадигма программирования, основанная на концепции 'объектов', которые могут содержать данные и код. Основные принципы ООП:",
-              type: "list",
+              type: "text",
               description: `
               <li>Инкапсуляция: Сокрытие состояния объекта и управление доступом к нему через методы. Это помогает защитить внутренние данные и предотвратить их неправильное использование.</li>
               <li>Наследование: Возможность создавать новые классы на основе существующих. Новый класс (потомок) наследует свойства и методы родительского класса, что позволяет повторно использовать и расширять код.</li>
@@ -7097,7 +7105,7 @@ console.log(sum); // 15
           children: [
             {
               title: "S - Single Responsibility Principle",
-              type: "list",
+              type: "text",
               description: `
                 <p>Принцип единственной ответственности:</p>
                 <ul>
@@ -7108,7 +7116,7 @@ console.log(sum); // 15
             },
             {
               title: "O - Open/Closed Principle",
-              type: "list",
+              type: "text",
               description: `
                 <p>Принцип открытости/закрытости:</p>
                 <ul>
@@ -7119,7 +7127,7 @@ console.log(sum); // 15
             },
             {
               title: "L - Liskov Substitution Principle",
-              type: "list",
+              type: "text",
               description: `
                 <p>Принцип подстановки Лисков:</p>
                 <ul>
@@ -7130,7 +7138,7 @@ console.log(sum); // 15
             },
             {
               title: "I - Interface Segregation Principle",
-              type: "list",
+              type: "text",
               description: `
                 <p>Принцип сегрегации интерфейсов:</p>
                 <ul>
@@ -7141,7 +7149,7 @@ console.log(sum); // 15
             },
             {
               title: "D - Dependency Inversion Principle",
-              type: "list",
+              type: "text",
               description: `
                 <p>Принцип инверсии зависимостей:</p>
                 <ul>
@@ -7157,7 +7165,7 @@ console.log(sum); // 15
           children: [
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>YAGNI (You Aren't Gonna Need It)</strong> - Принцип, который гласит, что не следует добавлять функциональности, пока не возникнет реальная необходимость, чтобы избежать излишней сложности.",
             },
@@ -7180,7 +7188,7 @@ console.log(sum); // 15
                     {
                       title:
                         "В фронтенд-разработке используются различные структуры данных для организации и хранения информации",
-                      type: "list",
+                      type: "text",
                       description: `
                       <p>Вот некоторые из них:</p>
                         <li>Массивы (Arrays): Упорядоченные коллекции элементов, которые могут быть любого типа. Массивы позволяют хранить списки данных и обеспечивают доступ к элементам по индексу.</li>
@@ -7199,7 +7207,7 @@ console.log(sum); // 15
                     {
                       title:
                         "Двоичная система счисления — это система, основанная на двух символах: 0 и 1",
-                      type: "list",
+                      type: "text",
                       description: `
                       <p>Она является основой для работы всех цифровых компьютеров, так как они используют двоичную логику для обработки данных. В двоичной системе каждое число представляется как последовательность битов (binary digits), где каждый бит может принимать значение 0 или 1.
                       Например, число 5 в десятичной системе представляется как 101 в двоичной системе:</p>
@@ -7215,7 +7223,7 @@ console.log(sum); // 15
                     {
                       title:
                         "Браузер — это программа, которая выполняет следующие основные функции:",
-                      type: "list",
+                      type: "text",
                       description: `
                         <li>Запрос ресурсов: Браузер отправляет HTTP(S)-запросы к веб-серверу для получения HTML, CSS, JavaScript, изображений и других ресурсов.</li>
                         <li>Парсинг HTML: После получения ответа от сервера браузер начинает парсить HTML-код, создавая DOM (Document Object Model) — дерево объектов, представляющее структуру документа.</li>
@@ -7233,7 +7241,7 @@ console.log(sum); // 15
                     {
                       title:
                         "DOM (Document Object Model) — это программный интерфейс для классов документов HTML и XML. Он представляет структуру документа в виде дерева узлов, где каждый узел соответствует элементу или тексту на странице. DOM позволяет программно изменять структуру, содержимое и стиль документа.",
-                      type: "list",
+                      type: "text",
                       description: `
                       <p>С помощью DOM разработчики могут:</p>
                         <li>Добавлять, удалять и изменять элементы на странице.</li>
@@ -7249,14 +7257,14 @@ console.log(sum); // 15
                   children: [
                     {
                       title: "Определение BOM",
-                      type: "list",
+                      type: "text",
                       description: `
                       <p>BOM (Browser Object Model) — это интерфейс, который предоставляет JavaScript доступ к объектам, представляющим браузер и его окружение. С помощью BOM разработчики могут взаимодействовать с элементами браузера, такими как окно, история, адресная строка и другие аспекты, не относящиеся непосредственно к документу.</p>
                       `,
                     },
                     {
                       title: "Основные объекты BOM",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li><strong>window:</strong> Главный объект, представляющий окно браузера. Все другие объекты BOM являются его свойствами.</li>
@@ -7269,7 +7277,7 @@ console.log(sum); // 15
                     },
                     {
                       title: "Примеры использования BOM",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li><strong>Изменение URL:</strong> С помощью 'location.href' можно менять адрес текущей страницы.</li>
@@ -7280,7 +7288,7 @@ console.log(sum); // 15
                     },
                     {
                       title: "Преимущества и недостатки BOM",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li><strong>Преимущества:</strong> Позволяет взаимодействовать с браузером, что дает возможность создавать более динамичные и интерактивные веб-приложения.</li>
@@ -7336,7 +7344,7 @@ console.log(sum); // 15
                     },
                     {
                       title: "Обработка событий",
-                      type: "code",
+                      type: "text",
                       description: `
                         <p>Можно указать, в какой фазе будет срабатывать обработчик, используя третий аргумент в <code>addEventListener</code>.</p>
                       `,
@@ -7352,7 +7360,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
                   children: [
                     {
                       title: "HTTP-запрос состоит из нескольких частей:",
-                      type: "list",
+                      type: "text",
                       description: `
                       <p>Метод: Указывает тип запроса, например:</p>
                         <li>GET: Запрос на получение данных.</li>
@@ -7374,7 +7382,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
                   children: [
                     {
                       title: "Cookie",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Основные характеристики cookie:</p>
                         <li><strong>Применение</strong>: Хранит данные на стороне клиента, отправляемые на сервер при каждом запросе.</li>
@@ -7385,7 +7393,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
                     },
                     {
                       title: "sessionStorage",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Основные характеристики sessionStorage:</p>
                         <li><strong>Применение</strong>: Хранит данные, специфичные для одной сессии.</li>
@@ -7396,7 +7404,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
                     },
                     {
                       title: "localStorage",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Основные характеристики localStorage:</p>
                         <li><strong>Применение</strong>: Хранит данные, доступные между сессиями.</li>
@@ -7412,7 +7420,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
                   children: [
                     {
                       title: "Загрузка и парсинг HTML",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Основные характеристики загрузки и парсинга HTML:</p>
                         <ul>
@@ -7425,7 +7433,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
                     },
                     {
                       title: "Загрузка и парсинг CSS",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Основные характеристики загрузки и парсинга CSS:</p>
                         <ul>
@@ -7437,7 +7445,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
                     },
                     {
                       title: "Создание и рендеринг страницы",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Основные характеристики создания и рендеринга страницы:</p>
                         <ul>
@@ -7449,7 +7457,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
                     },
                     {
                       title: "Закрытие (beforeunload)",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Событие 'beforeunload' срабатывает, когда пользователь пытается покинуть страницу или обновить ее. Оно позволяет разработчикам предупреждать пользователей о том, что у них есть несохраненные изменения, и дает возможность предотвратить случайное закрытие страницы.</p>
                       `,
@@ -7470,7 +7478,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
                   children: [
                     {
                       title: "Алгоритмы сортировки",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Вот некоторые из основных алгоритмов сортировки:</p>
                         <li><strong>Пузырьковая сортировка (Bubble Sort)</strong>: Простейший алгоритм сортировки с временной сложностью O(n^2).</li>
@@ -7483,7 +7491,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
                     },
                     {
                       title: "Алгоритмы поиска",
-                      type: "list",
+                      type: "text",
                       description: `
                         <p>Вот некоторые из основных алгоритмов поиска:</p>
                         <li><strong>Линейный поиск (Linear Search)</strong>: Проходит по каждому элементу массива, временная сложность O(n).</li>
@@ -7498,7 +7506,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
                   children: [
                     {
                       title: "Факториал числа",
-                      type: "code",
+                      type: "text",
                       description: `
                         <p>Задача: Реализовать функцию, вычисляющую факториал числа.</p>
                         <ul>
@@ -7534,7 +7542,7 @@ function factorial(n) {
                   children: [
                     {
                       title: "Основные концепции",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>SOLID.</li>
@@ -7547,7 +7555,7 @@ function factorial(n) {
                     },
                     {
                       title: "Структуры данных и алгоритмы",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Основные структуры данных и их организация (массив, список, стек, очередь, дерево, хеш-таблица и т.д.).</li>
@@ -7558,7 +7566,7 @@ function factorial(n) {
                     },
                     {
                       title: "Хранение данных",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Разница между cookie, sessionStorage и localStorage.</li>
@@ -7569,7 +7577,7 @@ function factorial(n) {
                     },
                     {
                       title: "Программирование и методологии",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Функциональное программирование.</li>
@@ -7589,7 +7597,7 @@ function factorial(n) {
                   children: [
                     {
                       title: "Основные концепции",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Структура HTML документа.</li>
@@ -7602,7 +7610,7 @@ function factorial(n) {
                     },
                     {
                       title: "CSS",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Вес селектора или что такое специфичность в CSS.</li>
@@ -7618,7 +7626,7 @@ function factorial(n) {
                     },
                     {
                       title: "Семантика",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Какие существуют принципы семантической верстки?</li>
@@ -7629,7 +7637,7 @@ function factorial(n) {
                     },
                     {
                       title: "Прочее",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Что такое прогрессивная развертка?</li>
@@ -7647,7 +7655,7 @@ function factorial(n) {
                   children: [
                     {
                       title: "Основные концепции",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Типы данных.</li>
@@ -7664,7 +7672,7 @@ function factorial(n) {
                     },
                     {
                       title: "Функции",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Функция declaration and expression, arrow function.</li>
@@ -7685,7 +7693,7 @@ function factorial(n) {
                     },
                     {
                       title: "Наследование и замыкания",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Посредством чего в JS реализуются наследования?</li>
@@ -7697,7 +7705,7 @@ function factorial(n) {
                     },
                     {
                       title: "Promise и колбэки",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Promise.</li>
@@ -7709,7 +7717,7 @@ function factorial(n) {
                     },
                     {
                       title: "Структуры данных",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Чем отличается Map от WeakMap?</li>
@@ -7721,7 +7729,7 @@ function factorial(n) {
                     },
                     {
                       title: "Взаимодействие с DOM",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Как получить доступ к элементу DOM?</li>
@@ -7733,7 +7741,7 @@ function factorial(n) {
                     },
                     {
                       title: "Алгоритмы и модели",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>В чем разница между spread-оператором и rest-оператором?</li>
@@ -7747,7 +7755,7 @@ function factorial(n) {
                     },
                     {
                       title: "Безопасность",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Что такое XSS (Cross-Site Scripting)?</li>
@@ -7758,7 +7766,7 @@ function factorial(n) {
                     },
                     {
                       title: "Частые вопросы",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Как работает механизм замыкания?</li>
@@ -7779,7 +7787,7 @@ function factorial(n) {
                     },
                     {
                       title: "Остальные вопросы",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Bind, call, apply можно использовать на стрелочных функциях ?</li>
@@ -7796,7 +7804,7 @@ function factorial(n) {
                   children: [
                     {
                       title: "Основы протоколов",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>HTTP и HTTPS</li>
@@ -7808,7 +7816,7 @@ function factorial(n) {
                     },
                     {
                       title: "Методы HTTP",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>какие методы есть?</li>
@@ -7823,7 +7831,7 @@ function factorial(n) {
                     },
                     {
                       title: "Запросы и ответы",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>request / response</li>
@@ -7834,7 +7842,7 @@ function factorial(n) {
                     },
                     {
                       title: "Технологии взаимодействия",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>JWT</li>
@@ -7850,7 +7858,7 @@ function factorial(n) {
                     },
                     {
                       title: "Безопасность и угрозы",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Web-угрозы</li>
@@ -7859,7 +7867,7 @@ function factorial(n) {
                     },
                     {
                       title: "Частые вопросы",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Что такое CORS и как он работает?</li>
@@ -7874,7 +7882,7 @@ function factorial(n) {
                     },
                     {
                       title: "Обязательные темы для собеседований",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Основы HTTP/HTTPS</li>
@@ -7893,7 +7901,7 @@ function factorial(n) {
                   children: [
                     {
                       title: "Основные концепции",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Что такое JSX?</li>
@@ -7907,7 +7915,7 @@ function factorial(n) {
                     },
                     {
                       title: "Компоненты",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Что такое Portal?</li>
@@ -7924,7 +7932,7 @@ function factorial(n) {
                     },
                     {
                       title: "Хуки",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Какие хуки вы знаете?</li>
@@ -7940,7 +7948,7 @@ function factorial(n) {
                     },
                     {
                       title: "Состояние",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Что такое менеджер состояний и с какими из них вы работали?</li>
@@ -7962,7 +7970,7 @@ function factorial(n) {
                     },
                     {
                       title: "Архитектура",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Как бы вы построили хорошую архитектуру проекта на React?</li>
@@ -7975,7 +7983,7 @@ function factorial(n) {
                     },
                     {
                       title: "Другие аспекты",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Как отследить изменения поля объекта в функциональном компоненте?</li>
@@ -7991,7 +7999,7 @@ function factorial(n) {
                     },
                     {
                       title: "Частые вопросы",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>В чем разница между controlled и uncontrolled компонентами?</li>
@@ -8008,7 +8016,7 @@ function factorial(n) {
                   children: [
                     {
                       title: "Основные концепции",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Что такое TypeScript и чем он отличается от JavaScript?</li>
@@ -8021,7 +8029,7 @@ function factorial(n) {
                     },
                     {
                       title: "Типизация",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Как объявить типы переменных?</li>
@@ -8034,7 +8042,7 @@ function factorial(n) {
                     },
                     {
                       title: "Классы и интерфейсы",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Что такое классы в TypeScript?</li>
@@ -8047,7 +8055,7 @@ function factorial(n) {
                     },
                     {
                       title: "Функции и дженерики",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Как объявить функции с типами параметров и возвращаемым типом?</li>
@@ -8059,7 +8067,7 @@ function factorial(n) {
                     },
                     {
                       title: "Интеграция с JavaScript",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Как использовать JavaScript-библиотеки в TypeScript?</li>
@@ -8070,7 +8078,7 @@ function factorial(n) {
                     },
                     {
                       title: "Инструменты и конфигурация",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Как настроить TypeScript в проекте?</li>
@@ -8081,7 +8089,7 @@ function factorial(n) {
                     },
                     {
                       title: "Частые вопросы",
-                      type: "list",
+                      type: "text",
                       description: `
                         <ul>
                           <li>Каковы основные различия между TypeScript и Flow?</li>
@@ -8099,250 +8107,246 @@ function factorial(n) {
         },
         {
           title: "Theme Backend",
-          children: [
-            {
-              title: "new topic",
-            },
-          ],
+          children: [],
         },
         {
           title: "Definitions",
           children: [
             {
               title: "",
-              type: "list",
+              type: "text",
               description: `<strong>BEM</strong> — это парадигма, которая используется для описания структуры элементов интерфейса.`,
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description: `<strong>Functional programming</strong> — это парадигма программирования, в которой основное внимание уделяется использованию функций и избеганию изменения состояния и данных.`,
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Reducer</strong> - чистая функция, которая принимает старый 'state' и 'action', и возвращает новое модифицированное состояние если это нужно. По правилам иммутабельности работает лишь с копией state.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Actions</strong> - объект, который содержит тип и payload, которые передаются в reducer.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Thunk</strong> - функция, которая возвращает другую функцию.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Middleware</strong> - функция, которая принимает store и next и возвращает функцию, которая принимает action и вызывает next(action).",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Selectors</strong> - функция, которая принимает state и возвращает его часть.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>HOC</strong> - Higher Order Component - функция, которая принимает компонент и возвращает новый компонент.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Hooks</strong> - функции, которые позволяют использовать состояние и действия в функциональном компоненте.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 '<strong>Promise</strong> - объект, который представляет асинхронное выполнение. Он может быть в состояниях "pending", "fulfilled" и "rejected."',
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Callback</strong> - функция, которая вызывается после завершения асинхронного действия.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>BLL</strong> - Business Logic Layer (слой бизнес логики).",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>DAL</strong> - Data Access Layer (слой доступа к данным).",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>UI</strong> - User Interface (пользовательский интерфейс).",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>API</strong> - Application Programming Interface (интерфейс программного обеспечения).",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>REST API</strong> - Representational State Transfer API (REST API).",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Side Effects</strong> - эффекты, которые происходят в результате выполнения асинхронного действия.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>OOP</strong> - Объектно-ориентированное программирование.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Encapsulation</strong> - инкапсуляция, которая предотвращает доступ к необходимому коду извне.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Polymorphism</strong> - полиморфизм, который позволяет обрабатывать различные объекты в одном коде.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Inheritance</strong> - наследование, которое позволяет создавать новые классы на основе существующих.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Constructor</strong> - конструктор, который вызывается при создании объекта.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Super</strong> - ключевое слово, которое вызывается в конструкторе родительского класса.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>This</strong> - ключевое слово, которое ссылается на текущий объект.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Prototype</strong> - объект, который хранит ссылки на другие объекты.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Bind</strong> - метод, который привязывает функцию к объекту.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Component</strong> - это функциональный компонент React, который возвращает JSX.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>ComponentDidMount</strong> - это жизненный цикл компонента, который вызывается после его рендеринга.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>__proto__</strong> - это свойство объекта, которое хранит ссылки на другие объекты.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>SOLID</strong> - это принципы ООП, которые помогают разработчикам создавать простые и удобные программы.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>KISS (Keep It Simple, Stupid)</strong> - это принцип, который подразумевает, что системы следует проектировать максимально просто; избегать ненужной сложности.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>DRY (Don't Repeat Yourself)</strong> - Принцип, согласно которому информация и логика не должны повторяться в коде, чтобы уменьшить дублирование и облегчить поддержку.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>YAGNI (You Aren't Gonna Need It)</strong> - Принцип, который гласит, что не следует добавлять функциональности, пока не возникнет реальная необходимость, чтобы избежать излишней сложности.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Clean code</strong> - Это код, который легко читать, понимать и поддерживать. Он следует стандартам стиля, хорошо структурирован и документирован.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Continuous Integration (CI)</strong> -  Это практика разработки, при которой изменения в коде автоматически интегрируются и тестируются в основном репозитории, что позволяет выявлять и устранять ошибки на ранних стадиях.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Delivery (Continuous Delivery)</strong> - Это подход, при котором код всегда готов к выпуску в продакшн. Это позволяет быстро и предсказуемо разворачивать обновления.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Deployments</strong> - Этот процесс включает в себя развертывание приложения или обновлений на продуктивном сервере для его использования конечными пользователями.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Agile</strong> - Методология разработки программного обеспечения, ориентированная на гибкость и адаптивность, которая подчеркивает необходимость быстрой поставки частичных и готовых продуктов.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Scrum</strong> - Фреймворк для управления проектами в Agile, который организует команды в спринты для быстрой разработки, обратной связи и улучшения процессов.",
             },
             {
               title: "",
-              type: "list",
+              type: "text",
               description:
                 "<strong>Kanban</strong> - Метод управления, который использует визуальные доски и карточки для отслеживания и управления потоком работы, акцентируя внимание на оптимизации процессов и сокращении времени выполнения задач.",
             },
@@ -8357,8 +8361,9 @@ function factorial(n) {
           title: "VS Code",
           children: [
             {
-              title: "Visual Studio Code Справка по горячим клавишам",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "Visual Studio Code Справка по горячим клавишам",
               url: "https://hotkeycheatsheet.com/ru/hotkey-cheatsheet/vscode",
             },
           ],
@@ -8367,8 +8372,9 @@ function factorial(n) {
           title: "WebStorm",
           children: [
             {
-              title: "WebStorm Справка по горячим клавишам",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "WebStorm Справка по горячим клавишам",
               url: "https://hotkeycheatsheet.com/ru/hotkey-cheatsheet/webstorm",
             },
           ],
@@ -8377,8 +8383,9 @@ function factorial(n) {
           title: "Sublime Text 3",
           children: [
             {
-              title: "Sublime Text 3 Справка по горячим клавишам",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "Sublime Text 3 Справка по горячим клавишам",
               url: "https://hotkeycheatsheet.com/ru/hotkey-cheatsheet/sublime-text-3",
             },
           ],
@@ -8387,8 +8394,9 @@ function factorial(n) {
           title: "PyCharm",
           children: [
             {
-              title: "PyCharm Справка по горячим клавишам",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "PyCharm Справка по горячим клавишам",
               url: "https://hotkeycheatsheet.com/ru/hotkey-cheatsheet/pycharm",
             },
           ],
@@ -8397,24 +8405,27 @@ function factorial(n) {
     },
 
     {
-      title: "<<<test>>>",
+      title: "< demo >",
       children: [
         {
           title: "ссылки",
           children: [
             {
-              title: "ссылка рабочая",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "ссылка рабочая",
               url: "https://learn.javascript.ru",
             },
             {
-              title: "ссылка пустая",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "ссылка пустая",
               url: "",
             },
             {
-              title: "ссылка с неверным URL",
-              type: "link",
+              title: "",
+              type: "text",
+              link: "ссылка с неверным URL",
               url: "http://learn.javascript.ru",
             },
           ],
@@ -8512,7 +8523,7 @@ function factorial(n) {
           children: [
             {
               title: "список с заголовком и описанием",
-              type: "list",
+              type: "text",
               description: `
                 <p>Использование <code><strong>Set</strong></code> имеет несколько преимуществ:</p>
                 <ul>
@@ -8524,7 +8535,7 @@ function factorial(n) {
             },
             {
               title: "список с заголовком, описанием и ссылкой",
-              type: "list",
+              type: "text",
               description: `
                 <p>Использование <code><strong>Set</strong></code> имеет несколько преимуществ:</p>
                 <ul>
@@ -8538,7 +8549,7 @@ function factorial(n) {
             },
             {
               title: "список с заголовком, описанием и неправильной ссылкой",
-              type: "list",
+              type: "text",
               description: `
                 <p>Использование <code><strong>Set</strong></code> имеет несколько преимуществ:</p>
                 <ul>
@@ -8552,7 +8563,7 @@ function factorial(n) {
             },
             {
               title: "список с заголовком, описанием и пустой ссылкой",
-              type: "list",
+              type: "text",
               description: `
                 <p>Использование <code><strong>Set</strong></code> имеет несколько преимуществ:</p>
                 <ul>
@@ -8566,7 +8577,7 @@ function factorial(n) {
             },
             {
               title: "список с заголовком и описанием",
-              type: "list",
+              type: "text",
               description: `
                 <p>Использование <code><strong>Set</strong></code> имеет несколько преимуществ:</p>
                 <ul>
@@ -8583,7 +8594,7 @@ function factorial(n) {
             },
             {
               title: "нумерованный список с заголовком и описанием",
-              type: "list",
+              type: "text",
               description: `
                 <p>Использование <code><strong>Set</strong></code> имеет несколько преимуществ:</p>
                 <ol>
@@ -8598,14 +8609,14 @@ function factorial(n) {
                 </ol>
               `,
             },
-          ],
+          ]
         },
         {
           title: "код",
           children: [
             {
               title: "Код с описанием и заголовком",
-              type: "code",
+              type: "text",
               description: `
                 <p>Пример добавления обработчика события клика:</p>
               `,
@@ -8622,7 +8633,7 @@ button.addEventListener('click', function(event) {
             },
             {
               title: "Код с заголовком без описания",
-              type: "code",
+              type: "text",
               code: `
 const button = document.getElementById('myButton');
 
@@ -8636,7 +8647,7 @@ button.addEventListener('click', function(event) {
             },
             {
               title: "", // Код без заголовка и описания
-              type: "code",
+              type: "text",
               code: `
 const button = document.getElementById('myButton');
 
@@ -8651,7 +8662,7 @@ button.addEventListener('click', function(event) {
             {
               title:
                 "Код с заголовком, описанием в виде списков и каких других структур текста",
-              type: "code",
+              type: "text",
               description: `
                 <ul>
                   <li><strong>глобальный селектор *</strong>: не имеет веса</li>
@@ -8689,7 +8700,7 @@ color: green;
             },
             {
               title: "Код с заголовком без описания с ссылкой и телом ссылки",
-              type: "code",
+              type: "text",
               code: `
 const button = document.getElementById('myButton');
 
@@ -8705,7 +8716,7 @@ button.addEventListener('click', function(event) {
             },
             {
               title: "Код с заголовком без описания с неправильной ссылкой",
-              type: "code",
+              type: "text",
               code: `
 button.addEventListener('click', function(event) {
   console.log('Кнопка нажата!');
@@ -8716,7 +8727,7 @@ button.addEventListener('click', function(event) {
             },
             {
               title: "Код с заголовком без описания с пустой ссылкой",
-              type: "code",
+              type: "text",
               code: `
 button.addEventListener('click', function(event) {
   console.log('Кнопка нажата!');
