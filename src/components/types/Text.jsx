@@ -7,15 +7,23 @@ const StyledText = styled.div`
   }
   & > p {
     padding: 0 10px;
-    color: red;
-    font-size: 1.05rem;
     & > a {
       padding: 0;
     }
   }
+  & > pre {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #f5f5f5;
+    font-family: monospace;
+    white-space: pre-wrap;
+    overflow: auto;
+    margin-bottom: 10px;
+  }
 `
 
-export default function Text({data}) {
+export default function Text({ data }) {
   function formatLink() {
     if (!data.link && !data.url) {
       return null
@@ -23,7 +31,7 @@ export default function Text({data}) {
       if (data.link && data.url) {
         const isValidUrl = data.link && data.url && data.url.startsWith("https://");
         if (!isValidUrl) {
-          return <p>Invalid or missing link URL. Please check the URL.</p>
+          return <p style={{ color: "red" }}>Invalid or missing link URL. Please check the URL.</p>
         } else {
           return (
             <p>
@@ -51,6 +59,11 @@ export default function Text({data}) {
       )}
       {data.description && (
         <p dangerouslySetInnerHTML={{ __html: data.description }} />
+      )}
+      {data.code && (
+        <pre>
+          <code>{data.code}</code>
+        </pre>
       )}
       {formatLink()}
     </StyledText>

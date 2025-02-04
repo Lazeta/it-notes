@@ -1,0 +1,14 @@
+import { PyCharm } from "./PyCharm/PyCharm";
+import { SublimeText3 } from "./SublimeText3/SublimeText3";
+import { VSCode } from "./VSCode/VSCode";
+import { WebStorm } from "./WebStorm/WebStorm";
+
+export const IDE = {
+  title: "IDE",
+  children: [
+    VSCode,
+    WebStorm,
+    SublimeText3,
+    PyCharm,
+  ],
+};

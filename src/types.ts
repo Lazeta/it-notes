@@ -3,5 +3,5 @@ export type types = {
     title:string;
     description: string;
     children?: types[];
-    type: 'article' | 'link' | 'image' | 'video' | 'code' | 'site' | 'notes' | "paragraph" | "list" | "text";
+    type: 'article' | 'image' | 'video' | 'code' | "text";
 }

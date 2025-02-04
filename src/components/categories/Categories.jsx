@@ -3,10 +3,7 @@ import { StyledCategories } from "../../styles/components/categories/categories.
 import Button from "../buttons/Button";
 import styled from "styled-components";
 import Text from "../types/Text";
-import Link from "../types/Link";
 import Image from "../types/Image";
-import List from "../types/List";
-import Code from "../types/Code";
 import Video from "../types/Video";
 
 const StyledChildItems = styled.div`
@@ -34,12 +31,9 @@ export default function Categories({ data }) {
 
   return (
     <StyledCategories>
-      {data.type === "link" ? (<Link data={data} />) : 
-      data.type === "image" ? (<Image data={data} />) : 
+      {data.type === "image" ? (<Image data={data} />) : 
       data.type === "video" ? (<Video data={data} />) : 
       data.type === "text" ? (<Text data={data} />) : 
-      data.type === "list" ? (<List data={data} />) : 
-      data.type === "code" ? (<Code data={data} />) : 
       (
         <Button
           onClick={expand}
