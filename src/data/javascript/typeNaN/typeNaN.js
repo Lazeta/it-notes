@@ -1,4 +1,5 @@
 export const typeNaN = {
+  id: 231,
   title: "NaN (Not-a-Number)",
   children: [
     {

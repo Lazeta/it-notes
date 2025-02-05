@@ -1,4 +1,5 @@
 export const DevelopmentOfMultilingualWebsites = {
+  id: 108,
   title: "На что нужно обратить внимание при разработке мультиязычных сайтов",
   children: [
     {

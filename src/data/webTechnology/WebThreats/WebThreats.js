@@ -1,4 +1,5 @@
 export const WebThreats = {
+  id: 20,
   title: "Web-угрозы",
   children: [
     {

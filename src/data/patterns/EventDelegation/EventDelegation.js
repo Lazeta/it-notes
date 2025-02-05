@@ -1,4 +1,5 @@
 export const EventDelegation = {
+  id: 505,
   title: "Делегирование событий",
   children: [
     {

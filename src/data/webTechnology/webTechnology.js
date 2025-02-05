@@ -22,6 +22,7 @@ import { HTTPHeaders } from "./HTTPHeaders/HTTPHeaders";
 import { ResponseCodes } from "./ResponseCodes/ResponseCodes";
 
 export const WebTechnology = {
+  id: 0,
   title: "Web-technology",
   children: [
     WhenUserOpensPage,

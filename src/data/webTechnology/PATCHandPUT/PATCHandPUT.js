@@ -1,4 +1,5 @@
 export const PATCHandPUT = {
+  id: 11,
   title: "PATCH и PUT",
   children: [
     {

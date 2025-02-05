@@ -1,4 +1,5 @@
 export const ConnectMethod = {
+  id: 15,
   title: "Метод CONNECT",
   children: [
     {

@@ -1,4 +1,5 @@
 export const OverrideBrowserDefaults = {
+  id: 232,
   title: "Override browser defaults / Отмена действий браузера по умолчанию",
   children: [
     {

@@ -1,4 +1,5 @@
 export const GETandPOST = {
+  id: 12,
   title: "GET и POST",
   children: [
     {

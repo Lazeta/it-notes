@@ -1,4 +1,5 @@
 export const WebSocketAndPredecessorTechnologies = {
+  id: 9,
   title: "WebSocket и предшествующие технологии",
   children: [
     {

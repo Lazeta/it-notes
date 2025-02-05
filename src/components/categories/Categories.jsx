@@ -1,22 +1,38 @@
 import { useState } from "react";
-import { StyledCategories } from "../../styles/components/categories/categories.styled";
 import Button from "../buttons/Button";
 import styled from "styled-components";
 import Text from "../types/Text";
 import Image from "../types/Image";
 import Video from "../types/Video";
 
-const StyledChildItems = styled.div`
+const StyledCategories = styled.section`
+  width: 96%;
+  margin: 7px auto;
+  text-align: justify;
+  padding: 0 10px;
+  background-color: #f5f5f5;
+  border: 2px solid gray;
+  border-radius: 8px;
+  Button {
+    cursor: pointer;
+    padding: 8px 20px;
+    margin-left: -10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+`;
+
+const StyledChildMap = styled.div`
   padding: 5px 0;
   margin-top: 5px;
 `;
 
 export default function Categories({ data }) {
-  const [isVisible, setIsVisible] = useState(false);
+  const [visibleItemId, setVisibleItemId] = useState(null);
   const [searchTerm] = useState('');
 
-  const expand = () => {
-    setIsVisible(!isVisible);
+  const expand = (itemId) => {
+    setVisibleItemId(visibleItemId === itemId ? null : itemId);
   }
 
   const filterChildren = (children) => {
@@ -30,27 +46,26 @@ export default function Categories({ data }) {
   const filteredChildren = filterChildren(data.children);
 
   return (
-    <StyledCategories>
+    <StyledCategories key={data.id}>
       {data.type === "image" ? (<Image data={data} />) : 
       data.type === "video" ? (<Video data={data} />) : 
       data.type === "text" ? (<Text data={data} />) : 
       (
         <Button
-          onClick={expand}
+          onClick={() => expand(data.id)}
           type="button"
           title={data.title}
-          className={"button__title"}
         />
       )}
 
-      {isVisible && filteredChildren.length > 0 && (
-        <StyledChildItems>
-          {filteredChildren.map((child, index) => (
-            <div key={index} >
+      {visibleItemId === data.id && filteredChildren.length > 0 && (
+        <StyledChildMap>
+          {filteredChildren.map((child) => (
+            <div key={child.id}>
               <Categories data={child} />
             </div>
           ))}
-        </StyledChildItems>
+        </StyledChildMap>
       )}
     </StyledCategories>
   );

@@ -1,4 +1,5 @@
 export const GlobalWindowObject = {
+  id: 216,
   title: "Global window object / Глобальный объект window",
   children: [
     {

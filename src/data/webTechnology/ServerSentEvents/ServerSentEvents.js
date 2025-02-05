@@ -1,4 +1,5 @@
 export const ServerSentEvents = {
+  id: 10,
   title: "Server-Sent Events (SSE)",
   children: [
     {

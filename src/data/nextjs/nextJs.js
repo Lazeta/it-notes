@@ -2,6 +2,7 @@ import { NextJsCourseTutorial } from "./NextJsCourseTutorial/NextJsCourseTutoria
 import { Routing } from "./Routing/Routing";
 
 export const NextJs = {
+  id: 400,
   title: "Next.js",
   children: [
     NextJsCourseTutorial,

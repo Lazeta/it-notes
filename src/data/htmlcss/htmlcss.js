@@ -8,6 +8,7 @@ import { ProgressiveScan } from "./ProgressiveScan/ProgressiveScan";
 import { Style } from "./Style/Style";
 
 export const HTML_CSS = {
+    id: 100,
     title: "HTML/CSS",
     children: [
         Style,

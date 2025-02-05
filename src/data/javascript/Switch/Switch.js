@@ -1,4 +1,5 @@
 export const Switch = {
+  id: 240,
   title: "Switch",
   children: [
     {

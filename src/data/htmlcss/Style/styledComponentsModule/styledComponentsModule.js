@@ -1,4 +1,5 @@
 export const styledComponentsModule = {
+  id: 105,
   title: "styled-components",
   children: [
     {

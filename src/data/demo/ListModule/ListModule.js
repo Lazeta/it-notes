@@ -1,4 +1,5 @@
 export const ListModule = {
+  id: 805,
   title: "список",
   children: [
     {

@@ -1,4 +1,5 @@
 export const LinearEquation = {
+  id: 223,
   title: "Linear equation / Линейное уравнение",
   children: [
     {

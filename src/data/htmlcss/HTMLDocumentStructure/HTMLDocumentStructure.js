@@ -1,4 +1,5 @@
 export const HTMLDocumentStructure = {
+  id: 107,
   title: "Структура HTML документа",
   children: [
     {

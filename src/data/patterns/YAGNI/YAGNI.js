@@ -1,4 +1,5 @@
 export const YAGNI = {
+  id: 515,
   title: "YAGNI",
   children: [
     {

@@ -1,4 +1,5 @@
 export const JWT = {
+  id: 2,
   title: "JWT (JSON Web Token)",
   children: [
     {

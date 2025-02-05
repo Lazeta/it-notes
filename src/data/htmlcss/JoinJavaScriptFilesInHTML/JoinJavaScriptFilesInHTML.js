@@ -1,4 +1,5 @@
 export const JoinJavaScriptFilesInHTML = {
+  id: 111,
   title: "Подключение JavaScript-скриптов в HTML",
   children: [
     {
