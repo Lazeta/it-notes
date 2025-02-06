@@ -1,5 +1,5 @@
 export const reactTS = {
-  id: 302,
+  id: 176,
   title: "React TS",
   children: [
     {

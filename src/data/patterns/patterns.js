@@ -15,7 +15,7 @@ import { SOLID } from "./SOLID/SOLID";
 import { YAGNI } from "./YAGNI/YAGNI";
 
 export const Patterns = {
-  id: 500,
+  id: 16,
   title: "Patterns, principles, methodologies",
   children: [
     CleanCode,

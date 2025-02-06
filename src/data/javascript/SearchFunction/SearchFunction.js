@@ -1,5 +1,5 @@
 export const SearchFunction = {
-  id: 242,
+  id: 165,
   title: "Search function",
   children: [],
 };

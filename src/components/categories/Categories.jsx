@@ -1,38 +1,23 @@
+import { S } from "./Categories.styles";
 import { useState } from "react";
 import Button from "../buttons/Button";
-import styled from "styled-components";
 import Text from "../types/Text";
 import Image from "../types/Image";
 import Video from "../types/Video";
 
-const StyledCategories = styled.section`
-  width: 96%;
-  margin: 7px auto;
-  text-align: justify;
-  padding: 0 10px;
-  background-color: #f5f5f5;
-  border: 2px solid gray;
-  border-radius: 8px;
-  Button {
-    cursor: pointer;
-    padding: 8px 20px;
-    margin-left: -10px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-`;
-
-const StyledChildMap = styled.div`
-  padding: 5px 0;
-  margin-top: 5px;
-`;
-
-export default function Categories({ data }) {
-  const [visibleItemId, setVisibleItemId] = useState(null);
+export default function Categories({ data, openPath, onExpand }) {
   const [searchTerm] = useState('');
 
+  const isOpen = openPath.includes(data.id);
+
   const expand = (itemId) => {
-    setVisibleItemId(visibleItemId === itemId ? null : itemId);
+    if (openPath.includes(itemId)) {
+      const newPath = openPath.filter((id) => id !== itemId);
+      onExpand(newPath[newPath.length - 1]);
+    }
+    else {
+      onExpand(itemId);
+    }
   }
 
   const filterChildren = (children) => {
@@ -46,27 +31,34 @@ export default function Categories({ data }) {
   const filteredChildren = filterChildren(data.children);
 
   return (
-    <StyledCategories key={data.id}>
+    <S.Categories 
+      key={data.title}>
       {data.type === "image" ? (<Image data={data} />) : 
       data.type === "video" ? (<Video data={data} />) : 
       data.type === "text" ? (<Text data={data} />) : 
       (
         <Button
+          key={data.title}
           onClick={() => expand(data.id)}
           type="button"
           title={data.title}
         />
       )}
 
-      {visibleItemId === data.id && filteredChildren.length > 0 && (
-        <StyledChildMap>
+      {isOpen && filteredChildren.length > 0 && (
+        <S.ChildMap>
           {filteredChildren.map((child) => (
             <div key={child.id}>
-              <Categories data={child} />
+              <Categories
+                key={child.title}
+                data={child} 
+                openPath={openPath}
+                onExpand={(itemId) => onExpand(itemId)}
+              />
             </div>
           ))}
-        </StyledChildMap>
+        </S.ChildMap>
       )}
-    </StyledCategories>
+    </S.Categories>
   );
 }

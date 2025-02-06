@@ -43,7 +43,7 @@ import { VariableDeclarations } from "./VariableDeclarations/VariableDeclaration
 import { VariablesLetConstVarAndHoisting } from "./VariablesLetConstVarAndHoisting/VariablesLetConstVarAndHoisting";
 
 export const JavaScript = {
-  id: 200,
+  id: 13,
   title: "JavaScript",
   children: [
     addEventListenerFunction,

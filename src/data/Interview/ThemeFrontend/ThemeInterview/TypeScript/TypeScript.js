@@ -1,5 +1,5 @@
 export const TypeScript = {
-  id: 610,
+  id: 2502,
   title: "TypeScript",
   children: [
     {

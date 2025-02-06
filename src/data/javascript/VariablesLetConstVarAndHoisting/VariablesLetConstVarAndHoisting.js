@@ -1,5 +1,5 @@
 export const VariablesLetConstVarAndHoisting = {
-  id: 240,
+  id: 172,
   title: "Variables: let, const, var and hoisting / Переменные: let, const, var и хоистинг",
   children: [
     {

@@ -1,5 +1,5 @@
 export const Inheritance = {
-  id: 219,
+  id: 149,
   title: "Inheritance / наследование",
   children: [
     {

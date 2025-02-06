@@ -1,5 +1,5 @@
 export const VideoModule = {
-  id: 803,
+  id: 204,
   title: "видео",
   children: [
     {

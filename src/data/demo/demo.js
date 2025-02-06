@@ -6,7 +6,7 @@ import { TextModule } from "./TextModule/TextModule";
 import { VideoModule } from "./VideoModule/VideoModule";
 
 export const demo = {
-  id: 800,
+  id: 19,
   title: "< demo >",
   children: [
     LinkModule,

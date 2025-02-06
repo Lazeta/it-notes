@@ -1,8 +1,9 @@
 export const CommonQuestions = {
-  id: 602,
+  id: 2517,
   title: "Common questions",
   children: [
     {
+      id: 10001,
       title: "Основные структуры данных и их организация",
       children: [
         {
@@ -22,6 +23,7 @@ export const CommonQuestions = {
       ],
     },
     {
+      id: 10002,
       title: "Двоичная система счисления",
       children: [
         {
@@ -38,6 +40,7 @@ export const CommonQuestions = {
       ],
     },
     {
+      id: 10003,
       title: "как работает браузер",
       children: [
         {
@@ -56,6 +59,7 @@ export const CommonQuestions = {
       ],
     },
     {
+      id: 10004,
       title: "Что такое DOM",
       children: [
         {
@@ -73,6 +77,7 @@ export const CommonQuestions = {
       ],
     },
     {
+      id: 10005,
       title: "Что такое BOM",
       children: [
         {
@@ -126,6 +131,7 @@ export const CommonQuestions = {
       ],
     },
     {
+      id: 10006,
       title: "Фазы событий в DOM",
       children: [
         {
@@ -176,6 +182,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
       ],
     },
     {
+      id: 10007,
       title: "Из чего состоит HTTP запрос",
       children: [
         {
@@ -198,6 +205,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
       ],
     },
     {
+      id: 10008,
       title: "Разница между cookie, sessionStorage и localStorage",
       children: [
         {
@@ -236,6 +244,7 @@ element.addEventListener('click', handler, false); // Фаза всплытия
       ],
     },
     {
+      id: 10009,
       title: "Жизненный цикл страницы: три ключевых события",
       children: [
         {

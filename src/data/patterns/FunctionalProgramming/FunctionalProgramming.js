@@ -1,5 +1,5 @@
 export const FunctionalProgramming = {
-  id: 506,
+  id: 185,
   title: "Functional programming",
   children: [
     {

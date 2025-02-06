@@ -1,5 +1,5 @@
 export const DataTypes = {
-  id: 206,
+  id: 136,
   title: "Data types / Типы данных",
   children: [
     {

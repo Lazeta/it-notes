@@ -1,5 +1,5 @@
 export const DestructuringObjectsInJS = {
-  id: 208,
+  id: 138,
   title: "Destructuring objects in JS",
   children: [
     {

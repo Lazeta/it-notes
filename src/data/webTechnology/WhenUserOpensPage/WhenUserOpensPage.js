@@ -1,5 +1,5 @@
 export const WhenUserOpensPage = {
-  id: 1,
+  id: 101,
   title: "Когда пользователь открывает страницу по ссылке",
   children: [
     {

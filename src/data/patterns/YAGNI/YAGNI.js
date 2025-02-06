@@ -1,5 +1,5 @@
 export const YAGNI = {
-  id: 515,
+  id: 194,
   title: "YAGNI",
   children: [
     {

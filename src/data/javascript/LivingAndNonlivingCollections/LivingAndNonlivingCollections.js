@@ -1,5 +1,5 @@
 export const LivingAndNonlivingCollections = {
-  id: 222,
+  id: 152,
   title: "Living and nonliving collections / Живые и неживые коллекции",
   children: [
     {

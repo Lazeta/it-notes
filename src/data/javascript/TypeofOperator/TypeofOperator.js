@@ -1,5 +1,5 @@
 export const TypeofOperator = {
-  id: 239,
+  id: 171,
   title: "typeof operator ",
   children: [
     {

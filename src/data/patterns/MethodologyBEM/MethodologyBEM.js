@@ -1,5 +1,5 @@
 export const MethodologyBEM = {
-  id: 509,
+  id: 188,
   title: "Methodology BEM",
   children: [
     {

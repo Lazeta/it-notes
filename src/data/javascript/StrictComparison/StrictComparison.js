@@ -1,5 +1,5 @@
 export const StrictComparison = {
-  id: 243,
+  id: 167,
   title: "Strict comparison",
   children: [
     {

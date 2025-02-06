@@ -1,9 +1,9 @@
 export const Methods = {
-  id: 223,
+  id: 154,
   title: "Methods",
   children: [
     {
-      id: 224,
+      id: 505,
       title: "Array Methods",
       children: [
         {
@@ -152,7 +152,7 @@ export const Methods = {
       ],
     },
     {
-      id: 225,
+      id: 506,
       title: "Strings Methods",
       children: [
         {
@@ -360,7 +360,7 @@ export const Methods = {
       ],
     },
     {
-      id: 226,
+      id: 507,
       title: "Numbers Methods",
       children: [
         {
@@ -463,7 +463,7 @@ console.log(getRandomInt(1, 10)); // случайное число от 1 до 1
       ],
     },
     {
-      id: 227,
+      id: 508,
       title: "Object Methods",
       children: [
         {
@@ -570,7 +570,7 @@ console.log(obj.hasOwnProperty('age')); // false
       ],
     },
     {
-      id: 228,
+      id: 509,
       title: "Cycle",
       children: [
         {
@@ -660,7 +660,7 @@ k++;
       ],
     },
     {
-      id: 229,
+      id: 510,
       title: "work with JSON",
       children: [
         {
@@ -678,7 +678,7 @@ k++;
       ],
     },
     {
-      id: 230,
+      id: 511,
       title: "Regular Expressions",
       children: [
         {

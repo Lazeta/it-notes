@@ -6,7 +6,7 @@ import { ReactInterview } from "./ReactInterview/ReactInterview";
 import { TypeScript } from "./TypeScript/TypeScript";
 
 export const ThemeInterview = {
-  id: 603,
+  id: 514,
   title: "Темы интервью 📚",
   children: [
     CommonQuestions,

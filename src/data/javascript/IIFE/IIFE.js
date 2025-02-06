@@ -1,5 +1,5 @@
 export const IIFE = {
-  id: 220,
+  id: 150,
   title: "IIFE (Immediately Invoked Function Expression) / (Немедленно вызванное функциональное выражение)",
   children: [
     {

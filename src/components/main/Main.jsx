@@ -1,17 +1,11 @@
-import styled from "styled-components";
 import { data } from "../../data/Data";
-import Categories from "../categories/Categories";
-
-const StyledMain = styled.div`
-  width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
-`;
+import ParentComponent from "../categories/ParentComponent";
+import { S } from "./Main.styles";
 
 export const Main = () => {
   return (
-    <StyledMain>
-      <Categories data={data} />
-    </StyledMain>
+    <S.Main>
+      <ParentComponent data={data} />
+    </S.Main>
   );
 };

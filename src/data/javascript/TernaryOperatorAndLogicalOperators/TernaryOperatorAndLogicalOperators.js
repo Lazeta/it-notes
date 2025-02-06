@@ -1,5 +1,5 @@
 export const TernaryOperatorAndLogicalOperators = {
-  id: 238,
+  id: 170,
   title: "Ternary operator and logical operators",
   children: [
     {

@@ -1,5 +1,5 @@
 export const DRY = {
-  id: 503,
+  id: 182,
   title: "DRY",
   children: [
     {

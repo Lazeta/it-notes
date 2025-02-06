@@ -1,21 +1,10 @@
-import styled from "styled-components"
+import { S } from "./Video.styles";
 
-const StyledVideo = styled.div`
-  & > h3 {
-    margin: 0;
-  }
-  & > iframe {
-    height: 100%;
-    max-width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-  }
-`
 export default function Video({ data }) {
   const isValidUrl = data.url && data.url.startsWith("https://www.youtube.com/embed");
 
   return (
-    <StyledVideo>
+    <S.Video>
       {data.title && <h3>{data.title}</h3>}
       {data.description && <p>{data.description}</p>}
       {isValidUrl ? (
@@ -24,6 +13,6 @@ export default function Video({ data }) {
         <p style={{ color: "red" }}>Invalid or missing video URL. Please check the URL.</p>
       )}
       {/* добавим логику опциональную добавления видео загружаемого с локального устройства */}
-    </StyledVideo>
+    </S.Video>
   )
 }

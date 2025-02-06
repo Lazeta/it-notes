@@ -1,5 +1,5 @@
 export const SCSSModule = {
-  id: 104,
+  id: 503,
   title: "SCSS",
   children: [
     {

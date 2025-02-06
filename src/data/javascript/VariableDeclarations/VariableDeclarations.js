@@ -1,5 +1,5 @@
 export const VariableDeclarations = {
-  id: 241,
+  id: 173,
   title: "Variable declarations / Объявления переменных",
   children: [
     {

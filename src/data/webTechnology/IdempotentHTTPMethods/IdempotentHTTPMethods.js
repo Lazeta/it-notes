@@ -1,5 +1,5 @@
 export const IdempotentHTTPMethods = {
-  id: 6,
+  id: 106,
   title: "Идемпотентные методы HTTP",
   children: [
     {

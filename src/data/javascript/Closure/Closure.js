@@ -1,5 +1,5 @@
 export const Closure = {
-  id: 205,
+  id: 135,
   title: "Closure / Замыкание",
   children: [
     {

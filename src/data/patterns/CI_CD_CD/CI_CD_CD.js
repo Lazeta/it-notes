@@ -1,5 +1,5 @@
 export const CI_CD_CD = {
-  id: 502,
+  id: 181,
   title: "Continuous Integration vs Continuous Deployment vs Delivery Pipeline",
   children: [
     {

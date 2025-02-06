@@ -1,5 +1,5 @@
 export const SOLID = {
-  id: 514,
+  id: 193,
   title: "SOLID",
   children: [
     {

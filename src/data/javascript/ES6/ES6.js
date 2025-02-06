@@ -1,5 +1,5 @@
 export const ES6 = {
-  id: 211,
+  id: 141,
   title: "ES6",
   children: [
     {

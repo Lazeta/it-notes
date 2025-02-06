@@ -1,5 +1,5 @@
 export const ImperativeAndDeclarativeProgramming = {
-  id: 507,
+  id: 186,
   title: "Imperative and Declarative Programming",
   children: [
     {

@@ -1,16 +1,10 @@
-import styled from "styled-components";
-
-const StyledLine = styled.div`
-  margin-top: 30px;
-  margin-bottom: 0;
-  width: 100%;
-`;
+import { S } from "./Line.styles";
 
 export const Line = () => {
   return (
-    <StyledLine>
+    <S.Line>
       <hr />
       <br />
-    </StyledLine>
+    </S.Line>
   );
 };

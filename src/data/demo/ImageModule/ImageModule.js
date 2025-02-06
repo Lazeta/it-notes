@@ -1,5 +1,5 @@
 export const ImageModule = {
-  id: 802,
+  id: 203,
   title: "картинки",
   children: [
     {

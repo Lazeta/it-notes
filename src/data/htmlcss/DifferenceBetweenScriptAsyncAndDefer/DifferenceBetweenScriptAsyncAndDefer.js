@@ -1,5 +1,5 @@
 export const DifferenceBetweenScriptAsyncAndDefer = {
-  id: 110,
+  id: 128,
   title: "Разница между script, script async и script defer",
   children: [
     {

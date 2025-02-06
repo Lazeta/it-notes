@@ -1,5 +1,5 @@
 export const functionDeclarationAndExpressionAndArrow = {
-  id: 214,
+  id: 144,
   title: "function declaration and expression, arrow function",
   children: [
     {

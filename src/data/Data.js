@@ -10,6 +10,7 @@ import { WebTechnology } from "./webTechnology/webTechnology";
 
 
 export const data = {
+  id: 1,
   title: "Sections",
   children: [
     WebTechnology,

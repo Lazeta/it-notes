@@ -3,7 +3,7 @@ import { ThemeBackend } from "./ThemeBackend/ThemeBackend";
 import { ThemeFrontend } from "./ThemeFrontend/ThemeFrontend";
 
 export const Interview = {
-  id: 600,
+  id: 17,
   title: "Interview",
   children: [
     ThemeFrontend,

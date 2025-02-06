@@ -1,5 +1,5 @@
 export const LongPollingAndShortPolling = {
-  id: 8,
+  id: 108,
   title: "Long Polling и Short Polling",
   children: [
     {

@@ -1,5 +1,5 @@
 export const TemporalDeadZone = {
-  id: 237,
+  id: 169,
   title: "Temporal Dead Zone / Временная мертвая зона",
   children: [
     {
