@@ -1,7 +1,9 @@
 export const JSQuestions = {
+  id: 513,
   title: "JS questions",
   children: [
     {
+      id: 2510,
       title: "Основные алгоритмы сортировки и поиска",
       children: [
         {
@@ -30,6 +32,7 @@ export const JSQuestions = {
       ],
     },
     {
+      id: 2511,
       title: "Реализация простого алгоритма на JavaScript",
       children: [
         {

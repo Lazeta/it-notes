@@ -1,25 +1,6 @@
 import { useState } from "react";
 import Button from "../buttons/Button";
-import styled from "styled-components";
-
-const StyledForm = styled.form`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-gap: 15px;
-  margin-top: 20px;
-  text-align: center;
-
-  div {
-    min-width: 300px;
-    width: 100%;
-  }
-
-  input,
-  textarea,
-  select {
-    width: -webkit-fill-available;
-  }
-`;
+import { S } from "./NoteForm.styles";
 
 export const NoteForm = ({ addNote }) => {
   const [title, setTitle] = useState("");
@@ -43,7 +24,7 @@ export const NoteForm = ({ addNote }) => {
   };
 
   return (
-    <StyledForm onSubmit={handleSubmit}>
+    <S.Form onSubmit={handleSubmit}>
       <div>
         <input
           type="text"
@@ -84,6 +65,6 @@ export const NoteForm = ({ addNote }) => {
       <div>
         <Button type="submit" title="Add note" />
       </div>
-    </StyledForm>
+    </S.Form>
   );
 };

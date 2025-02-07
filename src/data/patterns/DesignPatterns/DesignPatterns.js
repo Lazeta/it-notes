@@ -1,4 +1,5 @@
 export const DesignPatterns = {
+  id: 183,
   title: "Design patterns / Шаблоны проектирования",
   children: [
     {

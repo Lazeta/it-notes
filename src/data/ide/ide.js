@@ -4,6 +4,7 @@ import { VSCode } from "./VSCode/VSCode";
 import { WebStorm } from "./WebStorm/WebStorm";
 
 export const IDE = {
+  id: 18,
   title: "IDE",
   children: [
     VSCode,

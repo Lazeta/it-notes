@@ -1,4 +1,5 @@
 export const VersionProtocolsHTTP = {
+  id: 105,
   title: "Версии протокола HTTP",
   children: [
     {

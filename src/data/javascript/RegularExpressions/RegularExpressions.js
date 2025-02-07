@@ -1,4 +1,5 @@
 export const RegularExpressions = {
+  id: 161,
   title: "Regular Expressions / Регулярные выражения",
   children: [
     {

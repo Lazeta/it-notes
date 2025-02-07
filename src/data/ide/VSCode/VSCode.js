@@ -1,4 +1,5 @@
 export const VSCode = {
+  id: 198,
   title: "VS Code",
   children: [
     {

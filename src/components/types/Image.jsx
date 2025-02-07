@@ -1,24 +1,10 @@
-import styled from "styled-components";
-
-const StyledImage = styled.div`
-  & > p {
-    color: red;
-  }
-  & > span > p {
-    text-align: center;
-  }
-  & > img {
-    padding: 10px 0;
-    max-width: 100%;
-    object-fit: cover;
-  }
-`
+import { S } from "./Image.styles";
 
 export default function Image({ data }) {
   const isValidUrl = data.url && data.url.startsWith("https://");
   
   return (
-    <StyledImage>
+    <S.Image>
       {data.title && (
         <span>
           <p>{data.title}</p>
@@ -32,6 +18,6 @@ export default function Image({ data }) {
         <p>Invalid or missing image URL. Please check the URL.</p>
       )}
       {/* добавим логику опциональную добавления картинки с локального устройства и места хранения */}
-    </StyledImage>
+    </S.Image>
   )
 }

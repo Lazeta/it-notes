@@ -1,4 +1,5 @@
 export const NextJsCourseTutorial = {
+  id: 178,
   title: "Next.js Crash Course Tutorial",
   children: [
     {

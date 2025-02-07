@@ -1,4 +1,5 @@
 export const FunctionLevenshtein = {
+  id: 143,
   title: "Function Levenshtein / Функция Левенштейна",
   children: [
     {

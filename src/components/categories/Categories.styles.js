@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledCategories = styled.section`
+const Categories = styled.section`
   width: 96%;
   margin: 7px auto;
   text-align: justify;
@@ -8,8 +8,7 @@ export const StyledCategories = styled.section`
   background-color: #f5f5f5;
   border: 2px solid gray;
   border-radius: 8px;
-
-  .button__title {
+  Button {
     cursor: pointer;
     padding: 8px 20px;
     margin-left: -10px;
@@ -17,3 +16,13 @@ export const StyledCategories = styled.section`
     flex-wrap: wrap;
   }
 `;
+
+const ChildMap = styled.div`
+  padding: 5px 0;
+  margin-top: 5px;
+`;
+
+export const S = {
+    Categories,
+    ChildMap
+}

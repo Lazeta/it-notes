@@ -1,4 +1,5 @@
 export const CreatingLayoutInHTMLAndCSS = {
+  id: 124,
   title: "Создание макета в HTML и CSS",
   children: [
     {

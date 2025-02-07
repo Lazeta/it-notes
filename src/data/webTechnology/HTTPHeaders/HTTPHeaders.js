@@ -1,4 +1,5 @@
 export const HTTPHeaders = {
+  id: 121,
   title: "Заголовки HTTP",
   children: [
     {

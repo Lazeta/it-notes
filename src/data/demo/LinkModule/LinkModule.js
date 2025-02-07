@@ -1,4 +1,5 @@
 export const LinkModule = {
+  id: 202,
   title: "ссылки",
   children: [
     {

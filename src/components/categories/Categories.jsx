@@ -1,28 +1,35 @@
+import { S } from "./Categories.styles";
 import { useState } from "react";
-import { StyledCategories } from "../../styles/components/categories/categories.styled";
 import Button from "../buttons/Button";
-import styled from "styled-components";
 import Text from "../types/Text";
 import Image from "../types/Image";
 import Video from "../types/Video";
 
-const StyledChildItems = styled.div`
-  padding: 5px 0;
-  margin-top: 5px;
-`;
-
-export default function Categories({ data }) {
-  const [isVisible, setIsVisible] = useState(false);
+export default function Categories({ data, openPath, onExpand }) {
   const [searchTerm] = useState('');
 
-  const expand = () => {
-    setIsVisible(!isVisible);
+  const isOpen = openPath.includes(data.id);
+
+  // const expand = (itemId) => {
+  //   if (openPath.includes(itemId)) {
+  //     // Если элемент уже открыт, закрываем его и всех его детей
+  //     onExpand(itemId);
+  //   } else {
+  //     // Если элемент закрыт, открываем его
+  //     onExpand(itemId);
+  //   }
+  // };
+
+  const expand = (itemId) => {
+    onExpand(itemId);
   }
 
   const filterChildren = (children) => {
     if (!children) return [];
     return children.filter(child => {
-      const matchesTitle = child.title.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesTitle = child.title
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
       const hasVisibleChildren = filterChildren(child.children).length > 0;
       return matchesTitle || hasVisibleChildren;
     });
@@ -30,28 +37,34 @@ export default function Categories({ data }) {
   const filteredChildren = filterChildren(data.children);
 
   return (
-    <StyledCategories>
+    <S.Categories 
+      key={data.id}>
       {data.type === "image" ? (<Image data={data} />) : 
       data.type === "video" ? (<Video data={data} />) : 
       data.type === "text" ? (<Text data={data} />) : 
       (
         <Button
-          onClick={expand}
+          key={data.id}
+          onClick={() => expand(data.id)}
           type="button"
           title={data.title}
-          className={"button__title"}
         />
       )}
 
-      {isVisible && filteredChildren.length > 0 && (
-        <StyledChildItems>
-          {filteredChildren.map((child, index) => (
-            <div key={index} >
-              <Categories data={child} />
+      {isOpen && filteredChildren.length > 0 && (
+        <S.ChildMap>
+          {filteredChildren.map((child) => (
+            <div key={child.id}>
+              <Categories
+                key={child.id}
+                data={child} 
+                openPath={openPath}
+                onExpand={(itemId) => onExpand(itemId)}
+              />
             </div>
           ))}
-        </StyledChildItems>
+        </S.ChildMap>
       )}
-    </StyledCategories>
+    </S.Categories>
   );
 }

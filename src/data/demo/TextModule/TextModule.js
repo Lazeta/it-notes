@@ -1,4 +1,5 @@
 export const TextModule = {
+  id: 205,
   title: "Текст",
   children: [
     {

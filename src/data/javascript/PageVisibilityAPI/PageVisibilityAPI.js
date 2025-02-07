@@ -1,4 +1,5 @@
 export const PageVisibilityAPI = {
+  id: 158,
   title: "Page Visibility API",
   children: [
     {

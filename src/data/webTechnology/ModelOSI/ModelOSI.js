@@ -1,4 +1,5 @@
 export const ModelOSI = {
+  id: 114,
   title: "Модель OSI",
   children: [
     {

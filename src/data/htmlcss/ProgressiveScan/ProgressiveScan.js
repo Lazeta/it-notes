@@ -1,4 +1,5 @@
 export const ProgressiveScan = {
+  id: 127,
   title: "Что такое прогрессивная развертка",
   children: [
     {

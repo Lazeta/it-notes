@@ -1,7 +1,9 @@
 export const Methods = {
+  id: 154,
   title: "Methods",
   children: [
     {
+      id: 505,
       title: "Array Methods",
       children: [
         {
@@ -150,6 +152,7 @@ export const Methods = {
       ],
     },
     {
+      id: 506,
       title: "Strings Methods",
       children: [
         {
@@ -357,6 +360,7 @@ export const Methods = {
       ],
     },
     {
+      id: 507,
       title: "Numbers Methods",
       children: [
         {
@@ -459,6 +463,7 @@ console.log(getRandomInt(1, 10)); // случайное число от 1 до 1
       ],
     },
     {
+      id: 508,
       title: "Object Methods",
       children: [
         {
@@ -565,6 +570,7 @@ console.log(obj.hasOwnProperty('age')); // false
       ],
     },
     {
+      id: 509,
       title: "Cycle",
       children: [
         {
@@ -654,6 +660,7 @@ k++;
       ],
     },
     {
+      id: 510,
       title: "work with JSON",
       children: [
         {
@@ -671,6 +678,7 @@ k++;
       ],
     },
     {
+      id: 511,
       title: "Regular Expressions",
       children: [
         {

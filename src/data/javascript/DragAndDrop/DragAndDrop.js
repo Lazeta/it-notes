@@ -1,4 +1,5 @@
 export const DragAndDrop = {
+  id: 140,
   title: "Drag and Drop / Перетаскивание",
   children: [
     {
