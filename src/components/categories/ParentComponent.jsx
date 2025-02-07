@@ -20,7 +20,13 @@ export default function ParentComponent({ data }) {
     const newPath = findPath(data, itemId);
 
     if(newPath) {
-      setOpenPath(newPath);
+      if (openPath.includes(itemId)) {
+        // Если элемент уже открыт, закрываем его и всех его детей
+        const parentPath = newPath.slice(0, newPath.indexOf(itemId));
+        setOpenPath(parentPath);
+      } else {
+        setOpenPath(newPath);
+      }
     } else {
       setOpenPath([]); // Очистка пути, если элемент не найден
     }

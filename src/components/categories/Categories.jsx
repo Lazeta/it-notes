@@ -12,18 +12,20 @@ export default function Categories({ data, openPath, onExpand }) {
 
   const expand = (itemId) => {
     if (openPath.includes(itemId)) {
-      // Если элемент уже открыт, закрываем его
-      const newPath = openPath.filter((id) => id !== itemId);
-      onExpand(newPath.length > 0 ? newPath[newPath.length - 1] : null);
+      // Если элемент уже открыт, закрываем его и всех его детей
+      onExpand(itemId);
     } else {
+      // Если элемент закрыт, открываем его
       onExpand(itemId);
     }
-  }
+  };
 
   const filterChildren = (children) => {
     if (!children) return [];
     return children.filter(child => {
-      const matchesTitle = child.title.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesTitle = child.title
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
       const hasVisibleChildren = filterChildren(child.children).length > 0;
       return matchesTitle || hasVisibleChildren;
     });
