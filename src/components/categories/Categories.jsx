@@ -10,15 +10,19 @@ export default function Categories({ data, openPath, onExpand }) {
 
   const isOpen = openPath.includes(data.id);
 
+  // const expand = (itemId) => {
+  //   if (openPath.includes(itemId)) {
+  //     // Если элемент уже открыт, закрываем его и всех его детей
+  //     onExpand(itemId);
+  //   } else {
+  //     // Если элемент закрыт, открываем его
+  //     onExpand(itemId);
+  //   }
+  // };
+
   const expand = (itemId) => {
-    if (openPath.includes(itemId)) {
-      // Если элемент уже открыт, закрываем его и всех его детей
-      onExpand(itemId);
-    } else {
-      // Если элемент закрыт, открываем его
-      onExpand(itemId);
-    }
-  };
+    onExpand(itemId);
+  }
 
   const filterChildren = (children) => {
     if (!children) return [];
