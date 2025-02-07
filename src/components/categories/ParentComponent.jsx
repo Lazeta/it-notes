@@ -21,6 +21,8 @@ export default function ParentComponent({ data }) {
 
     if(newPath) {
       setOpenPath(newPath);
+    } else {
+      setOpenPath([]); // Очистка пути, если элемент не найден
     }
   }
 

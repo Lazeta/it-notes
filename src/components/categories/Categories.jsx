@@ -12,10 +12,10 @@ export default function Categories({ data, openPath, onExpand }) {
 
   const expand = (itemId) => {
     if (openPath.includes(itemId)) {
+      // Если элемент уже открыт, закрываем его
       const newPath = openPath.filter((id) => id !== itemId);
-      onExpand(newPath[newPath.length - 1]);
-    }
-    else {
+      onExpand(newPath.length > 0 ? newPath[newPath.length - 1] : null);
+    } else {
       onExpand(itemId);
     }
   }
@@ -32,13 +32,13 @@ export default function Categories({ data, openPath, onExpand }) {
 
   return (
     <S.Categories 
-      key={data.title}>
+      key={data.id}>
       {data.type === "image" ? (<Image data={data} />) : 
       data.type === "video" ? (<Video data={data} />) : 
       data.type === "text" ? (<Text data={data} />) : 
       (
         <Button
-          key={data.title}
+          key={data.id}
           onClick={() => expand(data.id)}
           type="button"
           title={data.title}
@@ -50,7 +50,7 @@ export default function Categories({ data, openPath, onExpand }) {
           {filteredChildren.map((child) => (
             <div key={child.id}>
               <Categories
-                key={child.title}
+                key={child.id}
                 data={child} 
                 openPath={openPath}
                 onExpand={(itemId) => onExpand(itemId)}
