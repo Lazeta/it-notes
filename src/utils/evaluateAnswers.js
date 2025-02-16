@@ -1,44 +1,34 @@
 async function evaluateAnswer(question, userAnswer) {
-  const prompt = `Оцени ответ на вопрос "${question.question}". Правильный ответ: "${question.answer}". Ответ пользователя: "${userAnswer}". Оцени корректность ответа от 0% до 100%, где 0% - полностью неверный ответ, а 100% - идеальный ответ. Верни только число от 0 до 100, соответствующее проценту соответствия ответа.`;
-
   try {
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    const response = await fetch("http://localhost:3000/api/chatgpt", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "gpt-4", // Используйте актуальную модель
-        messages: [
-          {
-            role: "system",
-            content:
-              "You are a helpful assistant that evaluates answers to questions.",
-          },
-          { role: "user", content: prompt },
-        ],
-        max_tokens: 5,
+        question: question.question,
+        userAnswer: userAnswer,
       }),
     });
 
-    const data = await response.json();
+    const text = await response.text(); // Сначала читаем ответ как текст
+    console.log("Ответ от сервера:", text); // Логируем ответ
+
+    const data = JSON.parse(text); // Пытаемся распарсить JSON
 
     if (!response.ok) {
-      throw new Error(data.error?.message || "Ошибка при запросе к OpenAI");
+      throw new Error(data.error?.message || "Ошибка при запросе к прокси-серверу");
     }
 
-    const scoreText = data.choices[0].message.content.trim();
-    const score = parseInt(scoreText);
-
+    const score = data.score;
     if (isNaN(score)) {
-      throw new Error("Не удалось получить оценку от OpenAI.");
+      throw new Error("Не удалось получить оценку от прокси-сервера.");
     }
 
     return score;
   } catch (error) {
     console.error("Ошибка при оценке ответа:", error);
-    return 0; // Возвращаем 0 в случае ошибки
+    return 0;
   }
 }
 
