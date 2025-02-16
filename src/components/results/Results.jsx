@@ -1,15 +1,18 @@
+import { S } from "./Results.styles";
+
 export default function Results ({results}) {
     return (
-        <div>
+        <S.Results>
             <h2>Результаты</h2>
             <p>Итоговый балл: {results.finalScore}</p>
             {results.results.map((result, index) => (
                 <div key={index}>
-                    <p>Вопрос: {result.question}</p>
+                    <h3>Вопрос: {result.question}</h3>
                     <p>Ваш ответ: {result.userAnswer}</p>
+                    <p>Правильный ответ: {result.correctAnswer}</p>
                     <p>Оценка: {result.score}% ({result.points} баллов)</p>
                 </div>
             ))}
-        </div>
+        </S.Results>
     )
 } 
