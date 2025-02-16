@@ -33,7 +33,7 @@ export default function ParentComponent({ data }) {
   }
 
   return (
-    <Categories
+    <Categories 
       key={data.id}
       data={data}
       openPath={openPath}

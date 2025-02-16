@@ -31,7 +31,7 @@ export const CleanCode = {
           `,
       code: `
 function calculateArea(radius) {
-return Math.PI * radius * radius;
+  return Math.PI * radius * radius;
 }
           `,
     },
@@ -43,7 +43,7 @@ return Math.PI * radius * radius;
           `,
       code: `
 function c(r) {
-return 3.14 * r * r;
+  return 3.14 * r * r;
 }
           `,
     },
