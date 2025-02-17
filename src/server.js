@@ -17,7 +17,7 @@ app.use(
       return `/v1/chat/completions`;
     },
     proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
-      proxyReqOpts.headers['Authorization'] = `Bearer YOUR_OPENAI_API_KEY`;
+      proxyReqOpts.headers['Authorization'] = `Bearer ${OPENAI_API_KEY}`;
       proxyReqOpts.headers['Content-Type'] = 'application/json';
       return proxyReqOpts;
     },

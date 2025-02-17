@@ -1,21 +1,30 @@
 import { useState } from "react";
-import { test } from "../../data/tests/test1"
 import { S } from "./Test.styles";
 import Results from "../results/Results";
 import evaluateAnswers from "../../utils/evaluateAnswers";
 
-export const Test = () => {
+export const Test = ({ test }) => {
     const [userAnswers, setUserAnswers] = useState({});
     const [results, setResults] = useState(null);
+    const [showAnswer, setShowAnswer] = useState({});
 
+    // Обработчик изменения ответа
     const handleAnswerChange = (questionId, answer) => {
         setUserAnswers((prev) => ({ ...prev, [questionId]: answer }))
     }
 
+    // Обработчик завершения теста
     const handleSubmit = async () => {
         const results = await evaluateAnswers(test, userAnswers);
         setResults(results);
     }
+
+    const handleShowAnswerClick = (id) => {
+        setShowAnswer(prev => ({
+            ...prev,
+            [id]: !prev[id], // Переключаем отображение ответа для конкретного вопроса
+        }));
+    };
 
     // Проверяем ответил ли пользователь на все вопросы
     const isTestComplete = test.questions.every(
@@ -33,6 +42,7 @@ export const Test = () => {
                             rows="4"
                             value={userAnswers[question.id] || ""}
                             onChange={(e) => handleAnswerChange(question.id, e.target.value)}
+                            placeholder="Введите ваш ответ"
                         ></textarea>
                     </div>
                 ))}
@@ -42,6 +52,9 @@ export const Test = () => {
         </S.Tests>
     )
 }
+
+
+
 
 // const [showQuest, setShowQuest] = useState([]);
 // const [showAnswer, setShowAnswer] = useState({});
@@ -57,12 +70,7 @@ export const Test = () => {
 //         setShowQuest(mapQuestions);
 //     }
 
-//     const handleShowAnswerClick = (id) => {
-//         setShowAnswer(prev => ({
-//             ...prev,
-//             [id]: !prev[id], // Переключаем отображение ответа для конкретного вопроса
-//         }));
-//     };
+
 
 {/* <Button title={"Show questions"} onClick={handleShowQuestionClick}></Button> */ }
 
