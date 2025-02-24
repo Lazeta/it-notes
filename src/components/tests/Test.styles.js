@@ -13,7 +13,12 @@ const Test = styled.div`
   }
 `
 
+const TestWrapper = styled.div`
+  margin: 0 auto;
+`;
+
 export const S = {
     Tests,
     Test,
+    TestWrapper,
 }
