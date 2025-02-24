@@ -1,5 +1,6 @@
 import { S } from "./Test.styles"
 import { Test } from "./Test";
+import Button from "../buttons/Button";
 
 export const Tests = ({ testId }) => {
     console.log(testId)

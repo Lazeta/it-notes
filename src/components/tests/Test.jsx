@@ -57,7 +57,6 @@ export const Test = ({ test }) => {
 
 
 // const [showQuest, setShowQuest] = useState([]);
-// const [showAnswer, setShowAnswer] = useState({});
 
 //     const handleShowQuestionClick = () => {
 //         const mapQuestions = test.questions.map((quest) => {
