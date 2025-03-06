@@ -17,8 +17,21 @@ const TestWrapper = styled.div`
   margin: 0 auto;
 `;
 
+const Details = styled.details`
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+`
+
+const Summary = styled.summary`
+  font-weight: bold;
+  cursor: pointer;
+`
+
 export const S = {
     Tests,
     Test,
     TestWrapper,
+    Details,
+    Summary
 }

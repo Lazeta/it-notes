@@ -6,7 +6,7 @@ import evaluateAnswers from "../../utils/evaluateAnswers";
 export const Test = ({ test }) => {
     const [userAnswers, setUserAnswers] = useState({});
     const [results, setResults] = useState(null);
-    const [showAnswer, setShowAnswer] = useState({});
+    // const [showAnswer, setShowAnswer] = useState({});
 
     // Обработчик изменения ответа
     const handleAnswerChange = (questionId, answer) => {
@@ -19,12 +19,12 @@ export const Test = ({ test }) => {
         setResults(results);
     }
 
-    const handleShowAnswerClick = (id) => {
-        setShowAnswer(prev => ({
-            ...prev,
-            [id]: !prev[id], // Переключаем отображение ответа для конкретного вопроса
-        }));
-    };
+    // const handleShowAnswerClick = (id) => {
+    //     setShowAnswer(prev => ({
+    //         ...prev,
+    //         [id]: !prev[id], // Переключаем отображение ответа для конкретного вопроса
+    //     }));
+    // };
 
     // Проверяем ответил ли пользователь на все вопросы
     const isTestComplete = test.questions.every(

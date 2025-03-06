@@ -6,6 +6,24 @@ const Main = styled.div`
   margin: 0 auto;
 `;
 
+const Details = styled.details`
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  
+  & [open] > summary {
+    color: blue;
+  }
+`
+
+const Summary = styled.summary`
+  font-weight: bold;
+  cursor: pointer;
+`
+
 export const S = {
-    Main
+    Main,
+    Details,
+    Summary,
 }

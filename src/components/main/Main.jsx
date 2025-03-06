@@ -10,7 +10,10 @@ export const Main = () => {
     <S.Main>
       <ParentComponent data={data} />
       <Line/>
-      <Tests testId={test}/>
+      <S.Details>
+        <S.Summary>Тесты</S.Summary>
+        <Tests testId={test}/>
+      </S.Details>
     </S.Main>
   );
 };
