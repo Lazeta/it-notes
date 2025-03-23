@@ -15,8 +15,12 @@ export const gitCommands = {
               <li><code>git pull</code> — получение изменений из удалённого репозитория.</li>
               <li><code>git branch</code> — управление ветками.</li>
               <li><code>git merge</code> — слияние веток.</li>
+              <li><code>git rebase</code> — копирование истории из одной ветки в другую.</li>
+              <li><code>git cherry-pick</code> — перенос выбранных коммитов по хэшу из одной ветки в другую.</li>
             </ul>
           `,
+      link: `Подробнее о методах Git`,
+      url: `https://docs.google.com/spreadsheets/d/17ze48FSKuw9B9qVtrFa5O_iWgAo5-Lvv5vPRpCYiVNI/edit?usp=sharing`,
     },
     {
       title: "Ветвление в Git",
