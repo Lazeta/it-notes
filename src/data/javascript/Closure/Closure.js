@@ -37,13 +37,13 @@ export const Closure = {
           `,
       code: `
 function outerFunction() {
-let outerVar = 'I am outside!';
+  let outerVar = 'I am outside!';
 
-function innerFunction() {
-console.log(outerVar); // Доступ к outerVar
-}
+  function innerFunction() {
+    console.log(outerVar); // Доступ к outerVar
+  }
 
-return innerFunction;
+  return innerFunction;
 }
 
 const myInnerFunction = outerFunction();
@@ -58,21 +58,21 @@ myInnerFunction(); // Вывод: "I am outside!"
           `,
       code: `
 function createCounter() {
-let count = 0; // Приватная переменная
+  let count = 0; // Приватная переменная
 
-return {
-increment: function() {
-  count++;
-  return count;
-},
-decrement: function() {
-  count--;
-  return count;
-},
-getCount: function() {
-  return count;
-}
-};
+  return {
+    increment: function() {
+      count++;
+      return count;
+    },
+    decrement: function() {
+      count--;
+      return count;
+    },
+    getCount: function() {
+      return count;
+    }
+  };
 }
 
 const counter = createCounter();
