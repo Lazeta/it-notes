@@ -4,7 +4,7 @@ export const Codewars = {
   children: [
     {
       title: "Task 1",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "Count Odd Numbers below n",
@@ -44,7 +44,7 @@ const oddCount = n => n % 2 === 0 ? n / 2 : (n - 1) / 2
     },
     {
       title: "Task 2",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "Pole Vault Starting Marks",
@@ -91,7 +91,7 @@ return Math.round((slope * bodyHeight + b.y - slope * b.x) * 100) / 100;
     },
     {
       title: "Task 3",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "Playing with cubes II",
@@ -136,7 +136,7 @@ this.side = Math.abs(n);
     },
     {
       title: "Task 4",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "Polish alphabet",
@@ -225,7 +225,7 @@ return str.replace(/[ąćęłńóśźż]/g, match => diacritics[match])
     },
     {
       title: "Task 5",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "Who is going to pay for the wall?",
@@ -252,7 +252,7 @@ const whoIsPaying = name => name.length > 2 ? ([name, name.substr(0, 2)]) : [nam
     },
     {
       title: "Task 6",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "Smallest unused ID",
@@ -301,7 +301,7 @@ for (let i = 0; i <= ids.length; i++) {
     },
     {
       title: "Task 7",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "Did she say hallo?",
@@ -374,7 +374,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 8",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "title",
@@ -390,7 +390,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 9",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "title",
@@ -406,7 +406,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 10",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "title",
@@ -422,7 +422,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 11",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "title",
@@ -438,7 +438,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 12",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "title",
@@ -454,7 +454,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 13",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "title",
@@ -470,7 +470,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 14",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "title",
@@ -486,7 +486,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 15",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "title",
@@ -502,7 +502,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 16",
-      id: 0,
+      // id: 0,
       children: [
         {
           title: "title",
