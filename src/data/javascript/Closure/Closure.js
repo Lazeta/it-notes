@@ -18,6 +18,7 @@ export const Closure = {
     },
     {
       title: "Зачем нам замыкание?",
+      type: "text",
       description: `
             <p>Замыкания часто используются для:</p>
             <ul>
