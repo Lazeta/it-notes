@@ -58,19 +58,20 @@ myInnerFunction(); // Вывод: "I am outside!"
           `,
       code: `
 function createCounter() {
-  let count = 0; // Приватная переменная
+  let _count = 0; // Условная приватная переменная
+  // let #count = 0; // Настоящая приватная переменная
 
   return {
     increment: function() {
-      count++;
-      return count;
+      _count++;
+      return _count;
     },
     decrement: function() {
-      count--;
-      return count;
+      _count--;
+      return _count;
     },
     getCount: function() {
-      return count;
+      return _count;
     }
   };
 }
