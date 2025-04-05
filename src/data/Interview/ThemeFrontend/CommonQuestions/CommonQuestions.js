@@ -1,5 +1,5 @@
 export const CommonQuestions = {
-  id: 2517,
+  id: 2600,
   title: "Common questions",
   children: [
     {

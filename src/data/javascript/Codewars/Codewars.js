@@ -4,7 +4,7 @@ export const Codewars = {
   children: [
     {
       title: "Task 1",
-      // id: 0,
+      id: 550, // id после 500 согласно 4 уровню вложенности
       children: [
         {
           title: "Count Odd Numbers below n",
@@ -44,7 +44,7 @@ const oddCount = n => n % 2 === 0 ? n / 2 : (n - 1) / 2
     },
     {
       title: "Task 2",
-      // id: 0,
+      id: 551,
       children: [
         {
           title: "Pole Vault Starting Marks",
@@ -91,7 +91,7 @@ return Math.round((slope * bodyHeight + b.y - slope * b.x) * 100) / 100;
     },
     {
       title: "Task 3",
-      // id: 0,
+      id: 552,
       children: [
         {
           title: "Playing with cubes II",
@@ -136,7 +136,7 @@ this.side = Math.abs(n);
     },
     {
       title: "Task 4",
-      // id: 0,
+      id: 553,
       children: [
         {
           title: "Polish alphabet",
@@ -225,7 +225,7 @@ return str.replace(/[ąćęłńóśźż]/g, match => diacritics[match])
     },
     {
       title: "Task 5",
-      // id: 0,
+      id: 554,
       children: [
         {
           title: "Who is going to pay for the wall?",
@@ -252,7 +252,7 @@ const whoIsPaying = name => name.length > 2 ? ([name, name.substr(0, 2)]) : [nam
     },
     {
       title: "Task 6",
-      // id: 0,
+      id: 555,
       children: [
         {
           title: "Smallest unused ID",
@@ -301,7 +301,7 @@ for (let i = 0; i <= ids.length; i++) {
     },
     {
       title: "Task 7",
-      // id: 0,
+      id: 556,
       children: [
         {
           title: "Did she say hallo?",
@@ -330,7 +330,7 @@ function should be case insensitive to pass the tests
 function validateHello(str) {
 const greetings = ['hello', 'ciao', 'salut', 'hallo', 'hola', 'ahoj', 'czesc'];
 const lowerStr = str.toLowerCase()
-const words = lowerStr.match(/\w+/g)
+const words = lowerStr.match(/\\w+/g)
 for (let word of words){
 if(greetings.includes(word)){
   return true
@@ -374,7 +374,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 8",
-      // id: 0,
+      id: 557,
       children: [
         {
           title: "title",
@@ -390,7 +390,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 9",
-      // id: 0,
+      id: 558,
       children: [
         {
           title: "title",
@@ -406,7 +406,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 10",
-      // id: 0,
+      id: 559,
       children: [
         {
           title: "title",
@@ -422,7 +422,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 11",
-      // id: 0,
+      id: 560,
       children: [
         {
           title: "title",
@@ -438,7 +438,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 12",
-      // id: 0,
+      id: 561,
       children: [
         {
           title: "title",
@@ -454,7 +454,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 13",
-      // id: 0,
+      id: 562,
       children: [
         {
           title: "title",
@@ -470,7 +470,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 14",
-      // id: 0,
+      id: 563,
       children: [
         {
           title: "title",
@@ -486,7 +486,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 15",
-      // id: 0,
+      id: 564,
       children: [
         {
           title: "title",
@@ -502,7 +502,7 @@ const validateHello = message => new RegExp(vivas.join('|'), 'i').test(message);
     },
     {
       title: "Task 16",
-      // id: 0,
+      id: 565,
       children: [
         {
           title: "title",

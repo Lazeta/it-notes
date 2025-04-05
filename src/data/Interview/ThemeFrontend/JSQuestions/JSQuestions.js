@@ -3,7 +3,7 @@ export const JSQuestions = {
   title: "JS questions",
   children: [
     {
-      id: 2510,
+      id: 2550,
       title: "Основные алгоритмы сортировки и поиска",
       children: [
         {
@@ -32,7 +32,7 @@ export const JSQuestions = {
       ],
     },
     {
-      id: 2511,
+      id: 2551,
       title: "Реализация простого алгоритма на JavaScript",
       children: [
         {

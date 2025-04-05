@@ -4,6 +4,7 @@ export const CSSModule = {
   children: [
     {
       title: "Способы подключения стилей в HTML",
+      id: 2500,
       children: [
         {
           title: "1. Внешний стиль (External CSS)",
@@ -51,6 +52,7 @@ export const CSSModule = {
     },
     {
       title: "Вес селектора или что такое специфичность в CSS",
+      id: 2501,
       children: [
         {
           title:
@@ -95,6 +97,7 @@ color: green;
     },
     {
       title: "Псевдоклассы и псевдоэлементы",
+      id: 2502,
       children: [
         {
           title:
@@ -123,6 +126,7 @@ font-weight: bold;
     },
     {
       title: "Коробчатая модель (box-sizing)",
+      id: 2503,
       children: [
         {
           title:
@@ -178,6 +182,7 @@ font-weight: bold;
     },
     {
       title: "em против rem, относительные и абсолютные значения",
+      id: 2504,
       children: [
         {
           title:
@@ -204,6 +209,7 @@ font-size: 1.5rem; /* 24px */
     },
     {
       title: "Позиционирование: поток документов, overflow, z-index",
+      id: 2505,
       children: [
         {
           title:
@@ -295,9 +301,9 @@ z-index: 2; /* Находится выше */
         },
       ],
     },
-
     {
       title: "Флексбокс",
+      id: 2506,
       children: [
         {
           title:
@@ -325,6 +331,7 @@ align-items: center;
     },
     {
       title: "Сетка",
+      id: 2507,
       children: [
         {
           title: "CSS Grid",
@@ -350,6 +357,7 @@ gap: 10px; /* расстояние между элементами */
     },
     {
       title: "CSS Grid Layout",
+      id: 2508,
       children: [
         {
           title: "CSS Grid Layout",
@@ -384,6 +392,7 @@ column-span: all;
     },
     {
       title: "Разница между блочными и строчными элементами",
+      id: 2509,
       children: [
         {
           title: "Блочные элементы",
@@ -425,6 +434,7 @@ column-span: all;
     },
     {
       title: "HTML and CSS Slider",
+      id: 2510,
       children: [
         {
           title: "",
@@ -435,6 +445,7 @@ column-span: all;
     },
     {
       title: "Принципы семантической верстки",
+      id: 2511,
       children: [
         {
           title: "Принципы семантической верстки включают:",
@@ -461,6 +472,7 @@ column-span: all;
     },
     {
       title: "Что такое #shadow-root в инспекторе HTML-страницы",
+      id: 2512,
       children: [
         {
           title:
@@ -477,6 +489,7 @@ column-span: all;
     },
     {
       title: "Названия популярных CSS-методологий и их отличия",
+      id: 2513,
       children: [
         {
           title: "Существует несколько популярных CSS-методологий:",
@@ -493,6 +506,7 @@ column-span: all;
     },
     {
       title: "Как изменить цвет в svg файле",
+      id: 2514,
       children: [
         {
           title: "Изменение цвета",
