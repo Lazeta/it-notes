@@ -6,20 +6,20 @@ export const CRP = {
       title: "1. Что такое CRP?",
       type: "text",
       description: `
-            <p>CRP (Cross-Origin Resource Policy) - это механизм безопасности, который позволяет управлять доступом к ресурсам на основе их источника.</p>
+            <p>CRP / CSP (Cross-Origin Resource Policy или Content Security Policy) - это механизм безопасности, который позволяет управлять доступом к ресурсам на основе их источника.</p>
             <p>Он используется для определения, какие ресурсы могут быть использованы в контексте других источников.</p>
           `,
     },
     {
-      title: "2. Зачем нужен CRP?",
+      title: "2. Зачем нужен CSP (Content Security Policy)?",
       type: "text",
       description: `
-            <p>CRP помогает предотвратить атаки, такие как:</p>
+            <p>CSP помогает предотвратить атаки, такие как:</p>
             <ul>
-              <li>Cross-Site Scripting (XSS)</li>
-              <li>Cross-Origin Resource Sharing (CORS)</li>
+              <li><strong>Cross-Site Scripting (XSS)</strong> — блокирует выполнение вредоносных скриптов, внедрённых на страницу.</li>
+              <li><strong>Data Injection</strong> — запрещает загрузку ресурсов (изображений, стилей, скриптов) из неподтверждённых источников.</li>
+              <li><strong>Clickjacking</strong> — может ограничивать встраивание страницы в iframe (через директиву <code>frame-ancestors</code>).</li>
             </ul>
-            <p>Это позволяет разработчикам контролировать, какие внешние ресурсы могут взаимодействовать с их приложениями.</p>
           `,
     },
     {
