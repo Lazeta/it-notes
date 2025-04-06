@@ -1,5 +1,6 @@
-export const CommonQuestions = {
+export const CommonQuestionsList = {
   title: "Общие вопросы",
+  id: 2520,
   children: [
     {
       title: "Основные концепции",

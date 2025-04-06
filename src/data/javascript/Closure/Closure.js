@@ -1,36 +1,51 @@
+import { ReadMoreAboutMemoryLeaksClosures } from "./ReadMoreAboutMemoryLeaksClosures/ReadMoreAboutMemoryLeaksClosures";
+
 export const Closure = {
   id: 135,
   title: "Closure / Замыкание",
   children: [
     {
-      title: "1. Определение замыкания",
+      title: "Определение замыкания",
       type: "text",
       description: `
-            <p>Замыкание - это функция, которая имеет доступ к своей внешней области видимости даже после завершения выполнения внешней функции.</p>
+            <p>Замыкание (closure) — это функция, которая запоминает свою внешнюю (лексическую) область видимости (scope) и сохраняет доступ к переменным этой области, даже после того, как внешняя функция завершила выполнение.</p>
           `,
     },
     {
-      title: "2. Как работает замыкание?",
+      title: "Как работает замыкание?",
       type: "text",
       description: `
             <p>Когда функция создаётся в JavaScript, она "захватывает" переменные из своей внешней области видимости. Даже если внешняя функция завершила выполнение, замыкание сохраняет ссылку на эти переменные.</p>
           `,
     },
     {
-      title: "3. Пример замыкания",
+      title: "Зачем нам замыкание?",
+      type: "text",
+      description: `
+            <p>Замыкания часто используются для:</p>
+            <ul>
+              <li><strong>Инкапсуляция данных (Data Encapsulation)</strong> — cкрывает переменные от внешнего кода, создавая "приватные" свойства.</li>
+              <li><strong>Сохранение состояния (State Persistence)</strong> — позволяет функции "помнить" данные между вызовами без глобальных переменных.</li>
+              <li><strong>Функциональное программирование (Currying & FP)</strong> — Каррирование (преобразование функции от многих аргументов в цепочку функций от одного аргумента). Создание функций с предустановленными параметрами (частичное применение).</li>
+              <li><strong>Обработка событий (Event Handlers)</strong> — Сохранение контекста (например, ID элемента) для асинхронных операций.</li>
+            </ul>
+          `,
+    },
+    {
+      title: "Пример замыкания",
       type: "text",
       description: `
             <p>Пример замыкания:</p>
           `,
       code: `
 function outerFunction() {
-let outerVar = 'I am outside!';
+  let outerVar = 'I am outside!';
 
-function innerFunction() {
-console.log(outerVar); // Доступ к outerVar
-}
+  function innerFunction() {
+    console.log(outerVar); // Доступ к outerVar
+  }
 
-return innerFunction;
+  return innerFunction;
 }
 
 const myInnerFunction = outerFunction();
@@ -38,40 +53,29 @@ myInnerFunction(); // Вывод: "I am outside!"
           `,
     },
     {
-      title: "4. Применение замыканий",
-      type: "text",
-      description: `
-            <p>Замыкания часто используются для:</p>
-            <ul>
-              <li>Создания приватных переменных.</li>
-              <li>Фабричных функций для создания функций с предустановленными значениями.</li>
-              <li>Обработчиков событий, где необходимо сохранить состояние.</li>
-            </ul>
-          `,
-    },
-    {
-      title: "5. Пример использования замыкания для приватных переменных",
+      title: "Пример использования замыкания для приватных переменных",
       type: "text",
       description: `
             <p>Пример создания приватной переменной:</p>
           `,
       code: `
 function createCounter() {
-let count = 0; // Приватная переменная
+  let _count = 0; // Условная приватная переменная
+  // let #count = 0; // Настоящая приватная переменная
 
-return {
-increment: function() {
-  count++;
-  return count;
-},
-decrement: function() {
-  count--;
-  return count;
-},
-getCount: function() {
-  return count;
-}
-};
+  return {
+    increment: function() {
+      _count++;
+      return _count;
+    },
+    decrement: function() {
+      _count--;
+      return _count;
+    },
+    getCount: function() {
+      return _count;
+    }
+  };
 }
 
 const counter = createCounter();
@@ -82,11 +86,12 @@ console.log(counter.decrement()); // 1
           `,
     },
     {
-      title: "6. Замыкания и производительность",
+      title: "Замыкания и производительность",
       type: "text",
       description: `
             <p>Хотя замыкания мощный инструмент, они могут повлиять на производительность, если используются неправильно. Избыточное использование замыканий может привести к утечкам памяти, если ссылки на замыкания не освобождаются.</p>
           `,
     },
+    ReadMoreAboutMemoryLeaksClosures,
   ],
 };

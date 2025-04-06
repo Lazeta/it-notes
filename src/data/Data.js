@@ -7,6 +7,7 @@ import { Patterns } from "./patterns/patterns";
 import { react } from "./react/react";
 import { HTML_CSS } from "./htmlcss/htmlcss";
 import { WebTechnology } from "./webTechnology/webTechnology";
+import { gitParent } from "./git/gitParent";
 
 
 export const data = {
@@ -22,5 +23,6 @@ export const data = {
     Interview,
     IDE,
     demo,
+    gitParent,
   ],
 };

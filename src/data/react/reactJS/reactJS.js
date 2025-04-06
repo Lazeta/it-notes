@@ -3,8 +3,11 @@ export const reactJS = {
   title: "React JS",
   children: [
     {
-      title: "",
+      title: "Portals / Порталы в React",
       type: "text",
+      description: `
+        <p>Порталы - это способ визуализации элемента в узле DOM, который существует вне иерархии DOM родительского компонента. Когда запускается портал, то все события управляются иерархией компонентов React, а не иерархией, заданной положением DOM элемента</p>
+      `,
       link: "Introduction to React JS",
       url: "https://it-shpora.pp.ua/category/react/",
     },
