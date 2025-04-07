@@ -402,6 +402,7 @@ export const Methods = {
           code: "var x = 9.656; console.log(x.toPrecision(4)); // '9.656'",
         },
         {
+          id: 2537,
           title: "Методы Math",
           children: [
             {
