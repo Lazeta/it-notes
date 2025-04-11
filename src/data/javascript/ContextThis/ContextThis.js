@@ -1,3 +1,5 @@
+import { thisAndFunctionMethods } from "./thisAndFunctionMethods/thisAndFunctionMethods";
+
 export const ContextThis = {
   id: 133,
   title: "Context this",
@@ -99,5 +101,6 @@ boundShow();       // 'Test'
       description:
         "Контекст `this` в JavaScript может быть сложным для понимания. Важно понимать, как он работает в разных контекстах для избежания ошибок.",
     },
+    thisAndFunctionMethods,
   ],
 };
