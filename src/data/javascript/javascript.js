@@ -1,4 +1,5 @@
 import { addEventListenerFunction } from "./addEventListenerFunction/addEventListenerFunction";
+import { arraysJavaScript } from "./arraysJavaScript/arraysJavaScript";
 import { AsynchronousProgramming } from "./AsynchronousProgramming/AsynchronousProgramming";
 import { CancelAscentAndDive } from "./CancelAscentAndDive/CancelAscentAndDive";
 import { Closure } from "./Closure/Closure";
@@ -23,6 +24,7 @@ import { LexicalEnvironment } from "./LexicalEnvironment/LexicalEnvironment";
 import { LinearEquation } from "./LinearEquation/LinearEquation";
 import { LivingAndNonlivingCollections } from "./LivingAndNonlivingCollections/LivingAndNonlivingCollections";
 import { Methods } from "./Methods/Methods";
+import { objectJavascript } from "./objectJavaScript/objectJavascript";
 import { OverrideBrowserDefaults } from "./OverrideBrowserDefaults/OverrideBrowserDefaults";
 import { PageVisibilityAPI } from "./PageVisibilityAPI/PageVisibilityAPI";
 import { Promises } from "./Promises/Promises";
@@ -34,6 +36,7 @@ import { SearchFunction } from "./SearchFunction/SearchFunction";
 import { Sets } from "./Sets/Sets";
 import { SortFunctions } from "./SortFunctions/SortFunctions";
 import { StrictComparison } from "./StrictComparison/StrictComparison";
+import { stringsAndTemplateLiterals } from "./stringsAndTemplateLiterals/stringsAndTemplateLiterals";
 import { Switch } from "./Switch/Switch";
 import { TemporalDeadZone } from "./TemporalDeadZone/TemporalDeadZone";
 import { TernaryOperatorAndLogicalOperators } from "./TernaryOperatorAndLogicalOperators/TernaryOperatorAndLogicalOperators";
@@ -51,6 +54,7 @@ export const JavaScript = {
     ContextThis,
     CancelAscentAndDive,
     Closure,
+    Codewars,
     DataTypes,
     Descriptors,
     DestructuringObjectsInJS,
@@ -71,6 +75,8 @@ export const JavaScript = {
     LinearEquation,
     Methods,
     typeNaN,
+    arraysJavaScript,
+    objectJavascript, 
     OverrideBrowserDefaults,
     Promises,
     PageVisibilityAPI,
@@ -82,12 +88,12 @@ export const JavaScript = {
     SortFunctions,
     SearchFunction,
     StrictComparison,
+    stringsAndTemplateLiterals,
     Scope,
     TemporalDeadZone,
     TernaryOperatorAndLogicalOperators,
     TypeofOperator,
     VariablesLetConstVarAndHoisting,
     VariableDeclarations,
-    Codewars,
   ],
 };

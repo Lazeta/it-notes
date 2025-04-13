@@ -5,7 +5,7 @@ export const test4 = {
     {
       id: 1,
       question: "Что такое rest api?",
-      answer: `<strong>REST API</strong> — (Representational State Transfer Application Programming Interface) 
+      answer: `REST API — (Representational State Transfer Application Programming Interface) 
       — это архитектурный стиль взаимодействия компонентов распределенного приложения в сети. 
       В контексте веб-разработки, он позволяет веб-сервисам общаться друг с другом через HTTP, 
       используя стандартные методы HTTP (GET, POST, PUT, DELETE и т.д.) для выполнения операций над данными.
