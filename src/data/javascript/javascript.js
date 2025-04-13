@@ -40,6 +40,7 @@ import { stringsAndTemplateLiterals } from "./stringsAndTemplateLiterals/strings
 import { Switch } from "./Switch/Switch";
 import { TemporalDeadZone } from "./TemporalDeadZone/TemporalDeadZone";
 import { TernaryOperatorAndLogicalOperators } from "./TernaryOperatorAndLogicalOperators/TernaryOperatorAndLogicalOperators";
+import { typeConversionInJS } from "./TypeConversion/typeConversion";
 import { typeNaN } from "./typeNaN/typeNaN";
 import { TypeofOperator } from "./TypeofOperator/TypeofOperator";
 import { VariableDeclarations } from "./VariableDeclarations/VariableDeclarations";
@@ -95,5 +96,7 @@ export const JavaScript = {
     TypeofOperator,
     VariablesLetConstVarAndHoisting,
     VariableDeclarations,
+    Codewars,
+    typeConversionInJS,
   ],
 };

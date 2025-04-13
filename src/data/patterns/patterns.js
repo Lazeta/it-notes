@@ -1,6 +1,7 @@
 import { CI_CD_CD } from "./CI_CD_CD/CI_CD_CD";
 import { CleanCode } from "./CleanCode/CleanCode";
 import { DesignPatterns } from "./DesignPatterns/DesignPatterns";
+import { DIALOG_MODAL_PATTERN } from "./DialogPattern/DialogPattern";
 import { DRY } from "./DRY/DRY";
 import { EventDelegation } from "./EventDelegation/EventDelegation";
 import { FunctionalProgramming } from "./FunctionalProgramming/FunctionalProgramming";
@@ -33,5 +34,6 @@ export const Patterns = {
     OOP,
     SOLID,
     YAGNI,
+    DIALOG_MODAL_PATTERN,
   ],
 };

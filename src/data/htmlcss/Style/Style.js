@@ -4,7 +4,7 @@ import { SCSSModule } from "./SCSSModule/SCSSModule";
 import { styledComponentsModule } from "./styledComponentsModule/styledComponentsModule";
 
 export const Style = {
-  id: 123,
+  id: 132,
   title: "Style",
   children: [
     CSSModule,
