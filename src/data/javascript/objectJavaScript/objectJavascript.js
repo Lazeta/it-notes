@@ -96,13 +96,23 @@ const settings = Object.assign({}, defaults, { fontSize: 14 });</code></pre>
         <pre><code>const config = Object.freeze({ apiUrl: 'https://api.example.com' });
 config.apiUrl = 'new-url'; // Ошибка в strict mode</code></pre>
 
-        <p><strong>6. Object.getPrototypeOf(obj)</strong> — возвращает прототип:</p>
+        <p><strong>6. Object.seal(obj)</strong> - запрещает добавление и удаление.</p>
+        <pre><code>
+        const object1 = {
+          property1: 42,
+        };
+        Object.seal(object1);
+        object1.property1 = 33;
+        delete object1.property1; // Cannot delete when sealed
+        </code></pre>
+
+        <p><strong>7. Object.getPrototypeOf(obj)</strong> — возвращает прототип:</p>
         <pre><code>const proto = Object.getPrototypeOf(rabbit);</code></pre>
 
-        <p><strong>7. Object.setPrototypeOf(obj, proto)</strong> — устанавливает прототип:</p>
+        <p><strong>8. Object.setPrototypeOf(obj, proto)</strong> — устанавливает прототип:</p>
         <pre><code>Object.setPrototypeOf(rabbit, animal);</code></pre>
 
-        <p><strong>8. structuredClone(obj)</strong> — глубокое копирование:</p>
+        <p><strong>9. structuredClone(obj)</strong> — глубокое копирование:</p>
         <pre><code>const deepCopy = structuredClone(original);</code></pre>
       `
     },

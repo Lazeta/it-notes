@@ -15,6 +15,7 @@ import { EventLoop } from "./EventLoop/EventLoop";
 import { FeaturesOfArrowFunctions } from "./FeaturesOfArrowFunctions/FeaturesOfArrowFunctions";
 import { functionDeclarationAndExpressionAndArrow } from "./functionDeclarationAndExpressionAndArrow/functionDeclarationAndExpressionAndArrow";
 import { FunctionLevenshtein } from "./FunctionLevenshtein/FunctionLevenshtein";
+import { GarbageCollection } from "./GarbageCollection/GarbageCollection";
 import { GlobalWindowObject } from "./GlobalWindowObject/GlobalWindowObject";
 import { Hoisting } from "./Hoisting/Hoisting";
 import { HowObjectsBecomePrimitives } from "./HowObjectsBecomePrimitives/HowObjectsBecomePrimitives";
@@ -67,6 +68,7 @@ export const JavaScript = {
     FunctionLevenshtein,
     functionDeclarationAndExpressionAndArrow,
     FeaturesOfArrowFunctions,
+    GarbageCollection,
     GlobalWindowObject,
     HowObjectsBecomePrimitives,
     Hoisting,
