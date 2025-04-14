@@ -1,6 +1,6 @@
 export const stringsAndTemplateLiterals = {
   id: 526,
-  title: "Строки и шаблонные литералы",
+  title: "Strings & Template Literals || Строки и шаблонные литералы",
   children: [
     {
       title: "Базовые операции со строками",

@@ -24,6 +24,7 @@ import { LexicalEnvironment } from "./LexicalEnvironment/LexicalEnvironment";
 import { LinearEquation } from "./LinearEquation/LinearEquation";
 import { LivingAndNonlivingCollections } from "./LivingAndNonlivingCollections/LivingAndNonlivingCollections";
 import { Methods } from "./Methods/Methods";
+import { modulesJavaScript } from "./modulesJavaScript/modulesJavaScript";
 import { objectJavascript } from "./objectJavaScript/objectJavascript";
 import { OverrideBrowserDefaults } from "./OverrideBrowserDefaults/OverrideBrowserDefaults";
 import { PageVisibilityAPI } from "./PageVisibilityAPI/PageVisibilityAPI";
@@ -75,6 +76,7 @@ export const JavaScript = {
     LivingAndNonlivingCollections,
     LinearEquation,
     Methods,
+    modulesJavaScript,
     typeNaN,
     arraysJavaScript,
     objectJavascript, 
