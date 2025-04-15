@@ -48,6 +48,7 @@ import { TypeofOperator } from "./TypeofOperator/TypeofOperator";
 import { VariableDeclarations } from "./VariableDeclarations/VariableDeclarations";
 import { VariablesLetConstVarAndHoisting } from "./VariablesLetConstVarAndHoisting/VariablesLetConstVarAndHoisting";
 import { errorHandling } from "./errorHandling/errorHandling";
+import { domManipulation } from "./domManipulation/domManipulation";
 
 
 export const JavaScript = {
@@ -66,6 +67,7 @@ export const JavaScript = {
     Descriptors,
     DestructuringObjectsInJS,
     DifferenceBetweenNullAndUndefined,
+    domManipulation,
     DragAndDrop,
     ES6,
     errorHandling,
