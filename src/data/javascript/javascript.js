@@ -47,6 +47,7 @@ import { typeNaN } from "./typeNaN/typeNaN";
 import { TypeofOperator } from "./TypeofOperator/TypeofOperator";
 import { VariableDeclarations } from "./VariableDeclarations/VariableDeclarations";
 import { VariablesLetConstVarAndHoisting } from "./VariablesLetConstVarAndHoisting/VariablesLetConstVarAndHoisting";
+import { errorHandling } from "./errorHandling/errorHandling";
 
 
 export const JavaScript = {
@@ -67,6 +68,7 @@ export const JavaScript = {
     DifferenceBetweenNullAndUndefined,
     DragAndDrop,
     ES6,
+    errorHandling,
     EventLoop,
     FunctionLevenshtein,
     functionDeclarationAndExpressionAndArrow,
