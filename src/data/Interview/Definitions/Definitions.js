@@ -10,6 +10,16 @@ export const Definitions = {
     {
       title: "",
       type: "text",
+      description: `<strong>DOM</strong> — Document Object Model, представляет структуру документа в виде дерева объектов, позволяя JavaScript взаимодействовать с HTML и CSS.`,
+    },
+    {
+      title: "",
+      type: "text",
+      description: `<strong>BOM</strong> — Browser Object Model, предоставляет объекты и методы для взаимодействия с браузером, такими как окно браузера, история посещений и другие возможности.`
+    },
+    {
+      title: "",
+      type: "text",
       description: `<strong>Functional programming</strong> — это парадигма программирования, в которой основное внимание уделяется использованию функций и избеганию изменения состояния и данных.`,
     },
     {
