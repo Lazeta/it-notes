@@ -1,6 +1,6 @@
 export const typeConversionInJS = {
   id: 212,
-  title: "Type Conversion in JavaScript / Преобразования типов в JavaScript",
+  title: "Type Conversion in JavaScript",
   children: [
     {
       title: "Таблица преобразований",

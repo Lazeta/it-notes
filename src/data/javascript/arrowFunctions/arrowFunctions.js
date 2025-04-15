@@ -1,6 +1,6 @@
-export const FeaturesOfArrowFunctions = {
+export const arrowFunctions = {
   id: 145,
-  title: "Features of arrow functions / Особенности стрелочных функций",
+  title: "Arrow functions",
   children: [
     {
       title: "1. Синтаксис",

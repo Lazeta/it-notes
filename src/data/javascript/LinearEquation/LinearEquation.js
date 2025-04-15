@@ -1,6 +1,6 @@
 export const LinearEquation = {
   id: 153,
-  title: "Linear equation / Линейное уравнение",
+  title: "Linear equation",
   children: [
     {
       title: "1. Определение линейного уравнения",

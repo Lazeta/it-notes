@@ -12,7 +12,7 @@ import { DifferenceBetweenNullAndUndefined } from "./DifferenceBetweenNullAndUnd
 import { DragAndDrop } from "./DragAndDrop/DragAndDrop";
 import { ES6 } from "./ES6/ES6";
 import { EventLoop } from "./EventLoop/EventLoop";
-import { FeaturesOfArrowFunctions } from "./FeaturesOfArrowFunctions/FeaturesOfArrowFunctions";
+import { arrowFunctions } from "./arrowFunctions/arrowFunctions";
 import { functionDeclarationAndExpressionAndArrow } from "./functionDeclarationAndExpressionAndArrow/functionDeclarationAndExpressionAndArrow";
 import { FunctionLevenshtein } from "./FunctionLevenshtein/FunctionLevenshtein";
 import { GarbageCollection } from "./GarbageCollection/GarbageCollection";
@@ -48,11 +48,14 @@ import { TypeofOperator } from "./TypeofOperator/TypeofOperator";
 import { VariableDeclarations } from "./VariableDeclarations/VariableDeclarations";
 import { VariablesLetConstVarAndHoisting } from "./VariablesLetConstVarAndHoisting/VariablesLetConstVarAndHoisting";
 
+
 export const JavaScript = {
   id: 13,
   title: "JavaScript",
   children: [
     addEventListenerFunction,
+    arraysJavaScript,
+    arrowFunctions,
     AsynchronousProgramming,
     ContextThis,
     CancelAscentAndDive,
@@ -67,7 +70,6 @@ export const JavaScript = {
     EventLoop,
     FunctionLevenshtein,
     functionDeclarationAndExpressionAndArrow,
-    FeaturesOfArrowFunctions,
     GarbageCollection,
     GlobalWindowObject,
     HowObjectsBecomePrimitives,
@@ -80,7 +82,6 @@ export const JavaScript = {
     Methods,
     modulesJavaScript,
     typeNaN,
-    arraysJavaScript,
     objectJavascript, 
     OverrideBrowserDefaults,
     Promises,

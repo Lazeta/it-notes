@@ -2,7 +2,7 @@ import { ReadMoreAboutMemoryLeaksClosures } from "./ReadMoreAboutMemoryLeaksClos
 
 export const Closure = {
   id: 135,
-  title: "Closure / Замыкание",
+  title: "Closure",
   children: [
     {
       title: "Определение замыкания",

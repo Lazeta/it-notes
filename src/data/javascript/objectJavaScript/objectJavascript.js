@@ -1,6 +1,6 @@
 export const objectJavascript = {
   id: 524,
-  title: "Objects in JavaScript / Объекты в JavaScript",
+  title: "Objects in JS",
   children: [
     {
       title: "Создание объектов",

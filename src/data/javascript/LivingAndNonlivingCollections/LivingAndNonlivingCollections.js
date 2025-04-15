@@ -1,6 +1,6 @@
 export const LivingAndNonlivingCollections = {
   id: 152,
-  title: "Living and nonliving collections / Живые и неживые коллекции",
+  title: "Living and nonliving collections",
   children: [
     {
       title: "1. Что такое коллекции в JavaScript?",

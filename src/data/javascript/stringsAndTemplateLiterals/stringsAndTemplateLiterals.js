@@ -1,6 +1,6 @@
 export const stringsAndTemplateLiterals = {
   id: 526,
-  title: "Strings & Template Literals || Строки и шаблонные литералы",
+  title: "Strings & Template Literals",
   children: [
     {
       title: "Базовые операции со строками",
@@ -97,12 +97,12 @@ export const stringsAndTemplateLiterals = {
   ['a', 'b', 'c'].join('-'); // 'a-b-c'</code></pre>
   
           <p><strong>Проверка на соответствие:</strong></p>
-          <pre><code>'123'.match(/\d+/); // ['123', index: 0, ...]
+          <pre><code>'123'.match(/\\d+/); // ['123', index: 0, ...]
   'hello'.search(/ell/); // 1</code></pre>
   
           <p><strong>Замена подстроки:</strong></p>
           <pre><code>'Hello world'.replace('world', 'everyone'); // 'Hello everyone'
-  '2023-10-15'.replace(/(\d{4})-(\d{2})-(\d{2})/, '$3.$2.$1'); // '15.10.2023'</code></pre>
+  '2023-10-15'.replace(/(\\d{4})-(\\d{2})-(\\d{2})/, '$3.$2.$1'); // '15.10.2023'</code></pre>
         `,
     },
     {

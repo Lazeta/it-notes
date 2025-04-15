@@ -1,6 +1,6 @@
 export const arraysJavaScript = {
   id: 525,
-  title: "Массивы в JavaScript",
+  title: "Arrays is JS",
   children: [
     {
       title: "Создание массивов",
