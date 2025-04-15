@@ -40,16 +40,26 @@ export const errorHandling = {
             <li><code>RangeError</code> — значение вне допустимого диапазона</li>
             <li><code>URIError</code> — ошибка в URI-функциях</li>
           </ul>
-  
+    
           <p><strong>Примеры:</strong></p>
-          <pre><code>// TypeError
-  null.function();
-  
-  // ReferenceError
-  unknownVariable;
-  
-  // RangeError
-  new Array(-1);</code></pre>
+          <pre><code>// Error: базовая ошибка
+    throw new Error('Это базовая ошибка.');
+    
+    // SyntaxError: синтаксическая ошибка
+    eval('var a = ;'); // Ошибка в синтаксисе
+    
+    // TypeError: неверный тип данных
+    null.function(); // Попытка вызвать метод у null
+    
+    // ReferenceError: ссылка на несуществующую переменную
+    console.log(unknownVariable); // Переменная не определена
+    
+    // RangeError: значение вне допустимого диапазона
+    new Array(-1); // Невозможно создать массив с отрицательной длиной
+    
+    // URIError: ошибка в URI-функциях
+    decodeURIComponent('%'); // Неверный URI
+    </code></pre>
         `,
     },
     {
