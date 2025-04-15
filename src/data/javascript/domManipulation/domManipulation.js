@@ -83,14 +83,21 @@ export const domManipulation = {
       type: "text",
       description: `
           <p><strong>Работа с содержимым:</strong></p>
-          <pre><code>// HTML-содержимое
-  element.innerHTML = '&lt;strong&gt;Text&lt;/strong&gt;';
-  
-  // Текстовое содержимое
-  element.textContent = 'Plain text';
-  
-  // Значение форм
-  input.value = 'New value';</code></pre>
+          <pre><code>// HTML-содержимое — не рекомендуется из-за рисков безопасности
+          element.innerHTML = '&lt;strong&gt;Text&lt;/strong&gt;'; // Установка HTML-кода
+
+          // Текстовое содержимое — безопасный способ установки текста
+          element.textContent = 'Plain text'; // Установка текстового содержимого
+
+          // Значение форм — установка значения для элемента ввода
+          input.value = 'New value'; // Установка значения в поле ввода
+
+          // Видимое текстовое содержимое — учитывает стили и видимость
+          element.innerText = 'Visible text'; // Установка видимого текста
+
+          // Вставка HTML-кода без замены существующего содержимого
+          element.insertAdjacentHTML('beforeend', '<span>New Content</span>'); // Вставка HTML в конец элемента
+          </code></pre>
   
           <p><strong>Классы и атрибуты:</strong></p>
           <pre><code>// Классы
@@ -128,6 +135,13 @@ export const domManipulation = {
             <li>Перезаписывает все содержимое</li>
             <li>Может привести к утечкам памяти</li>
             <li>Уязвимость для XSS-атак при вставке пользовательских данных</li>
+          </ul>
+
+          <p><strong>Вместо этого используйте лучше:</strong></p>
+          <ul>
+            <li><strong>textContent</strong> - используется для установки или получения текстового содержимого элемента. Он не интерпретирует HTML, что делает его более безопасным.</li>
+            <li><strong>innerText</strong> - похож на textContent, но учитывает стиль и видимость текста. Он возвращает только видимый текст.</li>
+            <li><strong>insertAdjacentHTML</strong> - если нужно вставить HTML-код, но без полной перезаписи содержимого элемента, можно использовать insertAdjacentHTML. Этот метод позволяет добавлять HTML в определённые позиции относительно элемента.</li>
           </ul>
         `,
     },
