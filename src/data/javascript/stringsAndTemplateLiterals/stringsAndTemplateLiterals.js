@@ -64,9 +64,11 @@ export const stringsAndTemplateLiterals = {
         `,
     },
     {
-      title: "Тегированные шаблоны",
+      title: "Тегированные шаблоны (Tagged templates)",
       type: "text",
       description: `
+          <p><strong>Определение:</strong></p>
+          Тегированные шаблоны — это функция, которая может обрабатывать строку шаблона, а также значения, вставленные в него. Они используются для создания динамически формируемых строк.
           <p><strong>Пользовательская обработка строк:</strong></p>
           <pre><code>function highlight(strings, ...values) {
     return strings.reduce((result, str, i) => {
