@@ -1,6 +1,6 @@
 export const LexicalEnvironment = {
   id: 151,
-  title: "Lexical Environment / Лексическое окружение",
+  title: "Lexical Environment",
   children: [
     {
       title: "1. Определение лексического окружения",

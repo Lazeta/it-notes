@@ -1,6 +1,6 @@
 export const Hoisting =     {
     id: 148,
-    title: "Hoisting / поднятие",
+    title: "Hoisting",
     children: [
       {
         title: "1. Определение Hoisting",

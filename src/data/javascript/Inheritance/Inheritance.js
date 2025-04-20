@@ -1,6 +1,6 @@
 export const Inheritance = {
   id: 149,
-  title: "Inheritance / наследование",
+  title: "Inheritance",
   children: [
     {
       title: "Прототипное наследование",

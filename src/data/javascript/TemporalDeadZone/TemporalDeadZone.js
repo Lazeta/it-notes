@@ -1,6 +1,6 @@
 export const TemporalDeadZone = {
   id: 169,
-  title: "Temporal Dead Zone / Временная мертвая зона",
+  title: "Temporal Dead Zone",
   children: [
     {
       title: "1. Определение Temporal Dead Zone",

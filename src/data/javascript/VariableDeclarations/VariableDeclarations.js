@@ -1,6 +1,6 @@
 export const VariableDeclarations = {
   id: 173,
-  title: "Variable declarations / Объявления переменных",
+  title: "Variable declarations",
   children: [
     {
       title: "1. Использование var",

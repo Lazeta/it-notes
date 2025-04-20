@@ -1,7 +1,7 @@
 export const DifferenceBetweenNullAndUndefined = {
   id: 139,
   title:
-    "Difference between null and undefined / Разница между null и undefined",
+    "Difference between null and undefined",
   children: [
     {
       title: "Описание null и undefined",

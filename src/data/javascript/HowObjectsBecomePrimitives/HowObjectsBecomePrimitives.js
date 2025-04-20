@@ -1,6 +1,6 @@
 export const HowObjectsBecomePrimitives = {
   id: 147,
-  title: "How objects become primitives / Как объекты превращаются в примитивы",
+  title: "How objects become primitives",
   children: [
     {
       title: "Преобразование объектов в примитивы",

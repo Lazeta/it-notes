@@ -1,6 +1,6 @@
 export const RegularExpressions = {
   id: 161,
-  title: "Regular Expressions / Регулярные выражения",
+  title: "Regular Expressions",
   children: [
     {
       title: "Определение",

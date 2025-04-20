@@ -20,7 +20,6 @@ import { REST } from "./REST/REST";
 import { WebThreats } from "./WebThreats/WebThreats";
 import { HTTPHeaders } from "./HTTPHeaders/HTTPHeaders";
 import { ResponseCodes } from "./ResponseCodes/ResponseCodes";
-import { GarbageCollection } from "./GarbageCollection/GarbageCollection";
 
 export const WebTechnology = {
   id: 11,
@@ -48,6 +47,5 @@ export const WebTechnology = {
     WebThreats,
     HTTPHeaders,
     ResponseCodes,
-    GarbageCollection,
   ],
 };

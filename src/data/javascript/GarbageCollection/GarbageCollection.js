@@ -1,6 +1,6 @@
 export const GarbageCollection = {
-  id: 123,
-  title: "GC (сборщик мусора)",
+  id: 522,
+  title: "Garbage Collection",
   children: [
     {
       title: "Определение",
