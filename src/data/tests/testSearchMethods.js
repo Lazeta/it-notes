@@ -1,9 +1,9 @@
 export const testSearchMethods = {
-  id: 100106,
+  id: 100125,
   title: "Search methods",
   questions: [
     {
-      id: 100107,
+      id: 100126,
       question: "Как получить элемент DOM по его ID с помощью JavaScript?",
       answer: `
 Классический способ: document.getElementById()
@@ -11,7 +11,7 @@ export const testSearchMethods = {
       `,
     },
     {
-      id: 100108,
+      id: 100127,
       question: "Объясните разницу между методами querySelector и getElementById в JavaScript.",
       answer: `
 getElementById
@@ -22,7 +22,7 @@ querySelector
       `,
     },
     {
-      id: 100109,
+      id: 100128,
       question: "Каковы основные различия между статическим и живым NodeList, и как это влияет на работу с методами поиска элементов в DOM?",
       answer: `
 Производительность:
