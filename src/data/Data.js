@@ -8,6 +8,7 @@ import { react } from "./react/react";
 import { HTML_CSS } from "./htmlcss/htmlcss";
 import { WebTechnology } from "./webTechnology/webTechnology";
 import { gitParent } from "./git/gitParent";
+import { stateManaging } from "./stateManaging/stateManaging";
 
 
 export const data = {
@@ -19,10 +20,11 @@ export const data = {
     JavaScript,
     react,
     NextJs,
+    stateManaging,
     Patterns,
     Interview,
+    gitParent,
     IDE,
     demo,
-    gitParent,
   ],
 };

@@ -1,5 +1,5 @@
 export const testMethodsOfObjectArrayFunction = {
-  id: 100099,
+  id: 100119,
   title: "Methods of Object, Array, Function.prototype",
   questions: [
     {
