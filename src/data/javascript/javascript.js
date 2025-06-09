@@ -7,7 +7,7 @@ import { Codewars } from "./Codewars/Codewars";
 import { ContextThis } from "./ContextThis/ContextThis";
 import { DataTypes } from "./DataTypes/DataTypes";
 import { Descriptors } from "./Descriptors/Descriptors";
-import { DestructuringObjectsInJS } from "./DestructuringObjectsInJS/DestructuringObjectsInJS";
+import { DestructuringInJS } from "./DestructuringObjectsInJS/DestructuringInJS";
 import { DifferenceBetweenNullAndUndefined } from "./DifferenceBetweenNullAndUndefined/DifferenceBetweenNullAndUndefined";
 import { DragAndDrop } from "./DragAndDrop/DragAndDrop";
 import { ES6 } from "./ES6/ES6";
@@ -65,7 +65,7 @@ export const JavaScript = {
     Codewars,
     DataTypes,
     Descriptors,
-    DestructuringObjectsInJS,
+    DestructuringInJS,
     DifferenceBetweenNullAndUndefined,
     domManipulation,
     DragAndDrop,

@@ -1,4 +1,4 @@
-export const destructuringAssignmentExample = {
+export const DestructuringInJS = {
   id: 138,
   title: "Destructuring assignment / Деструктурирующее присваивание",
   children: [
