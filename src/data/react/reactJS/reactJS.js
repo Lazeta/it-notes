@@ -1,5 +1,5 @@
 import { componentRerenders } from "./componentRerenders/componentRerendersReact";
-import { hookUseRef } from "./HookUseRef/hookUseRef";
+import { hooks } from "./hooks/hooks";
 import { memoization } from "./memoization/memoReact";
 import { polymorphismInReact } from "./polymorphismInReact/polymorphismInReact";
 import { PortalsReact } from "./PortalsReact/PortalsReact";
@@ -9,7 +9,7 @@ export const reactJS = {
   title: "React JS",
   children: [
     PortalsReact,
-    hookUseRef,
+    hooks,
     memoization,
     componentRerenders,
     polymorphismInReact,

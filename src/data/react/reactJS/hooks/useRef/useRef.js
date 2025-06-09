@@ -1,5 +1,5 @@
-export const hookUseRef = {
-  id: 517,
+export const useRef = {
+  id: 2545,
   title: "Хук useRef",
   children: [
     {
