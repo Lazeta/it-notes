@@ -1,3 +1,4 @@
+import { middleware } from "./middleware/middleware";
 import { workCycle } from "./workCycle/workCycle";
 
 export const redux = {
@@ -5,5 +6,6 @@ export const redux = {
     title: "Redux",
     children: [
         workCycle,
+        middleware,
     ],
 }
