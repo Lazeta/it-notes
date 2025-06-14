@@ -33,7 +33,6 @@ export const Test = ({ test }) => {
 
     return (
         <S.Tests>
-            <h1>{test.title}</h1>
             <S.Test key={test.id}>
                 {test.questions.map((question) => (
                     <div key={question.id}>
