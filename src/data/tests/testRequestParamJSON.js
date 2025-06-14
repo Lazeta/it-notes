@@ -1,9 +1,9 @@
 export const testRequestParamJSON = {
-  id: 100117,
+  id: 101675,
   title: "Request parameters and JSON",
   questions: [
     {
-      id: 100085,
+      id: 101676,
       question: "Как клонировать объект в JavaScript с использованием JSON?",
       answer: `
       JSON.stringify() — преобразует объект в строку JSON.
@@ -12,7 +12,7 @@ export const testRequestParamJSON = {
       const clone = JSON.parse(JSON.stringify(original));`,
     },
     {
-      id: 100086,
+      id: 101677,
       question: "Как добавить тело запроса в HTTP-запрос при использовании fetch API?",
       answer: `
       Чтобы добавить тело запроса (body) при использовании fetch, нужно:
@@ -22,7 +22,7 @@ export const testRequestParamJSON = {
 (Обычно) указать заголовок Content-Type через свойство headers.`,
     },
     {
-      id: 100087,
+      id: 101678,
       question: "Какие типы содержимого можно использовать при отправке HTTP-запроса, и как это влияет на запрос и ответ?",
       answer: `
       application/json

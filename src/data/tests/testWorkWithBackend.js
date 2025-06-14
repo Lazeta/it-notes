@@ -1,9 +1,9 @@
 export const testWorkWithBackend = {
-  id: 100118,
+  id: 101025,
   title: "Work with backend",
   questions: [
     {
-      id: 100082,
+      id: 101026,
       question:
         "Что такое протокол HTTPS и чем он отличается от HTTP? Как он защищает данные при передаче?",
       answer: `
@@ -18,7 +18,7 @@ export const testWorkWithBackend = {
       `,
     },
     {
-      id: 100083,
+      id: 101027,
       question: "Опишите принципы REST и как они применяются при работе с API",
       answer: `
 REST API (Representational State Transfer Application Programming Interface) — это архитектурный стиль взаимодействия компонентов распределенного приложения в сети. В контексте веб-разработки, он позволяет веб-сервисам общаться друг с другом через HTTP, используя стандартные методы HTTP (GET, POST, PUT, DELETE и т.д.) для выполнения операций над данными.
@@ -36,7 +36,7 @@ REST API (Representational State Transfer Application Programming Interface) —
       `,
     },
     {
-      id: 100084,
+      id: 101028,
       question:
         "Какие существуют способы обхода ограничений CORS и в каких ситуациях их применяют?",
       answer: `

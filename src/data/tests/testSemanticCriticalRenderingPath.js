@@ -1,9 +1,9 @@
 export const testSemanticCriticalRenderingPath = {
-  id: 100113,
+  id: 101650,
   title: "Semantic, Critical Rendering path, block/inline elements",
   questions: [
     {
-      id: 100114,
+      id: 101651,
       question: "Объясните, какова базовая структура HTML-документа и какие основные теги в нее входят?",
       answer: `
 Обязательные:
@@ -18,7 +18,7 @@ export const testSemanticCriticalRenderingPath = {
       `,
     },
     {
-      id: 100115,
+      id: 101652,
       question: "Какие основные различия между блочными и строчными элементами в HTML?",
       answer: `
 Блочные элементы (block):
@@ -26,7 +26,6 @@ export const testSemanticCriticalRenderingPath = {
 Занимают всю доступную ширину родителя, даже если контент узкий.
 Полностью поддерживают CSS-бокс-модель (width, height, margin, padding, border).
 Могут содержать другие блочные и строчные элементы (например, <div> внутри <section>).
-
 
 Строчные элементы (inline):
 Располагаются в строку (как слова в тексте).
@@ -36,7 +35,7 @@ export const testSemanticCriticalRenderingPath = {
       `,
     },
     {
-      id: 100116,
+      id: 101653,
       question: "Что такое критический путь рендеринга и как его можно оптимизировать?",
       answer: `
 Это последовательность шагов, которые браузер выполняет для преобразования HTML, CSS и JavaScript в пиксели на экране. Оптимизация CRP ускоряет отображение контента, улучшая воспринимаемую производительность.
