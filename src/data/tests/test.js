@@ -72,16 +72,8 @@ import { testRouteRef } from "./testRouteRef";
 
 export const test = [
   testEventLoop,
-    // [66%] Расскажи про event loop 
-    // [20%] Что такое макро и микро задачи 
-    // [16%] Для чего нужен eventloop в js 
-    // [10%] В чём разница между макро и микро задачами
-    // [3%]	В чём разница в работе eventloop на сервере и в браузере
-    // [3%]	Где находятся макро и микро таски в eventloop
-    // [3%]	Какие проблемы решает eventloop
-    // [3%]	Сколько в один кадр eventloop`а может войти reflow и repaint
-    // [3%]	Как работает eventloop в web api
-    // [3%]	Как взаимодействуешь с eventloop
+  testOOP,
+  testFunctionalProgramming,
   testClosure,
     // [46%] Что такое замыкание 
     // [10%] Для чего замыкание нужно 
@@ -109,15 +101,6 @@ export const test = [
     // [3%]	Что произойдёт если я использую await на то что не является promise		
     // [3%] К какой категории относятся промисы
     // [3%]	Что использовали до promise
-  testVirtualDom,
-    // [26%] Что такое virtual dom 
-    // [6%] Зачем нужен виртуальный дом
-    // [3%]	Зачем нужно дерево компонентов/virtual dom	
-    // [3%]	Чем отличаются между собой shadow dom и virtual dom и regular dom
-    // [3%]	Что быстрее, dom или virtual dom	
-    // [3%]	Какой тип данных представляет из себя virtual dom в js	
-    // [3%]	Есть ли в react shadow dom или только virtual	
-    // [3%]	Для чего необходим virtual dom в react
   testFiber, 
     // [20%] Что такое fiber дерево
   testDOM,
@@ -136,6 +119,15 @@ export const test = [
     // [3%]	Почему нельзя отдать строку в дом
   testBOM, 
     // [12%] что такое BOM
+  testVirtualDom,
+    // [26%] Что такое virtual dom 
+    // [6%] Зачем нужен виртуальный дом
+    // [3%]	Зачем нужно дерево компонентов/virtual dom	
+    // [3%]	Чем отличаются между собой shadow dom и virtual dom и regular dom
+    // [3%]	Что быстрее, dom или virtual dom	
+    // [3%]	Какой тип данных представляет из себя virtual dom в js	
+    // [3%]	Есть ли в react shadow dom или только virtual	
+    // [3%]	Для чего необходим virtual dom в react
   testDataType,
     // [26%] Какие типы данных существуют в javascript
     // [6%]	Что знаешь о примитивных типах данных в javascript
@@ -159,11 +151,6 @@ export const test = [
     // [3%]	Как работает поток данных между redux и компонентом
     // [3%] Какие могут быть оптимизации для снижения обмена данных между front-end и сервером
     // [3%]	Какие есть доступы или подходы к базам данных из прикладного кода (active record)
-  testOOP, 
-    // [10] Принципы ооп
-    // [6%]	Что такое ооп
-    // [3%]	Что выбираешь ооп или функции
-    // [3%]	Чем ооп в js отличается от ооп в других языках
   testSOLID,
     // [6%]	Что такое solid
     // [3%]	Какое отношение к solid
@@ -178,8 +165,6 @@ export const test = [
     // 20%] в чем разница между классической функцией и стрелочной [
   testStyleIsolation,
     // [20%] Какие способы изоляции стилей ты знаешь 
-  testFunctionalProgramming,
-    // [20%] Концепция функционального программирования
   testEquality,
     // [20%] в чем разница == и === 
   testFunctionExpressionVsFunctionDeclaration,
