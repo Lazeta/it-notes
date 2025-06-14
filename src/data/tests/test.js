@@ -36,7 +36,7 @@ import { testSemanticVersioning } from "./testSemanticVersioning";
 import { testThis } from "./testThis";
 import { testLocalStorageLocalSession } from "./testLocalStorageLocalSession";
 import { testHooks } from "./testHooks";
-import { testScopes } from "./testScopes";
+import { testScope } from "./testScope";
 import { testPosition } from "./testPosition";
 import { testArrays } from "./testArrays";
 import { testStateManager } from "./testStateManager";
@@ -75,32 +75,7 @@ export const test = [
   testOOP,
   testFunctionalProgramming,
   testClosure,
-    // [46%] Что такое замыкание 
-    // [10%] Для чего замыкание нужно 
-    // [6%]	Расскажи про замыкание
-    // [3%]	Какой смысл замыканий, если бы не было функций высшего порядка
-    // [3%]	В чём разница между видами замыкания
-    // [3%]	Чем отличается замыкание от области видимости
   testPromise,
-    // [46%] Что такое promise и какие состояния у него есть
-    // [6%]	Зачем появились promise	
-    // [6%]	Как работает promiseall	и для чего?
-    // [3%]	Что такое promise.All
-    // [3%]	Что возвращает promiseall при ошибке
-    // [3%]	Как работает promise	
-    // [3%]	Где используются promise	
-    // [3%]	Какими способами можно создать promise	
-    // [3%]	Какие статические методы promise знаешь	
-    // [3%]	Какие статусы есть у promise
-    // [3%]	В чём преимущество синтаксического сахара в виде async await над promise	
-    // [3%]	В чем отличие async/await от promise
-    // [3%]	Расскажи о том что такое promise race
-    // [3%]	Сходство и отличия observable от promise	
-    // [3%]	Можно ли перезапустить остановленный promise	
-    // [3%]	Какая самая важная отличительная черта promise	
-    // [3%]	Что произойдёт если я использую await на то что не является promise		
-    // [3%] К какой категории относятся промисы
-    // [3%]	Что использовали до promise
   testFiber, 
     // [20%] Что такое fiber дерево
   testDOM,
@@ -203,8 +178,7 @@ export const test = [
     // [3%]	В какой последователности будут вызываться хуки при использовании хуков жизненного цикла в миксине и подключении его в компонент
     // [3%]	Зачем нужны хуки react
     // [3%]	Какие хуки добавляют для подключения ротера
-  testScopes,
-    // [13%] Расскажи про области видимости 
+  testScope,
   testPosition,
     // [13%] Какие бывают значения у свойства position 
     // Как можно позиционировать элементы
