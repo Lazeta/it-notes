@@ -1,4 +1,4 @@
-export const test3 = {
+export const testCORS = {
   id: 100050,
   title: "Тест по CORS",
   questions: [

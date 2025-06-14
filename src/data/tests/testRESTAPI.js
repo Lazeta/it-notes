@@ -1,4 +1,4 @@
-export const test4 = {
+export const testRESTAPI = {
   id: 100075,
   title: "Тест по REST API",
   questions: [

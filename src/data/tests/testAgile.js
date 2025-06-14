@@ -1,6 +1,6 @@
 // import evaluateAnswers from "../../utils/evaluateAnswers";
 
-export const test1 = {
+export const testAgile = {
   id: 100000,
   title: "Тест по Agile",
   questions: [

@@ -1,9 +1,9 @@
-export const testLocalStorage = {
-  id: 100088,
+export const testLocalStorageLocalSession = {
+  id: 100725,
   title: "LocalStorage, SessionStorage",
   questions: [
     {
-      id: 100089,
+      id: 100726,
       question: "Что такое LocalStorage и SessionStorage в JavaScript и для чего они используются?",
       answer: `
 LocalStorage:
@@ -20,7 +20,7 @@ SessionStorage:
       `,
     },
     {
-      id: 100090,
+      id: 100727,
       question: "Как можно использовать JSON для хранения сложных объектов в LocalStorage? Приведите пример.",
       answer: `
 LocalStorage может сохранять только строки, поэтому для работы с объектами, массивами и другими сложными структурами данных используется сериализация в JSON (преобразование в строку) и парсинг (восстановление из строки).
@@ -34,7 +34,7 @@ console.log(savedData); // { name: "Alice", age: 25, hobbies: ["coding", "music"
       `,
     },
     {
-      id: 100091,
+      id: 100728,
       question: "Как можно использовать паттерн обсервер для отслеживания изменений в данных, хранящихся в LocalStorage?",
       answer: `
 Паттерн Наблюдатель позволяет отслеживать изменения данных в LocalStorage и автоматически уведомлять подписанные компоненты.      
