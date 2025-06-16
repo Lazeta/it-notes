@@ -1,4 +1,4 @@
-export const arrowFunctions = {
+export const ArrowFunctions = {
   id: 145,
   title: "Arrow functions",
   children: [

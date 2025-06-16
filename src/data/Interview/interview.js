@@ -6,8 +6,8 @@ export const Interview = {
   id: 17,
   title: "Interview",
   children: [
-    ThemeFrontend,
-    ThemeBackend,
     Definitions,
+    ThemeBackend,
+    ThemeFrontend,
   ],
 };

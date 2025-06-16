@@ -1,6 +1,6 @@
-export const REST = {
+export const RESTAPI = {
   id: 119,
-  title: "REST",
+  title: "REST API (Representational State Transfer API)",
   children: [
     {
       title: "Определение",
@@ -36,6 +36,33 @@ export const REST = {
               <li><strong>PUT:</strong> Обновление существующего ресурса.</li>
               <li><strong>DELETE:</strong> Удаление ресурса.</li>
             </ul>
+            <p>Пример GET-запроса для получения данных о пользователе:</p>
+          `,
+      code: `
+fetch('https://api.example.com/users/1',  {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+})
+.then(response => response.json())
+.then(data => console.log(data));
+          `,
+    },
+    {
+      title: "Статусные коды HTTP",
+      type: "text",
+      description: `
+            <p>REST API использует стандартные HTTP-статусы для указания результата выполнения запроса:</p>
+            <ul>
+              <li><strong>200 OK:</strong> Запрос выполнен успешно.</li>
+              <li><strong>201 Created:</strong> Ресурс успешно создан.</li>
+              <li><strong>400 Bad Request:</strong> Ошибка в запросе клиента.</li>
+              <li><strong>401 Unauthorized:</strong> Необходима авторизация.</li>
+              <li><strong>403 Forbidden:</strong> Доступ запрещен.</li>
+              <li><strong>404 Not Found:</strong> Ресурс не найден.</li>
+              <li><strong>500 Internal Server Error:</strong> Ошибка на стороне сервера.</li>
+            </ul>
           `,
     },
     {
@@ -43,6 +70,12 @@ export const REST = {
       type: "text",
       description: `
             <p>В REST ресурсы идентифицируются с помощью URI (Uniform Resource Identifier). Каждому ресурсу соответствует уникальный URI, по которому можно получить доступ к этому ресурсу.</p>
+            <p>Примеры URI:</p>
+            <ul>
+              <li><code>https://api.example.com/users</code>  — список всех пользователей.</li>
+              <li><code>https://api.example.com/users/1</code>  — информация о пользователе с ID 1.</li>
+              <li><code>https://api.example.com/posts?author=1</code> — список постов пользователя с ID 1.</li>
+            </ul>
           `,
     },
     {
@@ -58,13 +91,14 @@ export const REST = {
           `,
     },
     {
-      title: "Примеры использования REST API:",
+      title: "Примеры использования REST API",
       type: "text",
       description: `
+            <p>REST API широко используется в современных приложениях:</p>
             <ul>
-              <li><strong>Веб-сервисы:</strong> Веб-сайты используют его для запроса данных с сервера (например, загрузка списка пользователей, публикации сообщений в блоге).</li>
-              <li><strong>Мобильные приложения:</strong> Мобильные приложения общаются с сервером для получения и отправки данных (например, проверка погоды, отправка сообщений).</li>
-              <li><strong>Интеграция с внешними сервисами:</strong> Приложения могут интегрироваться с внешними API для расширения своего функционала (например, использование карт Google Maps, интеграция с социальными сетями).</li>
+              <li><strong>Веб-сервисы:</strong> Например, получение списка товаров из интернет-магазина (<code>GET /products</code>).</li>
+              <li><strong>Мобильные приложения:</strong> Например, отправка данных формы регистрации (<code>POST /register</code>).</li>
+              <li><strong>Интеграция с внешними сервисами:</strong> Например, использование API Google Maps для отображения карт (<code>GET /maps/api</code>).</li>
             </ul>
           `,
     },
@@ -77,6 +111,18 @@ export const REST = {
         Благодаря своей простоте, масштабируемости и гибкости, 
         REST стал доминирующим стилем для разработки API для веб-приложений.</p>
       `,
+    },
+    {
+      title: "",
+      type: "text",
+      url: "https://restfulapi.net/",
+      link: "RESTful API Design Guide",
+    },
+    {
+      title: "",
+      type: "text",
+      url: "https://developer.mozilla.org/ru/docs/Web/HTTP/Status",
+      link: "MDN: HTTP Status Codes",
     },
   ],
 };

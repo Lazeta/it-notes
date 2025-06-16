@@ -8,16 +8,16 @@ import { ProgressiveScan } from "./ProgressiveScan/ProgressiveScan";
 import { Style } from "./Style/Style";
 
 export const HTML_CSS = {
-    id: 12,
-    title: "HTML/CSS",
-    children: [
-        Style,
-        CreatingLayoutInHTMLAndCSS,
-        HTMLDocumentStructure,
-        DevelopmentOfMultilingualWebsites,
-        ProgressiveScan,
-        DifferenceBetweenScriptAsyncAndDefer,
-        JoinJavaScriptFilesInHTML,
-        ForAttribute,
-    ],
+  id: 12,
+  title: "HTML/CSS",
+  children: [
+    CreatingLayoutInHTMLAndCSS,
+    DevelopmentOfMultilingualWebsites,
+    DifferenceBetweenScriptAsyncAndDefer,
+    ForAttribute,
+    HTMLDocumentStructure,
+    JoinJavaScriptFilesInHTML,
+    ProgressiveScan,
+    Style,
+  ],
 };

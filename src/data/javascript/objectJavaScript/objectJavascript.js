@@ -1,4 +1,4 @@
-export const objectJavascript = {
+export const ObjectJavascript = {
   id: 524,
   title: "Objects in JS",
   children: [

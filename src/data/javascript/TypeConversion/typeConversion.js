@@ -1,4 +1,4 @@
-export const typeConversionInJS = {
+export const TypeConversionInJS = {
   id: 212,
   title: "Type Conversion in JavaScript",
   children: [

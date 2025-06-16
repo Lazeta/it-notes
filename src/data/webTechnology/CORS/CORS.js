@@ -1,6 +1,6 @@
 export const CORS = {
   id: 117,
-  title: "CORS",
+  title: "CORS (Кросс-доменный доступ к ресурсам)",
   children: [
     {
       title: "Определение",

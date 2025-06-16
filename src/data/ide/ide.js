@@ -7,9 +7,9 @@ export const IDE = {
   id: 18,
   title: "IDE",
   children: [
+    PyCharm,
+    SublimeText3,
     VSCode,
     WebStorm,
-    SublimeText3,
-    PyCharm,
   ],
 };

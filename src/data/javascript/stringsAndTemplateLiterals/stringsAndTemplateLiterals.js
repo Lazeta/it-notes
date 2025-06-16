@@ -1,4 +1,4 @@
-export const stringsAndTemplateLiterals = {
+export const StringsAndTemplateLiterals = {
   id: 526,
   title: "Strings & Template Literals",
   children: [
