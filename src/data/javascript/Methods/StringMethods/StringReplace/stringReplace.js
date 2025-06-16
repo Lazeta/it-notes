@@ -1,5 +1,5 @@
 export const stringReplace = {
-  title: "str.replace()",
+  title: "6. Метод replace()",
   id: 2538,
   children: [
     {

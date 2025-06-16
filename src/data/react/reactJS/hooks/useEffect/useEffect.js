@@ -6,8 +6,7 @@ export const useEffect = {
       title: "Основы использования",
       type: "text",
       description: `
-        <p><strong>useEffect</strong> - хук для выполнения побочных эффектов в функциональных компонентах React.</p>
-        
+        <p><strong>useEffect</strong> — это хук для выполнения побочных эффектов в функциональных компонентах React.</p>
         <pre><code>import { useEffect } from 'react';
 
 function Example() {
@@ -19,21 +18,21 @@ function Example() {
   });
 
   return (
-    &lt;div&gt;
-      &lt;p&gt;Вы кликнули {count} раз&lt;/p&gt;
-      &lt;button onClick={() => setCount(count + 1)}&gt;
+    <div>
+      <p>Вы кликнули {count} раз</p>
+      <button onClick={() => setCount(count + 1)}>
         Нажми меня
-      &lt;/button&gt;
-    &lt;/div&gt;
+      </button>
+    </div>
   );
 }</code></pre>
 
         <p><strong>Параметры:</strong></p>
         <ul>
-          <li><code>effect</code> - функция, содержащая код эффекта</li>
-          <li><code>dependencies</code> - массив зависимостей (опционально)</li>
+          <li><code>effect</code>: функция, содержащая код эффекта.</li>
+          <li><code>dependencies</code>: массив зависимостей (опционально).</li>
         </ul>
-      `
+      `,
     },
     {
       title: "Варианты использования",
@@ -63,7 +62,7 @@ function Example() {
 
   return () => clearInterval(timer);
 }, []);</code></pre>
-      `
+      `,
     },
     {
       title: "Типичные сценарии применения",
@@ -106,7 +105,7 @@ function Example() {
     element.classList.remove('highlight');
   };
 }, [id]);</code></pre>
-      `
+      `,
     },
     {
       title: "Оптимизация производительности",
@@ -151,7 +150,7 @@ useEffect(() => {
 useEffect(() => {
   localStorage.setItem('count', count);
 }, [count]);</code></pre>
-      `
+      `,
     },
     {
       title: "Типичные ошибки",
@@ -182,7 +181,7 @@ useEffect(() => {
   const timer = setInterval(() => {}, 1000);
   // Забыли return () => clearInterval(timer);
 }, []);</code></pre>
-      `
+      `,
     },
     {
       title: "Продвинутые паттерны",
@@ -238,7 +237,7 @@ useEffect(() => {
   
   return ref.current;
 }</code></pre>
-      `
+      `,
     },
     {
       title: "TypeScript и useEffect",
@@ -249,7 +248,7 @@ useEffect(() => {
   let mounted = true;
 
   async function fetchData() {
-    const response = await fetch&lt;ApiResponse&gt;('/api/data');
+    const response = await fetch<ApiResponse>('/api/data');
     if (mounted) setData(response.data);
   }
 
@@ -275,14 +274,14 @@ useEffect(() => {
   name: string;
 }
 
-const [user, setUser] = useState&lt;User | null&gt;(null);
+const [user, setUser] = useState<User | null>(null);
 
 useEffect(() => {
   if (user) {
     console.log(user.name); // Тип User гарантирован
   }
 }, [user]);</code></pre>
-      `
-    }
-  ]
+      `,
+    },
+  ],
 };

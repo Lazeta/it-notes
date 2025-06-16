@@ -6,7 +6,7 @@ export const useContext = {
       title: "Основы использования",
       type: "text",
       description: `
-        <p><strong>useContext</strong> - хук для доступа к значению контекста без использования Consumer.</p>
+        <p><strong>useContext</strong> — это хук для доступа к значению контекста без использования <code>Consumer</code>.</p>
         
         <pre><code>import { createContext, useContext } from 'react';
 
@@ -16,25 +16,25 @@ const ThemeContext = createContext('light');
 function App() {
   // 2. Передача значения через Provider
   return (
-    &lt;ThemeContext.Provider value="dark"&gt;
-      &lt;Toolbar /&gt;
-    &lt;/ThemeContext.Provider&gt;
+    <ThemeContext.Provider value="dark">
+      <Toolbar />
+    </ThemeContext.Provider>
   );
 }
 
 function Toolbar() {
   // 3. Получение значения в любом дочернем компоненте
   const theme = useContext(ThemeContext);
-  return &lt;div&gt;Текущая тема: {theme}&lt;/div&gt;;
+  return <div>Текущая тема: {theme}</div>;
 }</code></pre>
 
         <p><strong>Когда использовать:</strong></p>
         <ul>
-          <li>Глобальные настройки (темы, язык)</li>
-          <li>Данные пользователя</li>
-          <li>Кешированные данные приложения</li>
+          <li>Глобальные настройки (темы, язык).</li>
+          <li>Данные пользователя.</li>
+          <li>Кешированные данные приложения.</li>
         </ul>
-      `
+      `,
     },
     {
       title: "Типизация с TypeScript",
@@ -46,14 +46,14 @@ function Toolbar() {
   age: number;
 }
 
-const UserContext = createContext&lt;User | null&gt;(null);
+const UserContext = createContext<User | null>(null);
 
 function UserProfile() {
   const user = useContext(UserContext);
   
-  if (!user) return &lt;div&gt;Пользователь не найден&lt;/div&gt;;
+  if (!user) return <div>Пользователь не найден</div>;
   
-  return &lt;div&gt;{user.name}, {user.age} лет&lt;/div&gt;;
+  return <div>{user.name}, {user.age} лет</div>;
 }</code></pre>
 
         <p><strong>Контекст с default value:</strong></p>
@@ -71,8 +71,8 @@ const defaultTheme: Theme = {
   }
 };
 
-const ThemeContext = createContext&lt;Theme&gt;(defaultTheme);</code></pre>
-      `
+const ThemeContext = createContext<Theme>(defaultTheme);</code></pre>
+      `,
     },
     {
       title: "Оптимизация производительности",
@@ -86,9 +86,9 @@ const ThemeContext = createContext&lt;Theme&gt;(defaultTheme);</code></pre>
   const userValue = useMemo(() => ({ user, setUser }), [user]);
   
   return (
-    &lt;UserContext.Provider value={userValue}&gt;
-      &lt;Profile /&gt;
-    &lt;/UserContext.Provider&gt;
+    <UserContext.Provider value={userValue}>
+      <Profile />
+    </UserContext.Provider>
   );
 }</code></pre>
 
@@ -112,7 +112,7 @@ const SettingsContext = createContext(settings);</code></pre>
 
 // Использование
 const { user } = useUser();</code></pre>
-      `
+      `,
     },
     {
       title: "Паттерны использования",
@@ -130,27 +130,27 @@ function CounterProvider({ children }) {
   const value = { count, increment, decrement };
   
   return (
-    &lt;CounterContext.Provider value={value}&gt;
+    <CounterContext.Provider value={value}>
       {children}
-    &lt;/CounterContext.Provider&gt;
+    </CounterContext.Provider>
   );
 }
 
 function Counter() {
   const { count, increment } = useContext(CounterContext);
-  return &lt;button onClick={increment}&gt;{count}&lt;/button&gt;;
+  return <button onClick={increment}>{count}</button>;
 }</code></pre>
 
         <p><strong>2. Многоуровневые провайдеры:</strong></p>
         <pre><code>function App() {
   return (
-    &lt;ThemeProvider&gt;
-      &lt;UserProvider&gt;
-        &lt;SettingsProvider&gt;
-          &lt;MainApp /&gt;
-        &lt;/SettingsProvider&gt;
-      &lt;/UserProvider&gt;
-    &lt;/ThemeProvider&gt;
+    <ThemeProvider>
+      <UserProvider>
+        <SettingsProvider>
+          <MainApp />
+        </SettingsProvider>
+      </UserProvider>
+    </ThemeProvider>
   );
 }</code></pre>
 
@@ -165,12 +165,12 @@ function App() {
   };
   
   return (
-    &lt;ApiContext.Provider value={api}&gt;
-      &lt;UserList /&gt;
-    &lt;/ApiContext.Provider&gt;
+    <ApiContext.Provider value={api}>
+      <UserList />
+    </ApiContext.Provider>
   );
 }</code></pre>
-      `
+      `,
     },
     {
       title: "Частые ошибки",
@@ -182,9 +182,9 @@ function App() {
   
   // Плохо: новый объект при каждом рендере
   return (
-    &lt;UserContext.Provider value={{ user, setUser }}&gt;
-      &lt;Child /&gt;
-    &lt;/UserContext.Provider&gt;
+    <UserContext.Provider value={{ user, setUser }}>
+      <Child />
+    </UserContext.Provider>
   );
 }
 
@@ -202,7 +202,7 @@ const value = useMemo(() => ({ user, setUser }), [user]);</code></pre>
 
 // Решение:
 const theme = useContext(ThemeContext) ?? defaultTheme;</code></pre>
-      `
+      `,
     },
     {
       title: "Продвинутые техники",
@@ -211,20 +211,20 @@ const theme = useContext(ThemeContext) ?? defaultTheme;</code></pre>
         <p><strong>1. Комбинированные провайдеры:</strong></p>
         <pre><code>function AppProviders({ children }) {
   return (
-    &lt;ThemeProvider&gt;
-      &lt;AuthProvider&gt;
-        &lt;ApiProvider&gt;
+    <ThemeProvider>
+      <AuthProvider>
+        <ApiProvider>
           {children}
-        &lt;/ApiProvider&gt;
-      &lt;/AuthProvider&gt;
-    &lt;/ThemeProvider&gt;
+        </ApiProvider>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 
 // Использование
-&lt;AppProviders&gt;
-  &lt;App /&gt;
-&lt;/AppProviders&gt;</code></pre>
+<AppProviders>
+  <App />
+</AppProviders></code></pre>
 
         <p><strong>2. Селективный рендеринг с контекстом:</strong></p>
         <pre><code>const UserContext = createContext();
@@ -236,12 +236,12 @@ function UserProvider({ userId, children }) {
     fetchUser(userId).then(setUser);
   }, [userId]);
   
-  if (!user) return &lt;Loader /&gt;;
+  if (!user) return <Loader />;
   
   return (
-    &lt;UserContext.Provider value={user}&gt;
+    <UserContext.Provider value={user}>
       {children}
-    &lt;/UserContext.Provider&gt;
+    </UserContext.Provider>
   );
 }</code></pre>
 
@@ -254,12 +254,12 @@ function CartProvider({ children }) {
   const value = { state, dispatch };
   
   return (
-    &lt;CartContext.Provider value={value}&gt;
+    <CartContext.Provider value={value}>
       {children}
-    &lt;/CartContext.Provider&gt;
+    </CartContext.Provider>
   );
 }</code></pre>
-      `
+      `,
     },
     {
       title: "Альтернативы и сравнения",
@@ -294,7 +294,7 @@ function CartProvider({ children }) {
             <td>Данные, нужные в разных частях приложения</td>
           </tr>
         </table>
-      `
-    }
-  ]
+      `,
+    },
+  ],
 };

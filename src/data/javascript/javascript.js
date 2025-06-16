@@ -49,6 +49,9 @@ import { TypeNaN } from "./typeNaN/typeNaN";
 import { Classes } from "./Classes/Classes";
 import { DOMManipulation } from "./DOMManipulation/DOMManipulation";
 import { Variables } from "./Variables/Variables";
+import { PrototypeAndProto } from "./PrototypeAndProto/PrototypeAndProto";
+import { ForwardRef } from "./ForwardRef/ForwardRef";
+import { PureFunction } from "./PureFunction/PureFunction";
 
 export const JavaScript = {
   id: 13,
@@ -74,6 +77,7 @@ export const JavaScript = {
     EventLoop,
     Functions,
     FunctionLevenshtein,
+    ForwardRef,
     GarbageCollection,
     GlobalWindowObject,
     HowObjectsBecomePrimitives,
@@ -89,6 +93,8 @@ export const JavaScript = {
     OverrideBrowserDefaults,
     PageVisibilityAPI,
     Promises,
+    PrototypeAndProto,
+    PureFunction,
     Recursion,
     Reducers,
     RegularExpressions,

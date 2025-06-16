@@ -37,7 +37,6 @@ import { testScope } from "./testScope";
 import { testPosition } from "./testPosition";
 import { testMethodsArrays } from "./testMethodsArrays";
 import { testStateManager } from "./testStateManager";
-import { testUseEffect } from "./testUseEffect";
 import { testSemantic } from "./testSemantic";
 import { testMethodologyBem } from "./testMethodologyBem";
 import { testPrototype } from "./testPrototype";
@@ -45,7 +44,6 @@ import { testContext } from "./testContext";
 import { testTwoWayDataBinding } from "./testTwoWayDataBinding";
 import { testGitFlow } from "./testGitFlow";
 import { testUseTSJS } from "./testUseTSJS";
-import { testMapSet } from "./testMapSet";
 import { testPsevdoelement } from "./testPsevdoelement";
 import { testIIFE } from "./testIIFE";
 import { testCSS } from "./testCSS";
@@ -67,6 +65,7 @@ import { testCache } from "./testCache";
 import { testTypescript } from "./testTypescript";
 import { testRouteRef } from "./testRouteRef";
 import { testMethodsObjects } from "./testMethodsObjects";
+import { testPureComponent } from "./testPureComponent";
 
 export const test = [
   testEventLoop,
@@ -83,35 +82,37 @@ export const test = [
   testDataStructure, 
   testDataBase,
   testSOLID,
+  testRESTAPI,
+  testCORS,
   testVarLetConst,
   testStyleIsolation,
   testEquality,
   testFunctions,
+  testIIFE,
   testMapVsForEach,
   testScope,
   testMethodsArrays,
   testMethodsObjects,
   testNullVsUndefined,
-  testGeneric,
   testMemo,
+  testHooks,
+  testPureComponent,
+  testPrototype,
+  testContext,
+  testInheritance,
+  testRouteRef, 
+  testGeneric,
+  testSemantic,
   testSemanticVersioning,
   testLocalStorageLocalSession,
-  testHooks,
   testPosition,
   testStateManager,
-  testUseEffect,
-  testSemantic,
   testMethodologyBem,
-  testPrototype,
-  testRESTAPI,
-  testContext,
   testTwoWayDataBinding,
   testWorkWithBackend,
   testGitFlow,
   testUseTSJS,
-  testMapSet,
   testPsevdoelement,
-  testIIFE,
   testCSS,
     // [10%] Что такое css
     // [10%] Что означает слово каскад в css
@@ -134,10 +135,8 @@ export const test = [
   testEvents,
     // [10%] E.Preventdefailt() и e.Stopprepaganation(), для чего нужны
   testSetTimeout,
-  testInheritance,
   testAsyncAwait, 
   testLibrary, 
-  testCORS,
   testHTML, 
   testTesting, 
   testProcessors, 
@@ -150,5 +149,4 @@ export const test = [
   testRequestParamJSON, 
   testSearchMethods,
   testTypescript,
-  testRouteRef, 
 ];

@@ -6,34 +6,31 @@ export const useState = {
       title: "Основы использования",
       type: "text",
       description: `
-        <p><strong>useState</strong> - хук для управления состоянием в функциональных компонентах React.</p>
-        
+        <p><strong>useState</strong> — это хук для управления состоянием в функциональных компонентах React.</p>
         <pre><code>import { useState } from 'react';
 
 function Counter() {
   const [count, setCount] = useState(0);
   
   return (
-    &lt;div&gt;
-      &lt;p&gt;Вы кликнули {count} раз&lt;/p&gt;
-      &lt;button onClick={() => setCount(count + 1)}&gt;
+    <div>
+      <p>Вы кликнули {count} раз</p>
+      <button onClick={() => setCount(count + 1)}>
         Нажми меня
-      &lt;/button&gt;
-    &lt;/div&gt;
+      </button>
+    </div>
   );
 }</code></pre>
-
         <p><strong>Параметры:</strong></p>
         <ul>
-          <li><code>initialState</code> - начальное значение состояния</li>
+          <li><code>initialState</code>: начальное значение состояния.</li>
         </ul>
-
         <p><strong>Возвращает:</strong></p>
         <ul>
-          <li>Текущее значение состояния</li>
-          <li>Функцию для его обновления</li>
+          <li>Текущее значение состояния.</li>
+          <li>Функцию для его обновления.</li>
         </ul>
-      `
+      `,
     },
     {
       title: "Особенности работы",
@@ -63,17 +60,17 @@ const [state, setState] = useState(() => {
 
         <p><strong>3. Правила хуков:</strong></p>
         <ul>
-          <li>Вызывайте хуки только на верхнем уровне компонента</li>
-          <li>Не используйте в условиях и циклах</li>
+          <li>Вызывайте хуки только на верхнем уровне компонента.</li>
+          <li>Не используйте в условиях и циклах.</li>
         </ul>
-      `
+      `,
     },
     {
       title: "Типизация с TypeScript",
       type: "text",
       description: `
         <p><strong>Явное указание типа:</strong></p>
-        <pre><code>const [user, setUser] = useState&lt;User | null&gt;(null);
+        <pre><code>const [user, setUser] = useState<User | null>(null);
 
 interface User {
   name: string;
@@ -82,7 +79,7 @@ interface User {
 
         <p><strong>Автовывод типа:</strong></p>
         <pre><code>const [count, setCount] = useState(0); // Тип number
-const [items, setItems] = useState&lt;string[]&gt;([]); // Массив строк</code></pre>
+const [items, setItems] = useState<string[]>([]); // Массив строк</code></pre>
 
         <p><strong>Сложные состояния:</strong></p>
         <pre><code>type FormState = {
@@ -91,12 +88,12 @@ const [items, setItems] = useState&lt;string[]&gt;([]); // Массив стро
   remember: boolean;
 };
 
-const [form, setForm] = useState&lt;FormState&gt;({
+const [form, setForm] = useState<FormState>({
   username: '',
   password: '',
   remember: false
 });</code></pre>
-      `
+      `,
     },
     {
       title: "Работа с объектами и массивами",
@@ -122,7 +119,7 @@ setItems(prev => prev.filter(item => item !== 2));
 
 // Обновление
 setItems(prev => prev.map(item => item === 1 ? 10 : item));</code></pre>
-      `
+      `,
     },
     {
       title: "Продвинутые паттерны",
@@ -159,7 +156,7 @@ const [form, handleChange] = useForm({ email: '', agree: false });</code></pre>
 
   return [state, setState];
 }</code></pre>
-      `
+      `,
     },
     {
       title: "Оптимизация производительности",
@@ -190,7 +187,7 @@ const handleClick = () => {
   setName('New Name');
   // Только один ре-рендер
 };</code></pre>
-      `
+      `,
     },
     {
       title: "Частые ошибки",
@@ -226,7 +223,7 @@ const [fullName, setFullName] = useState('John Doe');
 
 // Лучше - вычислять при рендере
 const fullName = \`\${user.firstName} \${user.lastName}\`;</code></pre>
-      `
-    }
-  ]
+      `,
+    },
+  ],
 };
