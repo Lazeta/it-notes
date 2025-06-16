@@ -1,3 +1,4 @@
+import { testTwoWayDataBinding } from "../../tests/testTwoWayDataBinding";
 import { CacheReact } from "./CacheReact/CacheReact";
 import { componentRerenders } from "./componentRerenders/componentRerendersReact";
 import { FiberTree } from "./FiberTree/FiberTree";
@@ -23,6 +24,7 @@ export const reactJS = {
     FiberTree,
     VirtualDom,
     CacheReact,
+    testTwoWayDataBinding,
     {
       title: "",
       type: "text",
