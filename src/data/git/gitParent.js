@@ -7,8 +7,8 @@ export const gitParent = {
     title: "Git",
     children: [
       Git,
-      gitFlow,
       gitCommands,
+      gitFlow,
     ],
   };
   

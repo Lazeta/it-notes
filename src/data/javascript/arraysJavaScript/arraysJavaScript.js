@@ -1,4 +1,4 @@
-export const arraysJavaScript = {
+export const ArraysJavaScript = {
   id: 525,
   title: "Arrays is JS",
   children: [

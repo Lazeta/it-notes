@@ -1,4 +1,4 @@
-export const addEventListenerFunction = {
+export const AddEventListenerFunction = {
   id: 131,
   title: "addEventListener() method arguments",
   children: [

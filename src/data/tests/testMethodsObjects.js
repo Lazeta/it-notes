@@ -1,6 +1,6 @@
-export const testMethodsOfObjectArrayFunction = {
+export const testMethodsObjects = {
   id: 100100,
-  title: "Methods of Object, Array, Function.prototype",
+  title: "Methods of Objects (методы объекта)",
   questions: [
     {
       id: 100101,
@@ -26,7 +26,6 @@ export const testMethodsOfObjectArrayFunction = {
       array.reduce((accumulator, currentValue) => {
         return accumulator + currentValue;
       }, initialValue);
-
       accumulator — накопленное значение (на каждом шаге добавляется currentValue).
       currentValue — текущий элемент массива.
       initialValue (опционально) — начальное значение аккумулятора (если не указано, берётся первый элемент массива).
@@ -64,10 +63,25 @@ export const testMethodsOfObjectArrayFunction = {
     {
       id: 100105,
       question: "метод Object.entries()",
-      answer: `Метод Object.entries() в JavaScript возвращает массив, содержащий собственные 
-      перечисляемые свойства объекта в виде пар [ключ, значение]. Этот метод полезен для 
-      перебора свойств объекта и их значений, а также для преобразования объекта в другие 
-      структуры данных, такие как Map. `,
+      answer: `  **Object.entries():**
+      - Возвращает массив пар [ключ, значение] для всех собственных перечисляемых свойств объекта.
+      - Полезен для перебора свойств объекта.
+
+      **Пример:**
+      \`\`\`javascript
+      const obj = { a: 1, b: 2, c: 3 };
+      const entries = Object.entries(obj);
+      console.log(entries); // [['a', 1], ['b', 2], ['c', 3]]
+
+      // Перебор с for...of:
+      for (const [key, value] of entries) {
+        console.log(\`\${key}: \${value}\`);
+      }
+      // Вывод:
+      // a: 1
+      // b: 2
+      // c: 3
+      \`\`\``,
     },
     {
       id: 100106,
@@ -77,7 +91,6 @@ export const testMethodsOfObjectArrayFunction = {
       где вложенные объекты или массивы ссылаются на те же самые объекты в памяти, что и 
       оригинальный объект. Глубокое клонирование, напротив, создает полностью независимые копии 
       всех вложенных объектов и массивов. 
-      
       Поверхностное клонирование:
       Оператор spread (...):
       . С его помощью можно копировать свойства объекта, но не вложенные объекты или массивы, 
@@ -197,21 +210,54 @@ export const testMethodsOfObjectArrayFunction = {
     },
     {
       id: 100117,
-      question: "Методы объектов",
-      answer: `Object.keys(obj): Возвращает массив ключей объекта. 
-      Object.values(obj): Возвращает массив значений объекта. 
-      Object.entries(obj): Возвращает массив пар [ключ, значение] объекта. 
-      Object.assign(target, ...sources): Копирует значения из одного или нескольких исходных объектов в целевой объект. 
-      Object.create(proto[, propertiesObject]): Создает новый объект с указанным прототипом и (необязательно) дескрипторами свойств. 
-      Object.freeze(obj): Замораживает объект, предотвращая добавление, удаление или изменение его свойств. 
-      Object.seal(obj): Запечатывает объект, предотвращая добавление новых свойств, но позволяя изменять существующие. 
-      Object.getPrototypeOf(obj): Возвращает прототип указанного объекта. 
+      question: "Какие методы объектов существуют в JavaScript?",
+      answer: `
+      **Основные методы объектов:**
+      1. **Object.keys(obj):** Возвращает массив ключей объекта.
+        \`\`\`javascript
+        const obj = { a: 1, b: 2 };
+        console.log(Object.keys(obj)); // ['a', 'b']
+        \`\`\`
+
+      2. **Object.values(obj):** Возвращает массив значений объекта.
+        \`\`\`javascript
+        console.log(Object.values(obj)); // [1, 2]
+        \`\`\`
+
+      3. **Object.entries(obj):** Возвращает массив пар [ключ, значение].
+        \`\`\`javascript
+        console.log(Object.entries(obj)); // [['a', 1], ['b', 2]]
+        \`\`\`
+
+      4. **Object.assign(target, ...sources):** Копирует свойства из исходных объектов в целевой.
+        \`\`\`javascript
+        const target = { a: 1 };
+        const source = { b: 2 };
+        Object.assign(target, source);
+        console.log(target); // { a: 1, b: 2 }
+        \`\`\`
+
+      5. **Object.freeze(obj):** Замораживает объект (предотвращает изменения).
+        \`\`\`javascript
+        const frozen = Object.freeze({ a: 1 });
+        frozen.a = 2; // Не изменится
+        console.log(frozen.a); // 1
+        \`\`\`
+
+      6. **Object.seal(obj):** Запечатывает объект (предотвращает добавление/удаление свойств).
+        \`\`\`javascript
+        const sealed = Object.seal({ a: 1 });
+        sealed.b = 2; // Не добавится
+        console.log(sealed); // { a: 1 }
+        \`\`\`
+
+      7. **Object.getPrototypeOf(obj):** Возвращает прототип объекта.
+        \`\`\`javascript
+        const proto = { x: 10 };
+        const obj = Object.create(proto);
+        console.log(Object.getPrototypeOf(obj) === proto); // true
+        \`\`\`
       `,
-    },
-    {
-      id: 100118,
-      question: "",
-      answer: ``,
     },
   ],
 };

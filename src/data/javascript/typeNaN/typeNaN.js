@@ -1,4 +1,4 @@
-export const typeNaN = {
+export const TypeNaN = {
   id: 155,
   title: "NaN (Not-a-Number)",
   children: [

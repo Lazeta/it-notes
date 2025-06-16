@@ -1,5 +1,5 @@
-import { addEventListenerFunction } from "./addEventListenerFunction/addEventListenerFunction";
-import { arraysJavaScript } from "./arraysJavaScript/arraysJavaScript";
+import { AddEventListenerFunction } from "./addEventListenerFunction/addEventListenerFunction";
+import { ArraysJavaScript } from "./arraysJavaScript/arraysJavaScript";
 import { AsynchronousProgramming } from "./AsynchronousProgramming/AsynchronousProgramming";
 import { CancelAscentAndDive } from "./CancelAscentAndDive/CancelAscentAndDive";
 import { Closure } from "./Closure/Closure";
@@ -12,8 +12,8 @@ import { DifferenceBetweenNullAndUndefined } from "./DifferenceBetweenNullAndUnd
 import { DragAndDrop } from "./DragAndDrop/DragAndDrop";
 import { ES6 } from "./ES6/ES6";
 import { EventLoop } from "./EventLoop/EventLoop";
-import { arrowFunctions } from "./arrowFunctions/arrowFunctions";
-import { functionDeclarationAndExpressionAndArrow } from "./functionDeclarationAndExpressionAndArrow/functionDeclarationAndExpressionAndArrow";
+import { ArrowFunctions } from "./arrowFunctions/arrowFunctions";
+import { Functions } from "./Functions/Functions";
 import { FunctionLevenshtein } from "./FunctionLevenshtein/FunctionLevenshtein";
 import { GarbageCollection } from "./GarbageCollection/GarbageCollection";
 import { GlobalWindowObject } from "./GlobalWindowObject/GlobalWindowObject";
@@ -25,8 +25,8 @@ import { LexicalEnvironment } from "./LexicalEnvironment/LexicalEnvironment";
 import { LinearEquation } from "./LinearEquation/LinearEquation";
 import { LivingAndNonlivingCollections } from "./LivingAndNonlivingCollections/LivingAndNonlivingCollections";
 import { Methods } from "./Methods/Methods";
-import { modulesJavaScript } from "./modulesJavaScript/modulesJavaScript";
-import { objectJavascript } from "./objectJavaScript/objectJavascript";
+import { ModulesJavaScript } from "./modulesJavaScript/modulesJavaScript";
+import { ObjectJavascript } from "./objectJavaScript/objectJavascript";
 import { OverrideBrowserDefaults } from "./OverrideBrowserDefaults/OverrideBrowserDefaults";
 import { PageVisibilityAPI } from "./PageVisibilityAPI/PageVisibilityAPI";
 import { Promises } from "./Promises/Promises";
@@ -38,74 +38,72 @@ import { SearchFunction } from "./SearchFunction/SearchFunction";
 import { Sets } from "./Sets/Sets";
 import { SortFunctions } from "./SortFunctions/SortFunctions";
 import { StrictComparison } from "./StrictComparison/StrictComparison";
-import { stringsAndTemplateLiterals } from "./stringsAndTemplateLiterals/stringsAndTemplateLiterals";
+import { StringsAndTemplateLiterals } from "./stringsAndTemplateLiterals/stringsAndTemplateLiterals";
 import { Switch } from "./Switch/Switch";
 import { TemporalDeadZone } from "./TemporalDeadZone/TemporalDeadZone";
 import { TernaryOperatorAndLogicalOperators } from "./TernaryOperatorAndLogicalOperators/TernaryOperatorAndLogicalOperators";
-import { typeConversionInJS } from "./TypeConversion/typeConversion";
-import { typeNaN } from "./typeNaN/typeNaN";
+import { TypeConversionInJS } from "./TypeConversion/typeConversion";
 import { TypeofOperator } from "./TypeofOperator/TypeofOperator";
-import { VariableDeclarations } from "./VariableDeclarations/VariableDeclarations";
-import { VariablesLetConstVarAndHoisting } from "./VariablesLetConstVarAndHoisting/VariablesLetConstVarAndHoisting";
-import { errorHandling } from "./errorHandling/errorHandling";
-import { domManipulation } from "./domManipulation/domManipulation";
-
+import { ErrorHandling } from "./errorHandling/errorHandling";
+import { TypeNaN } from "./typeNaN/typeNaN";
+import { Classes } from "./Classes/Classes";
+import { DOMManipulation } from "./DOMManipulation/DOMManipulation";
+import { Variables } from "./Variables/Variables";
 
 export const JavaScript = {
   id: 13,
   title: "JavaScript",
   children: [
-    addEventListenerFunction,
-    arraysJavaScript,
-    arrowFunctions,
+    AddEventListenerFunction,
+    ArrowFunctions,
+    ArraysJavaScript,
     AsynchronousProgramming,
+    Codewars,
+    Classes,
+    Closure,
     ContextThis,
     CancelAscentAndDive,
-    Closure,
-    Codewars,
     DataTypes,
     Descriptors,
-    DestructuringInJS,
     DifferenceBetweenNullAndUndefined,
-    domManipulation,
+    DOMManipulation,
     DragAndDrop,
+    DestructuringInJS,
     ES6,
-    errorHandling,
+    ErrorHandling,
     EventLoop,
+    Functions,
     FunctionLevenshtein,
-    functionDeclarationAndExpressionAndArrow,
     GarbageCollection,
     GlobalWindowObject,
     HowObjectsBecomePrimitives,
     Hoisting,
-    Inheritance,
     IIFE,
+    Inheritance,
     LexicalEnvironment,
     LivingAndNonlivingCollections,
     LinearEquation,
     Methods,
-    modulesJavaScript,
-    typeNaN,
-    objectJavascript, 
+    ModulesJavaScript,
+    ObjectJavascript,
     OverrideBrowserDefaults,
-    Promises,
     PageVisibilityAPI,
+    Promises,
     Recursion,
     Reducers,
     RegularExpressions,
     Sets,
-    Switch,
+    Scope,
     SortFunctions,
     SearchFunction,
     StrictComparison,
-    stringsAndTemplateLiterals,
-    Scope,
+    StringsAndTemplateLiterals,
+    Switch,
     TemporalDeadZone,
     TernaryOperatorAndLogicalOperators,
+    TypeConversionInJS,
+    TypeNaN,
     TypeofOperator,
-    VariablesLetConstVarAndHoisting,
-    VariableDeclarations,
-    Codewars,
-    typeConversionInJS,
+    Variables,
   ],
 };

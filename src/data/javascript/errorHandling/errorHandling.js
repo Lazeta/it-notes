@@ -1,4 +1,4 @@
-export const errorHandling = {
+export const ErrorHandling = {
   id: 528,
   title: "Error Handling / Обработка ошибок",
   children: [

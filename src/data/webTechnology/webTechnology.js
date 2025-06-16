@@ -16,36 +16,50 @@ import { ConnectMethod } from "./ConnectMethod/ConnectMethod";
 import { RequestResponse } from "./RequestResponse/RequestResponse";
 import { CORS } from "./CORS/CORS";
 import { CRP } from "./CRP/CRP";
-import { REST } from "./REST/REST";
+import { RESTAPI } from "./RESTAPI/RESTAPI";
 import { WebThreats } from "./WebThreats/WebThreats";
 import { HTTPHeaders } from "./HTTPHeaders/HTTPHeaders";
 import { ResponseCodes } from "./ResponseCodes/ResponseCodes";
+import { Cookie } from "./Cookie/Cookie";
+import { LocalStorage } from "./LocalStorage/localStorage";
+import { SessionStorage } from "./SessionStorage/sessionStorage";
+import { Cache } from "./Cache/cache";
+import { DOM } from "./DOM/DOM";
+import { BOM } from "./BOM/BOM";
+import { DataStructure } from "./DataStructure/DataStructure";
 
 export const WebTechnology = {
   id: 11,
   title: "Web-technology",
   children: [
-    WhenUserOpensPage,
-    JWT,
-    JustAndHardRequest,
-    HTTPAndHTTPS,
-    VersionProtocolsHTTP,
-    IdempotentHTTPMethods,
-    ProtocolTCPAndUDP,
-    LongPollingAndShortPolling,
-    WebSocketAndPredecessorTechnologies,
-    ServerSentEvents,
-    PATCHandPUT,
-    GETandPOST,
-    Options,
-    ModelOSI,
-    ConnectMethod,
-    RequestResponse,
+    BOM,
+    Cache,
     CORS,
     CRP,
-    REST,
-    WebThreats,
+    Cookie,
+    ConnectMethod,
+    DataStructure,
+    DOM,
+    GETandPOST,
+    HTTPAndHTTPS,
     HTTPHeaders,
+    IdempotentHTTPMethods,
+    JWT,
+    JustAndHardRequest,
+    LocalStorage,
+    LongPollingAndShortPolling,
+    ModelOSI,
+    Options,
+    PATCHandPUT,
+    RESTAPI,
+    RequestResponse,
     ResponseCodes,
+    SessionStorage,
+    ServerSentEvents,
+    VersionProtocolsHTTP,
+    WebThreats,
+    WebSocketAndPredecessorTechnologies,
+    WhenUserOpensPage,
+    ProtocolTCPAndUDP,
   ],
 };

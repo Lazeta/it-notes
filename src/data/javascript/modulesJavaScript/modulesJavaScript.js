@@ -1,4 +1,4 @@
-export const modulesJavaScript = {
+export const ModulesJavaScript = {
   id: 527,
   title: "Модули в JavaScript",
   children: [
