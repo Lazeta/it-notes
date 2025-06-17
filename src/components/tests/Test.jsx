@@ -33,21 +33,23 @@ export const Test = ({ test }) => {
 
     return (
         <S.Tests>
-            <S.Test key={test.id}>
-                {test.questions.map((question) => (
-                    <div key={question.id}>
-                        <h3>{question.question}</h3>
-                        <textarea
-                            rows="4"
-                            value={userAnswers[question.id] || ""}
-                            onChange={(e) => handleAnswerChange(question.id, e.target.value)}
-                            placeholder="Введите ваш ответ"
-                        ></textarea>
-                    </div>
-                ))}
-                <button onClick={handleSubmit} disabled={!isTestComplete}>Завершить тест</button>
-                {results && <Results results={results} />}
-            </S.Test>
+            {results ? (<Results results={results} />
+            ) : (
+                <S.Test key={test.id}>
+                    {test.questions.map((question) => (
+                        <div key={question.id}>
+                            <h3>{question.question}</h3>
+                            <textarea
+                                rows="4"
+                                value={userAnswers[question.id] || ""}
+                                onChange={(e) => handleAnswerChange(question.id, e.target.value)}
+                                placeholder="Введите ваш ответ"
+                            ></textarea>
+                        </div>
+                    ))}
+                    <button onClick={handleSubmit} disabled={!isTestComplete}>Завершить тест</button>
+                </S.Test>
+            )}
         </S.Tests>
     )
 }
@@ -70,15 +72,15 @@ export const Test = ({ test }) => {
 
 
 
-{/* <Button title={"Show questions"} onClick={handleShowQuestionClick}></Button> */ }
+// {/* <Button title={"Show questions"} onClick={handleShowQuestionClick}></Button> */ }
 
-{/* отправляем ответ на анализ
-                        <button onClick={()=> {
-                            // делает API запрос на сервер AI
-                        }}>Send answer</button> *
-                        {/* кнопка для показа ответа
-                        <button onClick={() => handleShowAnswerClick(question.id)}>
-                            {showAnswer[question.id] ? "Скрыть ответ" : "Показать ответ"}
-                        </button>
-                        {/* Отображение ответа
-                        {showAnswer[question.id] && <p>{question.answer}</p>} */}
+// {/* отправляем ответ на анализ
+//                         <button onClick={()=> {
+//                             // делает API запрос на сервер AI
+//                         }}>Send answer</button> *
+//                         {/* кнопка для показа ответа
+//                         <button onClick={() => handleShowAnswerClick(question.id)}>
+//                             {showAnswer[question.id] ? "Скрыть ответ" : "Показать ответ"}
+//                         </button>
+//                         {/* Отображение ответа
+//                         {showAnswer[question.id] && <p>{question.answer}</p>} */}
