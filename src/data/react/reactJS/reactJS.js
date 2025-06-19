@@ -1,4 +1,3 @@
-import { testTwoWayDataBinding } from "../../tests/testTwoWayDataBinding";
 import { CacheReact } from "./CacheReact/CacheReact";
 import { componentRerenders } from "./componentRerenders/componentRerendersReact";
 import { FiberTree } from "./FiberTree/FiberTree";
@@ -8,6 +7,7 @@ import { polymorphismInReact } from "./polymorphismInReact/polymorphismInReact";
 import { PortalsReact } from "./PortalsReact/PortalsReact";
 import { Props } from "./Props/Props";
 import { PureComponent } from "./PureComponent/PureComponent";
+import { TwoWayBinding } from "./TwoWayBinding/TwoWayBinding";
 import { VirtualDom } from "./VirtualDom/VirtualDom";
 
 export const reactJS = {
@@ -24,7 +24,7 @@ export const reactJS = {
     FiberTree,
     VirtualDom,
     CacheReact,
-    testTwoWayDataBinding,
+    TwoWayBinding,
     {
       title: "",
       type: "text",
