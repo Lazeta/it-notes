@@ -36,7 +36,6 @@ import { testHooks } from "./React/Hooks/testHooks";
 import { testScope } from "./Javascript/Core/testScope";
 import { testPosition } from "./Javascript/CSS/testPosition";
 import { testMethodsArrays } from "./Javascript/Core/testMethodsArrays";
-import { testStateManager } from "./none/testStateManager";
 import { testSemantic } from "./Javascript/HTML/testSemantic";
 import { testMethodologyBem } from "./Common/Patterns/testMethodologyBem";
 import { testPrototype } from "./Javascript/Core/testPrototype";
@@ -107,7 +106,6 @@ export const test = [
   testSemanticVersioning,
   testLocalStorageLocalSession,
   testPosition,
-  testStateManager,
   testMethodologyBem,
   testTwoWayDataBinding,
   testWorkWithBackend,
