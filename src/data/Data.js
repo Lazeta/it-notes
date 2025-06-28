@@ -6,7 +6,7 @@ import { NextJs } from "./nextjs/nextJs";
 import { Patterns } from "./patterns/patterns";
 import { react } from "./react/react";
 import { HTML_CSS } from "./htmlcss/htmlcss";
-import { WebTechnology } from "./webTechnology/webTechnology";
+import { Network } from "./webTechnology/Network";
 import { gitParent } from "./git/gitParent";
 import { stateManaging } from "./stateManaging/stateManaging";
 
@@ -15,7 +15,7 @@ export const data = {
   id: 1,
   title: "Sections",
   children: [
-    WebTechnology,
+    Network,
     HTML_CSS,
     JavaScript,
     react,

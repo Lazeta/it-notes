@@ -13,7 +13,7 @@ export const WebSocketAndPredecessorTechnologies = {
       title: "Предшествующие технологии",
       type: "text",
       description: `
-            <p>До появления WebSocket использовались несколько технологий для реализации коммуникации в реальном времени:</p>
+            <p>До появления WebSocket использовали несколько технологий для реализации коммуникации в реальном времени:</p>
             <ul>
               <li><strong>HTTP Polling:</strong>
                 <ul>

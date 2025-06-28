@@ -1,4 +1,4 @@
-import { testTwoWayDataBinding } from "../../tests/testTwoWayDataBinding";
+import { testTwoWayDataBinding } from "../../tests/React/Optimization/testTwoWayDataBinding";
 import { CacheReact } from "./CacheReact/CacheReact";
 import { componentRerenders } from "./componentRerenders/componentRerendersReact";
 import { FiberTree } from "./FiberTree/FiberTree";
