@@ -24,15 +24,15 @@ export default function Categories({ data, openPath, onExpand }) {
     });
   }
 
-  // Защитная функция если данные не пришли корректно
-  const safeChildren = (children) =>
-    (children || []).map(child => ({
-      ...child,
-      title: child.title || 'Unknown Title', // Заполняем отсутствующие заголовки
-      children: safeChildren(child.children), // Рекурсивно обрабатываем дочерние элементы
-    }));
+  // // Защитная функция если данные не пришли корректно
+  // const safeChildren = (children) =>
+  //   (children || []).map(child => ({
+  //     ...child,
+  //     title: child.title || '', // Заполняем отсутствующие заголовки
+  //     children: safeChildren(child.children), // Рекурсивно обрабатываем дочерние элементы
+  //   }));
 
-  const filteredChildren = filterChildren(safeChildren(data.children));
+  const filteredChildren = filterChildren((data.children));
 
   return (
     <S.Categories
