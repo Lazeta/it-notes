@@ -17,29 +17,37 @@ export default function Categories({ data, openPath, onExpand }) {
   const filterChildren = (children) => {
     if (!children) return [];
     return children.filter(child => {
-      const matchesTitle = child.title
-        .toLowerCase()
-        .includes(searchTerm.toLowerCase());
+      const matchesTitle = typeof child.title === 'string'
+        && child.title.toLowerCase().includes(searchTerm.toLowerCase());
       const hasVisibleChildren = filterChildren(child.children).length > 0;
       return matchesTitle || hasVisibleChildren;
     });
   }
-  const filteredChildren = filterChildren(data.children);
+
+  // Защитная функция если данные не пришли корректно
+  const safeChildren = (children) =>
+    (children || []).map(child => ({
+      ...child,
+      title: child.title || 'Unknown Title', // Заполняем отсутствующие заголовки
+      children: safeChildren(child.children), // Рекурсивно обрабатываем дочерние элементы
+    }));
+
+  const filteredChildren = filterChildren(safeChildren(data.children));
 
   return (
-    <S.Categories 
+    <S.Categories
       key={data.id}>
-      {data.type === "image" ? (<Image data={data} />) : 
-      data.type === "video" ? (<Video data={data} />) : 
-      data.type === "text" ? (<Text data={data} />) : 
-      (
-        <Button
-          key={data.id}
-          onClick={() => expand(data.id)}
-          type="button"
-          title={data.title}
-        />
-      )}
+      {data.type === "image" ? (<Image data={data} />) :
+        data.type === "video" ? (<Video data={data} />) :
+          data.type === "text" ? (<Text data={data} />) :
+            (
+              <Button
+                key={data.id}
+                onClick={() => expand(data.id)}
+                type="button"
+                title={data.title}
+              />
+            )}
 
       {isOpen && filteredChildren.length > 0 && (
         <S.ChildMap>
@@ -47,7 +55,7 @@ export default function Categories({ data, openPath, onExpand }) {
             <div key={child.id}>
               <Categories
                 key={child.id}
-                data={child} 
+                data={child}
                 openPath={openPath}
                 onExpand={(itemId) => onExpand(itemId)}
               />

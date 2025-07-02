@@ -66,26 +66,90 @@ import { testRouteRef } from "./React/Routing/testRouteRef";
 import { testMethodsObjects } from "./Javascript/Core/testMethodsObjects";
 import { testPureComponent } from "./React/Optimization/testPureComponent";
 import { testHTTP } from "./Common/GeneralPrinciples/testHTTP";
+import { testAppSpeedEstimation } from "./Common/Debugging/testAppSpeedEstimation";
+import { testMapSet } from "./Common/DataStructures/testMapSet";
+import { testCommonPrinciples } from "./Common/GeneralPrinciples/testCommonPrinciples";
+import { testProgrammingParadigms } from "./Common/GeneralPrinciples/testProgrammingParadigms";
+import { testDesignPatterns } from "./Common/Patterns/testDesignPatterns";
+import { testEnum } from "./TypeScript/Advanced/testEnum";
+import { testTypeGuards } from "./TypeScript/Advanced/testTypeGuards";
+import { testE2E } from "./React/Testing/testE2E";
+import { testJestEnzymeOtherTools } from "./React/Testing/testJestEnzymeOtherTools";
+import { testUtilityTypes } from "./TypeScript/Advanced/testUtilityTypes";
+import { testClassesTypeScript } from "./TypeScript/Core/testClassesTypeScript";
+import { testModuleTypeScript } from "./TypeScript/Core/testModuleTypeScript";
+import { testStrictModeTypeScript } from "./TypeScript/Core/testStrictModeTypeScript";
+import { testRegularExpressions } from "./Javascript/Core/testRegularExpressions";
+import { testGarbageCollector } from "./Javascript/Core/testGarbageCollector";
+import { testSnapshotTesting } from "./React/Testing/testSnapshotTesting";
+import { testReactRouter } from "./React/Routing/testReactRouter";
+import { testReactRouterAPI } from "./React/Routing/testReactRouterAPI";
+import { testHooksRouting } from "./React/Routing/testHooksRouting";
+import { testHistoryLocationMatch } from "./React/Routing/testHistoryLocationMatch";
+import { testUnionTypeIntersection } from "./TypeScript/Core/testUnionType&Intersection";
+import { testSelectorsRedux } from "./React/Redux/testSelectorsRedux";
+import { testReduxAlternative } from "./React/Redux/testReduxAlternative";
+import { testRedux } from "./React/Redux/testRedux";
+import { testReducersRedux } from "./React/Redux/testReducersRedux";
+import { testUseEffect } from "./React/Hooks/testUseEffect";
+import { testUseContext } from "./React/Hooks/testUseContext";
+import { testOtherHooks } from "./React/Hooks/testOtherHooks";
+import { testCustomHooks } from "./React/Hooks/testCustomHooks";
+import { testSyntheticEvent } from "./React/Events/testSyntheticEvent";
+import { testJSXHandlers } from "./React/Events/testJSXHandlers";
+import { testBubblingEventInReact } from "./React/Events/testBubblingEventInReact";
+import { test3ReduxMainPrinciples } from "./React/Redux/test3ReduxMainPrinciples";
+import { testBindingEvents } from "./React/Events/testBindingEvents";
+import { testWorkingWithFormsReact } from "./React/Components/testWorkingWithForms";
+import { testWhyHooks } from "./React/Components/testWhyHooks";
+import { testState } from "./React/Components/testState";
+import { testRefs } from "./React/Components/testRefs";
+import { testPropsValidation } from "./React/Components/testPropsValidation";
+import { testPortals } from "./React/Components/testPortals";
+import { testPatternsReact } from "./React/Components/testPatternsReact";
+import { testLifecycleMethods } from "./React/Components/testLifecycleMethods";
+import { testFunctionalComponents } from "./React/Components/testFunctionalComponents";
+import { testControlledUncontrolled } from "./React/Components/testControlledUncontrolled";
+import { testContextReact } from "./React/Components/testContextReact";
+import { testClassComponents } from "./React/Components/testClassComponents";
+import { testVirtualization } from "./React/Optimization/testVirtualization";
+import { testUseMemoUseCallback } from "./React/Optimization/testUseMemo&UseCallback";
+import { testReselectRecompose } from "./React/Optimization/testReselect&Recompose";
+import { testReduxDevtools } from "./React/Optimization/testReduxDevtools";
+import { testReactDevtools } from "./React/Optimization/testReactDevtools";
+import { testRenderReact } from "./React/JSX/testRenderReact";
+import { testFragments } from "./React/JSX/testFragments";
+import { testLazyImports } from "./React/Optimization/testLazyImports&DynamicImports";
+import { testConcurrentModeSuspense } from "./React/Optimization/testConcurrentMode&Suspense";
+import { testBundleOptimization } from "./React/Optimization/testBundleOptimization";
+import { testBasicReactOptimization } from "./React/Optimization/testBasicReactOptimization";
+import { testUseLayoutEffect } from "./React/Hooks/testUseLayoutEffect";
+import { testUseReducer } from "./React/Hooks/testUseReducer";
+import { testUseState } from "./React/Hooks/testUseState";
+import { testMiddlewares } from "./React/Redux/testMiddlewares";
+import { testHOCconnect } from "./React/Redux/testHOCconnect";
+import { testActions } from "./React/Redux/testActions";
+import { testErrorHandling } from "./Javascript/Core/testErrorHandling";
 
 export const test = [
+  // Main themes
+  testProgrammingParadigms,
+  testFunctionalProgramming,
+  testCommonPrinciples,
   testEventLoop,
   testOOP,
   testClosure,
   testPromise,
-  testFiber, 
   testDOM,
-  testBOM, 
+  testBOM,
+  testFiber,
   testThis,
   testVirtualDom,
-  testFunctionalProgramming,
   testDataType,
-  testDataStructure, 
-  testDataBase,
   testSOLID,
   testRESTAPI,
   testCORS,
   testVarLetConst,
-  testStyleIsolation,
   testEquality,
   testFunctions,
   testIIFE,
@@ -97,56 +161,112 @@ export const test = [
   testMemo,
   testHooks,
   testPureComponent,
-  testPrototype,
   testContext,
+  testContextReact,
   testInheritance,
-  testRouteRef, 
   testGenerics,
-  testSemantic,
-  testSemanticVersioning,
-  testLocalStorageLocalSession,
-  testPosition,
-  testMethodologyBem,
-  testTwoWayDataBinding,
-  testWorkWithBackend,
-  testGitFlow,
-  testUseTSJS,
-  testPsevdoelement,
-  testCSS,
-    // [10%] Что такое css
-    // [10%] Что означает слово каскад в css
-    // [10%] Разница между margin и padding
-    // [10%] Cвойство display - основное значение и как оно работает
-    // [10%] Как отцентрировать блок по горизонтали и по вертикали
-    // [10%] Что такое inline стили, и какой они имеют приоритет
-    // [10%] Что такое наследование в css
-    // [10%] Какими способами можно скрыть элемент 
-    // [3%]	Что необходимо указать в css для срабатывания данных брэкпоинтов
-  testProps,
-  testJSX,
-  testReact,
-  testSelectorsCSS,
-    // [10%] Какие селекторы знаешь
-    // [10%] Что такое псевдоклассы
-    // [10%] Что ты знаешь про специфичность селекторов
-  testTernaryOperator,
-  testDestructurization,
-  testEvents,
-    // [10%] E.Preventdefailt() и e.Stopprepaganation(), для чего нужны
-  testSetTimeout,
-  testAsyncAwait,
-  testLibrary, 
-  testHTML, 
-  testTesting, 
-  testProcessors, 
-  testPureFunction, 
-  testCookie,
-  testCache,
-  testAgile, 
-  testClasses, 
-  testSemanticCriticalRenderingPath, 
-  testRequestParamJSON, 
-  testSearchMethods,
   testTypescript,
   testHTTP,
+  testMapSet,
+  testCookie,
+  testCache,
+  testReact,
+  testProps,
+  testLocalStorageLocalSession,
+  testJSX,
+  testSemantic,
+  testSemanticCriticalRenderingPath,
+  testClasses,
+  testEvents,
+  testPureFunction,
+  testReactRouter,
+  testReactRouterAPI,
+  testRedux,
+  test3ReduxMainPrinciples,
+  testSelectorsRedux,
+  testReducersRedux,
+  testUseEffect,
+  testUseContext,
+  testCustomHooks,
+  testWorkingWithFormsReact,
+  testState,
+  testRefs,
+  testPatternsReact,
+  testFunctionalComponents,
+  testLifecycleMethods,
+  testClassComponents,
+  testUseMemoUseCallback,
+  testLazyImports,
+  testBasicReactOptimization,
+  testUseLayoutEffect,
+  testUseReducer,
+  testUseState,
+  testMiddlewares,
+  testHOCconnect,
+  testActions,
+
+  // Additional themes
+  testDesignPatterns,
+  testDataStructure,
+  testDataBase,
+  testStyleIsolation,
+  testPrototype,
+  testMethodologyBem,
+  testAppSpeedEstimation,
+  testRouteRef,
+  testUseTSJS,
+  testCSS,
+  testSelectorsCSS,
+  testEnum,
+  testGitFlow,
+  testTypeGuards,
+  testE2E,
+  testSemanticVersioning,
+  testUtilityTypes,
+  testClassesTypeScript,
+  testModuleTypeScript,
+  testStrictModeTypeScript,
+  testRegularExpressions,
+  testGarbageCollector,
+  testAsyncAwait,
+  testHTML,
+  testDestructurization,
+  testTernaryOperator,
+  testSetTimeout,
+  testWorkWithBackend,
+  testSnapshotTesting,
+  testAgile,
+  testRequestParamJSON,
+  testSearchMethods,
+  testTesting,
+  testHooksRouting,
+  testHistoryLocationMatch,
+  testUnionTypeIntersection,
+  testOtherHooks,
+  testSyntheticEvent,
+  testJSXHandlers,
+  testBubblingEventInReact,
+  testBindingEvents,
+  testWhyHooks,
+  testPosition,
+  testTwoWayDataBinding,
+  testPsevdoelement,
+  testPropsValidation,
+  testPortals,
+  testControlledUncontrolled,
+  testVirtualization,
+  testReselectRecompose,
+  testReduxDevtools,
+  testReactDevtools,
+  testRenderReact,
+  testFragments,
+  testConcurrentModeSuspense,
+  testBundleOptimization,
+  testErrorHandling,
+
+  // other themes
+  testProcessors,
+  testLibrary,
+  testJestEnzymeOtherTools,
+  testReduxAlternative,
 ];
