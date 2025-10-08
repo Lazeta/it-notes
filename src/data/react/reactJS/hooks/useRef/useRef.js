@@ -1,6 +1,6 @@
 export const useRef = {
   id: 2545,
-  title: "Хук useRef",
+  title: "useRef",
   children: [
     {
       title: "Определение",
