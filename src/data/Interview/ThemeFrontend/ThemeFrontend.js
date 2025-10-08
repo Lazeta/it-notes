@@ -1,13 +1,21 @@
-import { CommonQuestions } from "./CommonQuestions/CommonQuestions";
+import { Definitions } from "./Definitions/Definitions";
 import { JSQuestions } from "./JSQuestions/JSQuestions";
-import { ThemeInterview } from "./ThemeInterview/ThemeInterview";
+import { CommonQuestionsList } from "./CommonQuestions/CommonQuestions";
+import { HTMLCSS } from "./HTMLCSS/HTMLCSS";
+import { Network } from "./Network/Network";
+import { ReactInterview } from "./ReactInterview/ReactInterview";
+import { TypeScript } from "./TypeScript/TypeScript";
 
 export const ThemeFrontend = {
   id: 195,
   title: "Theme Frontend",
   children: [
-    CommonQuestions,
+    Definitions,
+    CommonQuestionsList,
+    Network,
+    HTMLCSS,
     JSQuestions,
-    ThemeInterview,
+    TypeScript,
+    ReactInterview,
   ],
 };
