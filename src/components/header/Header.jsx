@@ -23,8 +23,8 @@ export const Header = () => {
   };
 
   return (
-    <S.Header>
-      <h2>Programming Notes</h2>
+    <S.Header role="banner">
+      <h1>Programming Notes</h1>
       <NoteForm addNote={addNote} />
     </S.Header>
   );

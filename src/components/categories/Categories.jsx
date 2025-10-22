@@ -24,14 +24,6 @@ export default function Categories({ data, openPath, onExpand }) {
     });
   }
 
-  // // Защитная функция если данные не пришли корректно
-  // const safeChildren = (children) =>
-  //   (children || []).map(child => ({
-  //     ...child,
-  //     title: child.title || '', // Заполняем отсутствующие заголовки
-  //     children: safeChildren(child.children), // Рекурсивно обрабатываем дочерние элементы
-  //   }));
-
   const filteredChildren = filterChildren((data.children));
 
   return (
@@ -46,18 +38,20 @@ export default function Categories({ data, openPath, onExpand }) {
                 onClick={() => expand(data.id)}
                 type="button"
                 title={data.title}
+                ariaExpanded={isOpen}
+                ariaControls={`category-${data.id}`}
               />
             )}
 
-      {isOpen && filteredChildren.length > 0 && (
-        <S.ChildMap>
+      {isOpen && (
+        <S.ChildMap id={`category-${data.id}`}>
           {filteredChildren.map((child) => (
             <div key={child.id}>
               <Categories
                 key={child.id}
                 data={child}
                 openPath={openPath}
-                onExpand={(itemId) => onExpand(itemId)}
+                onExpand={expand} //* 
               />
             </div>
           ))}

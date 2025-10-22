@@ -9,7 +9,6 @@ function App() {
       <Header />
       <Line />
       <Main />
-      {/* <Footer /> */}
     </div>
   );
 }

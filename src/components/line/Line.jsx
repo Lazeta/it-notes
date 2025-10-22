@@ -3,8 +3,7 @@ import { S } from "./Line.styles";
 export const Line = () => {
   return (
     <S.Line>
-      <hr />
-      <br />
+      <hr className="separator"/>
     </S.Line>
   );
 };
