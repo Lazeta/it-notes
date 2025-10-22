@@ -10,7 +10,10 @@ const Button = styled.button`
   cursor: pointer;
   font-size: 16px;
   padding: 12px 10px;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  transition:
+    background-color 0.3s,
+    transform 0.3s,
+    box-shadow 0.3s;
 
   &:hover {
     background-color: #2ba7bd;
@@ -19,11 +22,21 @@ const Button = styled.button`
   }
 
   &:active {
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      transform: translateX(0px) scale(1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateX(0px) scale(1);
+  }
+
+  .btn-text {
+    display: inline-flex;
+    flex-shrink: 0;
+    line-height: inherit;
+  }
+
+  .btn-icon {
+    white-space: nowrap;
   }
 `;
 
 export const S = {
   Button,
-}
+};
