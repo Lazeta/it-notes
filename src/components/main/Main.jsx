@@ -1,9 +1,9 @@
 import { data } from "../../data/Data";
-import { test } from "../../data/tests/test";
 import ParentComponent from "../categories/ParentComponent";
 import { Line } from "../line/Line";
 import { Tests } from "../tests/Tests";
 import { S } from "./Main.styles";
+import { testList } from "../../data/tests/testList"; 
 
 export const Main = () => {
   return (
@@ -12,7 +12,7 @@ export const Main = () => {
       <Line/>
       <S.Details>
         <S.Summary>Тесты</S.Summary>
-        <Tests testId={test}/>
+        <Tests testId={testList}/>
       </S.Details>
     </S.Main>
   );

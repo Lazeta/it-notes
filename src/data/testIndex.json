@@ -1,0 +1,662 @@
+{
+  "100000": {
+    "path": "./tests/Common/Development/testAgile",
+    "exportName": "testAgile",
+    "title": "Тест по Agile"
+  },
+  "100025": {
+    "path": "./tests/Javascript/Browser/testEventLoop",
+    "exportName": "testEventLoop",
+    "title": "Eventloop"
+  },
+  "100050": {
+    "path": "./tests/Common/GeneralPrinciples/testCORS",
+    "exportName": "testCORS",
+    "title": "Тест по CORS"
+  },
+  "100075": {
+    "path": "./tests/Common/GeneralPrinciples/testRESTAPI",
+    "exportName": "testRESTAPI",
+    "title": "Тест по REST API"
+  },
+  "100100": {
+    "path": "./tests/Javascript/Core/testMethodsObjects",
+    "exportName": "testMethodsObjects",
+    "title": "Methods of Objects (методы объекта)"
+  },
+  "100120": {
+    "path": "./tests/Javascript/Browser/testDOM",
+    "exportName": "testDOM",
+    "title": "DOM"
+  },
+  "100125": {
+    "path": "./tests/Javascript/Core/testSearchMethods",
+    "exportName": "testSearchMethods",
+    "title": "Search methods"
+  },
+  "100150": {
+    "path": "./tests/Javascript/Core/testClosure",
+    "exportName": "testClosure",
+    "title": "Closure (Замыкания)"
+  },
+  "100175": {
+    "path": "./tests/Javascript/Core/testPromise",
+    "exportName": "testPromise",
+    "title": "Promise (Промисы)"
+  },
+  "100200": {
+    "path": "./tests/React/Reconciliation/testVirtualDom",
+    "exportName": "testVirtualDom",
+    "title": "Virtual Dom (Виртуальный Дом)"
+  },
+  "100225": {
+    "path": "./tests/React/Reconciliation/testFiber",
+    "exportName": "testFiber",
+    "title": "Файбер дерево"
+  },
+  "100250": {
+    "path": "./tests/Javascript/Browser/testBOM",
+    "exportName": "testBOM",
+    "title": "BOM (Browser Object Model)"
+  },
+  "100275": {
+    "path": "./tests/Javascript/Core/testDataType",
+    "exportName": "testDataType",
+    "title": "Data Type (Типы Данных)"
+  },
+  "100300": {
+    "path": "./tests/Common/DataStructures/testDataStructure",
+    "exportName": "testDataStructure",
+    "title": "Data Structure (Структуры Данных)"
+  },
+  "100325": {
+    "path": "./tests/Common/DataStructures/testDataBase",
+    "exportName": "testDataBase",
+    "title": "Data Base (База Данных)"
+  },
+  "100350": {
+    "path": "./tests/Common/Patterns/testOOP",
+    "exportName": "testOOP",
+    "title": "ООП"
+  },
+  "100375": {
+    "path": "./tests/Common/Patterns/testSOLID",
+    "exportName": "testSOLID",
+    "title": "S.O.L.I.D."
+  },
+  "100400": {
+    "path": "./tests/Javascript/Core/testVarLetConst",
+    "exportName": "testVarLetConst",
+    "title": "Var Let Const"
+  },
+  "100475": {
+    "path": "./tests/Javascript/CSS/testStyleIsolation",
+    "exportName": "testStyleIsolation",
+    "title": "Изоляция Стилей"
+  },
+  "100500": {
+    "path": "./tests/Common/GeneralPrinciples/testFunctionalProgramming",
+    "exportName": "testFunctionalProgramming",
+    "title": "Functional Programming (Функциональное программирование)"
+  },
+  "100525": {
+    "path": "./tests/Javascript/Core/testEquality",
+    "exportName": "testEquality",
+    "title": "Equality (Равенство)"
+  },
+  "100550": {
+    "path": "./tests/Javascript/Core/testFunctions",
+    "exportName": "testFunctions",
+    "title": "Functions (функции)"
+  },
+  "100575": {
+    "path": "./tests/Javascript/Core/testMapVsForEach",
+    "exportName": "testMapVsForEach",
+    "title": "Map и forEach"
+  },
+  "100600": {
+    "path": "./tests/Javascript/Core/testNullVsUndefined",
+    "exportName": "testNullVsUndefined",
+    "title": "null и undefined"
+  },
+  "100625": {
+    "path": "./tests/TypeScript/Advanced/testGenerics",
+    "exportName": "testGenerics",
+    "title": "Generic (дженерик)"
+  },
+  "100650": {
+    "path": "./tests/React/Optimization/testMemo",
+    "exportName": "testMemo",
+    "title": "Memoization (мемоизация)"
+  },
+  "100675": {
+    "path": "./tests/Javascript/HTML/testSemanticVersioning",
+    "exportName": "testSemanticVersioning",
+    "title": "Семантическое версионирование"
+  },
+  "100700": {
+    "path": "./tests/Javascript/Core/testThis",
+    "exportName": "testThis",
+    "title": "This (привязка контекста)"
+  },
+  "100725": {
+    "path": "./tests/Javascript/Storage/testLocalStorageLocalSession",
+    "exportName": "testLocalStorageLocalSession",
+    "title": "LocalStorage, SessionStorage"
+  },
+  "100750": {
+    "path": "./tests/React/Hooks/testHooks",
+    "exportName": "testHooks",
+    "title": "Hooks (Хуки)"
+  },
+  "100775": {
+    "path": "./tests/Javascript/Core/testScope",
+    "exportName": "testScope",
+    "title": "Scope (Область видимости)"
+  },
+  "100800": {
+    "path": "./tests/Javascript/CSS/testPosition",
+    "exportName": "testPosition",
+    "title": "Позиционирование"
+  },
+  "100825": {
+    "path": "./tests/Javascript/Core/testMethodsArrays",
+    "exportName": "testMethodsArrays",
+    "title": "Arrays (массивы)"
+  },
+  "100875": {
+    "path": "./tests/React/Redux/testSelectorsRedux",
+    "exportName": "testSelectorsRedux",
+    "title": "Selectors (селекторы)"
+  },
+  "100900": {
+    "path": "./tests/Javascript/HTML/testSemantic",
+    "exportName": "testSemantic",
+    "title": "Semantic (Семантика)"
+  },
+  "100925": {
+    "path": "./tests/Common/Patterns/testMethodologyBem",
+    "exportName": "testMethodologyBem",
+    "title": "Методология BEM"
+  },
+  "100950": {
+    "path": "./tests/Javascript/Core/testPrototype",
+    "exportName": "testPrototype",
+    "title": "Прототипы и прото"
+  },
+  "100975": {
+    "path": "./tests/Javascript/Core/testContext",
+    "exportName": "testContext",
+    "title": "Context (контекст)"
+  },
+  "101000": {
+    "path": "./tests/React/Optimization/testTwoWayDataBinding",
+    "exportName": "testTwoWayDataBinding",
+    "title": "Two-Way Binding (двустороннее связывание)"
+  },
+  "101025": {
+    "path": "./tests/Common/GeneralPrinciples/testWorkWithBackend",
+    "exportName": "testWorkWithBackend",
+    "title": "Work with backend"
+  },
+  "101050": {
+    "path": "./tests/Common/Git/testGitFlow",
+    "exportName": "testGitFlow",
+    "title": "Git Flow"
+  },
+  "101075": {
+    "path": "./tests/Common/GeneralPrinciples/testUseTSJS",
+    "exportName": "testUseTSJS",
+    "title": "Используем TypeScript"
+  },
+  "101100": {
+    "path": "./tests/Common/DataStructures/testMapSet",
+    "exportName": "testMapSet",
+    "title": "Map и Set"
+  },
+  "101125": {
+    "path": "./tests/Javascript/CSS/testPsevdoelement",
+    "exportName": "testPsevdoelement",
+    "title": "Псевдоэлемент"
+  },
+  "101150": {
+    "path": "./tests/Javascript/Core/testIIFE",
+    "exportName": "testIIFE",
+    "title": "IIFE"
+  },
+  "101175": {
+    "path": "./tests/Javascript/CSS/testCSS",
+    "exportName": "testCSS",
+    "title": "CSS"
+  },
+  "101200": {
+    "path": "./tests/React/Components/testProps",
+    "exportName": "testProps",
+    "title": "Props (пропсы)"
+  },
+  "101225": {
+    "path": "./tests/React/JSX/testJSX",
+    "exportName": "testJSX",
+    "title": "JSX"
+  },
+  "101250": {
+    "path": "./tests/React/testReact",
+    "exportName": "testReact",
+    "title": "React"
+  },
+  "101275": {
+    "path": "./tests/Javascript/CSS/testSelectorsCSS",
+    "exportName": "testSelectorsCSS",
+    "title": "Selectors types, Selector weight, styles that are inherited"
+  },
+  "101300": {
+    "path": "./tests/Javascript/Core/testTernaryOperator",
+    "exportName": "testTernaryOperator",
+    "title": "Тернарный оператор"
+  },
+  "101325": {
+    "path": "./tests/Javascript/Core/testDestructurization",
+    "exportName": "testDestructurization",
+    "title": "Деструктуризация"
+  },
+  "101350": {
+    "path": "./tests/Javascript/Browser/testEvents",
+    "exportName": "testEvents",
+    "title": "Events"
+  },
+  "101375": {
+    "path": "./tests/Javascript/Core/testSetTimeout",
+    "exportName": "testSetTimeout",
+    "title": "SetTimeout"
+  },
+  "101400": {
+    "path": "./tests/Javascript/Core/testInheritance",
+    "exportName": "testInheritance",
+    "title": "Inheritance (Наследование)"
+  },
+  "101425": {
+    "path": "./tests/Javascript/Core/testAsyncAwait",
+    "exportName": "testAsyncAwait",
+    "title": "Async Await"
+  },
+  "101450": {
+    "path": "./tests/Common/GeneralPrinciples/testLibrary",
+    "exportName": "testLibrary",
+    "title": "Библиотеки"
+  },
+  "101475": {
+    "path": "./tests/Javascript/HTML/testHTML",
+    "exportName": "testHTML",
+    "title": "HTML"
+  },
+  "101500": {
+    "path": "./tests/React/Testing/testTesting",
+    "exportName": "testTesting",
+    "title": "Тестирование"
+  },
+  "101525": {
+    "path": "./tests/Common/GeneralPrinciples/testProcessors",
+    "exportName": "testProcessors",
+    "title": "Processors - Процессоры"
+  },
+  "101550": {
+    "path": "./tests/Javascript/Core/testPureFunction",
+    "exportName": "testPureFunction",
+    "title": "PureFunction (чистая функция)"
+  },
+  "101575": {
+    "path": "./tests/Javascript/Storage/testCookie",
+    "exportName": "testCookie",
+    "title": "Cookie"
+  },
+  "101600": {
+    "path": "./tests/Javascript/Storage/testCache",
+    "exportName": "testCache",
+    "title": "Cache (Кэширование)"
+  },
+  "101625": {
+    "path": "./tests/Javascript/Core/testClasses",
+    "exportName": "testClasses",
+    "title": "Classes"
+  },
+  "101650": {
+    "path": "./tests/Javascript/HTML/testSemanticCriticalRenderingPath",
+    "exportName": "testSemanticCriticalRenderingPath",
+    "title": "Semantic, Critical Rendering path, block/inline elements"
+  },
+  "101675": {
+    "path": "./tests/Common/GeneralPrinciples/testRequestParamJSON",
+    "exportName": "testRequestParamJSON",
+    "title": "Request parameters and JSON"
+  },
+  "101700": {
+    "path": "./tests/TypeScript/Core/testTypescript",
+    "exportName": "testTypescript",
+    "title": "Typescript"
+  },
+  "101725": {
+    "path": "./tests/React/Routing/testRouteRef",
+    "exportName": "testRouteRef",
+    "title": "forwardRef (Перенаправление Ref)"
+  },
+  "101750": {
+    "path": "./tests/React/Optimization/testPureComponent",
+    "exportName": "testPureComponent",
+    "title": "PureComponent (чистый компонент)"
+  },
+  "101800": {
+    "path": "./tests/Common/GeneralPrinciples/testHTTP",
+    "exportName": "testHTTP",
+    "title": "Тест по HTTP и HTTPS"
+  },
+  "101825": {
+    "path": "./tests/Common/Debugging/testAppSpeedEstimation",
+    "exportName": "testAppSpeedEstimation",
+    "title": "Тест по оценке скорости приложения"
+  },
+  "101850": {
+    "path": "./tests/Common/GeneralPrinciples/testCommonPrinciples",
+    "exportName": "testCommonPrinciples",
+    "title": "Общие принципы"
+  },
+  "101875": {
+    "path": "./tests/Common/GeneralPrinciples/testProgrammingParadigms",
+    "exportName": "testProgrammingParadigms",
+    "title": "Тест по парадигмам программирования"
+  },
+  "101900": {
+    "path": "./tests/Common/Patterns/testDesignPatterns",
+    "exportName": "testDesignPatterns",
+    "title": "Тест по паттернам проектирования"
+  },
+  "101925": {
+    "path": "./tests/TypeScript/Core/testUnionType&Intersection",
+    "exportName": "testUnionTypeIntersection",
+    "title": "Union type & Intersection type"
+  },
+  "101950": {
+    "path": "./tests/TypeScript/Core/testStrictModeTypeScript",
+    "exportName": "testStrictModeTypeScript",
+    "title": "Strict mode"
+  },
+  "101975": {
+    "path": "./tests/TypeScript/Core/testModuleTypeScript",
+    "exportName": "testModuleTypeScript",
+    "title": "Модули"
+  },
+  "102000": {
+    "path": "./tests/TypeScript/Core/testClassesTypeScript",
+    "exportName": "testClassesTypeScript",
+    "title": "Классы"
+  },
+  "102025": {
+    "path": "./tests/TypeScript/Advanced/testEnum",
+    "exportName": "testEnum",
+    "title": "Enum"
+  },
+  "102050": {
+    "path": "./tests/TypeScript/Advanced/testTypeGuards",
+    "exportName": "testTypeGuards",
+    "title": "Type Guards"
+  },
+  "102075": {
+    "path": "./tests/React/Testing/testE2E",
+    "exportName": "testE2E",
+    "title": "E2E тесты"
+  },
+  "102100": {
+    "path": "./tests/TypeScript/Advanced/testUtilityTypes",
+    "exportName": "testUtilityTypes",
+    "title": "Utility Types"
+  },
+  "102125": {
+    "path": "./tests/React/Testing/testJestEnzymeOtherTools",
+    "exportName": "testJestEnzymeOtherTools",
+    "title": "Другие инструменты"
+  },
+  "102150": {
+    "path": "./tests/Javascript/Core/testRegularExpressions",
+    "exportName": "testRegularExpressions",
+    "title": "Regular Expressions (Регулярные выражения)"
+  },
+  "102175": {
+    "path": "./tests/Javascript/Core/testGarbageCollector",
+    "exportName": "testGarbageCollector",
+    "title": "Garbage Collector (сборщик мусора)"
+  },
+  "102200": {
+    "path": "./tests/Javascript/Core/testErrorHandling",
+    "exportName": "testErrorHandling",
+    "title": "Error Handling (обработка ошибок)"
+  },
+  "102225": {
+    "path": "./tests/React/Testing/testSnapshotTesting",
+    "exportName": "testSnapshotTesting",
+    "title": "Snapshot Testing (снапшот тестирование)"
+  },
+  "102250": {
+    "path": "./tests/React/Routing/testReactRouter",
+    "exportName": "testReactRouter",
+    "title": "React Router (Роутинг)"
+  },
+  "102275": {
+    "path": "./tests/React/Routing/testReactRouterAPI",
+    "exportName": "testReactRouterAPI",
+    "title": "React Router API"
+  },
+  "102300": {
+    "path": "./tests/React/Routing/testHistoryLocationMatch",
+    "exportName": "testHistoryLocationMatch",
+    "title": "History, Location, Match (React Router)"
+  },
+  "102325": {
+    "path": "./tests/React/Routing/testHooksRouting",
+    "exportName": "testHooksRouting",
+    "title": "React Hooks & Routing"
+  },
+  "102375": {
+    "path": "./tests/React/Hooks/testUseEffect",
+    "exportName": "testUseEffect",
+    "title": "хук useEffect"
+  },
+  "102400": {
+    "path": "./tests/React/Redux/testReduxAlternative",
+    "exportName": "testReduxAlternative",
+    "title": "Redux (альтернативы)"
+  },
+  "102425": {
+    "path": "./tests/React/Redux/testRedux",
+    "exportName": "testRedux",
+    "title": "Управление состоянием приложения"
+  },
+  "102450": {
+    "path": "./tests/React/Redux/testReducersRedux",
+    "exportName": "testReducersRedux",
+    "title": "Reducers в Redux"
+  },
+  "102475": {
+    "path": "./tests/React/Hooks/testUseContext",
+    "exportName": "testUseContext",
+    "title": "useContext (контекст)"
+  },
+  "102500": {
+    "path": "./tests/React/Hooks/testOtherHooks",
+    "exportName": "testOtherHooks",
+    "title": "Другие хуки React"
+  },
+  "102525": {
+    "path": "./tests/React/Hooks/testCustomHooks",
+    "exportName": "testCustomHooks",
+    "title": "Custom hooks (пользовательские хуки)"
+  },
+  "102550": {
+    "path": "./tests/React/Events/testSyntheticEvent",
+    "exportName": "testSyntheticEvent",
+    "title": "SyntheticEvent (синтетическое событие)"
+  },
+  "102575": {
+    "path": "./tests/React/Events/testJSXHandlers",
+    "exportName": "testJSXHandlers",
+    "title": "JSX Handlers (обработчики JSX)"
+  },
+  "102600": {
+    "path": "./tests/React/Events/testBubblingEventInReact",
+    "exportName": "testBubblingEventInReact",
+    "title": "Bubbling Event in React"
+  },
+  "102625": {
+    "path": "./tests/React/Events/testBindingEvents",
+    "exportName": "testBindingEvents",
+    "title": "Binding Events (привязка событий)"
+  },
+  "102650": {
+    "path": "./tests/React/Components/testWorkingWithForms",
+    "exportName": "testWorkingWithFormsReact",
+    "title": "Working with Forms in React"
+  },
+  "102675": {
+    "path": "./tests/React/Components/testWhyHooks",
+    "exportName": "testWhyHooks",
+    "title": "Why Hooks (зачем нужны хуки)"
+  },
+  "102700": {
+    "path": "./tests/React/Components/testState",
+    "exportName": "testState",
+    "title": "State Management (управление состоянием)"
+  },
+  "102725": {
+    "path": "./tests/React/Components/testRefs",
+    "exportName": "testRefs",
+    "title": "Refs (ссылки)"
+  },
+  "102775": {
+    "path": "./tests/React/Components/testPropsValidation",
+    "exportName": "testPropsValidation",
+    "title": "Props Validation (валидация пропсов)"
+  },
+  "102800": {
+    "path": "./tests/React/Components/testPortals",
+    "exportName": "testPortals",
+    "title": "Portals (порталы)"
+  },
+  "102825": {
+    "path": "./tests/React/Components/testPatternsReact",
+    "exportName": "testPatternsReact",
+    "title": "Design Patterns in React (шаблоны проектирования в React)"
+  },
+  "102850": {
+    "path": "./tests/React/Components/testLifecycleMethods",
+    "exportName": "testLifecycleMethods",
+    "title": "Lifecycle Methods (методы жизненного цикла)"
+  },
+  "102875": {
+    "path": "./tests/React/Components/testFunctionalComponents",
+    "exportName": "testFunctionalComponents",
+    "title": "Functional Components (функциональные компоненты)"
+  },
+  "102900": {
+    "path": "./tests/React/Components/testControlledUncontrolled",
+    "exportName": "testControlledUncontrolled",
+    "title": "Controlled vs Uncontrolled Components (управляемые и неуправляемые компоненты)"
+  },
+  "102925": {
+    "path": "./tests/React/Components/testContextReact",
+    "exportName": "testContextReact",
+    "title": "Context API (контекст)"
+  },
+  "102950": {
+    "path": "./tests/React/Components/testClassComponents",
+    "exportName": "testClassComponents",
+    "title": "Class Components (классовые компоненты)"
+  },
+  "102975": {
+    "path": "./tests/React/Optimization/testVirtualization",
+    "exportName": "testVirtualization",
+    "title": "Virtualization (виртуализация)"
+  },
+  "103000": {
+    "path": "./tests/React/Optimization/testUseMemo&UseCallback",
+    "exportName": "testUseMemoUseCallback",
+    "title": "useMemo and useCallback (оптимизация производительности)"
+  },
+  "103025": {
+    "path": "./tests/React/Optimization/testReselect&Recompose",
+    "exportName": "testReselectRecompose",
+    "title": "Reselect and Recompose (селекторы и композиция)"
+  },
+  "103050": {
+    "path": "./tests/React/Optimization/testReduxDevtools",
+    "exportName": "testReduxDevtools",
+    "title": "Redux DevTools (инструменты разработчика для Redux)"
+  },
+  "103075": {
+    "path": "./tests/React/Optimization/testReactDevtools",
+    "exportName": "testReactDevtools",
+    "title": "React DevTools (инструменты разработчика для React)"
+  },
+  "103100": {
+    "path": "./tests/React/JSX/testRenderReact",
+    "exportName": "testRenderReact",
+    "title": "Rendering in React (рендеринг)"
+  },
+  "103125": {
+    "path": "./tests/React/JSX/testFragments",
+    "exportName": "testFragments",
+    "title": "React Fragments (фрагменты)"
+  },
+  "103150": {
+    "path": "./tests/React/Optimization/testLazyImports&DynamicImports",
+    "exportName": "testLazyImports",
+    "title": "Lazy Imports (ленивые импорты)"
+  },
+  "103175": {
+    "path": "./tests/React/Optimization/testConcurrentMode&Suspense",
+    "exportName": "testConcurrentModeSuspense",
+    "title": "Concurrent Mode and Suspense (конкурентный режим и подвеска)"
+  },
+  "103200": {
+    "path": "./tests/React/Optimization/testBundleOptimization",
+    "exportName": "testBundleOptimization",
+    "title": "Bundle Optimization (оптимизация сборки)"
+  },
+  "103225": {
+    "path": "./tests/React/Optimization/testBasicReactOptimization",
+    "exportName": "testBasicReactOptimization",
+    "title": "Basic React Optimization (базовая оптимизация в React)"
+  },
+  "103250": {
+    "path": "./tests/React/Hooks/testUseState",
+    "exportName": "testUseState",
+    "title": "useState (управление состоянием)"
+  },
+  "103275": {
+    "path": "./tests/React/Hooks/testUseReducer",
+    "exportName": "testUseReducer",
+    "title": "useReducer (управление состоянием)"
+  },
+  "103300": {
+    "path": "./tests/React/Hooks/testUseLayoutEffect",
+    "exportName": "testUseLayoutEffect",
+    "title": "useLayoutEffect (синхронный эффект)"
+  },
+  "103325": {
+    "path": "./tests/React/Redux/testMiddlewares",
+    "exportName": "testMiddlewares",
+    "title": "Middlewares (промежуточное ПО)"
+  },
+  "103350": {
+    "path": "./tests/React/Redux/testHOCconnect",
+    "exportName": "testHOCconnect",
+    "title": "Higher-Order Components and connect (HOC и connect)"
+  },
+  "103375": {
+    "path": "./tests/React/Redux/testActions",
+    "exportName": "testActions",
+    "title": "Redux Actions (действия)"
+  },
+  "103400": {
+    "path": "./tests/React/Redux/test3ReduxMainPrinciples",
+    "exportName": "test3ReduxMainPrinciples",
+    "title": "Основные принципы Redux"
+  }
+}

@@ -131,7 +131,7 @@ import { testHOCconnect } from "./React/Redux/testHOCconnect";
 import { testActions } from "./React/Redux/testActions";
 import { testErrorHandling } from "./Javascript/Core/testErrorHandling";
 
-export const test = [
+export const testList = [
   // Main themes
   testProgrammingParadigms,
   testFunctionalProgramming,

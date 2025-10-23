@@ -4,6 +4,8 @@ import Results from "../results/Results";
 import evaluateAnswers from "../../utils/evaluateAnswers";
 
 export const Test = ({ test }) => {
+    // console.log("Test mounted", test && { id: test.id, title: test.title, questionsLen: test.questions?.length });
+
     const [userAnswers, setUserAnswers] = useState({});
     const [results, setResults] = useState(null);
 
