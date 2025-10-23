@@ -1,25 +1,26 @@
-import { List } from "react-window";
+import { useState, useRef, useEffect } from "react";
+import { List, useDynamicRowHeight } from "react-window";
 import { S } from "./Test.styles";
 import { Test } from "./Test";
-import { useState, useRef, useEffect } from "react";
 import { loadTestById } from "../../data/loadTestById";
 import testIndex from "../../data/testIndex.json";
 
 export const Tests = ({ testId }) => {
-    // 1) Используем список, который передали через prop testId (testList)
-    //    Ожидаем testId = [{ id: 101875, title: "..." }, ...] или аналогичный meta array.
     const metaList = Array.isArray(testId)
         ? testId.map((m) => ({ id: String(m.id), title: m.title || m.title }))
         : Object.keys(testIndex).map((id) => ({ id: String(id), title: testIndex[id].title }));
 
-    const loadedTestsRef = useRef({});
-    const loadingRef = useRef({});
+    const validTests = metaList;
+
+    const rowHeight = useDynamicRowHeight({ defaultRowHeight: 60 });
+
     const [currentTestId, setCurrentTestId] = useState(null);
     const [loadedTests, setLoadedTests] = useState({});
-
+    const loadingRef = useRef({});
+    const loadedTestsRef = useRef(loadedTests);
     useEffect(() => { loadedTestsRef.current = loadedTests; }, [loadedTests]);
 
-    async function handleTestClick(testMeta, index) {
+    async function handleTestClick(testMeta) {
         const id = String(testMeta.id);
 
         if (currentTestId === id) {
@@ -41,8 +42,7 @@ export const Tests = ({ testId }) => {
         setCurrentTestId(id);
 
         try {
-            const loaded = await loadTestById(id); // loadTestById должен поддерживать string/number
-
+            const loaded = await loadTestById(id);
             if (loaded) {
                 setLoadedTests((prev) => {
                     const next = { ...prev, [id]: loaded };
@@ -61,7 +61,6 @@ export const Tests = ({ testId }) => {
         }
     }
 
-    // RowComponent использует актуальный state из замыкания
     const RowComponent = ({ index, style, tests }) => {
         const testMeta = tests[index];
         if (!testMeta) return null;
@@ -70,21 +69,29 @@ export const Tests = ({ testId }) => {
         const loaded = loadedTests[id];
         const isLoading = !!loadingRef.current[id];
 
-        // console.log('Row render', { id, isCurrent, isLoading, loaded });
-        // if (loaded) console.log('loaded.questions.length=', loaded.questions?.length);
+        const innerKey = `${id}-${isCurrent ? 'open' : 'closed'}`;
 
         return (
-            <div style={style}>
-                <S.Details>
-                    <S.Summary onClick={() => handleTestClick(testMeta, index)}>
-                        {testMeta.title}
+            <div style={style} key={innerKey}>
+                <S.Details open={isCurrent}>
+                    <S.Summary
+                        onClick={(e) => {
+                            e.preventDefault();
+                            handleTestClick(testMeta);
+                        }}
+                    >
+                        {testMeta.title || "Без названия теста"}
                     </S.Summary>
 
                     {isCurrent && (
                         <>
                             {isLoading && !loaded && <div>Загрузка теста…</div>}
                             {!isLoading && !loaded && <div>Не удалось загрузить тест</div>}
-                            {loaded && Array.isArray(loaded.questions) && <Test test={loaded} />}
+                            {loaded && Array.isArray(loaded.questions) && (
+                                <div>
+                                    <Test test={loaded} />
+                                </div>
+                            )}
                         </>
                     )}
                 </S.Details>
@@ -92,22 +99,14 @@ export const Tests = ({ testId }) => {
         );
     };
 
-    const validTests = metaList;
-
     return (
-        <S.TestWrapper style={{ height: 1000 }}>
+        <S.TestWrapper style={{ height: 600 }}>
             <List
                 rowComponent={RowComponent}
                 rowCount={validTests.length}
-                rowHeight={60}
+                rowHeight={rowHeight}
                 rowProps={{ tests: validTests }}
-            >
-                {currentTestId && loadedTests[currentTestId] && (
-                    <div style={{ marginTop: 12 }}>
-                        <Test test={loadedTests[currentTestId]} />
-                    </div>
-                )}
-            </List>
+            />
         </S.TestWrapper>
     );
 };

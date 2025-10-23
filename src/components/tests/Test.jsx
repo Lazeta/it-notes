@@ -4,23 +4,20 @@ import Results from "../results/Results";
 import evaluateAnswers from "../../utils/evaluateAnswers";
 
 export const Test = ({ test }) => {
-    // console.log("Test mounted", test && { id: test.id, title: test.title, questionsLen: test.questions?.length });
+    console.log("Test mounted", test && { id: test.id, title: test.title, questionsLen: test.questions?.length });
 
     const [userAnswers, setUserAnswers] = useState({});
     const [results, setResults] = useState(null);
 
-    // Обработчик изменения ответа
     const handleAnswerChange = (questionId, answer) => {
         setUserAnswers((prev) => ({ ...prev, [questionId]: answer }))
     }
 
-    // Обработчик завершения теста
     const handleSubmit = async () => {
         const results = await evaluateAnswers(test, userAnswers);
         setResults(results);
     }
 
-    // Проверяем ответил ли пользователь на все вопросы
     const isTestComplete = test.questions.every(
         (question) => userAnswers[question.id]?.trim() !== ""
     );
